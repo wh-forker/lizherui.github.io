@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>lizherui的博客</title><link href="lizherui.github.io/" rel="alternate"></link><link href="lizherui.github.io/feeds/all-zhs.atom.xml" rel="self"></link><id>lizherui.github.io/</id><updated>2013-07-08T00:00:00+08:00</updated><entry><title>第一天上班</title><link href="lizherui.github.io/di-tian-shang-ban.html" rel="alternate"></link><updated>2013-07-08T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:lizherui.github.io,2013-07-08:di-tian-shang-ban.html</id><summary type="html">&lt;p&gt;预料到杭州公交堵，没想到这么堵，还特别挤，堪比北京的早高峰10号线，最终迟到了半小时。&lt;/p&gt;
 &lt;p&gt;各种入职手续、培训办得好累。。。&lt;/p&gt;
 &lt;p&gt;4点半被老大领到工位，总算安顿下来了，虽然啥也没干。&lt;/p&gt;
-&lt;p&gt;明天继续学Java~&lt;/p&gt;</summary><category term="工作 杭州 阿里"></category></entry><entry><title>关于我</title><link href="lizherui.github.io/guan-yu-wo.html" rel="alternate"></link><updated>2013-07-07T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:lizherui.github.io,2013-07-07:guan-yu-wo.html</id><summary type="html">&lt;p&gt;我来自北邮。&lt;/p&gt;
+&lt;p&gt;明天继续学Java~&lt;/p&gt;</summary><category term="工作"></category><category term="杭州"></category><category term="阿里"></category></entry><entry><title>关于我</title><link href="lizherui.github.io/guan-yu-wo.html" rel="alternate"></link><updated>2013-07-07T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:lizherui.github.io,2013-07-07:guan-yu-wo.html</id><summary type="html">&lt;p&gt;我来自北邮。&lt;/p&gt;
 &lt;p&gt;我在百度实习过大半年，但实在是不太喜欢百度这个公司，于是在毕业前离开了那里。&lt;/p&gt;
 &lt;p&gt;我最终决定加入阿里。&lt;/p&gt;
 &lt;p&gt;我热爱编程，开发环境嗜好Mac OS X + oh-my-zsh + Vim + Git的组合，以及clang + gdb进行编译、调试。键盘流，快捷键党，尤其反感编程的时候用鼠标的编程习惯。编程语言方面熟悉c/c++/python/php，最近正在学习java，有代码洁癖，平时没事喜欢看点源码，常年混迹github，google group等等开源相关的社区。&lt;/p&gt;
@@ -14,4 +14,4 @@
 &lt;p&gt;技术方面的话，自从5月底离开百度后就没怎么练了。再不练，武功就废了。坚持看完了SICP第二章，感到越来越吃力(实在太抽象了)，于是决定暂缓第三章的学习计划。考虑到淘宝大量使用JAVA,于是开始学习《JAVA编程思想》，想尽快入门JAVA。&lt;/p&gt;
 &lt;p&gt;周末和向楠、倪灿在西湖旁边吃了个饭，聊了聊很多往事，感慨万千。&lt;/p&gt;
 &lt;p&gt;下周一就要入职了，感觉压力很大。&lt;/p&gt;
-&lt;p&gt;上路了，毕业生。&lt;/p&gt;</summary><category term="生活 工作 杭州"></category></entry></feed>
+&lt;p&gt;上路了，毕业生。&lt;/p&gt;</summary><category term="生活"></category><category term="工作"></category><category term="杭州"></category></entry></feed>
