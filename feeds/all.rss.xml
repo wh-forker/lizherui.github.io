@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lizherui的博客</title><link>lizherui.github.io/</link><description></description><atom:link href="lizherui.github.io/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 07 Jul 2013 00:00:00 +0800</lastBuildDate><item><title>关于我</title><link>lizherui.github.io/guan-yu-wo.html</link><description>&lt;p&gt;我来自北邮。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lizherui的博客</title><link>lizherui.github.io/</link><description></description><atom:link href="lizherui.github.io/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 08 Jul 2013 00:00:00 +0800</lastBuildDate><item><title>第一天上班</title><link>lizherui.github.io/di-tian-shang-ban.html</link><description>&lt;p&gt;预料到杭州公交堵，没想到这么堵，还特别挤，堪比北京的早高峰10号线，最终迟到了半小时。&lt;/p&gt;
+&lt;p&gt;各种入职手续、培训办得好累。。。&lt;/p&gt;
+&lt;p&gt;4点半被老大领到工位，总算安顿下来了，虽然啥也没干。&lt;/p&gt;
+&lt;p&gt;明天继续学Java~&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Mon, 08 Jul 2013 00:00:00 +0800</pubDate><guid>tag:lizherui.github.io,2013-07-08:di-tian-shang-ban.html</guid><category>工作 杭州 阿里</category></item><item><title>关于我</title><link>lizherui.github.io/guan-yu-wo.html</link><description>&lt;p&gt;我来自北邮。&lt;/p&gt;
 &lt;p&gt;我在百度实习过大半年，但实在是不太喜欢百度这个公司，于是在毕业前离开了那里。&lt;/p&gt;
 &lt;p&gt;我最终决定加入阿里。&lt;/p&gt;
 &lt;p&gt;我热爱编程，开发环境嗜好Mac OS X + oh-my-zsh + Vim + Git的组合，以及clang + gdb进行编译、调试。键盘流，快捷键党，尤其反感编程的时候用鼠标的编程习惯。编程语言方面熟悉c/c++/python/php，最近正在学习java，有代码洁癖，平时没事喜欢看点源码，常年混迹github，google group等等开源相关的社区。&lt;/p&gt;
