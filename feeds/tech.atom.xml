@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>lizherui的博客</title><link href="lizherui.github.io/" rel="alternate"></link><link href="lizherui.github.io/feeds/tech.atom.xml" rel="self"></link><id>lizherui.github.io/</id><updated>2013-07-11T00:00:00+08:00</updated><entry><title>用eclim把vim打造成强悍的java开发利器</title><link href="lizherui.github.io/yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html" rel="alternate"></link><updated>2013-07-11T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:lizherui.github.io,2013-07-11:yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html</id><summary type="html">&lt;p&gt;对于常年习惯用vim编写c系、script系、lisp系语言的人来说，初转java最头疼的事情就是vim对java的支持实在太弱，被eclipse完爆。但是vim控突然转到eclipse会觉得很失落，尤其是eclipse那臃肿的界面和孱弱的编辑功能。vim关于java的插件按从轻到重的顺序只有区区3个：javacomplete.vim, vjde, eclim。前2个实在是太弱太难配置，好在开源社区贡献了强悍的eclim:The power of Eclipse in your favorite editor. &lt;/p&gt;
+&lt;p&gt;eclim安装很简单：去http://eclim.org/上下载下来后，执行java -jar eclim_2.2.6.jar一路next就可以了，相关文档在官网都有。有几个地方要说明一下：&lt;/p&gt;
+&lt;p&gt;相关配置有4个地方:    &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;EclimJavaCompleteCaseSensitive&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;EclimSignLevel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="n"&gt;g&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;EclimLogLevel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="nx"&gt;autocmd&lt;/span&gt; &lt;span class="nx"&gt;FileType&lt;/span&gt; &lt;span class="nb"&gt;java&lt;/span&gt; &lt;span class="nx"&gt;inoremap&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;tab&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;C&lt;/span&gt;&lt;span class="na"&gt;-x&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;C&lt;/span&gt;&lt;span class="na"&gt;-u&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;补全的话自带的ctrl+x ctrl+u按起来太麻烦，我给改成tab了，此外我喜欢大小写敏感的补全。&lt;/p&gt;
+&lt;p&gt;eclim其实就相当于让vim充当了eclispe的前端界面，把eclipse中的几乎全部功能都一一映射成为vim中的命令，这样既拥有eclipse强大的补全、一键运行以及各种杂七杂八的实用功能，又能体验vim强悍的编辑快感，真的是The power of Eclipse in your favorite editor啊。&lt;/p&gt;
+&lt;p&gt;eclim的官方文档挺长的，后续一些使用技巧也会在实战中逐渐学习。&lt;/p&gt;</summary><category term="vim"></category><category term="java"></category><category term="eclim，编辑器"></category></entry></feed>
