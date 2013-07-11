@@ -11,4 +11,4 @@
 
 &lt;p&gt;补全的话自带的ctrl+x ctrl+u按起来太麻烦，我给改成tab了，此外我喜欢大小写敏感的补全。&lt;/p&gt;
 &lt;p&gt;eclim其实就相当于让vim充当了eclispe的前端界面，把eclipse中的几乎全部功能都一一映射成为vim中的命令，这样既拥有eclipse强大的补全、一键运行以及各种杂七杂八的实用功能，又能体验vim强悍的编辑快感，真的是The power of Eclipse in your favorite editor啊。&lt;/p&gt;
-&lt;p&gt;eclim的官方文档挺长的，后续一些使用技巧也会在实战中逐渐学习。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Thu, 11 Jul 2013 00:00:00 +0800</pubDate><guid>tag:lizherui.github.io,2013-07-11:yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html</guid><category>vim</category><category>java</category><category>eclim，编辑器</category></item></channel></rss>
+&lt;p&gt;eclim的官方文档挺长的，后续一些使用技巧也会在实战中逐渐学习。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Thu, 11 Jul 2013 00:00:00 +0800</pubDate><guid>tag:lizherui.github.io,2013-07-11:yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html</guid><category>vim</category><category>java</category><category>eclim</category><category>编辑器</category></item></channel></rss>
