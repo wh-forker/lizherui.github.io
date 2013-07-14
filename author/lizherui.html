@@ -179,17 +179,76 @@
                 </div>
         </div>
         <hr />
-        
-                <div class="pagination">
-        <ul>
-                                        <li class="prev disabled"><a href="#">&larr; Previous</a></li>
-                                                        <li class="active"><a href="../author/lizherui.html">1</a></li>
-                                        <li class=""><a href="../author/lizherui2.html">2</a></li>
-                                                        <li class="next"><a href="../author/lizherui2.html">Next &rarr;</a></li>
-                        </ul>
-        </div>
+                <div class="article">
+                <h1><a href="../tao-bao-zhe-ge-gong-si.html">淘宝这个公司</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-07-13T00:00:00">
+        <i class="icon-calendar"></i>2013-07-13
+</abbr>
+<span class="label">By</span>
+<a href="../author/lizherui.html"><i class="icon-user"></i>lizherui</a>
+<span class="label">Category</span>
+<a href="../category/work.html"><i class="icon-folder-open"></i>work</a>.
 
-        </div><!--/span-->
+
+<span class="label">Tags</span>
+	<a href="../tag/gong-zuo.html"><i class="icon-tag"></i>工作</a>
+	<a href="../tag/tao-bao.html"><i class="icon-tag"></i>淘宝</a>
+	<a href="../tag/bai-du.html"><i class="icon-tag"></i>百度</a>
+	<a href="../tag/gong-si.html"><i class="icon-tag"></i>公司</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>我来淘宝一周了。</p>
+<p>这一周在淘宝的所见所闻总是让我不自觉地联想起在百度工作的日子。</p>
+<p>我觉得是时候总结一下了。</p>
+<h3>团队氛围</h3>
+<p>百度沉闷，淘宝风骚。</p>
+<p>我喜欢把工程师分成两种人："书呆子""与"嬉皮士"。</p>
+<p>百度的工程师是典型的"书呆子"，就是校园里喜欢闷头闷脑搞学习、成绩总是排在年级最前面、平时不怎么爱说话的那批人，这其实也是大众眼里典型的技术男形象。</p>
+<p>但是，实际上，还有另外一种工程师，他们就是“嬉皮士”。</p>
+<p>淘宝的工程师是典型的“嬉皮士”。他们在学校里那会儿往往就不喜欢按部就班地搞学习，但是喜欢捣腾钻研自己真正感兴趣的东西；他们的期末总成绩往往不是年级顶尖，但是自己喜欢的学科却又是高分在上；他们特别喜欢互相开玩笑逗乐子，总是黑别人也总是被别人黑。</p>
+<p>在百度，说起大学的课堂，大家就开始讨论哪门课最难学，哪个老师讲课最有水平；</p>
+<p>在淘宝，说起大学的课堂，大家就开始讨论哪门课最易逃，哪个老师上课从不点名。</p>
+<p>我去百度面试，面试官总是给出几道算法题后让我慢慢想，然后就忙自己的事去了。整个面试过程特别闷。</p>
+<p>我去淘宝面试，面试官不仅和我交流互动，还特别喜欢拿我开玩笑。整个面试过程充满了欢声笑语。</p>
+<p>你是“书呆子”，还是“嬉皮士”？</p>
+<h3>工程师文化 ...</h3>
+                        <a class="btn primary xsmall" href="../tao-bao-zhe-ge-gong-si.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+                <div class="article">
+                <h1><a href="../yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html">用eclim把vim打造成强悍的java开发利器</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-07-11T00:00:00">
+        <i class="icon-calendar"></i>2013-07-11
+</abbr>
+<span class="label">By</span>
+<a href="../author/lizherui.html"><i class="icon-user"></i>lizherui</a>
+<span class="label">Category</span>
+<a href="../category/tech.html"><i class="icon-folder-open"></i>tech</a>.
+
+
+<span class="label">Tags</span>
+	<a href="../tag/vim.html"><i class="icon-tag"></i>vim</a>
+	<a href="../tag/java.html"><i class="icon-tag"></i>java</a>
+	<a href="../tag/eclim.html"><i class="icon-tag"></i>eclim</a>
+	<a href="../tag/bian-ji-qi.html"><i class="icon-tag"></i>编辑器</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>对于常年习惯用vim编写c系、script系、lisp系语言的人来说，初转java最头疼的事情就是vim对java的支持实在太弱，被eclipse完爆。但是vim控突然转到eclipse会觉得很失落，尤其是eclipse那臃肿的界面和孱弱的编辑功能。vim关于java的插件按从轻到重的顺序只有区区3个：javacomplete.vim, vjde, eclim。前2个实在是太弱太难配置，好在开源社区贡献了强悍的eclim:The power of Eclipse in your favorite editor. </p>
+<p>eclim安装很简单：去http://eclim.org/上下载下来后，执行java -jar eclim_2.2.6.jar一路next就可以了，相关文档在官网都有。有几个地方要说明一下：</p>
+<p>相关配置有6个地方:    </p>
+<div class="highlight"><pre><span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimJavaCompleteCaseSensitive</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimSignLevel</span><span class="o">=</span><span class="mi">2</span>
+<span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimLogLevel</span><span class="o">=</span><span class="mi">2</span>
+<span class="k">let</span> <span class="n">g ...</span></pre></div>
+                        <a class="btn primary xsmall" href="../yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+        
+                        </div><!--/span-->
 
                 <div class="span3 well sidebar-nav" id="sidebar">
             <ul class="nav nav-list">
@@ -227,8 +286,18 @@
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
 <li class="tag-4">
-    <a href="../tag/a-li.html">
-        <i class="icon-tag icon-large"></i>阿里
+    <a href="../tag/bian-ji-qi.html">
+        <i class="icon-tag icon-large"></i>编辑器
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/gong-si.html">
+        <i class="icon-tag icon-large"></i>公司
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/java.html">
+        <i class="icon-tag icon-large"></i>java
     </a>
 </li>
 <li class="tag-2">
@@ -237,13 +306,8 @@
     </a>
 </li>
 <li class="tag-4">
-    <a href="../tag/sheng-huo.html">
-        <i class="icon-tag icon-large"></i>生活
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/java.html">
-        <i class="icon-tag icon-large"></i>java
+    <a href="../tag/tao-bao.html">
+        <i class="icon-tag icon-large"></i>淘宝
     </a>
 </li>
 <li class="tag-4">
@@ -251,19 +315,14 @@
         <i class="icon-tag icon-large"></i>百度
     </a>
 </li>
-<li class="tag-4">
-    <a href="../tag/tao-bao.html">
-        <i class="icon-tag icon-large"></i>淘宝
+<li class="tag-1">
+    <a href="../tag/gong-zuo.html">
+        <i class="icon-tag icon-large"></i>工作
     </a>
 </li>
 <li class="tag-4">
-    <a href="../tag/bian-ji-qi.html">
-        <i class="icon-tag icon-large"></i>编辑器
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/eclim.html">
-        <i class="icon-tag icon-large"></i>eclim
+    <a href="../tag/sheng-huo.html">
+        <i class="icon-tag icon-large"></i>生活
     </a>
 </li>
 <li class="tag-4">
@@ -272,13 +331,13 @@
     </a>
 </li>
 <li class="tag-4">
-    <a href="../tag/gong-si.html">
-        <i class="icon-tag icon-large"></i>公司
+    <a href="../tag/a-li.html">
+        <i class="icon-tag icon-large"></i>阿里
     </a>
 </li>
-<li class="tag-1">
-    <a href="../tag/gong-zuo.html">
-        <i class="icon-tag icon-large"></i>工作
+<li class="tag-4">
+    <a href="../tag/eclim.html">
+        <i class="icon-tag icon-large"></i>eclim
     </a>
 </li>
 
