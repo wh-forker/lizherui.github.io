@@ -18,14 +18,15 @@
 &lt;p&gt;说到开放这个事情，我常常感叹于这个页面&lt;a href="https://github.com/alibaba"&gt;https://github.com/alibaba&lt;/a&gt;上这些大名鼎鼎的开源项目:Tengine, LVS, tfs, tair, oceanbase, fastjson, webx, taocode, zeux, ali_kernel, druid……&lt;/p&gt;
 &lt;p&gt;百度什么都没有。&lt;/p&gt;
 &lt;p&gt;封闭的工程师文化最大的影响就是各个部门甚至各个小组的开发人员做了很多类似的东西，看起来个体效率高，但整体效率就下去了，这也是百度加班极其严重的原因之一。我印象最深的事情是一个小项目需要用到memcached，开发人员居然自己在线上那几台机器搭建起来网上随便下载的某个版本的memcached。memcached这个级别的技术居然都不是全公司统一部署、管理。&lt;/p&gt;
-&lt;p&gt;淘宝内网上有很多大家分享的技术心得和插件。就连新员工配置microsoft outlook/mac mail这种小事情，淘宝都有一键完成配置的插件可以下载。这在百度是不可想象的。&lt;/p&gt;
+&lt;p&gt;淘宝内网上有很多大家分享的技术心得和插件。就连新员工配置microsoft outlook/mac mail这种小事情，淘宝都有一键完成配置的插件可以下载。&lt;/p&gt;
+&lt;p&gt;我在百度的时候问过几次;eader,团队里的各种大牛能不能分享一些技术tips，我自己也想分享vim的一些强悍配置技巧。但都被leader拍回去了：你说的这些东西还是有所保留为好。&lt;/p&gt;
 &lt;p&gt;我觉得这是一件很严肃的事情，它反映了最根本的工程师态度：任何事情都要追求自动化。&lt;/p&gt;
 &lt;h3&gt;技术风格&lt;/h3&gt;
 &lt;p&gt;百度陈腐，淘宝花哨。&lt;/p&gt;
 &lt;p&gt;百度使用Thinkpad + win 7/xp + 盗版的secureCRT + 百度的工程师随处可见。&lt;/p&gt;
 &lt;p&gt;淘宝使用Macbook Pro/Air + Mac OS X + Vim/Emacs + Google的工程师随处可见。&lt;/p&gt;
 &lt;p&gt;百度的工程师居然有相当一部人不知道github这样的网站，这在淘宝是不可想象的。&lt;/p&gt;
-&lt;p&gt;这个话题我不想再对比了。&lt;/p&gt;
+&lt;p&gt;这个话题我不想再对比了，百度被甩得很远。&lt;/p&gt;
 &lt;h3&gt;总结&lt;/h3&gt;
 &lt;p&gt;如果你是“书呆子”，建议选择百度。&lt;/p&gt;
 &lt;p&gt;如果你是“嬉皮士”，建议选择淘宝。&lt;/p&gt;</summary><category term="工作"></category><category term="淘宝"></category><category term="百度"></category><category term="公司"></category></entry><entry><title>第一天上班</title><link href="lizherui.github.io/di-tian-shang-ban.html" rel="alternate"></link><updated>2013-07-08T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:lizherui.github.io,2013-07-08:di-tian-shang-ban.html</id><summary type="html">&lt;p&gt;预料到杭州公交堵，没想到这么堵，还特别挤，堪比北京的早高峰10号线，最终迟到了半小时。&lt;/p&gt;
