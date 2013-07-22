@@ -100,6 +100,40 @@
       <div class="row">
         <div class="span9" id="content">
                             <div class="article">
+                <h1><a href="../javazhu-jie-xue-xi.html">Java注解学习</a></h1>
+                <div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-07-22T00:00:00">
+        <i class="icon-calendar"></i>2013-07-22
+</abbr>
+<span class="label">By</span>
+<a href="../author/lizherui.html"><i class="icon-user"></i>lizherui</a>
+<span class="label">Category</span>
+<a href="../category/tech.html"><i class="icon-folder-open"></i>tech</a>.
+
+
+<span class="label">Tags</span>
+	<a href="../tag/java.html"><i class="icon-tag"></i>java</a>
+	<a href="../tag/annotations.html"><i class="icon-tag"></i>annotations</a>
+</footer><!-- /.post-info --></div>
+                <div class="summary"><p>初识Java注解是在学习Spring的时候，发现了大量如@Autowired的语法，这种语法在其它语言中很少见，于是对Java独特的注解有了兴趣。Google了一下Java注解的概念：Java注解就是对某种事物添加一个注释说明的意思，标注某种事物的特征以及形态，供日后其它人遇到该事物时有一个直观的认识。JAVA语言提供一套机制，可以在包、类、方法、字段、方法参数、局部变量、构造器和注解这些元素上添加标注，还可以通过JAVA的反射机制获得这些元素的标识信息，做进一步的操作。</p>
+<p>Java的注解让我第一时间联想到了Python中的装饰器。虽然它俩语法都是一样的，有一些Wrapper的影子，实际上还是挺有差别的。Java的注解更算是一种元数据，Python的装饰器更算是一种语法糖。举例如下,先是Python的一个小小wrapper的实现：</p>
+<div class="highlight"><pre><span class="nx">def</span> <span class="nx">makebold</span><span class="p">(</span><span class="nx">fn</span><span class="p">):</span>
+    <span class="nx">def</span> <span class="nx">wrapped</span><span class="p">():</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;b&gt;&quot;</span> <span class="o">+</span> <span class="nx">fn</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&lt;/b&gt;&quot;</span>
+    <span class="k">return</span> <span class="nx">wrapped</span>
+
+<span class="nx">def</span> <span class="nx">makeitalic</span><span class="p">(</span><span class="nx">fn</span><span class="p">):</span>
+    <span class="nx">def</span> <span class="nx">wrapped</span><span class="p">():</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;i&gt;&quot;</span> <span class="o">+</span> <span class="nx">fn</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&lt;/i&gt;&quot;</span>
+    <span class="k">return</span> <span class="nx">wrapped</span>
+
+<span class="p">@</span><span class="nx">makebold ...</span></pre></div>
+                        <a class="btn primary xsmall" href="../javazhu-jie-xue-xi.html">more ...</a>
+                </div>
+        </div>
+        <hr />
+                <div class="article">
                 <h1><a href="../yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html">用eclim把vim打造成强悍的java开发利器</a></h1>
                 <div class="well small"><footer class="post-info">
 <span class="label">Date</span>
@@ -167,14 +201,9 @@
 </li>
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-<li class="tag-4">
-    <a href="../tag/bai-du.html">
-        <i class="icon-tag icon-large"></i>百度
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/eclim.html">
-        <i class="icon-tag icon-large"></i>eclim
+<li class="tag-1">
+    <a href="../tag/gong-zuo.html">
+        <i class="icon-tag icon-large"></i>工作
     </a>
 </li>
 <li class="tag-4">
@@ -183,33 +212,8 @@
     </a>
 </li>
 <li class="tag-4">
-    <a href="../tag/editor.html">
-        <i class="icon-tag icon-large"></i>editor
-    </a>
-</li>
-<li class="tag-1">
-    <a href="../tag/gong-zuo.html">
-        <i class="icon-tag icon-large"></i>工作
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/java.html">
-        <i class="icon-tag icon-large"></i>java
-    </a>
-</li>
-<li class="tag-4">
     <a href="../tag/tao-bao.html">
         <i class="icon-tag icon-large"></i>淘宝
-    </a>
-</li>
-<li class="tag-2">
-    <a href="../tag/hang-zhou.html">
-        <i class="icon-tag icon-large"></i>杭州
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/gong-si.html">
-        <i class="icon-tag icon-large"></i>公司
     </a>
 </li>
 <li class="tag-4">
@@ -218,8 +222,43 @@
     </a>
 </li>
 <li class="tag-2">
+    <a href="../tag/hang-zhou.html">
+        <i class="icon-tag icon-large"></i>杭州
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/editor.html">
+        <i class="icon-tag icon-large"></i>editor
+    </a>
+</li>
+<li class="tag-2">
+    <a href="../tag/java.html">
+        <i class="icon-tag icon-large"></i>java
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/annotations.html">
+        <i class="icon-tag icon-large"></i>annotations
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/bai-du.html">
+        <i class="icon-tag icon-large"></i>百度
+    </a>
+</li>
+<li class="tag-2">
     <a href="../tag/sheng-huo.html">
         <i class="icon-tag icon-large"></i>生活
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/gong-si.html">
+        <i class="icon-tag icon-large"></i>公司
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/eclim.html">
+        <i class="icon-tag icon-large"></i>eclim
     </a>
 </li>
 
