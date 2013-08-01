@@ -27,10 +27,9 @@ FEED_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 
 # Blogroll
-LINKS =  (('Python.org', 'http://python.org/'),
+LINKS =  (('Google', 'https://www.google.com/ncr'),
+          ('Python.org', 'http://python.org/'),
           ('Pelican', 'http://getpelican.com/'),
-          ('Jinja2', 'http://jinja.pocoo.org/'),
-          ('Google', 'https://www.google.com/ncr'),
          )
 
 # Social widget
