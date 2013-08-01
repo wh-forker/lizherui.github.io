@@ -9,7 +9,7 @@ Tags: taobao, baidu, company
 
 我觉得是时候总结一下了。
 
-#团队氛围
+###团队氛围
 百度沉闷，淘宝风骚。
 
 我喜欢把工程师分成两种人："书呆子""与"嬉皮士"。
@@ -30,7 +30,7 @@ Tags: taobao, baidu, company
 
 你是“书呆子”，还是“嬉皮士”？
 
-#工程师文化
+###工程师文化
 百度封闭，淘宝开放。
 
 说到开放这个事情，我常常感叹于这个页面<https://github.com/alibaba>上这些大名鼎鼎的开源项目:Tengine, LVS, tfs, tair, oceanbase, fastjson, webx, taocode, zeux, ali_kernel, druid……
@@ -45,7 +45,7 @@ Tags: taobao, baidu, company
 
 我在百度的时候问过好几次leader：团队里的各种大牛能不能分享一些技术tips，我自己也想分享vim一些强悍的配置技巧。但每次都被leader拍回去：这种事情还是有所保留为好。
 
-#技术风格
+###技术风格
 百度陈腐，淘宝花哨。
 
 百度使用Thinkpad + win 7/xp + 盗版的secureCRT + 百度的工程师随处可见。
@@ -56,7 +56,7 @@ Tags: taobao, baidu, company
 
 这个话题我不想再对比了，百度被甩得很远。
 
-#总结
+###总结
 如果你是“书呆子”，建议选择百度。
 
 如果你是“嬉皮士”，建议选择淘宝。
