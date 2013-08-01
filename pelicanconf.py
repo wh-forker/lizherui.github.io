@@ -4,10 +4,9 @@ from __future__ import unicode_literals
 
 AUTHOR = u'lizherui'
 SITENAME = u"lizherui's blog"
-SITE_SOURCE = 'https://github.com/lizherui/lizherui.github.io'
 SITEURL = 'http://lizherui.github.io'
+GITHUB_URL = 'https://github.com/lizheru'
 ARCHIVES_URL = 'archives.html'
-GITHUB_URL = 'https://github.com/lizherui'
 
 RELATIVE_URLS = True
 DEFAULT_PAGINATION = 5
