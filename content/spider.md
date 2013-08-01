@@ -1,6 +1,6 @@
 Date: 2013-07-31
 Title: 爬取校招信息
-Category: tech
+Category: Tech
 Tags: python, spider
 
 抓取北邮人论坛和水木社区校招信息的爬虫程序, 直接运行main.py即可，非常简洁，可以扩展。

@@ -1,6 +1,6 @@
 Date: 2013-07-13
 Title: 淘宝这个公司
-Category: work
+Category: Work
 Tags: taobao, baidu, company
 
 我来淘宝一周了。
