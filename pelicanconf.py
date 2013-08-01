@@ -34,8 +34,8 @@ LINKS =  (('Python.org', 'http://python.org/'),
 
 # Social widget
 SOCIAL = (('github', 'https://github.com/lizherui'),
+          ('twitter', 'https://twitter.com/lzrak47'),
           ('weibo', 'http://weibo.com/lzrm4a1'),
           ('zhihu', 'http://www.zhihu.com/people/li-zhe-rui'),
-          ('twitter', 'https://twitter.com/lzrak47'),
         )
 
