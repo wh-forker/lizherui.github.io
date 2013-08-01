@@ -1,7 +1,7 @@
 Date: 2013-08-01
 Title: 终于有了自己的域名
 Category: Tech
-Tags: 域名
+Tags: 域名, godaddy
 
 今天折腾了半天，终于搞定了自己的独立域名：<http://www.lizherui.com>
 
