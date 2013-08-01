@@ -37,7 +37,7 @@
         <div class="nav-collapse">
         <ul class="nav">
                     
-                            <li><a href="../pages/guan-yu-wo.html">关于我</a></li>
+                            <li><a href="../pages/about.html">About</a></li>
                         </ul>
         </div>
         
@@ -100,60 +100,6 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <p>很多长期使用vim/emacs的人都容易对IDE抱有或多或少的偏见。没错，开发shell, php, python, ruby这样的解释性语言，用vim/emacs确实非常合适 ...</p> <a class="btn btn-info xsmall" href="../bian-ji-qi-yu-ide.html">read more</a></div>
     </div>	
 				
-    
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="../javazhu-jie-xue-xi.html"><h2>Java注解学习</h2></a>
-        <div class= "well small"> 2013-07-22
-
-by <a class="url fn" href="../author/lizherui.html">lizherui</a>
- 
-
-
- </div>
-        <div class="summary"><p>初识Java注解是在学习Spring的时候，发现了大量如@Autowired的语法，这种语法在其它语言中很少见，于是对Java独特的注解有了兴趣。Google了一下Java注解的概念：Java注解就是对某种事物添加一个注释说明的意思，标注某种事物的特征以及形态，供日后其它人遇到该事物时有一个直观的认识。JAVA语言提供一套机制，可以在包、类、方法、字段、方法参数、局部变量、构造器和注解这些元素上添加标注，还可以通过JAVA的反射机制获得这些元素的标识信息，做进一步的操作。</p>
-<p>Java的注解让我第一时间联想到了Python中的装饰器。虽然它俩语法都是一样的，有一些Wrapper的影子，实际上还是挺有差别的。Java的注解更算是一种元数据，Python的装饰器更算是一种语法糖。举例如下,先是Python的一个小小wrapper的实现：</p>
-<div class="highlight"><pre><span class="nx">def</span> <span class="nx">makebold</span><span class="p">(</span><span class="nx">fn</span><span class="p">):</span>
-    <span class="nx">def</span> <span class="nx">wrapped</span><span class="p">():</span>
-        <span class="k">return</span> <span class="s2">&quot;&lt;b&gt;&quot;</span> <span class="o">+</span> <span class="nx">fn</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&lt;/b&gt;&quot;</span>
-    <span class="k">return</span> <span class="nx">wrapped</span>
-
-<span class="nx">def</span> <span class="nx">makeitalic</span><span class="p">(</span><span class="nx">fn</span><span class="p">):</span>
-    <span class="nx">def</span> <span class="nx">wrapped</span><span class="p">():</span>
-        <span class="k">return</span> <span class="s2">&quot;&lt;i&gt;&quot;</span> <span class="o">+</span> <span class="nx">fn</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;&lt;/i&gt;&quot;</span>
-    <span class="k">return</span> <span class="nx">wrapped</span>
-
-<span class="p">@</span><span class="nx">makebold ...</span></pre></div> <a class="btn btn-info xsmall" href="../javazhu-jie-xue-xi.html">read more</a></div>
-    </div>	
-				
-    
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="../yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html"><h2>用eclim把vim打造成强悍的java开发利器</h2></a>
-        <div class= "well small"> 2013-07-11
-
-by <a class="url fn" href="../author/lizherui.html">lizherui</a>
- 
-
-
- </div>
-        <div class="summary"><p>对于常年习惯用vim编写c系、script系、lisp系语言的人来说，初转java最头疼的事情就是vim对java的支持实在太弱，被eclipse完爆。但是vim控突然转到eclipse会觉得很失落，尤其是eclipse那臃肿的界面和孱弱的编辑功能。vim关于java的插件按从轻到重的顺序只有区区3个：javacomplete.vim, vjde, eclim。前2个实在是太弱太难配置，好在开源社区贡献了强悍的eclim:The power of Eclipse in your favorite editor. </p>
-<p>eclim安装很简单：去http://eclim.org/上下载下来后，执行java -jar eclim_2.2.6.jar一路next就可以了，相关文档在官网都有。有几个地方要说明一下：</p>
-<p>相关配置有6个地方:    </p>
-<div class="highlight"><pre><span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimJavaCompleteCaseSensitive</span><span class="o">=</span><span class="mi">1</span>
-<span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimSignLevel</span><span class="o">=</span><span class="mi">2</span>
-<span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimLogLevel</span><span class="o">=</span><span class="mi">2</span>
-<span class="k">let</span> <span class="n">g ...</span></pre></div> <a class="btn btn-info xsmall" href="../yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html">read more</a></div>
-    </div>	
-				
             <div class="pagination">
 <ul>
     <li class="prev disabled"><a href="#">&larr; Previous</a></li>
@@ -176,7 +122,7 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
                 Site
                 </li>
             
-                <li><a href="../">Archives</a>
+                <li><a href="../archives.html">Archives</a>
                 <li><a href="../tags.html">Tags</a>
                             </ul>
             </div>
@@ -188,7 +134,6 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
                 Categories
                 </li>
                 
-                                <li><a href="../category/about.html">about</a></li>
                                 <li><a href="../category/life.html">life</a></li>
                                 <li><a href="../category/tech.html">tech</a></li>
                                 <li><a href="../category/work.html">work</a></li>
@@ -219,9 +164,9 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
            
                                 <li><a href="http://lizherui.github.io/feeds/all.rss.xml">rss</a></li>
                                 <li><a href="https://github.com/lizherui">github</a></li>
-                                <li><a href="https://twitter.com/lzrak47">twitter</a></li>
                                 <li><a href="http://weibo.com/lzrm4a1">weibo</a></li>
                                 <li><a href="http://www.zhihu.com/people/li-zhe-rui">zhihu</a></li>
+                                <li><a href="https://twitter.com/lzrak47">twitter</a></li>
                             </ul>
             </div>
             </div>

@@ -37,7 +37,7 @@
         <div class="nav-collapse">
         <ul class="nav">
                     
-                            <li><a href="../pages/guan-yu-wo.html">关于我</a></li>
+                            <li><a href="../pages/about.html">About</a></li>
                         </ul>
         </div>
         
@@ -57,8 +57,8 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="../yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html"><h1>用eclim把vim打造成强悍的java开发利器</h1></a>
-            2013-07-11
+            <a href="../bian-ji-qi-yu-ide.html"><h1>编辑器与IDE</h1></a>
+            2013-07-25
 
 by <a class="url fn" href="../author/lizherui.html">lizherui</a>
  
@@ -67,21 +67,19 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
  
         </div>
         
-        <div><p>对于常年习惯用vim编写c系、script系、lisp系语言的人来说，初转java最头疼的事情就是vim对java的支持实在太弱，被eclipse完爆。但是vim控突然转到eclipse会觉得很失落，尤其是eclipse那臃肿的界面和孱弱的编辑功能。vim关于java的插件按从轻到重的顺序只有区区3个：javacomplete.vim, vjde, eclim。前2个实在是太弱太难配置，好在开源社区贡献了强悍的eclim:The power of Eclipse in your favorite editor. </p>
-<p>eclim安装很简单：去http://eclim.org/上下载下来后，执行java -jar eclim_2.2.6.jar一路next就可以了，相关文档在官网都有。有几个地方要说明一下：</p>
-<p>相关配置有6个地方:    </p>
-<div class="highlight"><pre><span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimJavaCompleteCaseSensitive</span><span class="o">=</span><span class="mi">1</span>
-<span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimSignLevel</span><span class="o">=</span><span class="mi">2</span>
-<span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimLogLevel</span><span class="o">=</span><span class="mi">2</span>
-<span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimJavaSearchSingleResult</span><span class="o">=</span><span class="s1">&#39;tabnew&#39;</span>
-<span class="nx">autocmd</span> <span class="nx">FileType</span> <span class="nb">java</span> <span class="nx">inoremap</span> <span class="o">&lt;</span><span class="nx">tab</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">C</span><span class="na">-x</span><span class="o">&gt;&lt;</span><span class="nx">C</span><span class="na">-u</span><span class="o">&gt;</span>
-<span class="nx">autocmd</span> <span class="nx">FileType</span> <span class="nb">java</span> <span class="kt">map</span> <span class="o">&lt;</span><span class="nx">F2</span><span class="o">&gt;</span> <span class="p">:</span><span class="nx">JavaSearchContext</span><span class="o">&lt;</span><span class="nx">cr</span><span class="o">&gt;</span>
-</pre></div>
-
-
-<p>补全的话自带的ctrl+x ctrl+u按起来太麻烦，我给改成tab了，此外我喜欢大小写敏感的补全。</p>
-<p>eclim其实就相当于让vim充当了eclispe的前端界面，把eclipse中的几乎全部功能都一一映射成为vim中的命令，这样既拥有eclipse强大的补全、一键运行以及各种杂七杂八的实用功能，又能体验vim强悍的编辑快感，真的是The power of Eclipse in your favorite editor啊。</p>
-<p>eclim的官方文档挺长的，后续一些使用技巧也会在实战中逐渐学习。</p></div>
+        <div><p>虽然eclim很强悍，但由于它并没有集成任何的java debug功能，因此用vim+eclim的组合开发java仍然显得力不从心。</p>
+<p>我最终决定回到eclipse的怀抱中。同时，出于对逐渐丧失vim武功的担忧，我决定使用eclipse+viplugin的组合：编辑代码使用vim的指法，其它事情全部交给eclipse。</p>
+<p>这样用了一段时间，节奏还不错，而且eclipse一些强大的功能让我刮目相看，并让我开始反思之前对待编辑器与IDE的态度。</p>
+<p>IDE里面确实蕴含了比普通文本编辑器高级很多的技术。IDE会对程序文本进行真正的解析，之后才开始分析里面的结构。它们的“跳转到定义”一般都是很精确的跳转，而不是像文本编辑器那样瞎猜。</p>
+<p>此外，IDE代码补全的精准度与速度都远远超过了vim的任何插件；IDE对于java的接口与实现、类与类的继承关系、反射等稍高级的功能都支持得非常好。</p>
+<p>vim在这些方面确实做得不好，也不可能做得好。</p>
+<p>这样说来，vim的唯一优势就只是它那极其符合人体工程学的指法带来的行云流水般的操作快感了。</p>
+<p>不像php, python等所见即所得的解释性语言，java这种编译型的语言，若通过打日志来调试，那么每加一条调试用的日志代码，就要重新编译一次，实在是太低效了。而eclipse的调试功能确实是太强大了，调试过程中每个变量的值也都是清清楚楚。</p>
+<p>很多长期使用vim/emacs的人都容易对IDE抱有或多或少的偏见。没错，开发shell, php, python, ruby这样的解释性语言，用vim/emacs确实非常合适，也能满足需求，相比之下用IDE开发它们就会显得有些笨拙。</p>
+<p>但是最近开发java的经历让我逐渐冷静了下来，开始仔细地反思这件事情。就像没有万能的编程语言一样，也没有万能的编辑器。vim很强悍，emacs也很厉害，但是它俩在面对java这样的语言时，确实无法跟eclipse相提并论。</p>
+<p>eclipse能让java程序员的头脑从琐碎的细节里面解脱出来，所以我们能够更加专注于程序本身的语义和算法，这样我们能写出更加优美和可靠的程序。这就是我用eclipse写java程序的时候相对于vim的感觉。我感觉到自己能够看见程序背后所表现的模型，而不只是看到程序的文本和细节。</p>
+<p>最后我想说的是，eclipse这件事情对我触动很大。我开始渐渐认可这样的观点：程序员对诸如编程语言、编辑器这类事物产生宗教般的信仰或偏见确实是没有必要的。我们应该更加多元化地发展，学会尊重别的技术和别的事物，学会去发现、认可每件技术的优势与劣势。</p>
+<p>天下武功，确实没有高低之分；只有习武之人，才有强弱之别。</p></div>
         <hr />
     </div>
 		
@@ -107,7 +105,7 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
                 Site
                 </li>
             
-                <li><a href="../">Archives</a>
+                <li><a href="../archives.html">Archives</a>
                 <li><a href="../tags.html">Tags</a>
                             </ul>
             </div>
@@ -119,7 +117,6 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
                 Categories
                 </li>
                 
-                                <li><a href="../category/about.html">about</a></li>
                                 <li><a href="../category/life.html">life</a></li>
                                 <li><a href="../category/tech.html">tech</a></li>
                                 <li><a href="../category/work.html">work</a></li>
@@ -150,9 +147,9 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
            
                                 <li><a href="http://lizherui.github.io/feeds/all.rss.xml">rss</a></li>
                                 <li><a href="https://github.com/lizherui">github</a></li>
-                                <li><a href="https://twitter.com/lzrak47">twitter</a></li>
                                 <li><a href="http://weibo.com/lzrm4a1">weibo</a></li>
                                 <li><a href="http://www.zhihu.com/people/li-zhe-rui">zhihu</a></li>
+                                <li><a href="https://twitter.com/lzrak47">twitter</a></li>
                             </ul>
             </div>
             </div>
