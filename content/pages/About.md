@@ -14,4 +14,4 @@ Title: About
 
 我的个人简历(目前还是毕业前的资料)维护在<https://gist.github.com/lizherui/5640792>，必要的时候，会彻底更新它。
 
-这个博客使用Pelican搭建在Github Pages上，记录我毕业加入杭州阿里的一系列心路历程。
+这个博客使用Pelican搭建在Github Pages上，记录我毕业后加入杭州阿里的一系列心路历程。
