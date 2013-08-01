@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'lizherui'
 SITENAME = u"lizherui's world"
-SITEURL = 'http://lizherui.github.io'
+SITEURL = 'http://www.lizherui.com'
 GITHUB_URL = 'https://github.com/lizherui'
 ARCHIVES_URL = 'archives.html'
 
