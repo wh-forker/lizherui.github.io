@@ -11,4 +11,4 @@ Tags: 域名, godaddy
 2. 去<https://www.dnspod.cn>上添加新域名，并申请一条A记录指向Github Pages的ip:207.97.227.245；
 3. 在Pelican主目录新建CNAME文件，添上刚刚申请的域名：www.lizherui.com。
 
-有了独立域名后，感觉非常爽，更加坚定地好好打理这个博客的决心。
+有了独立域名后，感觉非常爽，更加坚定地好好打理个人博客的决心。
