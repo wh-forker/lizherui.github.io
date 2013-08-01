@@ -1,4 +1,3 @@
-Date: 2013-07-06
 Title: About
 
 我来自北邮。

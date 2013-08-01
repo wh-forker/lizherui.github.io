@@ -1,7 +1,7 @@
 Date: 2013-07-21
 Title: 滑雪
 Category: Life
-Tags: taobao, huaxue
+Tags: 淘宝, 滑雪
 
 没想到才来公司两周，就赶上了大型Outing。
 
