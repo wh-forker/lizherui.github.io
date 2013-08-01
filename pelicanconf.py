@@ -6,8 +6,7 @@ AUTHOR = u'lizherui'
 SITENAME = u"lizherui's blog"
 SITEURL = 'http://lizherui.github.io/'
 TIMEZONE = 'Asia/Shanghai'
-#THEME = "tuxlite_tbs"
-THEME = "bootlex"
+THEME = "tuxlite_tbs"
 DEFAULT_LANG = u'zh'
 DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 GITHUB_URL = "https://github.com/lizherui"
@@ -16,7 +15,7 @@ DISQUS_SITENAME = "lizherui"
 FEED_ALL_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 ARCHIVES_URL = "archives.html"
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 DEFAULT_PAGINATION = 5
 
 # Blogroll
@@ -33,9 +32,3 @@ SOCIAL = (('rss', 'http://lizherui.github.io/feeds/all.rss.xml'),
           ('twitter', 'https://twitter.com/lzrak47'),
           )
 
-ARTICLE_URL = ('{slug}/')
-ARTICLE_SAVE_AS = ('{slug}.html')
-PAGE_URL = ('{slug}/')
-PAGE_SAVE_AS = ('{slug}.html')
-AUTHOR_URL = ('author/{name}/')
-TAG_URL = ('tag/{name}/')
