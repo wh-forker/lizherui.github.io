@@ -1,5 +1,5 @@
 Date: 2013-08-01
-Title: 终于有了自己的域名
+Title: 今天我终于有了自己的独立域名
 Category: Tech
 Tags: 域名, godaddy
 
