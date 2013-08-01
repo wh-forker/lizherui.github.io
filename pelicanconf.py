@@ -16,7 +16,7 @@ DISQUS_SITENAME = "lizherui"
 FEED_ALL_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 ARCHIVES_URL = "archives.html"
-RELATIVE_URLS = True
+#RELATIVE_URLS = True
 DEFAULT_PAGINATION = 5
 
 # Blogroll
