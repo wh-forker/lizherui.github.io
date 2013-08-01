@@ -28,7 +28,7 @@ CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 
 # Blogroll
 LINKS =  (('Google', 'https://www.google.com/ncr'),
-          ('Python.org', 'http://python.org/'),
+          ('Python', 'http://python.org/'),
           ('Pelican', 'http://getpelican.com/'),
          )
 
