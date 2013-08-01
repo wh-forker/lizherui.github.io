@@ -5,10 +5,10 @@ from __future__ import unicode_literals
 AUTHOR = u'lizherui'
 SITENAME = u"lizherui's blog"
 SITEURL = 'http://lizherui.github.io'
-GITHUB_URL = 'https://github.com/lizheru'
+GITHUB_URL = 'https://github.com/lizherui'
 ARCHIVES_URL = 'archives.html'
 
-RELATIVE_URLS = True
+#RELATIVE_URLS = True
 DEFAULT_PAGINATION = 5
 
 TIMEZONE = 'Asia/Shanghai'
