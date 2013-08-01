@@ -29,7 +29,7 @@ CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 # Blogroll
 LINKS =  (('Google', 'https://www.google.com/ncr'),
           ('Python', 'http://python.org/'),
-          ('Pelican', 'http://getpelican.com/'),
+          ('Pelican', 'http://docs.getpelican.com/'),
          )
 
 # Social widget
@@ -39,5 +39,5 @@ SOCIAL = (('Github', 'https://github.com/lizherui'),
           ('Linkedin', 'http://www.linkedin.com/profile/view?id=232391796'),
           ('Weibo', 'http://weibo.com/lzrm4a1'),
           ('Zhihu', 'http://www.zhihu.com/people/li-zhe-rui'),
-        )
+         )
 
