@@ -33,3 +33,9 @@ SOCIAL = (('rss', 'http://lizherui.github.io/feeds/all.rss.xml'),
           ('twitter', 'https://twitter.com/lzrak47'),
           )
 
+ARTICLE_URL = ('{slug}/')
+ARTICLE_SAVE_AS = ('{slug}.html')
+PAGE_URL = ('{slug}/')
+PAGE_SAVE_AS = ('{slug}.html')
+AUTHOR_URL = ('author/{name}/')
+TAG_URL = ('tag/{name}/')
