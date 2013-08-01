@@ -1,296 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
-    <title>lizherui's blog - vim</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lizherui's blog</title>
     <meta name="description" content="">
     <meta name="author" content="lizherui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Le styles -->
-    <link rel="stylesheet" href="../theme/css/bootstrap.min.css" type="text/css" />
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-      .tag-1 {
-        font-size: 13pt;
-      }
-      .tag-2 {
-        font-size: 10pt;
-      }
-      .tag-2 {
-        font-size: 8pt;
-      }
-      .tag-4 {
-        font-size: 6pt;
-     }
-    </style>
-    <link href="../theme/css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link href="../theme/css/font-awesome.css" rel="stylesheet">
-
-    <link href="../theme/css/pygments.css" rel="stylesheet">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="../theme/html5.js"></script>
     <![endif]-->
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../theme/images/favicon.ico">
-    <link rel="apple-touch-icon" href="../theme/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../theme/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../theme/images/apple-touch-icon-114x114.png">
+    <!-- Le styles -->
+    <link href="../theme/bootstrap.min.css" rel="stylesheet">
+    <link href="../theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="../theme/local.css" rel="stylesheet">
+    <link href="../theme/pygments.css" rel="stylesheet">
 
-    <link href="../" type="application/atom+xml" rel="alternate" title="lizherui's blog ATOM Feed" />
-    
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="../index.html">lizherui's blog </a>
-          <div class="nav-collapse">
-            <ul class="nav">
-                                                                    <li class="divider-vertical"></li>
-                                              <li >
-                    <a href="../category/about.html">
-						<i class="icon-folder-open icon-large"></i>about
-					</a>
-                  </li>
-                                <li >
-                    <a href="../category/life.html">
-						<i class="icon-folder-open icon-large"></i>life
-					</a>
-                  </li>
-                                <li >
-                    <a href="../category/tech.html">
-						<i class="icon-folder-open icon-large"></i>tech
-					</a>
-                  </li>
-                                <li >
-                    <a href="../category/work.html">
-						<i class="icon-folder-open icon-large"></i>work
-					</a>
-                  </li>
-              
-                          <ul class="nav pull-right">
-                                <li><a href="../archives.html"><i class="icon-th-list"></i>Archives</a></li>
-                          </ul>
+<div class="navbar">
+    <div class="navbar-inner">
+    <div class="container">
 
-            </ul>
-            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
-          </div><!--/.nav-collapse -->
+         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </a>
+
+        <a class="brand" href="..">lizherui's blog</a>
+
+        <div class="nav-collapse">
+        <ul class="nav">
+                    
+                                </ul>
         </div>
-      </div>
+        
     </div>
+    </div>
+</div>
 
-    <div class="container-fluid">
-      <div class="row">
-        <div class="span9" id="content">
-                            <div class="article">
-                <h1><a href="../yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html">用eclim把vim打造成强悍的java开发利器</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2013-07-11T00:00:00">
-        <i class="icon-calendar"></i>2013-07-11
-</abbr>
-<span class="label">By</span>
-<a href="../author/lizherui.html"><i class="icon-user"></i>lizherui</a>
-<span class="label">Category</span>
-<a href="../category/tech.html"><i class="icon-folder-open"></i>tech</a>.
+<div class="container">
+    <div class="content">
+    <div class="row">
+
+        <div class="span9">
+                
+
+        
 
 
-<span class="label">Tags</span>
-	<a href="../tag/vim.html"><i class="icon-tag"></i>vim</a>
-	<a href="../tag/java.html"><i class="icon-tag"></i>java</a>
-	<a href="../tag/eclim.html"><i class="icon-tag"></i>eclim</a>
-	<a href="../tag/editor.html"><i class="icon-tag"></i>editor</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>对于常年习惯用vim编写c系、script系、lisp系语言的人来说，初转java最头疼的事情就是vim对java的支持实在太弱，被eclipse完爆。但是vim控突然转到eclipse会觉得很失落，尤其是eclipse那臃肿的界面和孱弱的编辑功能。vim关于java的插件按从轻到重的顺序只有区区3个：javacomplete.vim, vjde, eclim。前2个实在是太弱太难配置，好在开源社区贡献了强悍的eclim:The power of Eclipse in your favorite editor. </p>
+    <div class='article'>
+        <div class="content-title">
+            <a href="../yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html"><h1>用eclim把vim打造成强悍的java开发利器</h1></a>
+            2013-07-11
+
+by <a class="url fn" href="../author/lizherui.html">lizherui</a>
+ 
+
+
+ 
+        </div>
+        
+        <div><p>对于常年习惯用vim编写c系、script系、lisp系语言的人来说，初转java最头疼的事情就是vim对java的支持实在太弱，被eclipse完爆。但是vim控突然转到eclipse会觉得很失落，尤其是eclipse那臃肿的界面和孱弱的编辑功能。vim关于java的插件按从轻到重的顺序只有区区3个：javacomplete.vim, vjde, eclim。前2个实在是太弱太难配置，好在开源社区贡献了强悍的eclim:The power of Eclipse in your favorite editor. </p>
 <p>eclim安装很简单：去http://eclim.org/上下载下来后，执行java -jar eclim_2.2.6.jar一路next就可以了，相关文档在官网都有。有几个地方要说明一下：</p>
 <p>相关配置有6个地方:    </p>
 <div class="highlight"><pre><span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimJavaCompleteCaseSensitive</span><span class="o">=</span><span class="mi">1</span>
 <span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimSignLevel</span><span class="o">=</span><span class="mi">2</span>
 <span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimLogLevel</span><span class="o">=</span><span class="mi">2</span>
-<span class="k">let</span> <span class="n">g ...</span></pre></div>
-                        <a class="btn primary xsmall" href="../yong-eclimba-vimda-zao-cheng-qiang-han-de-javakai-fa-li-qi.html">more ...</a>
-                </div>
-        </div>
+<span class="k">let</span> <span class="n">g</span><span class="p">:</span><span class="n">EclimJavaSearchSingleResult</span><span class="o">=</span><span class="s1">&#39;tabnew&#39;</span>
+<span class="nx">autocmd</span> <span class="nx">FileType</span> <span class="nb">java</span> <span class="nx">inoremap</span> <span class="o">&lt;</span><span class="nx">tab</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">C</span><span class="na">-x</span><span class="o">&gt;&lt;</span><span class="nx">C</span><span class="na">-u</span><span class="o">&gt;</span>
+<span class="nx">autocmd</span> <span class="nx">FileType</span> <span class="nb">java</span> <span class="kt">map</span> <span class="o">&lt;</span><span class="nx">F2</span><span class="o">&gt;</span> <span class="p">:</span><span class="nx">JavaSearchContext</span><span class="o">&lt;</span><span class="nx">cr</span><span class="o">&gt;</span>
+</pre></div>
+
+
+<p>补全的话自带的ctrl+x ctrl+u按起来太麻烦，我给改成tab了，此外我喜欢大小写敏感的补全。</p>
+<p>eclim其实就相当于让vim充当了eclispe的前端界面，把eclipse中的几乎全部功能都一一映射成为vim中的命令，这样既拥有eclipse强大的补全、一键运行以及各种杂七杂八的实用功能，又能体验vim强悍的编辑快感，真的是The power of Eclipse in your favorite editor啊。</p>
+<p>eclim的官方文档挺长的，后续一些使用技巧也会在实战中逐渐学习。</p></div>
         <hr />
+    </div>
+		
+            <div class="pagination">
+<ul>
+    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+
+    <li class="active"><a href="../tag/vim.html">1</a></li>
+
+    <li class="next disabled"><a href="#">&rarr; Next</a></li>
+
+</ul>
+</div>    
+ 
+  
+        </div>
         
-                        </div><!--/span-->
+        <div class="span3">
 
-                <div class="span3 well sidebar-nav" id="sidebar">
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
-<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
-    <li><a href="http://getpelican.com/"><i class="icon-external-link"></i>Pelican</a></li>
-    <li><a href="http://python.org/"><i class="icon-external-link"></i>Python.org</a></li>
-    <li><a href="http://jinja.pocoo.org/"><i class="icon-external-link"></i>Jinja2</a></li>
-<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
-    <li><a href="http://lizherui.github.io/feeds/all.rss.xml"><i class="icon-rss feed-sign icon-large"></i>rss feed</a></li>
-    <li><a href="https://github.com/lizherui"><i class="icon-github-sign icon-large"></i>github</a></li>
-    <li><a href="https://twitter.com/lzrak47"><i class="icon-twitter-sign icon-large"></i>twitter</a></li>
-    <li><a href="http://weibo.com/lzrm4a1"><i class="icon-weibo-sign icon-large"></i>weibo</a></li>
-    <li><a href="http://www.zhihu.com/people/li-zhe-rui"><i class="icon-zhihu-sign icon-large"></i>zhihu</a></li>
-
-<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
-<li>
-<a href="../category/about.html">
-    <i class="icon-folder-open icon-large"></i>about
-</a>
-</li>
-<li>
-<a href="../category/life.html">
-    <i class="icon-folder-open icon-large"></i>life
-</a>
-</li>
-<li>
-<a href="../category/tech.html">
-    <i class="icon-folder-open icon-large"></i>tech
-</a>
-</li>
-<li>
-<a href="../category/work.html">
-    <i class="icon-folder-open icon-large"></i>work
-</a>
-</li>
-
-<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-<li class="tag-4">
-    <a href="../tag/ide.html">
-        <i class="icon-tag icon-large"></i>ide
-    </a>
-</li>
-<li class="tag-1">
-    <a href="../tag/hang-zhou.html">
-        <i class="icon-tag icon-large"></i>杭州
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/bai-du.html">
-        <i class="icon-tag icon-large"></i>百度
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/python.html">
-        <i class="icon-tag icon-large"></i>python
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/spider.html">
-        <i class="icon-tag icon-large"></i>spider
-    </a>
-</li>
-<li class="tag-2">
-    <a href="../tag/editor.html">
-        <i class="icon-tag icon-large"></i>editor
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/annotations.html">
-        <i class="icon-tag icon-large"></i>annotations
-    </a>
-</li>
-<li class="tag-1">
-    <a href="../tag/java.html">
-        <i class="icon-tag icon-large"></i>java
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/tao-bao.html">
-        <i class="icon-tag icon-large"></i>淘宝
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/eclim.html">
-        <i class="icon-tag icon-large"></i>eclim
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/eclipse.html">
-        <i class="icon-tag icon-large"></i>eclipse
-    </a>
-</li>
-<li class="tag-1">
-    <a href="../tag/sheng-huo.html">
-        <i class="icon-tag icon-large"></i>生活
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/a-li.html">
-        <i class="icon-tag icon-large"></i>阿里
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/vim.html">
-        <i class="icon-tag icon-large"></i>vim
-    </a>
-</li>
-<li class="tag-1">
-    <a href="../tag/gong-zuo.html">
-        <i class="icon-tag icon-large"></i>工作
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/gong-si.html">
-        <i class="icon-tag icon-large"></i>公司
-    </a>
-</li>
+                <li class="nav-header"> 
+                Site
+                </li>
+            
+                <li><a href="../">Archives</a>
+                <li><a href="../tags.html">Tags</a>
+                <li><a href="lizherui.github.io/" rel="alternate">Atom feed</a></li>
+                            </ul>
+            </div>
 
 
-</ul>        </div><!--/.well -->
+                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Categories
+                </li>
+                
+                                <li><a href="../category/about.html">about</a></li>
+                                <li><a href="../category/life.html">life</a></li>
+                                <li><a href="../category/tech.html">tech</a></li>
+                                <li><a href="../category/work.html">work</a></li>
+                                   
+            </ul>
+            </div>
+            
 
-      </div><!--/row-->
+                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Links
+                </li>
+            
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                        </ul>
+            </div>
+            
 
-      <hr>
+                        <div class="social">
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header"> 
+                Social
+                </li>
+           
+                                <li><a href="http://lizherui.github.io/feeds/all.rss.xml">rss feed</a></li>
+                                <li><a href="https://github.com/lizherui">github</a></li>
+                                <li><a href="https://twitter.com/lzrak47">twitter</a></li>
+                                <li><a href="http://weibo.com/lzrm4a1">weibo</a></li>
+                                <li><a href="http://www.zhihu.com/people/li-zhe-rui">zhihu</a></li>
+                            </ul>
+            </div>
+            </div>
+            
+        </div>  
+    </div>     </div> 
+<footer>
+<br />
+<p><a href="..">lizherui's blog</a> &copy; lizherui 2012</p>
+</footer>
 
-      <footer>
-        <address id="about">
-                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
-                                which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
-        </address><!-- /#about -->
-
-        <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>,
-                   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
-      </footer>
-
-    </div><!--/.fluid-container-->
-
-
-    <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-try {
-	var pageTracker = _gat._getTracker("UA-42648273-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-        <script type="text/javascript">
-    var disqus_shortname = 'lizherui';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-
-    <!-- Le javascript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../theme/js/jquery-1.7.2.min.js"></script>
-    <script src="../theme/js/bootstrap.min.js"></script>
-  </body>
+</div> <!-- /container -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
+<script>var _gaq=[['_setAccount','UA-42648273-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+<a href="<https://github.com/lizherui>"><img style="position: absolute; top: 40px; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub" /></a>
+ 
+</body>
 </html>
