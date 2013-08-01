@@ -1,7 +1,7 @@
 Date: 2013-07-06
 Title: 初到杭州
 Category: Life
-Tags: hangzhou, toabao
+Tags: 杭州, 淘宝
 
 在入职淘宝的前一周，我来到杭州。
 
