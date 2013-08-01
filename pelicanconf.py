@@ -23,7 +23,7 @@ GOOGLE_ANALYTICS = 'UA-42648273-1'
 
 DISQUS_SITENAME = 'lizherui'
 
-FEED_ALL_RSS = 'feeds/all.rss.xml'
+FEED_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 
 # Blogroll
@@ -33,8 +33,7 @@ LINKS =  (('Python.org', 'http://python.org/'),
          )
 
 # Social widget
-SOCIAL = (('rss', 'http://lizherui.github.io/feeds/all.rss.xml'),
-          ('github', 'https://github.com/lizherui'),
+SOCIAL = (('github', 'https://github.com/lizherui'),
           ('weibo', 'http://weibo.com/lzrm4a1'),
           ('zhihu', 'http://www.zhihu.com/people/li-zhe-rui'),
           ('twitter', 'https://twitter.com/lzrak47'),
