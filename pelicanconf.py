@@ -33,11 +33,11 @@ LINKS =  (('Python.org', 'http://python.org/'),
          )
 
 # Social widget
-SOCIAL = (('github', 'https://github.com/lizherui'),
-          ('twitter', 'https://twitter.com/lzrak47'),
-          ('facebook', 'https://www.facebook.com/profile.php?id=100004875786021'),
-          ('linkedin', 'http://www.linkedin.com/profile/view?id=232391796'),
-          ('weibo', 'http://weibo.com/lzrm4a1'),
-          ('zhihu', 'http://www.zhihu.com/people/li-zhe-rui'),
+SOCIAL = (('Github', 'https://github.com/lizherui'),
+          ('Twitter', 'https://twitter.com/lzrak47'),
+          ('Facebook', 'https://www.facebook.com/profile.php?id=100004875786021'),
+          ('Linkedin', 'http://www.linkedin.com/profile/view?id=232391796'),
+          ('Weibo', 'http://weibo.com/lzrm4a1'),
+          ('Zhihu', 'http://www.zhihu.com/people/li-zhe-rui'),
         )
 
