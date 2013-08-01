@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'lizherui'
 SITENAME = u"lizherui's blog"
-SITEURL = 'http://lizherui.github.io'
+SITEURL = 'http://lizherui.github.io/'
 TIMEZONE = 'Asia/Shanghai'
 #THEME = "tuxlite_tbs"
 THEME = "bootlex"
