@@ -19,10 +19,10 @@ RELATIVE_URLS = True
 DEFAULT_PAGINATION = 5
 
 # Blogroll
-LINKS =  (('Pelican', 'http://getpelican.com/'),
-          ('Python.org', 'http://python.org/'),
+LINKS =  (('Python.org', 'http://python.org/'),
+          ('Pelican', 'http://getpelican.com/'),
           ('Jinja2', 'http://jinja.pocoo.org/'),
-          )
+         )
 
 # Social widget
 SOCIAL = (('rss', 'http://lizherui.github.io/feeds/all.rss.xml'),
@@ -30,5 +30,5 @@ SOCIAL = (('rss', 'http://lizherui.github.io/feeds/all.rss.xml'),
           ('weibo', 'http://weibo.com/lzrm4a1'),
           ('zhihu', 'http://www.zhihu.com/people/li-zhe-rui'),
           ('twitter', 'https://twitter.com/lzrak47'),
-          )
+        )
 
