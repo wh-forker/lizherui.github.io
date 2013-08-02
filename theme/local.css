@@ -5,8 +5,8 @@
   background-color: #2E435E;
   //background-image: -moz-linear-gradient(top, #2e435e, #172e50);
   //background-image: -ms-linear-gradient(top, #2e435e, #172e50);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2e435e), to(#172e50));
-  background-image: -webkit-linear-gradient(top, #2e435e, #172e50);
+  //background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#2e435e), to(#172e50));
+  //background-image: -webkit-linear-gradient(top, #2e435e, #172e50);
   //background-image: -o-linear-gradient(top, #2e435e, #172e50);
   //background-image: linear-gradient(top, #2e435e, #172e50);
   background-repeat: repeat-x;
