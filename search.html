@@ -5,50 +5,18 @@
 <title>站内搜索</title>
 </head>
   <body>
-<style>
-#search-box {
-    position: relative;
-    width: 50%;
-    margin: 0;
-    padding: 1em;
-}
-
-#search-form {
-    height: 40px;
-    border: 1px solid #999;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    background-color: #fff;
-    overflow: hidden;
-}
-
-#search-text {
-    font-size: 14px;
-    color: #ddd;
-    border-width: 0;
-    background: transparent;
-}
-
-#search-box input[type="text"] {
-    width: 90%;
-    padding: 11px 0 12px 1em;
-    color: #333;
-    outline: none;
-}
-</style>
-<script>
-  (function() {
-    var cx = '012191777864628038963:sjrtj5zxtec';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//www.google.com/cse/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
-</body>
+      <script>
+      (function() {
+        var cx = '012191777864628038963:sjrtj5zxtec';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//www.google.com/cse/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:searchresults-only></gcse:searchresults-only>
+  </body>
 </html>
