@@ -1,4 +1,5 @@
 /* Styling for Nav bar. Bg color, link color etc */
+/*
 .navbar-inner {
   padding-left: 20px;
   padding-right: 20px;
@@ -22,7 +23,7 @@
 .navbar .nav > li > a { color: #49AFCD; }
 .navbar .divider-vertical { border-right: 1px solid #4D4D4D; }
 .navbar { margin-bottom: 4em; } 
-
+*/
 
 /* Styling for elements */
 body { font-size: 100%; }
