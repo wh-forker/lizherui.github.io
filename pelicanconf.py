@@ -8,7 +8,7 @@ SITEURL = 'http://www.lizherui.com'
 GITHUB_URL = 'https://github.com/lizherui'
 ARCHIVES_URL = 'archives.html'
 
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 DEFAULT_PAGINATION = 5
 
 TIMEZONE = 'Asia/Shanghai'
