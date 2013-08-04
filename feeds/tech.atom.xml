@@ -7,8 +7,8 @@
 3，高内聚，低耦合。&lt;/p&gt;
 &lt;p&gt;不过，除了以上这些收获和感悟以外，我发现了一些更让人感兴趣的东西，这也是这篇文章马上要探讨的重点——Java设计模式在Common lisp中的体现。&lt;/p&gt;
 &lt;p&gt;Java和Common lisp, 前者作为OO的代表，喜欢玩类和对象；后者作为Functional Programming的代表，喜欢玩函数和闭包。乍一看它俩应该风马牛不相及，井水不犯河水，但实际上我们会惊讶地发现Java设计模式中有着太多Common Lisp的对照，这种现象让人越来越强烈地感觉：软件设计虽然有众多的门派、风格和表现形式，但总体思想上似乎是殊途同归的，比如构造抽象屏障和提高抽象层次。&lt;/p&gt;
-&lt;p&gt;Java设计模式至少有16种设计模式能对应到Common Lisp中，如下图：
-&lt;img alt="aaa" src="https://lh6.googleusercontent.com/--fbXkQDQfg0/Uf56NGxglbI/AAAAAAAAAGo/vpbBtYGAoxM/w414-h292-no/1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Java设计模式至少有16种设计模式能对应到Common Lisp中，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="aaa" src="https://lh6.googleusercontent.com/--fbXkQDQfg0/Uf56NGxglbI/AAAAAAAAAGo/vpbBtYGAoxM/w414-h292-no/1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;Talk is cheap, let me show you the code.&lt;/p&gt;
 &lt;p&gt;我们先来看看Singleton模式。&lt;/p&gt;
 &lt;p&gt;Singleton模式有一个形象的比喻：Singleton就像追妹子一样，你不能大街上随便拉一个妹子就说是我对象，也不能自己做一个妹子出来说是自己对象。只能通过某种方法（追妹子），来产生一个对象。同时在调用这个方法的时候，会对你是否已经有对象进行检查。如果有，那么方法会直接返回，或者产生一个异常（抽你一巴掌，或者new Exception(”流氓!”)），从而保证你只有一个对象。&lt;/p&gt;
@@ -107,12 +107,12 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;让我们测试一下，载入刚刚写好的test.lsp：
-&lt;img alt="2" src="https://lh5.googleusercontent.com/-vhKXWOXzcBw/Uf56NAb3rlI/AAAAAAAAAGs/sR4IKun665k/w415-h297-no/2.png" /&gt; &lt;/p&gt;
+&lt;p&gt;让我们测试一下，载入刚刚写好的test.lsp：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="2" src="https://lh5.googleusercontent.com/-vhKXWOXzcBw/Uf56NAb3rlI/AAAAAAAAAGs/sR4IKun665k/w415-h297-no/2.png" /&gt; &lt;/p&gt;
 &lt;p&gt;测试一下：&lt;/p&gt;
-&lt;p&gt;&lt;img alt="3" src="https://lh3.googleusercontent.com/-eeLFQSEwkOU/Uf56NPKq97I/AAAAAAAAAGw/jE0cTtiFY6g/w172-h108-no/3.png" /&gt;&lt;/p&gt;
-&lt;p&gt;没有问题，我们还可以试一试刚才写的reset-singleton-classes：
-&lt;img alt="4" src="https://lh5.googleusercontent.com/-ROPqd87viOk/Uf56OKLi-xI/AAAAAAAAAG8/aQnvijRXTvQ/w180-h99-no/4.png" /&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img alt="3" src="https://lh3.googleusercontent.com/-eeLFQSEwkOU/Uf56NPKq97I/AAAAAAAAAGw/jE0cTtiFY6g/w172-h108-no/3.png" /&gt; &lt;/p&gt;
+&lt;p&gt;没有问题，我们还可以试一试刚才写的reset-singleton-classes：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="4" src="https://lh5.googleusercontent.com/-ROPqd87viOk/Uf56OKLi-xI/AAAAAAAAAG8/aQnvijRXTvQ/w180-h99-no/4.png" /&gt; &lt;/p&gt;
 &lt;p&gt;果然，foo1的单个实例被清空重建了。&lt;/p&gt;
 &lt;p&gt;小结：Common Lisp中的元类，有一点像Java中的抽象类，比如不能被实例化，可以被继承等等。但元类跟抽象类仍然有着本质的不同：元类的实例是类，不是对象,于是能动态地创建类，更加灵活。Singleton模式具体的实现机制，是在元类中维护了一个内部队列来达到目的。在Python中，元类机制也应用广泛。&lt;/p&gt;
 &lt;p&gt;张教主有这样一句名言：元编程是一种黑魔法，正派人士都很畏惧。&lt;/p&gt;
