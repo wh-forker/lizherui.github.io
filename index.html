@@ -228,7 +228,7 @@ by <a class="url fn" href="./author/lizherui.html">lizherui</a>
             <span class="k">return</span> <span class="n">new</span> <span class="n">HawaiianPizza</span><span class="p">();</span>
     <span class="p">}</span>
     <span class="n">throw</span> <span class="n">new</span> <span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;The pizza type &quot;</span> <span class="o">+</span> <span class="n">pizzaType</span> <span class="o">+</span> <span class="s">&quot; is not recognized.&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+    <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="n">class</span> <span class="n">PizzaLover</span> <span class="p">{</span>
@@ -274,7 +274,7 @@ Price of Hawaiian is 1150</p>
 
 
 <p>载入测试一下：</p>
-<p><img alt="6" src="https://lh3.googleusercontent.com/-nHpRPpSXzts/Uf56Obb5ufI/AAAAAAAAAHI/4lvgkQWPUBo/w415-h164-no/5.png" /></p>
+<p><img alt="5" src="https://lh3.googleusercontent.com/-nHpRPpSXzts/Uf56Obb5ufI/AAAAAAAAAHI/4lvgkQWPUBo/w415-h164-no/5.png" /></p>
 <p>小结：Common Lisp中由于函数是一等公民的缘故，相对于Java中工厂模式的实现要简单的多，不需要额外建一个工厂类，可以随心所欲地玩。函数式语言相当于OO语言来说，确实有一个优点——可以操纵的单元粒度更小更细，所以更加灵活，同时也更加容易失控。</p>
 <p>最后，让我们看看迭代器模式，首先是Java中的实现：</p>
 <div class="highlight"><pre><span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">ArrayList</span><span class="p">;</span>
