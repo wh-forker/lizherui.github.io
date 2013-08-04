@@ -1,5 +1,299 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lizherui's world</title><link>http://www.lizherui.com/</link><description></description><atom:link href="http://www.lizherui.com/feeds/tech.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 01 Aug 2013 00:00:00 +0800</lastBuildDate><item><title>今天我终于有了自己的独立域名</title><link>http://www.lizherui.com/jin-tian-wo-zhong-yu-you-liao-zi-ji-de-du-li-yu-ming.html</link><description>&lt;p&gt;今天折腾了半天，终于搞定了自己的独立域名：&lt;a href="http://www.lizherui.com"&gt;http://www.lizherui.com&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lizherui's world</title><link>http://www.lizherui.com/</link><description></description><atom:link href="http://www.lizherui.com/feeds/tech.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 04 Aug 2013 00:00:00 +0800</lastBuildDate><item><title>Java设计模式在Common Lisp中的体现</title><link>http://www.lizherui.com/javashe-ji-mo-shi-zai-common-lispzhong-de-ti-xian.html</link><description>&lt;p&gt;最近在进一步学习Java的过程中，我愈发感到Java把面向对象的编程思想玩到了登峰造极的地步。而Java中最能表现面向对象编程思想的，就是大名鼎鼎的设计模式了。&lt;/p&gt;
+&lt;p&gt;这是Wikipedia中对设计模式的定义：设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。面向对象设计模式通常以类型或对象来描述其中的关系和相互作用，但不涉及用来完成应用程序的特定类型或对象。设计模式能使不稳定依赖于相对稳定、具体依赖于相对抽象，避免会引起麻烦的紧耦合，以增强软件设计面对并适应变化的能力。&lt;/p&gt;
+&lt;p&gt;在学习了一些设计模式后，我们会发现这23种设计模式都围绕着以下三大基本原则：
+1，中意于组合而不是继承。
+2，依赖于接口而不是实现。
+3，高内聚，低耦合。&lt;/p&gt;
+&lt;p&gt;不过，除了以上这些收获和感悟以外，我发现了一些更让人感兴趣的东西，这也是这篇文章马上要探讨的重点——Java设计模式在Common lisp中的体现。&lt;/p&gt;
+&lt;p&gt;Java和Common lisp, 前者作为OO的代表，喜欢玩类和对象；后者作为Functional Programming的代表，喜欢玩函数和闭包。乍一看它俩应该风马牛不相及，井水不犯河水，但实际上我们会惊讶地发现Java设计模式中有着太多Common Lisp的对照，这种现象让人越来越强烈地感觉：软件设计虽然有众多的门派、风格和表现形式，但总体思想上似乎是殊途同归的，比如构造抽象屏障和提高抽象层次。&lt;/p&gt;
+&lt;p&gt;Java设计模式至少有16种设计模式能对应到Common Lisp中，如下图：
+&lt;img alt="aaa" src="https://lh6.googleusercontent.com/--fbXkQDQfg0/Uf56NGxglbI/AAAAAAAAAGo/vpbBtYGAoxM/w414-h292-no/1.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Talk is cheap, let me show you the code.&lt;/p&gt;
+&lt;p&gt;我们先来看看Singleton模式。&lt;/p&gt;
+&lt;p&gt;Singleton模式有一个形象的比喻：Singleton就像追妹子一样，你不能大街上随便拉一个妹子就说是我对象，也不能自己做一个妹子出来说是自己对象。只能通过某种方法（追妹子），来产生一个对象。同时在调用这个方法的时候，会对你是否已经有对象进行检查。如果有，那么方法会直接返回，或者产生一个异常（抽你一巴掌，或者new Exception(”流氓!”)），从而保证你只有一个对象。&lt;/p&gt;
+&lt;p&gt;这是一个线程安全的Java单例模式：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt; &lt;span class="n"&gt;myInstance&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt; &lt;span class="nf"&gt;getInstance&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myInstance&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;synchronized&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Singleton&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myInstance&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="n"&gt;myInstance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+                &lt;span class="p"&gt;}&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;myInstance&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="nf"&gt;Singleton&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// Constructor code goes here.&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这个例子简单明了，核心思想是利用Java中函数 的访问权限控制实现单例。&lt;/p&gt;
+&lt;p&gt;但是在Common Lisp中，没有访问权限控制，那怎么去实现单例呢？这就变得非常有意思了。不仅是Common Lisp，Python、Ruby等动态语言中都有一种非常强悍的编程机制——元编程。&lt;/p&gt;
+&lt;p&gt;这是Wikipedia中对元编程的定义：元编程是指某类计算机程序的编写，这类计算机程序编写或者操纵其它程序（或者自身）作为它们的数据，或者在运行时完成部分本应在编译时完成的工作。多数情况下，与手工编写全部代码相比，程序员可以获得更高的工作效率, 或者给与程序更大的灵活度去处理新的情形而无需重新编译。&lt;/p&gt;
+&lt;p&gt;我们需要用到元编程思想中的一个重要应用——元类，即类的模板，元类的实例也是类。&lt;/p&gt;
+&lt;p&gt;我们先定义一个元类:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;standard&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;initform&lt;/span&gt; &lt;span class="n"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;这段代码阻止程序员直接实例化singleton-class，有点儿像Java的抽象类。&lt;/p&gt;
+&lt;p&gt;然后为了严谨，我们对这个元类进行一些继承方面的限定。&lt;/p&gt;
+&lt;p&gt;允许这个元类继承标准类：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defmethod&lt;/span&gt; &lt;span class="n"&gt;validate&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;superclass&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;                                                                 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;superclass&lt;/span&gt; &lt;span class="n"&gt;standard&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;    
+&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;允许其它元类继承这个元类：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defmethod&lt;/span&gt; &lt;span class="n"&gt;validate&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;superclass&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;                                                                 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;superclass&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;   
+&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;不允许其它标准类继承这个元类：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defmethod&lt;/span&gt; &lt;span class="n"&gt;validate&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;superclass&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;standard&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;                                                                  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;superclass&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;然后定义初始化实例函数：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defvar&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defmethod&lt;/span&gt; &lt;span class="n"&gt;initialize&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;after&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pushnew&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;再定义真正的make-instance:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defmethod&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                      &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;slots&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt;
+    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;instance&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;setf&lt;/span&gt; &lt;span class="n"&gt;instance&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;method&lt;/span&gt;&lt;span class="p"&gt;)))))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;还可以定义一个reset-singleton-classes：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defun&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="p"&gt;;;&lt;/span&gt; &lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="n"&gt;means&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;singletons&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;now&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;loop&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
+        &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;setf&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;slot&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;元类完事了，我们定义两个标准类：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;foo1&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;metaclass&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;foo2&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;metaclass&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;让我们测试一下，载入刚刚写好的test.lsp：
+&lt;img alt="2" src="https://lh5.googleusercontent.com/-vhKXWOXzcBw/Uf56NAb3rlI/AAAAAAAAAGs/sR4IKun665k/w415-h297-no/2.png" /&gt; &lt;/p&gt;
+&lt;p&gt;测试一下：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="3" src="https://lh3.googleusercontent.com/-eeLFQSEwkOU/Uf56NPKq97I/AAAAAAAAAGw/jE0cTtiFY6g/w172-h108-no/3.png" /&gt;&lt;/p&gt;
+&lt;p&gt;没有问题，我们还可以试一试刚才写的reset-singleton-classes：
+&lt;img alt="4" src="https://lh5.googleusercontent.com/-ROPqd87viOk/Uf56OKLi-xI/AAAAAAAAAG8/aQnvijRXTvQ/w180-h99-no/4.png" /&gt; &lt;/p&gt;
+&lt;p&gt;果然，foo1的单个实例被清空重建了。&lt;/p&gt;
+&lt;p&gt;小结：Common Lisp中的元类，有一点像Java中的抽象类，比如不能被实例化，可以被继承等等。但元类跟抽象类仍然有着本质的不同：元类的实例是类，不是对象,于是能动态地创建类，更加灵活。Singleton模式具体的实现机制，是在元类中维护了一个内部队列来达到目的。在Python中，元类机制也应用广泛。&lt;/p&gt;
+&lt;p&gt;张教主有这样一句名言：元编程是一种黑魔法，正派人士都很畏惧。&lt;/p&gt;
+&lt;p&gt;我们再来看看工厂模式。&lt;/p&gt;
+&lt;p&gt;下面是一个典型的Java工厂模式：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;abstract&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Pizza&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;abstract&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;getPrice&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// count the cents&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;HamAndMushroomPizza&lt;/span&gt; &lt;span class="n"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Pizza&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;getPrice&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;850&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;DeluxePizza&lt;/span&gt; &lt;span class="n"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Pizza&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;getPrice&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;1050&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;HawaiianPizza&lt;/span&gt; &lt;span class="n"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Pizza&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;getPrice&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;1150&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;PizzaFactory&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;enum&lt;/span&gt; &lt;span class="n"&gt;PizzaType&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;HamMushroom&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="n"&gt;Deluxe&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="n"&gt;Hawaiian&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Pizza&lt;/span&gt; &lt;span class="n"&gt;createPizza&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PizzaType&lt;/span&gt; &lt;span class="n"&gt;pizzaType&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;switch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pizzaType&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;HamMushroom&lt;/span&gt;:
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;HamAndMushroomPizza&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Deluxe&lt;/span&gt;:
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;DeluxePizza&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Hawaiian&lt;/span&gt;:
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;HawaiianPizza&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;throw&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;IllegalArgumentException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;The pizza type &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;pizzaType&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot; is not recognized.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;PizzaLover&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="cm"&gt;/*&lt;/span&gt;
+&lt;span class="cm"&gt;     * Create all available pizzas and print their prices&lt;/span&gt;
+&lt;span class="cm"&gt;     */&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;[])&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PizzaFactory&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PizzaType&lt;/span&gt; &lt;span class="n"&gt;pizzaType&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;PizzaFactory&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PizzaType&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Price of &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;pizzaType&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot; is &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;PizzaFactory&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;createPizza&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pizzaType&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;getPrice&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;输出结果：
+Price of HamMushroom is 850
+Price of Deluxe is 1050
+Price of Hawaiian is 1150&lt;/p&gt;
+&lt;p&gt;在Common Lisp中，类和函数都是first class types ，即一等公民：
+    1，可以被存储到变量中。
+    2，可以作为参数传给其它函数。
+    3，可以作为函数的返回值。
+    4，可以在运行时被创造。
+因此，Common Lisp实现工厂模式就显得简单粗暴了，或者说，根本用不着工厂模式：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;pizza&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;price&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;accessor&lt;/span&gt; &lt;span class="n"&gt;price&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;ham&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mushroom&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;price&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;initform&lt;/span&gt; &lt;span class="mi"&gt;850&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;deluxe&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;price&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;initform&lt;/span&gt; &lt;span class="mi"&gt;1050&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;hawaiian&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;price&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;initform&lt;/span&gt; &lt;span class="mi"&gt;1150&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defparameter&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;types&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ham&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mushroom&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;
+        &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;deluxe&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;
+        &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hawaiian&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;载入测试一下：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="6" src="https://lh3.googleusercontent.com/-nHpRPpSXzts/Uf56Obb5ufI/AAAAAAAAAHI/4lvgkQWPUBo/w415-h164-no/5.png" /&gt;&lt;/p&gt;
+&lt;p&gt;小结：Common Lisp中由于函数是一等公民的缘故，相对于Java中工厂模式的实现要简单的多，不需要额外建一个工厂类，可以随心所欲地玩。函数式语言相当于OO语言来说，确实有一个优点——可以操纵的单元粒度更小更细，所以更加灵活，同时也更加容易失控。&lt;/p&gt;
+&lt;p&gt;最后，让我们看看迭代器模式，首先是Java中的实现：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;util&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ArrayList&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;util&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="n"&gt;interface&lt;/span&gt; &lt;span class="n"&gt;Iterator&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="nf"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;ConcreteIterator&lt;/span&gt; &lt;span class="n"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Iterator&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ArrayList&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;cursor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;ConcreteIterator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+        &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="nf"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cursor&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="p"&gt;()){&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="nf"&gt;next&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;()){&lt;/span&gt;
+            &lt;span class="n"&gt;obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cursor&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;interface&lt;/span&gt; &lt;span class="n"&gt;Aggregate&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Iterator&lt;/span&gt; &lt;span class="nf"&gt;iterator&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;ConcreteAggregate&lt;/span&gt; &lt;span class="n"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Aggregate&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ArrayList&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Iterator&lt;/span&gt; &lt;span class="nf"&gt;iterator&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ConcreteIterator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Test&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+        &lt;span class="n"&gt;Aggregate&lt;/span&gt; &lt;span class="n"&gt;ag&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ConcreteAggregate&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;小明&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;小红&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;小刚&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;Iterator&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iterator&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;()){&lt;/span&gt;
+            &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;核心思想是在内部封装一个Arraylist，只对外暴露Iterator的基本接口，跟C++ STL中迭代器的设计基本一致。&lt;/p&gt;
+&lt;p&gt;在Common Lisp中实现迭代器，我们只需要定义宏：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;defmethod&lt;/span&gt; &lt;span class="nx"&gt;make&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;cursor&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;collection&lt;/span&gt; &lt;span class="nx"&gt;list&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+  &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;(lambda (message)&lt;/span&gt;
+&lt;span class="s1"&gt;      (case message&lt;/span&gt;
+&lt;span class="s1"&gt;    (:next&lt;/span&gt;
+&lt;span class="s1"&gt;     (let ((r (first collection)))&lt;/span&gt;
+&lt;span class="s1"&gt;       (setf collection (cdr collection))&lt;/span&gt;
+&lt;span class="s1"&gt;       (values r (null collection))))&lt;/span&gt;
+&lt;span class="s1"&gt;    (:finished-p&lt;/span&gt;
+&lt;span class="s1"&gt;     (null collection)))))&lt;/span&gt;
+
+&lt;span class="s1"&gt;(defmethod cursor-next ((cursor function))&lt;/span&gt;
+&lt;span class="s1"&gt;  (funcall cursor &amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;next&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;defmethod&lt;/span&gt; &lt;span class="nx"&gt;cursor&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;finished&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;cursor&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;funcall&lt;/span&gt; &lt;span class="nx"&gt;cursor&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="nx"&gt;finished&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;p&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;测试一下:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="7" src="https://lh3.googleusercontent.com/-nHpRPpSXzts/Uf56Obb5ufI/AAAAAAAAAHI/4lvgkQWPUBo/w415-h164-no/6.png" /&gt;&lt;/p&gt;
+&lt;p&gt;小结：Common Lisp中由于自带序列，对迭代天然支持，所以相当于Java会更加简，天生的宏机制表现得畅快淋漓。&lt;/p&gt;
+&lt;p&gt;总结：无论在Java还是Common Lisp中，设计模式虽然有不同的表现形式，但目标都一致的：构造抽象屏障，控制抽象层次，降低模块之间的耦合，尽量编写通用的组件。由于函数在Common Lisp中是一等公民的缘故，因此相对Java来说，Common Lisp的操作粒度更小，我们可以构造各种精巧的小函数并利用宏机制让各个小函数互相组合起来工作，显得更加简洁、灵活和强悍。但同时，这种特点也容易使整个项目的可控性受到威胁。而且Common Lisp这种函数式的数学思维，确实显得过于抽象了，不如Java的OO机制来得更加直观、更加贴近生活，但对锻炼抽象思维很有帮助。&lt;/p&gt;
+&lt;p&gt;最后，在学习Java设计模式的过程中，除了开阔了自己的眼界，同时也勾起了我对函数式编程思想的美好怀念以及继续在课余时间学习SICP(http://book.douban.com/subject/1148282)的动力。&lt;/p&gt;
+&lt;p&gt;以前写Python的时候，我特别喜欢那4把宝剑——lambda、map、reduce、filter带来的随心所欲的编程快感。Java的设计模式对我开启了另一个世界的门——这个世界的疆域更加广阔，规则更加严谨，层次更加明显。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sun, 04 Aug 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-08-04:javashe-ji-mo-shi-zai-common-lispzhong-de-ti-xian.html</guid><category>java</category><category>lisp</category><category>设计模式</category></item><item><title>今天我终于有了自己的独立域名</title><link>http://www.lizherui.com/jin-tian-wo-zhong-yu-you-liao-zi-ji-de-du-li-yu-ming.html</link><description>&lt;p&gt;今天折腾了半天，终于搞定了自己的独立域名：&lt;a href="http://www.lizherui.com"&gt;http://www.lizherui.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;整个过程颇为曲折：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;去&lt;a href="https://www.godaddy.com"&gt;https://www.godaddy.com&lt;/a&gt;上用支付宝花80多块钱购买为期一年的顶级域名，并去修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。&lt;/li&gt;

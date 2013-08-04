@@ -146,6 +146,34 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
  
 
     <div class='article'>
+        <a href="../javashe-ji-mo-shi-zai-common-lispzhong-de-ti-xian.html"><h2>Java设计模式在Common Lisp中的体现</h2></a>
+        <div class= "well small"> 2013-08-04
+
+by <a class="url fn" href="../author/lizherui.html">lizherui</a>
+ 
+
+
+ </div>
+        <div class="summary"><p>最近在进一步学习Java的过程中，我愈发感到Java把面向对象的编程思想玩到了登峰造极的地步。而Java中最能表现面向对象编程思想的，就是大名鼎鼎的设计模式了。</p>
+<p>这是Wikipedia中对设计模式的定义：设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。面向对象设计模式通常以类型或对象来描述其中的关系和相互作用，但不涉及用来完成应用程序的特定类型或对象。设计模式能使不稳定依赖于相对稳定、具体依赖于相对抽象，避免会引起麻烦的紧耦合，以增强软件设计面对并适应变化的能力。</p>
+<p>在学习了一些设计模式后，我们会发现这23种设计模式都围绕着以下三大基本原则：
+1，中意于组合而不是继承。
+2，依赖于接口而不是实现。
+3，高内聚，低耦合。</p>
+<p>不过，除了以上这些收获和感悟以外，我发现了一些更让人感兴趣的东西，这也是这篇文章马上要探讨的重点——Java设计模式在Common lisp中的体现。</p>
+<p>Java和Common lisp, 前者作为OO的代表，喜欢玩类和对象；后者作为Functional Programming的代表，喜欢玩函数和闭包。乍一看它俩应该风马牛不相及，井水不犯河水，但实际上我们会惊讶地发现Java设计模式中有着太多Common Lisp的对照，这种现象让人越来越强烈地感觉：软件设计虽然有众多的门派、风格和表现形式，但总体思想上似乎是殊途同归的，比如构造抽象屏障和提高抽象层次。</p>
+<p>Java设计模式至少有16种设计模式能对应到Common Lisp中，如下图：
+<img alt="aaa" src="https://lh6.googleusercontent.com/--fbXkQDQfg0/Uf56NGxglbI/AAAAAAAAAGo/vpbBtYGAoxM/w414-h292-no/1.png" /></p>
+<p>Talk is ...</p> <a class="btn btn-info xsmall" href="../javashe-ji-mo-shi-zai-common-lispzhong-de-ti-xian.html">read more</a></div>
+    </div>	
+				
+    
+ 
+        
+
+ 
+
+    <div class='article'>
         <a href="../jin-tian-wo-zhong-yu-you-liao-zi-ji-de-du-li-yu-ming.html"><h2>今天我终于有了自己的独立域名</h2></a>
         <div class= "well small"> 2013-08-01
 
@@ -162,27 +190,6 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <li>在Pelican主目录新建CNAME文件，添上刚刚申请的域名：www.lizherui.com。</li>
 </ol>
 <p>有了独立域名后，感觉非常爽，更加坚定了好好打理个人博客的决心。</p> <a class="btn btn-info xsmall" href="../jin-tian-wo-zhong-yu-you-liao-zi-ji-de-du-li-yu-ming.html">read more</a></div>
-    </div>	
-				
-    
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="../pa-qu-xiao-zhao-xin-xi.html"><h2>爬取校招信息</h2></a>
-        <div class= "well small"> 2013-07-31
-
-by <a class="url fn" href="../author/lizherui.html">lizherui</a>
- 
-
-
- </div>
-        <div class="summary"><p>抓取北邮人论坛和水木社区校招信息的爬虫程序, 直接运行main.py即可，非常简洁，可以扩展。</p>
-<p>爬虫根据自定义关键字先对校招信息进行过滤，然后存储到本机redis中。本机若有lamp环境，可直接从redis读取信息到web页面上即可。</p>
-<p>Talk is cheap, show you the code:<a href="https://github.com/lizherui/spider_python">https://github.com/lizherui/spider_python</a>.</p>
-<p>Enjoy it.</p> <a class="btn btn-info xsmall" href="../pa-qu-xiao-zhao-xin-xi.html">read more</a></div>
     </div>	
 				
             <div class="pagination">
