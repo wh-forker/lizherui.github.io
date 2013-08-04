@@ -207,7 +207,7 @@ Price of Hawaiian is 1150&lt;/p&gt;
 
 
 &lt;p&gt;载入测试一下：&lt;/p&gt;
-&lt;p&gt;&lt;img alt="5" src="https://lh3.googleusercontent.com/-nHpRPpSXzts/Uf56Obb5ufI/AAAAAAAAAHI/4lvgkQWPUBo/w415-h164-no/5.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="5" src="https://lh5.googleusercontent.com/-YNmX58cxcDo/Uf56OIKW--I/AAAAAAAAAHA/W-vT08Kmtwo/w324-h112-no/5.png" /&gt;&lt;/p&gt;
 &lt;p&gt;小结：Common Lisp中由于函数是一等公民的缘故，相对于Java中工厂模式的实现要简单的多，不需要额外建一个工厂类，可以随心所欲地玩。函数式语言相当于OO语言来说，确实有一个优点——可以操纵的单元粒度更小更细，所以更加灵活，同时也更加容易失控。&lt;/p&gt;
 &lt;p&gt;最后，让我们看看迭代器模式，首先是Java中的实现：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;util&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ArrayList&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
