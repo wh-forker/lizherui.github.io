@@ -69,8 +69,8 @@ by <a class="url fn" href="./author/lizherui.html">lizherui</a>
 <p>在学习了一些设计模式后，我们会发现这23种设计模式都围绕着以下三大基本原则：</p>
 <ol>
 <li>中意于组合而不是继承。</li>
-<li>依赖于接口而不是实现。
-3.œ 高内聚，低耦合。</li>
+<li>依赖于接口而不是实现。</li>
+<li>高内聚，低耦合。</li>
 </ol>
 <p>不过，除了以上这些收获和感悟以外，我发现了一些更让人感兴趣的东西，这也是这篇文章马上要探讨的重点——Java设计模式在Common lisp中的体现。</p>
 <p>Java和Common lisp, 前者作为OO的代表，喜欢玩类和对象；后者作为Functional Programming的代表，喜欢玩函数和闭包。乍一看它俩应该风马牛不相及，井水不犯河水，但实际上我们会惊讶地发现Java设计模式中有着太多Common Lisp的对照，这种现象让人越来越强烈地感觉：软件设计虽然有众多的门派、风格和表现形式，但总体思想上似乎是殊途同归的，比如构造抽象屏障和提高抽象层次。</p>
@@ -244,12 +244,14 @@ by <a class="url fn" href="./author/lizherui.html">lizherui</a>
 Price of HamMushroom is 850
 Price of Deluxe is 1050
 Price of Hawaiian is 1150</p>
-<p>在Common Lisp中，类和函数都是first class types ，即一等公民：
-    1，可以被存储到变量中。
-    2，可以作为参数传给其它函数。
-    3，可以作为函数的返回值。
-    4，可以在运行时被创造。
-因此，Common Lisp实现工厂模式就显得简单粗暴了，或者说，根本用不着工厂模式：</p>
+<p>在Common Lisp中，类和函数都是first class types ，即一等公民：</p>
+<ol>
+<li>可以被存储到变量中。</li>
+<li>可以作为参数传给其它。</li>
+<li>可以作为函数的返。</li>
+<li>可以在运行时被创造。</li>
+</ol>
+<p>因此，Common Lisp实现工厂模式就显得简单粗暴了，或者说，根本用不着工厂模式：</p>
 <div class="highlight"><pre><span class="p">(</span><span class="n">defclass</span> <span class="n">pizza</span> <span class="p">()</span>
   <span class="p">((</span><span class="n">price</span> <span class="o">:</span><span class="n">accessor</span> <span class="n">price</span><span class="p">)))</span>
 

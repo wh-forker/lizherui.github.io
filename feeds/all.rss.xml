@@ -4,8 +4,8 @@
 &lt;p&gt;在学习了一些设计模式后，我们会发现这23种设计模式都围绕着以下三大基本原则：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;中意于组合而不是继承。&lt;/li&gt;
-&lt;li&gt;依赖于接口而不是实现。
-3.œ 高内聚，低耦合。&lt;/li&gt;
+&lt;li&gt;依赖于接口而不是实现。&lt;/li&gt;
+&lt;li&gt;高内聚，低耦合。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;不过，除了以上这些收获和感悟以外，我发现了一些更让人感兴趣的东西，这也是这篇文章马上要探讨的重点——Java设计模式在Common lisp中的体现。&lt;/p&gt;
 &lt;p&gt;Java和Common lisp, 前者作为OO的代表，喜欢玩类和对象；后者作为Functional Programming的代表，喜欢玩函数和闭包。乍一看它俩应该风马牛不相及，井水不犯河水，但实际上我们会惊讶地发现Java设计模式中有着太多Common Lisp的对照，这种现象让人越来越强烈地感觉：软件设计虽然有众多的门派、风格和表现形式，但总体思想上似乎是殊途同归的，比如构造抽象屏障和提高抽象层次。&lt;/p&gt;
@@ -179,12 +179,14 @@
 Price of HamMushroom is 850
 Price of Deluxe is 1050
 Price of Hawaiian is 1150&lt;/p&gt;
-&lt;p&gt;在Common Lisp中，类和函数都是first class types ，即一等公民：
-    1，可以被存储到变量中。
-    2，可以作为参数传给其它函数。
-    3，可以作为函数的返回值。
-    4，可以在运行时被创造。
-因此，Common Lisp实现工厂模式就显得简单粗暴了，或者说，根本用不着工厂模式：&lt;/p&gt;
+&lt;p&gt;在Common Lisp中，类和函数都是first class types ，即一等公民：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;可以被存储到变量中。&lt;/li&gt;
+&lt;li&gt;可以作为参数传给其它。&lt;/li&gt;
+&lt;li&gt;可以作为函数的返。&lt;/li&gt;
+&lt;li&gt;可以在运行时被创造。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;因此，Common Lisp实现工厂模式就显得简单粗暴了，或者说，根本用不着工厂模式：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;pizza&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
   &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;price&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;accessor&lt;/span&gt; &lt;span class="n"&gt;price&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
 
