@@ -29,10 +29,7 @@ FEED_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 
 PLUGIN_PATH = u"pelican-plugins"
-
-PLUGINS = ["sitemap", "related_posts"]
-
-RELATED_POSTS_MAX  = 3
+PLUGINS = ["sitemap"]
 
 ## 配置sitemap 插件
 SITEMAP = {
