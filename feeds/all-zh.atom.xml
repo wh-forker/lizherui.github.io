@@ -175,10 +175,10 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;输出结果：
-Price of HamMushroom is 850
-Price of Deluxe is 1050
-Price of Hawaiian is 1150&lt;/p&gt;
+&lt;p&gt;输出结果：&lt;/p&gt;
+&lt;p&gt;Price of HamMushroom is 850&lt;/p&gt;
+&lt;p&gt;Price of Deluxe is 1050&lt;/p&gt;
+&lt;p&gt;Price of Hawaiian is 1150&lt;/p&gt;
 &lt;p&gt;在Common Lisp中，类和函数都是first class types ，即一等公民：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;可以被存储到变量中。&lt;/li&gt;
