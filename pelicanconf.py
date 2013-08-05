@@ -28,6 +28,25 @@ DISQUS_SITENAME = 'lizheruisworld'
 FEED_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 
+PLUGIN_PATH = u"pelican-plugins"
+
+PLUGINS = ["sitemap"]
+
+## 配置sitemap 插件
+SITEMAP = {
+    "format": "xml",
+    "priorities": {
+        "articles": 0.7,
+        "indexes": 0.5,
+        "pages": 0.3,
+    },
+    "changefreqs": {
+        "articles": "monthly",
+        "indexes": "daily",
+        "pages": "monthly",
+    }
+}
+
 # Blogroll
 LINKS =  (('Google', 'https://www.google.com/ncr'),
           ('Python', 'http://python.org/'),
