@@ -8,7 +8,7 @@ Title: About
 
 我最终决定加入阿里。
 
-我热爱编程，开发环境嗜好Mac OS X + Oh-my-zsh + Vim + Git的组合，以及clang + gdb进行编译、调试。键盘流，快捷键党，尤其反感编程的时候用鼠标的编程习惯。编程语言方面熟悉c/c++/java/python/php，有代码洁癖，平时没事喜欢看点源码，常年混迹github，google group等等开源相关的社区。
+我热爱编程，开发环境嗜好Mac OS X + Oh-my-zsh + Vim + Git的组合，以及clang + gdb进行编译、调试。键盘流，快捷键党，尤其反感编程的时候用鼠标的编程习惯。编程语言方面熟悉c/c++/java/python/php/scheme，有代码洁癖，平时没事喜欢看点源码，常年混迹github，google group等等开源相关的社区。
 
 我崇尚Geek文化与黑客精神，喜欢小众的东西，热爱一切简洁、快速且强壮的事物。
 
