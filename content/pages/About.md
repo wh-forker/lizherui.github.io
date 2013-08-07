@@ -8,7 +8,7 @@ Title: About
 
 我最终在毕业的时候选择了阿里，花名"骨玉"。
 
-我热爱编程，开发环境嗜好Mac OS X + Oh-my-zsh + Vim + Git的组合，常用clang + gdb进行编译、调试。键盘流，快捷键党，尤其反感编程的时候用鼠标的编程习惯。编程语言方面熟悉c/c++/java/python/php/scheme，有代码洁癖，平时没事喜欢看点源码，常年混迹github，google group，stackoverflow等技术社区。
+我热爱编程，开发环境嗜好Mac OS X + Oh-my-zsh + Vim + Git的组合，惯用clang + gdb进行编译、调试。键盘流，快捷键党，尤其反感编程的时候用鼠标的编程习惯。编程语言方面熟悉c/c++/java/python/php/scheme，有代码洁癖，平时没事喜欢看点源码，常年混迹github，google group，stackoverflow等技术社区。
 
 我崇尚Geek文化与黑客精神，喜欢小众的东西，热爱一切简洁、快速且强壮的事物。
 
