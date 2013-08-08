@@ -14,6 +14,6 @@ Title: About
 
 我热爱竞争。大四这一年找工作拼得很凶，落下了竞争后遗症：面对任何竞争，我都会不由自主地凶狠起来，并无比渴望获胜。
 
-我的个人简历维护在<https://gist.github.com/lizherui/5640792>，目前还是毕业前的资料。不过到了必要的时候，我会彻底更新它。
+我的个人简历维护在<https://gist.github.com/lizherui/6184006>，目前还是毕业前的资料。不过到了必要的时候，我会彻底更新它。
 
 我收藏的技术书籍放在Dropbox上<https://www.dropbox.com/sh/4wweu1f2wd60epg/Sv-EQzFhfw>，会经常更新。
