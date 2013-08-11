@@ -2,7 +2,6 @@ Date: 2013-08-11
 Title: 为什么我一直强烈推荐程序员使用Mac OS X
 Category: Tech
 Tags: mac os x, macintoch
-
 我在相当长的时间里对Mac OS X一无所知。像很多程序员一样，最开始使用Windows进行开发，然后转到Linux。但是去年11月我终于攒够钱了，果断入手Macbook Pro，从此踏上使用Mac OS X的道路，一去不复返。
 
 这一年来使用Mac OS X的经历，不仅极大地开拓了我的视野，而且在很大程度上改变了我对待软件开发的态度。当然了，最重要的是，它使我的开发效率有了质的提升。
