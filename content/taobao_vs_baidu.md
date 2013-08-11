@@ -33,7 +33,7 @@ Tags: 淘宝, 百度, 公司
 ###工程师文化
 百度封闭，淘宝开放。
 
-说到开放这个事情，我常常感叹于这个页面<https://github.com/alibaba>上这些大名鼎鼎的开源项目:Tengine, LVS, tfs, tair, oceanbase, fastjson, webx, taocode, zeux, ali_kernel, druid……
+说到开放这个事情，我常常感叹于这个页面<https://github.com/alibaba>上这些大名鼎鼎的开源项目:Tengine, LVS, tfs, tair, oceanbase, fastjson, webx, taocode, zeus, ali_kernel, druid……
 
 百度什么都没有。
 
