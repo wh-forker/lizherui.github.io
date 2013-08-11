@@ -34,6 +34,12 @@
 &lt;p&gt;而且由于触摸板离键盘很近，我们能很方便地以手掌为轴心在触摸板和键盘之间旋转切换，而不需要像使用鼠标+键盘那样很麻烦地把整只手移来移去。这一点很重要，无时无刻都在极大地提高开发效率。&lt;/p&gt;
 &lt;h3&gt;设计优美的软件&lt;/h3&gt;
 &lt;p&gt;Mac OS X上的软件外貌优美，风格统一，没有乱七八糟的广告和病毒，也不需要360这样强奸用户的软件。一切都是绿色的、纯天然的。&lt;/p&gt;
+&lt;h3&gt;独一无二的字体渲染&lt;/h3&gt;
+&lt;p&gt;Mac OS X的字体渲染效果是最好的，完爆Windows/Linux。在Windows上有一个模仿Mac OS X字体渲染效果的软件叫Mactype，但仍然不能与Mac OS X的字体渲染效果相提并论。大名鼎鼎的Monaco字体有着程序员专用字体的美称，同样来自Mac OS X。&lt;/p&gt;
+&lt;p&gt;这是命令行下的字体效果：
+&lt;img alt="2" src="https://lh5.googleusercontent.com/-K5cnpKlXKwc/UgfGws5tvzI/AAAAAAAAAJ4/cXOTHfdjWRQ/w728-h350-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-12+%25E4%25B8%258A%25E5%258D%25881.15.00.png" /&gt;&lt;/p&gt;
+&lt;p&gt;这是Vim中的字体效果:
+&lt;img alt="3" src="https://lh5.googleusercontent.com/-CrhmcI9FC4Q/UgfG-YrNY1I/AAAAAAAAAKA/1ytp9t3SWto/w724-h612-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-12+%25E4%25B8%258A%25E5%258D%25881.16.22.png" /&gt;&lt;/p&gt;
 &lt;h3&gt;行云流水的快捷键&lt;/h3&gt;
 &lt;p&gt;Mac OS X上的快捷键随处可见，能随心所欲地定制，并且大多以Command为组合快捷键中的主键，用大拇指按起来极其顺手，让人渐渐忘却了Windows/Linux上用小拇指费劲地按ctrl/alt的痛苦日子。&lt;/p&gt;
 &lt;h3&gt;强悍易用的软件包管理器&lt;/h3&gt;

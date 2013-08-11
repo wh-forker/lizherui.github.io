@@ -54,16 +54,29 @@ Linux还有一个大问题就是图形界面太渣，而且很不稳定，实在
 
 ##Mac OS X的其它优势
 除了上述所说的Mac OS X既含有程序员必备的Unix命令行环境，又具备高端大气上档次的图形界面这一招牌优势外，Mac OS X中还有很多强悍的利器。
+
 ###眼花缭乱的手势
 我们看到使用macbook的人很少使用鼠标，不是因为他们忘了带，而是根本不需要鼠标，因为触摸板+手势完爆鼠标。
 
 Macbook的触摸板无疑是世界上最出色的：轻拍点按，双指右键，双指上下滚动，三指查找，三指拖移，四指左右切换全屏程序，四指上推显示Mission Control，四指下推显示Expose，四指合拢显示Launchpad，四指张开显示桌面。。。。。。
 
 而且由于触摸板离键盘很近，我们能很方便地以手掌为轴心在触摸板和键盘之间旋转切换，而不需要像使用鼠标+键盘那样很麻烦地把整只手移来移去。这一点很重要，无时无刻都在极大地提高开发效率。
+
 ###设计优美的软件
 Mac OS X上的软件外貌优美，风格统一，没有乱七八糟的广告和病毒，也不需要360这样强奸用户的软件。一切都是绿色的、纯天然的。
+
+###独一无二的字体渲染
+Mac OS X的字体渲染效果是最好的，完爆Windows/Linux。在Windows上有一个模仿Mac OS X字体渲染效果的软件叫Mactype，但仍然不能与Mac OS X的字体渲染效果相提并论。大名鼎鼎的Monaco字体有着程序员专用字体的美称，同样来自Mac OS X。
+
+这是命令行下的字体效果：
+![2](https://lh5.googleusercontent.com/-K5cnpKlXKwc/UgfGws5tvzI/AAAAAAAAAJ4/cXOTHfdjWRQ/w728-h350-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-12+%25E4%25B8%258A%25E5%258D%25881.15.00.png)
+
+这是Vim中的字体效果:
+![3](https://lh5.googleusercontent.com/-CrhmcI9FC4Q/UgfG-YrNY1I/AAAAAAAAAKA/1ytp9t3SWto/w724-h612-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-12+%25E4%25B8%258A%25E5%258D%25881.16.22.png)
+
 ###行云流水的快捷键
 Mac OS X上的快捷键随处可见，能随心所欲地定制，并且大多以Command为组合快捷键中的主键，用大拇指按起来极其顺手，让人渐渐忘却了Windows/Linux上用小拇指费劲地按ctrl/alt的痛苦日子。
+
 ###强悍易用的软件包管理器
 Homebrew，Mac OS X上强悍的软件包管理器，使用Ruby开发，托管在github上：<https://github.com/mxcl/homebrew>。我用过Ubuntu上的apt，也用过Fedora上的yum，但它俩实在无法跟Homebrew相提并论。
 ##结束语
