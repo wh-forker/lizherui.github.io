@@ -2,7 +2,10 @@ Date: 2013-08-11
 Title: 为什么我一直强烈推荐程序员使用Mac OS X
 Category: Tech
 Tags: mac os x, macintoch
-我在相当长的时间里对Mac OS X一无所知。像很多程序员一样，最开始使用Windows进行开发，然后转到Linux。但是去年11月我终于攒够钱了，果断入手Macbook Pro，从此踏上使用Mac OS X的道路，一去不复返。
+
+像绝大多数国内程序员一样，我在相当长的时间里对Mac OS X一无所知，最开始使用Windows进行开发，然后转到Linux。
+
+去年11月我终于攒够钱了，决定试一试从没接触过的Mac OS X，于是入手Macbook Pro，没想到从此踏上了Mac OS X的道路，一去不复返。
 
 这一年来使用Mac OS X的经历，不仅极大地开拓了我的视野，而且在很大程度上改变了我对待软件开发的态度。当然了，最重要的是，它使我的开发效率有了质的提升。
 
@@ -60,7 +63,7 @@ Macbook的触摸板无疑是世界上最出色的：轻拍点按，双指右键�
 ###设计优美的软件
 Mac OS X上的软件外貌优美，风格统一，没有乱七八糟的广告和病毒，也不需要360这样强奸用户的软件。一切都是绿色的、纯天然的。
 ###行云流水的快捷键
-Mac OS X上的快捷键能随心所欲地定制，并且大多以Command为组合快捷键中的主键，用大拇指按起来极其顺手，让人渐渐忘却了Windows/Linux上用小拇指费劲地按ctrl/alt的痛苦日子。
+Mac OS X上的快捷键随处可见，能随心所欲地定制，并且大多以Command为组合快捷键中的主键，用大拇指按起来极其顺手，让人渐渐忘却了Windows/Linux上用小拇指费劲地按ctrl/alt的痛苦日子。
 ###强悍易用的软件包管理器
 Homebrew，Mac OS X上强悍的软件包管理器，使用Ruby开发，托管在github上：<https://github.com/mxcl/homebrew>。我用过Ubuntu上的apt，也用过Fedora上的yum，但它俩实在无法跟Homebrew相提并论。
 ##结束语
