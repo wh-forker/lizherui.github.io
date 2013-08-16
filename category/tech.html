@@ -60,8 +60,8 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="../wei-shi-yao-wo-zhi-qiang-lie-tui-jian-cheng-xu-yuan-shi-yong-mac-os-x.html"><h1>为什么我一直强烈推荐程序员使用Mac OS X</h1></a>
-            2013-08-11
+            <a href="../bu-bu-da-zao-geekfeng-ge-de-ji-zhu-bo-ke.html"><h1>一步一步打造Geek风格的技术博客</h1></a>
+            2013-08-17
 
 by <a class="url fn" href="../author/lizherui.html">lizherui</a>
  
@@ -70,7 +70,199 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
  
         </div>
         
-        <div><p>像绝大多数国内程序员一样，我在相当长的时间里对Mac OS X一无所知，最开始使用Windows进行开发，然后转到Linux。</p>
+        <div><h2>如梦初醒</h2>
+<hr />
+<h3>Geek是什么</h3>
+<p>Geek更多的是一种精神，一种态度，一种对技术的理解与信念。他们无法忍受丑陋的代码，拙劣的技术。他们思路开阔，技术娴熟，他们不甘平庸，追求完美。他们不会囿于常识，他们敢于突破。在常人眼中，他们不走寻常路，享受各种非主流的技术。但在他们自己眼中，这些又是那么得自然与优美。他们用自己的行为诠释着自己对于技术的理解，用那份固执传达着自己的信念。</p>
+<p>他们掌握并热爱着技术，叛逆、执着，崇尚自由。</p>
+<h3>为什么不选择CSDN、Wordpress、Jekyll等技术</h3>
+<p>我在CSDN上发表博文被和谐了一次，就不会允许这种事发生第二次。</p>
+<p>Wordpress上手容易、功能强大、插件丰富。但是在我看来，这些优点同时也是它的缺点：太笨重、太无脑、不够酷、可定制的粒度不够小。我更喜欢简洁快速粗暴的博客系统。</p>
+<p>Jekyll非常棒，可惜它基于Ruby。对于Python爱好者而言，基于Python的Pelican显然更加可口。</p>
+<h2>卧薪尝胆</h2>
+<hr />
+<p>我在搭建这个博客的过程中学到了很多很多有意思的技术。</p>
+<p>搭建环境为Mac OS X/Linux，Windows下可能会麻烦一些。</p>
+<p>搭建过程中会涉及到的技术名词如下：</p>
+<ul>
+<li>Python</li>
+<li>Pip</li>
+<li>Pelican</li>
+<li>Jinja2</li>
+<li>Github </li>
+<li>Git</li>
+<li>Makefile</li>
+<li>Markdown</li>
+<li>Mou</li>
+<li>Jinja2</li>
+<li>Google_Analytics</li>
+<li>Google_Custom_Search</li>
+<li>Picasa</li>
+<li>Disqus</li>
+<li>Rss</li>
+<li>Sitemap</li>
+<li>Godaddy</li>
+<li>Dnspod</li>
+<li>A记录</li>
+</ul>
+<p>若对任何一个技术名词有疑问，请翻墙Google it. (<a href="https://www.google.com/ncr">https://www.google.com/ncr</a>)</p>
+<h2>初见端倪</h2>
+<hr />
+<p>开始动手。</p>
+<h3>Github入门指南</h3>
+<p>请参考<a href="http://blog.csdn.net/duxinfeng2010/article/details/8654690">http://blog.csdn.net/duxinfeng2010/article/details/8654690</a></p>
+<h3>使用Github Pages创建个人博客</h3>
+<p>Github为每一个用户分配了一个二级域名username.github.io，用户为自己的二级域名创建主页很简单，只需要在Github下创建一个名为username.github.io的版本库，并向其master分支提交网站静态页面即可。</p>
+<ul>
+<li>登陆Github，创建一个名为username.github.io的版本库（将username替换成自己的Github账户名）。</li>
+<li>点击Setting，选择一个自己喜欢的模板，最后点击发布public按钮。</li>
+<li>耐心等待一段时间（不超过10分钟），登陆http://username.github.io，会发现自己的个人博客已经生成。</li>
+</ul>
+<h3>安装Pelican和Markdown</h3>
+<div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">pelican</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">markdown</span>
+</pre></div>
+
+
+<h3>搭建骨架</h3>
+<div class="highlight"><pre><span class="n">mkdir</span> <span class="n">blog</span>
+<span class="n">cd</span> <span class="n">blog</span>
+<span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span>
+</pre></div>
+
+
+<p>根据提示一步步输入相应的配置项，不知道如何设置的接受默认即可，后续可以通过编辑pelicanconf.py文件更改配置)</p>
+<p>以下是生成的目录结构：</p>
+<div class="highlight"><pre><span class="n">blog</span><span class="o">/</span>
+<span class="err">├──</span> <span class="n">content</span>              <span class="err">#</span> <span class="err">存放输入的源文件</span>
+<span class="err">│</span>   <span class="err">└──</span> <span class="p">(</span><span class="n">pages</span><span class="p">)</span>          <span class="err">#</span> <span class="err">存放手工创建的静态页面</span>
+<span class="err">├──</span> <span class="n">output</span>               <span class="err">#</span> <span class="err">生成的输出文件</span>
+<span class="err">├──</span> <span class="n">develop_server</span><span class="p">.</span><span class="n">sh</span>    <span class="err">#</span> <span class="err">方便开启测试服务器</span>
+<span class="err">├──</span> <span class="n">Makefile</span>             <span class="err">#</span> <span class="err">方便管理博客的</span><span class="n">Makefile</span>
+<span class="err">├──</span> <span class="n">pelicanconf</span><span class="p">.</span><span class="n">py</span>       <span class="err">#</span> <span class="err">主配置文件</span>
+<span class="err">└──</span> <span class="n">publishconf</span><span class="p">.</span><span class="n">py</span>       <span class="err">#</span> <span class="err">主发布文件，可删除</span>
+</pre></div>
+
+
+<p>进入output把自己刚刚建好的username.github.io版本库clone下来：</p>
+<div class="highlight"><pre><span class="n">cd</span> <span class="n">output</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">:</span><span class="n">username</span><span class="o">/</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span>
+</pre></div>
+
+
+<h3>开始写博文</h3>
+<p>在content目录下用Markdown语法来写一篇文章，最好选择专业的Markdown编辑器，在Mac OS X下推荐使用Mou，在Linux/Windows下请Google。</p>
+<p>用Markdown写博文截图如下：
+<img alt="1" src="https://lh5.googleusercontent.com/-edzDa6ch3Jk/Ug5oATNTjsI/AAAAAAAAAKs/WIqU7KziyOA/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-17+%25E4%25B8%258A%25E5%258D%25881.57.09.png" /></p>
+<p>左半边是正在用markdown写的博文，右边是即时预览效果。</p>
+<p>写完后，执行以下命令，即可在本机<a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>看到效果。</p>
+<div class="highlight"><pre><span class="n">make</span> <span class="n">publish</span>
+<span class="n">make</span> <span class="n">serve</span>
+</pre></div>
+
+
+<p>若要一键上传到Github，需要修改Makefile两处地方：</p>
+<div class="highlight"><pre><span class="nl">publish:</span>
+<span class="err">$</span><span class="p">(</span><span class="n">PELICAN</span><span class="p">)</span> <span class="err">$</span><span class="p">(</span><span class="n">INPUTDIR</span><span class="p">)</span> <span class="o">-</span><span class="n">o</span> <span class="err">$</span><span class="p">(</span><span class="n">OUTPUTDIR</span><span class="p">)</span> <span class="o">-</span><span class="n">s</span> <span class="err">$</span><span class="p">(</span><span class="n">CONFFILE</span><span class="p">)</span> <span class="err">$</span><span class="p">(</span><span class="n">PELICANOPTS</span><span class="p">)</span>
+
+<span class="nl">github:</span> <span class="n">publish</span>
+<span class="n">git</span> <span class="n">add</span> <span class="p">.</span> <span class="p">;</span> <span class="n">cd</span> <span class="n">OUTPUTDIR</span> <span class="p">;</span> <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="err">&#39;</span><span class="n">your</span> <span class="n">comments</span><span class="err">&#39;</span> <span class="p">;</span> <span class="n">git</span> <span class="n">push</span>
+</pre></div>
+
+
+<p>以后写完文章执行make github就可以一键部署了。</p>
+<h2>如虎添翼</h2>
+<hr />
+<p>我们已经能成功地用markdown写出博文并部署到github了，但这远远不够。</p>
+<h3>管理图片</h3>
+<p>我觉得使用云相册比本地图片要方便的多，我使用picasa(<a href="https://picasaweb.google.com">https://picasaweb.google.com</a>)来维护blog的所有图片。</p>
+<h3>挑选主题</h3>
+<p>安装主题，比如bootstrap2：</p>
+<div class="highlight"><pre><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/getpelican/pelican-themes.git</span>
+<span class="n">cd</span> <span class="n">pelican</span><span class="o">-</span><span class="n">themes</span>
+<span class="n">pelican</span><span class="o">-</span><span class="n">themes</span> <span class="o">-</span><span class="n">i</span> <span class="n">bootstrap2</span>
+</pre></div>
+
+
+<p>选择主题，在pelicanconf.py中添加</p>
+<div class="highlight"><pre><span class="n">THEME</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">bootstrap2</span><span class="err">&#39;</span>
+</pre></div>
+
+
+<h3>安装第三方评论系统</h3>
+<p>在Disqus(<a href="https://disqus.com/admin/signup">https://disqus.com/admin/signup</a>)上申请一个站点，记牢Shortname。
+在pelicanconf.py添加</p>
+<div class="highlight"><pre><span class="n">DISQUS_SITENAME</span> <span class="o">=</span> <span class="n">Shortname</span>
+</pre></div>
+
+
+<h3>添加Google Analytics</h3>
+<p>去Google Analytics(<a href="http://www.google.com/analytics">http://www.google.com/analytics</a>)申请账号，记下跟踪ID。
+在pelicanconf.py添加</p>
+<div class="highlight"><pre><span class="n">GOOGLE_ANALYTICS</span> <span class="o">=</span> <span class="err">跟踪</span><span class="n">ID</span>
+</pre></div>
+
+
+<p>Google Analytics极其强悍，截图说明一切：
+<img alt="2" src="https://lh6.googleusercontent.com/-9vXmIT6vXDo/Ug5wTSu4wMI/AAAAAAAAALM/5-VSrnXNGUU/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-17+%25E4%25B8%258A%25E5%258D%25882.31.26.png" /></p>
+<p><img alt="3" src="https://lh6.googleusercontent.com/-a4ZAnTD7F0I/Ug5wTX0w9nI/AAAAAAAAALI/x9J0atK3lpU/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-17+%25E4%25B8%258A%25E5%258D%25882.31.54.png" /></p>
+<h3>添加插件</h3>
+<div class="highlight"><pre><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="o">:</span><span class="c1">//github.com/getpelican/pelican-plugins.git</span>
+</pre></div>
+
+
+<p>比如我要使用sitemap，在pelicanconf.py里配置如下</p>
+<div class="highlight"><pre><span class="n">PLUGIN_PATH</span> <span class="o">=</span> <span class="n">u</span><span class="s">&quot;pelican-plugins&quot;</span>
+<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;sitemap&quot;</span><span class="p">]</span>
+<span class="n">SITEMAP</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">&quot;format&quot;</span><span class="o">:</span> <span class="s">&quot;xml&quot;</span><span class="p">,</span>
+    <span class="s">&quot;priorities&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s">&quot;articles&quot;</span><span class="o">:</span> <span class="mf">0.7</span><span class="p">,</span>
+        <span class="s">&quot;indexes&quot;</span><span class="o">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="s">&quot;pages&quot;</span><span class="o">:</span> <span class="mf">0.3</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="s">&quot;changefreqs&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s">&quot;articles&quot;</span><span class="o">:</span> <span class="s">&quot;monthly&quot;</span><span class="p">,</span>
+        <span class="s">&quot;indexes&quot;</span><span class="o">:</span> <span class="s">&quot;daily&quot;</span><span class="p">,</span>
+        <span class="s">&quot;pages&quot;</span><span class="o">:</span> <span class="s">&quot;monthly&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3>使用Google站内搜索</h3>
+<p>请参考<a href="http://www.codenut.net/post/2013-06-30-cse">http://www.codenut.net/post/2013-06-30-cse</a></p>
+<h3>申请独立域名</h3>
+<ul>
+<li>在<a href="https://www.godaddy.com">https://www.godaddy.com</a>上用支付宝花购买为期一年的顶级域名，并去修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。</li>
+<li>在<a href="https://www.dnspod.cn">https://www.dnspod.cn</a>上添加新域名，并申请一条A记录指向Github Pages的ip:207.97.227.245；</li>
+<li>在Pelican主目录新建CNAME文件，添上刚刚申请的域名，如我的www.lizherui.com</li>
+</ul>
+<h2>登峰造极</h2>
+<hr />
+<p>最后，如果感觉还不够味儿，可以参考Pelican官方文档和这个博客的完整源码。</p>
+<p>Pelican : <a href="http://docs.getpelican.com/en/3.2">http://docs.getpelican.com/en/3.2</a></p>
+<p>Source Code : <a href="https://github.com/lizherui/lizherui.github.io">https://github.com/lizherui/lizherui.github.io</a> </p>
+<p>Have fun!</p></div>
+        <hr />
+    </div>
+		
+    
+ 
+        
+
+ 
+
+    <div class='article'>
+        <a href="../wei-shi-yao-wo-zhi-qiang-lie-tui-jian-cheng-xu-yuan-shi-yong-mac-os-x.html"><h2>为什么我一直强烈推荐程序员使用Mac OS X</h2></a>
+        <div class= "well small"> 2013-08-11
+
+by <a class="url fn" href="../author/lizherui.html">lizherui</a>
+ 
+
+
+ </div>
+        <div class="summary"><p>像绝大多数国内程序员一样，我在相当长的时间里对Mac OS X一无所知，最开始使用Windows进行开发，然后转到Linux。</p>
 <p>去年11月我终于攒够钱了，决定试着从Linux转到Mac OS X，于是入手Macbook Pro，从此踏上了Mac OS X的道路，没想到一去不复返。</p>
 <p>这一年来使用Mac OS X的经历，不仅极大地开拓了我的视野，而且在很大程度上改变了我对待软件开发的态度。当然了，最重要的是，它使我的开发效率有了质的提升。</p>
 <h2>Macintosh在国内的现状</h2>
@@ -78,48 +270,9 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <p>是因为Macintosh太贵了？还是因为Mac OS X不兼容Windows的一些软件？虽然这两条理由确实会打消广大普通用户购买Macintosh的念头，但是对于国内程序员来讲，这俩显然都不是问题。</p>
 <p>那到底是什么原因阻碍了绝大多数国内程序员使用Mac OS X呢？</p>
 <p>我仔细观察过这个事情很长时间，后来越来越明晰地发现，最根本的原因是绝大多数国内程序员完全都不知道Mac OS X是什么，更别提使用Mac OS X能给自己带来哪些好处了。</p>
-<h2>Mac OS X首先是Unix</h2>
-<p>没错，Mac OS X是Unix，这是最重要的一点，而很多很多国内程序员都不知道。</p>
-<p>这是Wikipedia对Mac OS X的部分描述：Mac OS X于1998年首次推出，并从2002年起随Macintosh发售。它是一套Unix基础的操作系统，包含两个主要的部份：核心名为Darwin，是以FreeBSD源代码和Mach微核心为基础，由苹果公司和独立开发者社区协力开发，以及一个由苹果计算机开发，名为Aqua之专有版权的图形界面。</p>
-<p>在命令行执行uname -a可以看到:
-<img alt="1" src="https://lh6.googleusercontent.com/v4Y0Fq4yLwoyn9aNLPllnXuooi_0pxbf4v3QUhyDQGk=w958-h40-no" /></p>
-<p>Mac OS X甚至比Linux具有更纯正的Unix血统，它是真正的Unix，符合标准，有授权，可以合法地用Unix商标。</p>
-<h2>Unix环境意味着什么</h2>
-<p>对于非c#/.net系程序员来讲，一套Unix环境绝对是必备的，尤其是C、C++、PHP、Python、Ruby程序员。Java程序员倒不是那么依赖Unix环境，但使用Unix环境只会如虎添翼。</p>
-<p>我回想起使用Windows开发C/C++/Python的那段日子，最痛苦的事情倒不是有些软件只支持Unix环境，而是当开发过程中遇到一些Windows环境下特有的奇奇怪怪的问题时，Google都搜索不到相应的解决方案，因为活跃的开发者大多使用Unix环境。</p>
-<p>这样的事情发生多了，就会让开发人员感到越来越沮丧，进而绝望。</p>
-<p>于是像大多数程序员一样，我开始学习使用Linux。</p>
-<h2>Linux操作系统的问题</h2>
-<p>就开发程序而言，Linux没有什么问题。</p>
-<p>Linux最大的问题之一在于桌面软件实在太少，连基本的搜狗输入法、QQ都没有，更别提其它的了。</p>
-<p>这就导致我们必须要经常在Linux和Windows之间切换：在Linux下开发，在Windows下做开发以外的事情。</p>
-<p>这样的事情做久了，就会越来越厌烦。</p>
-<p>Linux还有一个大问题就是图形界面太渣，而且很不稳定，实在是无力继续吐槽。</p>
-<p>于是，一个自然而然的需求便会越来越强烈：有没有既含Windows这样靠谱的图形系统以及广大的常用软件，又有高效的Unix命令行环境的一站式解决方案呢？</p>
-<p>答案就是Mac OS X。</p>
-<h2>Mac OS X的其它优势</h2>
-<p>除了上述所说的Mac OS X既含有程序员必备的Unix命令行环境，又具备高端大气上档次的图形界面这一招牌优势外，Mac OS X中还有很多强悍的利器。</p>
-<h3>眼花缭乱的手势</h3>
-<p>我们看到使用macbook的人很少使用鼠标，不是因为他们忘了带，而是根本不需要鼠标，因为触摸板+手势完爆鼠标。</p>
-<p>Macbook的触摸板无疑是世界上最出色的：轻拍点按，双指右键，双指上下滚动，三指查找，三指拖移，四指左右切换全屏程序，四指上推显示Mission Control，四指下推显示Expose，四指合拢显示Launchpad，四指张开显示桌面。。。。。。</p>
-<p>而且由于触摸板离键盘很近，我们能很方便地以手掌为轴心在触摸板和键盘之间旋转切换，而不需要像使用鼠标+键盘那样很麻烦地把整只手移来移去。这一点很重要，无时无刻都在极大地提高开发效率。</p>
-<h3>设计优美的软件</h3>
-<p>Mac OS X上的软件外貌优美，风格统一，没有乱七八糟的广告和病毒，也不需要360这样强奸用户的软件。一切都是绿色的、纯天然的。</p>
-<h3>独一无二的字体渲染</h3>
-<p>Mac OS X的字体渲染效果是最好的，完爆Windows/Linux。在Windows上有一个模仿Mac OS X字体渲染效果的软件叫Mactype，但仍然不能与Mac OS X的字体渲染效果相提并论。大名鼎鼎的Monaco字体有着程序员专用字体的美称，同样来自Mac OS X。</p>
-<p>这是命令行下的字体效果：
-<img alt="2" src="https://lh5.googleusercontent.com/-K5cnpKlXKwc/UgfGws5tvzI/AAAAAAAAAJ4/cXOTHfdjWRQ/w728-h350-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-12+%25E4%25B8%258A%25E5%258D%25881.15.00.png" /></p>
-<p>这是Vim中的字体效果:
-<img alt="3" src="https://lh5.googleusercontent.com/-CrhmcI9FC4Q/UgfG-YrNY1I/AAAAAAAAAKA/1ytp9t3SWto/w724-h612-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-12+%25E4%25B8%258A%25E5%258D%25881.16.22.png" /></p>
-<h3>行云流水的快捷键</h3>
-<p>Mac OS X上的快捷键随处可见，能随心所欲地定制，并且大多以Command为组合快捷键中的主键，用大拇指按起来极其顺手，让人渐渐忘却了Windows/Linux上用小拇指费劲地按ctrl/alt的痛苦日子。</p>
-<h3>强悍易用的软件包管理器</h3>
-<p>Homebrew，Mac OS X上强悍的软件包管理器，使用Ruby开发，托管在github上：<a href="https://github.com/mxcl/homebrew">https://github.com/mxcl/homebrew</a>。我用过Ubuntu上的apt，也用过Fedora上的yum，但它俩实在无法跟Homebrew相提并论。</p>
-<h2>结束语</h2>
-<p>无它，唯Mac OS X。</p></div>
-        <hr />
-    </div>
-		
+<h2>Mac ...</h2> <a class="btn btn-info xsmall" href="../wei-shi-yao-wo-zhi-qiang-lie-tui-jian-cheng-xu-yuan-shi-yong-mac-os-x.html">read more</a></div>
+    </div>	
+				
     
  
         
@@ -235,31 +388,6 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <p>Java至少有16种设计模式能对应到Common Lisp中，如下图：</p>
 <p><img alt="aaa" src="https://lh6.googleusercontent.com/--fbXkQDQfg0/Uf56NGxglbI/AAAAAAAAAGo/vpbBtYGAoxM/w414-h292-no/1.png" /></p>
 <p>Talk is cheap, let me ...</p> <a class="btn btn-info xsmall" href="../javashe-ji-mo-shi-zai-common-lispzhong-de-ti-xian.html">read more</a></div>
-    </div>	
-				
-    
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="../jin-tian-wo-zhong-yu-you-liao-zi-ji-de-du-li-yu-ming.html"><h2>今天我终于有了自己的独立域名</h2></a>
-        <div class= "well small"> 2013-08-01
-
-by <a class="url fn" href="../author/lizherui.html">lizherui</a>
- 
-
-
- </div>
-        <div class="summary"><p>今天折腾了半天，终于搞定了自己的独立域名：<a href="http://www.lizherui.com">http://www.lizherui.com</a></p>
-<p>整个过程颇为曲折：</p>
-<ol>
-<li>去<a href="https://www.godaddy.com">https://www.godaddy.com</a>上用支付宝花80多块钱购买为期一年的顶级域名，并去修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。</li>
-<li>去<a href="https://www.dnspod.cn">https://www.dnspod.cn</a>上添加新域名，并申请一条A记录指向Github Pages的ip:207.97.227.245；</li>
-<li>在Pelican主目录新建CNAME文件，添上刚刚申请的域名：www.lizherui.com。</li>
-</ol>
-<p>有了独立域名后，感觉非常爽，更加坚定了好好打理个人博客的决心。</p> <a class="btn btn-info xsmall" href="../jin-tian-wo-zhong-yu-you-liao-zi-ji-de-du-li-yu-ming.html">read more</a></div>
     </div>	
 				
             <div class="pagination">
