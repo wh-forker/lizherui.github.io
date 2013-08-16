@@ -1,5 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>lizherui的程序世界</title><link href="http://www.lizherui.com/" rel="alternate"></link><link href="http://www.lizherui.com/feeds/all-zh.atom.xml" rel="self"></link><id>http://www.lizherui.com/</id><updated>2013-08-11T00:00:00+08:00</updated><entry><title>为什么我一直强烈推荐程序员使用Mac OS X</title><link href="http://www.lizherui.com/wei-shi-yao-wo-zhi-qiang-lie-tui-jian-cheng-xu-yuan-shi-yong-mac-os-x.html" rel="alternate"></link><updated>2013-08-11T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-11:wei-shi-yao-wo-zhi-qiang-lie-tui-jian-cheng-xu-yuan-shi-yong-mac-os-x.html</id><summary type="html">&lt;p&gt;像绝大多数国内程序员一样，我在相当长的时间里对Mac OS X一无所知，最开始使用Windows进行开发，然后转到Linux。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>lizherui的程序世界</title><link href="http://www.lizherui.com/" rel="alternate"></link><link href="http://www.lizherui.com/feeds/all-zh.atom.xml" rel="self"></link><id>http://www.lizherui.com/</id><updated>2013-08-17T00:00:00+08:00</updated><entry><title>一步一步打造Geek风格的技术博客</title><link href="http://www.lizherui.com/bu-bu-da-zao-geekfeng-ge-de-ji-zhu-bo-ke.html" rel="alternate"></link><updated>2013-08-17T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-17:bu-bu-da-zao-geekfeng-ge-de-ji-zhu-bo-ke.html</id><summary type="html">&lt;h2&gt;如梦初醒&lt;/h2&gt;
+&lt;h3&gt;Geek是什么&lt;/h3&gt;
+&lt;p&gt;Geek更多的是一种精神，一种态度，一种对技术的理解与信念。他们无法忍受丑陋的代码，拙劣的技术。他们思路开阔，技术娴熟，他们不甘平庸，追求完美。他们不会囿于常识，他们敢于突破。在常人眼中，他们不走寻常路，享受各种非主流的技术。但在他们自己眼中，这些又是那么得自然与优美。他们用自己的行为诠释着自己对于技术的理解，用那份固执传达着自己的信念。&lt;/p&gt;
+&lt;p&gt;他们掌握并热爱着技术，叛逆、执着，崇尚自由。&lt;/p&gt;
+&lt;h3&gt;为什么不选择CSDN、Wordpress、Jekyll等技术&lt;/h3&gt;
+&lt;p&gt;我在CSDN上发表博文被和谐了一次，就不会允许这种事发生第二次。&lt;/p&gt;
+&lt;p&gt;Wordpress上手容易、功能强大、插件丰富。但是在我看来，这些优点同时也是它的缺点：太笨重、太无脑、不够酷、可定制的粒度不够小。我更喜欢简洁快速粗暴的博客系统。&lt;/p&gt;
+&lt;p&gt;Jekyll非常棒，可惜它基于Ruby。对于Python爱好者而言，基于Python的Pelican显然更加可口。&lt;/p&gt;
+&lt;h2&gt;卧薪尝胆&lt;/h2&gt;
+&lt;p&gt;我在搭建这个博客的过程中学到了很多很多有意思的技术。&lt;/p&gt;
+&lt;p&gt;搭建环境为Mac OS X/Linux，Windows下可能会麻烦一些。&lt;/p&gt;
+&lt;p&gt;搭建过程中会涉及到的技术名词如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Pip&lt;/li&gt;
+&lt;li&gt;Pelican&lt;/li&gt;
+&lt;li&gt;Jinja2&lt;/li&gt;
+&lt;li&gt;Github &lt;/li&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;li&gt;Makefile&lt;/li&gt;
+&lt;li&gt;Markdown&lt;/li&gt;
+&lt;li&gt;Mou&lt;/li&gt;
+&lt;li&gt;Jinja2&lt;/li&gt;
+&lt;li&gt;Google_Analytics&lt;/li&gt;
+&lt;li&gt;Google_Custom_Search&lt;/li&gt;
+&lt;li&gt;Picasa&lt;/li&gt;
+&lt;li&gt;Disqus&lt;/li&gt;
+&lt;li&gt;Rss&lt;/li&gt;
+&lt;li&gt;Sitemap&lt;/li&gt;
+&lt;li&gt;Godaddy&lt;/li&gt;
+&lt;li&gt;Dnspod&lt;/li&gt;
+&lt;li&gt;A记录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;若对任何一个技术名词有疑问，请翻墙Google it. (&lt;a href="https://www.google.com/ncr"&gt;https://www.google.com/ncr&lt;/a&gt;)&lt;/p&gt;
+&lt;h2&gt;初见端倪&lt;/h2&gt;
+&lt;h3&gt;Github入门指南&lt;/h3&gt;
+&lt;p&gt;请参考&lt;a href="http://blog.csdn.net/duxinfeng2010/article/details/8654690"&gt;http://blog.csdn.net/duxinfeng2010/article/details/8654690&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;使用Github Pages创建个人博客&lt;/h3&gt;
+&lt;p&gt;Github为每一个用户分配了一个二级域名username.github.io，用户为自己的二级域名创建主页很简单，只需要在Github下创建一个名为username.github.io的版本库，并向其master分支提交网站静态页面即可。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;登陆Github，创建一个名为username.github.io的版本库（将username替换成自己的Github账户名）。&lt;/li&gt;
+&lt;li&gt;点击Setting，选择一个自己喜欢的模板，最后点击发布public按钮。&lt;/li&gt;
+&lt;li&gt;耐心等待一段时间（不超过10分钟），登陆http://username.github.io，会发现自己的个人博客已经生成。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;安装Pelican和Markdown&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
+&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;搭建骨架&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;
+&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;quickstart&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;根据提示一步步输入相应的配置项，不知道如何设置的接受默认即可，后续可以通过编辑pelicanconf.py文件更改配置)&lt;/p&gt;
+&lt;p&gt;以下是生成的目录结构：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;              &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;存放输入的源文件&lt;/span&gt;
+&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pages&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;          &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;存放手工创建的静态页面&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;               &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;生成的输出文件&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;develop_server&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;    &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;方便开启测试服务器&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;Makefile&lt;/span&gt;             &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;方便管理博客的&lt;/span&gt;&lt;span class="n"&gt;Makefile&lt;/span&gt;
+&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;pelicanconf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;       &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;主配置文件&lt;/span&gt;
+&lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;publishconf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;       &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;主发布文件，可删除&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;进入output把自己刚刚建好的username.github.io版本库clone下来：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;开始写博文&lt;/h3&gt;
+&lt;p&gt;在content目录下用Markdown语法来写一篇文章，最好选择专业的Markdown编辑器，在Mac OS X下推荐使用Mou，在Linux/Windows下请Google。&lt;/p&gt;
+&lt;p&gt;用Markdown写博文截图如下：
+&lt;img alt="1" src="https://lh5.googleusercontent.com/-edzDa6ch3Jk/Ug5oATNTjsI/AAAAAAAAAKs/WIqU7KziyOA/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-17+%25E4%25B8%258A%25E5%258D%25881.57.09.png" /&gt;&lt;/p&gt;
+&lt;p&gt;左半边是正在用markdown写的博文，右边是即时预览效果。&lt;/p&gt;
+&lt;p&gt;写完后，执行以下命令，即可在本机&lt;a href="http://127.0.0.1:8000"&gt;http://127.0.0.1:8000&lt;/a&gt;看到效果。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;publish&lt;/span&gt;
+&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;serve&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;若要一键上传到Github，需要修改Makefile两处地方：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;publish:&lt;/span&gt;
+&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PELICAN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;INPUTDIR&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;OUTPUTDIR&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CONFFILE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PELICANOPTS&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nl"&gt;github:&lt;/span&gt; &lt;span class="n"&gt;publish&lt;/span&gt;
+&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;OUTPUTDIR&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;am&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;comments&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;以后写完文章执行make github就可以一键部署了。&lt;/p&gt;
+&lt;h2&gt;如虎添翼&lt;/h2&gt;
+&lt;p&gt;我们已经能成功地用markdown写出博文并部署到github了，但这远远不够。&lt;/p&gt;
+&lt;h3&gt;管理图片&lt;/h3&gt;
+&lt;p&gt;我觉得使用云相册比本地图片要方便的多，我使用picasa(&lt;a href="https://picasaweb.google.com"&gt;https://picasaweb.google.com&lt;/a&gt;)来维护blog的所有图片。&lt;/p&gt;
+&lt;h3&gt;挑选主题&lt;/h3&gt;
+&lt;p&gt;安装主题，比如bootstrap2：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/getpelican/pelican-themes.git&lt;/span&gt;
+&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;themes&lt;/span&gt;
+&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;themes&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;bootstrap2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;选择主题，在pelicanconf.py中添加&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;bootstrap2&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;安装第三方评论系统&lt;/h3&gt;
+&lt;p&gt;在Disqus(&lt;a href="https://disqus.com/admin/signup"&gt;https://disqus.com/admin/signup&lt;/a&gt;)上申请一个站点，记牢Shortname。
+在pelicanconf.py添加&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;DISQUS_SITENAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Shortname&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;添加Google Analytics&lt;/h3&gt;
+&lt;p&gt;去Google Analytics(&lt;a href="http://www.google.com/analytics"&gt;http://www.google.com/analytics&lt;/a&gt;)申请账号，记下跟踪ID。
+在pelicanconf.py添加&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;GOOGLE_ANALYTICS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;跟踪&lt;/span&gt;&lt;span class="n"&gt;ID&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Google Analytics极其强悍，截图说明一切：
+&lt;img alt="2" src="https://lh6.googleusercontent.com/-9vXmIT6vXDo/Ug5wTSu4wMI/AAAAAAAAALM/5-VSrnXNGUU/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-17+%25E4%25B8%258A%25E5%258D%25882.31.26.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="3" src="https://lh6.googleusercontent.com/-a4ZAnTD7F0I/Ug5wTX0w9nI/AAAAAAAAALI/x9J0atK3lpU/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-17+%25E4%25B8%258A%25E5%258D%25882.31.54.png" /&gt;&lt;/p&gt;
+&lt;h3&gt;添加插件&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/getpelican/pelican-plugins.git&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;比如我要使用sitemap，在pelicanconf.py里配置如下&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;PLUGIN_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pelican-plugins&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;PLUGINS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;sitemap&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;SITEMAP&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;format&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;priorities&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;0.7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;indexes&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;pages&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;0.3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;changefreqs&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;monthly&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;indexes&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;daily&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;pages&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;monthly&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;使用Google站内搜索&lt;/h3&gt;
+&lt;p&gt;请参考&lt;a href="http://www.codenut.net/post/2013-06-30-cse"&gt;http://www.codenut.net/post/2013-06-30-cse&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;申请独立域名&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;在&lt;a href="https://www.godaddy.com"&gt;https://www.godaddy.com&lt;/a&gt;上用支付宝花购买为期一年的顶级域名，并去修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。&lt;/li&gt;
+&lt;li&gt;在&lt;a href="https://www.dnspod.cn"&gt;https://www.dnspod.cn&lt;/a&gt;上添加新域名，并申请一条A记录指向Github Pages的ip:207.97.227.245；&lt;/li&gt;
+&lt;li&gt;在Pelican主目录新建CNAME文件，添上刚刚申请的域名，如我的www.lizherui.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;登峰造极&lt;/h2&gt;
+&lt;p&gt;最后，如果感觉还不够味儿，可以参考Pelican官方文档和这个博客的完整源码。&lt;/p&gt;
+&lt;p&gt;Pelican : &lt;a href="http://docs.getpelican.com/en/3.2"&gt;http://docs.getpelican.com/en/3.2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Source Code : &lt;a href="https://github.com/lizherui/lizherui.github.io"&gt;https://github.com/lizherui/lizherui.github.io&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;Have fun!&lt;/p&gt;</summary><category term="pelican"></category><category term="blog"></category><category term="python"></category></entry><entry><title>为什么我一直强烈推荐程序员使用Mac OS X</title><link href="http://www.lizherui.com/wei-shi-yao-wo-zhi-qiang-lie-tui-jian-cheng-xu-yuan-shi-yong-mac-os-x.html" rel="alternate"></link><updated>2013-08-11T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-11:wei-shi-yao-wo-zhi-qiang-lie-tui-jian-cheng-xu-yuan-shi-yong-mac-os-x.html</id><summary type="html">&lt;p&gt;像绝大多数国内程序员一样，我在相当长的时间里对Mac OS X一无所知，最开始使用Windows进行开发，然后转到Linux。&lt;/p&gt;
 &lt;p&gt;去年11月我终于攒够钱了，决定试着从Linux转到Mac OS X，于是入手Macbook Pro，从此踏上了Mac OS X的道路，没想到一去不复返。&lt;/p&gt;
 &lt;p&gt;这一年来使用Mac OS X的经历，不仅极大地开拓了我的视野，而且在很大程度上改变了我对待软件开发的态度。当然了，最重要的是，它使我的开发效率有了质的提升。&lt;/p&gt;
 &lt;h2&gt;Macintosh在国内的现状&lt;/h2&gt;
