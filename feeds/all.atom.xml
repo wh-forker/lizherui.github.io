@@ -9,6 +9,7 @@
 &lt;p&gt;Wordpress上手容易、功能强大、插件丰富。但是在我看来，这些优点同时也是它的缺点：太笨重、太无脑、不够酷、可定制的粒度不够小。我更喜欢简洁快速粗暴的博客系统。&lt;/p&gt;
 &lt;p&gt;Jekyll非常棒，可惜它基于Ruby。对于Python爱好者而言，基于Python的Pelican显然更加可口。&lt;/p&gt;
 &lt;h2&gt;卧薪尝胆&lt;/h2&gt;
+&lt;hr /&gt;
 &lt;p&gt;我在搭建这个博客的过程中学到了很多很多有意思的技术。&lt;/p&gt;
 &lt;p&gt;搭建环境为Mac OS X/Linux，Windows下可能会麻烦一些。&lt;/p&gt;
 &lt;p&gt;搭建过程中会涉及到的技术名词如下：&lt;/p&gt;
@@ -35,6 +36,7 @@
 &lt;/ul&gt;
 &lt;p&gt;若对任何一个技术名词有疑问，请翻墙Google it. (&lt;a href="https://www.google.com/ncr"&gt;https://www.google.com/ncr&lt;/a&gt;)&lt;/p&gt;
 &lt;h2&gt;初见端倪&lt;/h2&gt;
+&lt;hr /&gt;
 &lt;h3&gt;Github入门指南&lt;/h3&gt;
 &lt;p&gt;请参考&lt;a href="http://blog.csdn.net/duxinfeng2010/article/details/8654690"&gt;http://blog.csdn.net/duxinfeng2010/article/details/8654690&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;使用Github Pages创建个人博客&lt;/h3&gt;
@@ -98,6 +100,7 @@
 
 &lt;p&gt;以后写完文章执行make github就可以一键部署了。&lt;/p&gt;
 &lt;h2&gt;如虎添翼&lt;/h2&gt;
+&lt;hr /&gt;
 &lt;p&gt;我们已经能成功地用markdown写出博文并部署到github了，但这远远不够。&lt;/p&gt;
 &lt;h3&gt;管理图片&lt;/h3&gt;
 &lt;p&gt;我觉得使用云相册比本地图片要方便的多，我使用picasa(&lt;a href="https://picasaweb.google.com"&gt;https://picasaweb.google.com&lt;/a&gt;)来维护blog的所有图片。&lt;/p&gt;
@@ -164,6 +167,7 @@
 &lt;li&gt;在Pelican主目录新建CNAME文件，添上刚刚申请的域名，如我的www.lizherui.com&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;登峰造极&lt;/h2&gt;
+&lt;hr /&gt;
 &lt;p&gt;最后，如果感觉还不够味儿，可以参考Pelican官方文档和这个博客的完整源码。&lt;/p&gt;
 &lt;p&gt;Pelican : &lt;a href="http://docs.getpelican.com/en/3.2"&gt;http://docs.getpelican.com/en/3.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Source Code : &lt;a href="https://github.com/lizherui/lizherui.github.io"&gt;https://github.com/lizherui/lizherui.github.io&lt;/a&gt; &lt;/p&gt;

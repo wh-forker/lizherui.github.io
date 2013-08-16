@@ -17,6 +17,7 @@ Wordpress上手容易、功能强大、插件丰富。但是在我看来，这�
 Jekyll非常棒，可惜它基于Ruby。对于Python爱好者而言，基于Python的Pelican显然更加可口。
 
 ##卧薪尝胆
+* * *
 我在搭建这个博客的过程中学到了很多很多有意思的技术。
 
 搭建环境为Mac OS X/Linux，Windows下可能会麻烦一些。
@@ -46,7 +47,7 @@ Jekyll非常棒，可惜它基于Ruby。对于Python爱好者而言，基于Pyth
 若对任何一个技术名词有疑问，请翻墙Google it. (<https://www.google.com/ncr>)
 
 ##初见端倪
-
+* * *
 ###Github入门指南
 请参考<http://blog.csdn.net/duxinfeng2010/article/details/8654690>
 
@@ -108,6 +109,7 @@ Github为每一个用户分配了一个二级域名username.github.io，用户�
 以后写完文章执行make github就可以一键部署了。
 
 ##如虎添翼
+* * *
 我们已经能成功地用markdown写出博文并部署到github了，但这远远不够。
 
 ###管理图片
@@ -171,6 +173,7 @@ Google Analytics极其强悍，截图说明一切：
 * 在Pelican主目录新建CNAME文件，添上刚刚申请的域名，如我的www.lizherui.com
 
 ##登峰造极
+* * *
 最后，如果感觉还不够味儿，可以参考Pelican官方文档和这个博客的完整源码。
 
 Pelican : <http://docs.getpelican.com/en/3.2>
