@@ -2,6 +2,7 @@ Date: 2013-07-25
 Title: 编辑器与IDE
 Category: Tech
 Tags: 编辑器, eclipse, vim
+Slug: editor_and_ide
 
 虽然eclim很强悍，但由于它并没有集成任何的java debug功能，因此用vim+eclim的组合开发java仍然显得力不从心。
 

@@ -3,6 +3,7 @@ Title: 一步一步打造Geek风格的技术博客
 Category: Tech
 Tags: pelican, blog, pytho
 Slug: build_blog
+
 ##如梦初醒
 * * *
 ###Geek是什么

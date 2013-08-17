@@ -2,6 +2,7 @@ Date: 2013-07-13
 Title: 淘宝这个公司
 Category: Work
 Tags: 淘宝, 百度, 公司
+Slug: taobao_vs_baidu
 
 我来淘宝一周了。
 

@@ -2,6 +2,7 @@ Date: 2013-08-11
 Title: 为什么我一直强烈推荐程序员使用Mac OS X
 Category: Tech
 Tags: mac os x, macintoch
+Slug: use_mac_os_x
 
 像绝大多数国内程序员一样，我在相当长的时间里对Mac OS X一无所知，最开始使用Windows进行开发，然后转到Linux。
 
