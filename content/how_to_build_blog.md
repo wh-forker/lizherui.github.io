@@ -33,7 +33,6 @@ Jekyll非常棒，可惜它基于Ruby。对于Python爱好者而言，基于Pyth
 * Makefile
 * Markdown
 * Mou
-* Jinja2
 * Google_Analytics
 * Google_Custom_Search
 * Picasa
