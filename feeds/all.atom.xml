@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>lizherui的程序世界</title><link href="http://www.lizherui.com/" rel="alternate"></link><link href="http://www.lizherui.com/feeds/all.atom.xml" rel="self"></link><id>http://www.lizherui.com/</id><updated>2013-08-17T00:00:00+08:00</updated><entry><title>一步一步打造Geek风格的技术博客</title><link href="http://www.lizherui.com/pages/2013/Aug/17/build_blog.html" rel="alternate"></link><updated>2013-08-17T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-17:pages/2013/Aug/17/build_blog.html</id><summary type="html">&lt;h2&gt;如梦初醒&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>lizherui的程序世界</title><link href="http://www.lizherui.com/" rel="alternate"></link><link href="http://www.lizherui.com/feeds/all.atom.xml" rel="self"></link><id>http://www.lizherui.com/</id><updated>2013-08-17T00:00:00+08:00</updated><entry><title>一步一步打造Geek风格的技术博客</title><link href="http://www.lizherui.com/pages/2013/08/17/build_blog.html" rel="alternate"></link><updated>2013-08-17T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-17:pages/2013/08/17/build_blog.html</id><summary type="html">&lt;h2&gt;如梦初醒&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;h3&gt;Geek是什么&lt;/h3&gt;
 &lt;p&gt;Geek更多的是一种精神，一种态度，一种对技术的理解与信念。他们无法忍受丑陋的代码，拙劣的技术。他们思路开阔，技术娴熟，他们不甘平庸，追求完美。他们不会囿于常识，他们敢于突破。在常人眼中，他们不走寻常路，享受各种非主流的技术。但在他们自己眼中，这些又是那么得自然与优美。他们用自己的行为诠释着自己对于技术的理解，用那份固执传达着自己的信念。&lt;/p&gt;
@@ -171,7 +171,7 @@
 &lt;p&gt;最后，如果感觉还不够味儿，可以参考Pelican官方文档和这个博客的完整源码。&lt;/p&gt;
 &lt;p&gt;Pelican : &lt;a href="http://docs.getpelican.com/en/3.2"&gt;http://docs.getpelican.com/en/3.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Source Code : &lt;a href="https://github.com/lizherui/lizherui.github.io"&gt;https://github.com/lizherui/lizherui.github.io&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;Have fun!&lt;/p&gt;</summary><category term="pelican"></category><category term="blog"></category><category term="pytho"></category></entry><entry><title>为什么我一直强烈推荐程序员使用Mac OS X</title><link href="http://www.lizherui.com/pages/2013/Aug/11/use_mac_os_x.html" rel="alternate"></link><updated>2013-08-11T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-11:pages/2013/Aug/11/use_mac_os_x.html</id><summary type="html">&lt;p&gt;像绝大多数国内程序员一样，我在相当长的时间里对Mac OS X一无所知，最开始使用Windows进行开发，然后转到Linux。&lt;/p&gt;
+&lt;p&gt;Have fun!&lt;/p&gt;</summary><category term="pelican"></category><category term="blog"></category><category term="pytho"></category></entry><entry><title>为什么我一直强烈推荐程序员使用Mac OS X</title><link href="http://www.lizherui.com/pages/2013/08/11/use_mac_os_x.html" rel="alternate"></link><updated>2013-08-11T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-11:pages/2013/08/11/use_mac_os_x.html</id><summary type="html">&lt;p&gt;像绝大多数国内程序员一样，我在相当长的时间里对Mac OS X一无所知，最开始使用Windows进行开发，然后转到Linux。&lt;/p&gt;
 &lt;p&gt;去年11月我终于攒够钱了，决定试着从Linux转到Mac OS X，于是入手Macbook Pro，从此踏上了Mac OS X的道路，没想到一去不复返。&lt;/p&gt;
 &lt;p&gt;这一年来使用Mac OS X的经历，不仅极大地开拓了我的视野，而且在很大程度上改变了我对待软件开发的态度。当然了，最重要的是，它使我的开发效率有了质的提升。&lt;/p&gt;
 &lt;h2&gt;Macintosh在国内的现状&lt;/h2&gt;
@@ -217,7 +217,7 @@
 &lt;h3&gt;强悍易用的软件包管理器&lt;/h3&gt;
 &lt;p&gt;Homebrew，Mac OS X上强悍的软件包管理器，使用Ruby开发，托管在github上：&lt;a href="https://github.com/mxcl/homebrew"&gt;https://github.com/mxcl/homebrew&lt;/a&gt;。我用过Ubuntu上的apt，也用过Fedora上的yum，但它俩实在无法跟Homebrew相提并论。&lt;/p&gt;
 &lt;h2&gt;结束语&lt;/h2&gt;
-&lt;p&gt;无它，唯Mac OS X。&lt;/p&gt;</summary><category term="mac os x"></category><category term="macintoch"></category></entry><entry><title>编写可读代码的艺术</title><link href="http://www.lizherui.com/pages/2013/Aug/08/clean_code.html" rel="alternate"></link><updated>2013-08-08T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-08:pages/2013/Aug/08/clean_code.html</id><summary type="html">&lt;p&gt;我最早开始重视代码的可读性还是大三在搜狐做Python研发实习生的时候。那会儿我特别嫩，写代码还是学校大作业风格，天天被leader各种批评。现在回忆起来，虽然在搜狐呆的时间特别短，但那段经历能引起我对代码可读性的重视，也算是重量级的收获了。&lt;/p&gt;
+&lt;p&gt;无它，唯Mac OS X。&lt;/p&gt;</summary><category term="mac os x"></category><category term="macintoch"></category></entry><entry><title>编写可读代码的艺术</title><link href="http://www.lizherui.com/pages/2013/08/08/clean_code.html" rel="alternate"></link><updated>2013-08-08T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-08:pages/2013/08/08/clean_code.html</id><summary type="html">&lt;p&gt;我最早开始重视代码的可读性还是大三在搜狐做Python研发实习生的时候。那会儿我特别嫩，写代码还是学校大作业风格，天天被leader各种批评。现在回忆起来，虽然在搜狐呆的时间特别短，但那段经历能引起我对代码可读性的重视，也算是重量级的收获了。&lt;/p&gt;
 &lt;p&gt;今天一口气读完了《编写可读性代码的艺术》，感觉非常爽。我一直认为代码的可读性绝对是第一重要的，正如《黑客与画家》所言："代码写出来是给人看的，附带着能在机器上运行"。&lt;/p&gt;
 &lt;p&gt;顺手记录了几个重要的原则：&lt;/p&gt;
 &lt;ol&gt;
@@ -278,7 +278,7 @@
 &lt;li&gt;
 &lt;p&gt;最好读的代码就是没有代码。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</summary><category term="可读性"></category><category term="读书笔记"></category></entry><entry><title>如何成为一名黑客(转)</title><link href="http://www.lizherui.com/pages/2013/Aug/06/become_a_hack.html" rel="alternate"></link><updated>2013-08-06T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-06:pages/2013/Aug/06/become_a_hack.html</id><summary type="html">&lt;p&gt;这是一份大名鼎鼎的黑客手册，来自Eric S. Raymond，我忍不住转存下来。&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="可读性"></category><category term="读书笔记"></category></entry><entry><title>如何成为一名黑客(转)</title><link href="http://www.lizherui.com/pages/2013/08/06/become_a_hack.html" rel="alternate"></link><updated>2013-08-06T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-06:pages/2013/08/06/become_a_hack.html</id><summary type="html">&lt;p&gt;这是一份大名鼎鼎的黑客手册，来自Eric S. Raymond，我忍不住转存下来。&lt;/p&gt;
 &lt;h2&gt;什么是黑客&lt;/h2&gt;
 &lt;p&gt;Jargon File 包含了一大堆关于“hacker”这个词的定义，大部分与技术高超和热衷解决问题 及超越极限有关。但如果你只想知道如何 成为 一名黑客， 那么只有两件事情确实相关。&lt;/p&gt;
 &lt;p&gt;这可以追溯到几十年前第一台分时小型电脑诞生, ARPAnet 实验也刚展开的 年代，那时有一个由程序设计专家和网络名人所组成的, 具有分享特点的文化社群。 这种文化的成员创造了 “hacker” 这个名词。黑客们建立了 Internet。 黑客们发明出了现在使用的 UNIX 操作系统。黑客们使 Usenet 运作起来， 黑客们让 WWW 运转起来。如果你是这个文化的一部分，如果你对这种文化有所贡献，而且 这个社群的其它成员也认识你并称你为 hacker, 那么你就是一位黑客。&lt;/p&gt;
@@ -432,7 +432,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;做以上的事情，只会招来嘲笑。黑客们个个记忆超群—— 你将需要数年的时间让他们忘记你犯下的错误。&lt;/p&gt;
-&lt;p&gt;网名的问题值得深思。将身份隐藏在虚假的名字后是骇客、解密者、d00dz 及其他低等生物幼稚愚蠢的行为特点。黑客不会做这些事； 他们对他们所作的感到骄傲，而且乐于人们将作品与他们的 真名相联系。 因此, 若你现在用假名，放弃它。在黑客文化里它会令你你失败的。&lt;/p&gt;</summary><category term="黑客"></category><category term="编程"></category></entry><entry><title>Java设计模式在Common Lisp中的体现</title><link href="http://www.lizherui.com/pages/2013/Aug/04/lisp_design_patterns.html" rel="alternate"></link><updated>2013-08-04T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-04:pages/2013/Aug/04/lisp_design_patterns.html</id><summary type="html">&lt;p&gt;最近在进一步学习Java的过程中，我愈发感到Java把面向对象的编程思想玩到了登峰造极的地步。而Java中最能表现面向对象编程思想的，就是大名鼎鼎的设计模式了。&lt;/p&gt;
+&lt;p&gt;网名的问题值得深思。将身份隐藏在虚假的名字后是骇客、解密者、d00dz 及其他低等生物幼稚愚蠢的行为特点。黑客不会做这些事； 他们对他们所作的感到骄傲，而且乐于人们将作品与他们的 真名相联系。 因此, 若你现在用假名，放弃它。在黑客文化里它会令你你失败的。&lt;/p&gt;</summary><category term="黑客"></category><category term="编程"></category></entry><entry><title>Java设计模式在Common Lisp中的体现</title><link href="http://www.lizherui.com/pages/2013/08/04/lisp_design_patterns.html" rel="alternate"></link><updated>2013-08-04T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-04:pages/2013/08/04/lisp_design_patterns.html</id><summary type="html">&lt;p&gt;最近在进一步学习Java的过程中，我愈发感到Java把面向对象的编程思想玩到了登峰造极的地步。而Java中最能表现面向对象编程思想的，就是大名鼎鼎的设计模式了。&lt;/p&gt;
 &lt;p&gt;这是Wikipedia中对设计模式的定义：设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。面向对象设计模式通常以类型或对象来描述其中的关系和相互作用，但不涉及用来完成应用程序的特定类型或对象。设计模式能使不稳定依赖于相对稳定、具体依赖于相对抽象，避免会引起麻烦的紧耦合，以增强软件设计面对并适应变化的能力。&lt;/p&gt;
 &lt;p&gt;在学习了一些设计模式后，我们会发现这23种设计模式都围绕着以下三大基本原则：&lt;/p&gt;
 &lt;ol&gt;
@@ -739,20 +739,20 @@
 &lt;p&gt;“嗨，John，有什么问题？” Peter说。&lt;/p&gt;
 &lt;p&gt;虽然这只是10个字左右的问题，我不会假装自己记住了Lisp之父约翰麦卡锡说的每一个字。他在问Python程序能
 不能像处理数据一样，优雅地处理Python代码。&lt;/p&gt;
-&lt;p&gt;“不行。John, Python做不到。” Peter就回答了这一句，然后静静地等待，准备接受教授的质疑，但老人没有再说什么了。此时，无语已胜千言。&lt;/p&gt;</summary><category term="java"></category><category term="lisp"></category><category term="设计模式"></category></entry><entry><title>今天我终于有了自己的独立域名</title><link href="http://www.lizherui.com/pages/2013/Aug/01/personal_domain.html" rel="alternate"></link><updated>2013-08-01T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-01:pages/2013/Aug/01/personal_domain.html</id><summary type="html">&lt;p&gt;今天折腾了半天，终于搞定了自己的独立域名：&lt;a href="http://www.lizherui.com"&gt;http://www.lizherui.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;“不行。John, Python做不到。” Peter就回答了这一句，然后静静地等待，准备接受教授的质疑，但老人没有再说什么了。此时，无语已胜千言。&lt;/p&gt;</summary><category term="java"></category><category term="lisp"></category><category term="设计模式"></category></entry><entry><title>今天我终于有了自己的独立域名</title><link href="http://www.lizherui.com/pages/2013/08/01/personal_domain.html" rel="alternate"></link><updated>2013-08-01T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-01:pages/2013/08/01/personal_domain.html</id><summary type="html">&lt;p&gt;今天折腾了半天，终于搞定了自己的独立域名：&lt;a href="http://www.lizherui.com"&gt;http://www.lizherui.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;整个过程颇为曲折：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;去&lt;a href="https://www.godaddy.com"&gt;https://www.godaddy.com&lt;/a&gt;上用支付宝花80多块钱购买为期一年的顶级域名，并去修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。&lt;/li&gt;
 &lt;li&gt;去&lt;a href="https://www.dnspod.cn"&gt;https://www.dnspod.cn&lt;/a&gt;上添加新域名，并申请一条A记录指向Github Pages的ip:207.97.227.245；&lt;/li&gt;
 &lt;li&gt;在Pelican主目录新建CNAME文件，添上刚刚申请的域名：www.lizherui.com。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;有了独立域名后，感觉非常爽，更加坚定了好好打理个人博客的决心。&lt;/p&gt;</summary><category term="域名"></category><category term="godaddy"></category></entry><entry><title>爬取校招信息</title><link href="http://www.lizherui.com/pages/2013/Jul/31/spider.html" rel="alternate"></link><updated>2013-07-31T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-31:pages/2013/Jul/31/spider.html</id><summary type="html">&lt;p&gt;抓取北邮人论坛和水木社区校招信息的爬虫程序, 直接运行main.py即可，非常简洁，可以扩展。&lt;/p&gt;
+&lt;p&gt;有了独立域名后，感觉非常爽，更加坚定了好好打理个人博客的决心。&lt;/p&gt;</summary><category term="域名"></category><category term="godaddy"></category></entry><entry><title>爬取校招信息</title><link href="http://www.lizherui.com/pages/2013/07/31/spider.html" rel="alternate"></link><updated>2013-07-31T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-31:pages/2013/07/31/spider.html</id><summary type="html">&lt;p&gt;抓取北邮人论坛和水木社区校招信息的爬虫程序, 直接运行main.py即可，非常简洁，可以扩展。&lt;/p&gt;
 &lt;p&gt;爬虫根据自定义关键字先对校招信息进行过滤，然后存储到本机redis中。本机若有lamp环境，可直接从redis读取信息到web页面上即可。&lt;/p&gt;
 &lt;p&gt;Talk is cheap, show you the code:&lt;a href="https://github.com/lizherui/spider_python"&gt;https://github.com/lizherui/spider_python&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Enjoy it.&lt;/p&gt;</summary><category term="python"></category><category term="爬虫"></category></entry><entry><title>温暖的杭州人</title><link href="http://www.lizherui.com/pages/2013/Jul/27/hang_zhou_ren.html" rel="alternate"></link><updated>2013-07-27T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-27:pages/2013/Jul/27/hang_zhou_ren.html</id><summary type="html">&lt;p&gt;昨天傍晚我骑车去买水果，买完回去时忘记骑车了，没锁。快半夜才想起来这事，赶紧跑到已经关门的水果店门口，果然，车子没了。正当我郁闷地准备往回走时，没想到在水果店里看到了我的车子，一股暖意顿时涌上心头。&lt;/p&gt;
+&lt;p&gt;Enjoy it.&lt;/p&gt;</summary><category term="python"></category><category term="爬虫"></category></entry><entry><title>温暖的杭州人</title><link href="http://www.lizherui.com/pages/2013/07/27/hang_zhou_ren.html" rel="alternate"></link><updated>2013-07-27T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-27:pages/2013/07/27/hang_zhou_ren.html</id><summary type="html">&lt;p&gt;昨天傍晚我骑车去买水果，买完回去时忘记骑车了，没锁。快半夜才想起来这事，赶紧跑到已经关门的水果店门口，果然，车子没了。正当我郁闷地准备往回走时，没想到在水果店里看到了我的车子，一股暖意顿时涌上心头。&lt;/p&gt;
 &lt;p&gt;我每天早上上班的时候会去楼下那个早餐店买包子。有一次买了4块5的东西，但是我手里只有4块零钱和20块整钱。我正准备给他20块钱，没想到他说：给4块钱得了，下次来的时候再给剩下的5毛吧。&lt;/p&gt;
 &lt;p&gt;大家都知道江浙一代的人很会做生意，如今身临其境，确实开了眼界。这边做小本生意的人，不拘小节，也不看重短期的小利益，头脑、心态、眼光都很赞。&lt;/p&gt;
-&lt;p&gt;这方面我会多加留意，用心学习。&lt;/p&gt;</summary><category term="杭州"></category></entry><entry><title>编辑器与IDE</title><link href="http://www.lizherui.com/pages/2013/Jul/25/editor_and_ide.html" rel="alternate"></link><updated>2013-07-25T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-25:pages/2013/Jul/25/editor_and_ide.html</id><summary type="html">&lt;p&gt;虽然eclim很强悍，但由于它并没有集成任何的java debug功能，因此用vim+eclim的组合开发java仍然显得力不从心。&lt;/p&gt;
+&lt;p&gt;这方面我会多加留意，用心学习。&lt;/p&gt;</summary><category term="杭州"></category></entry><entry><title>编辑器与IDE</title><link href="http://www.lizherui.com/pages/2013/07/25/editor_and_ide.html" rel="alternate"></link><updated>2013-07-25T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-25:pages/2013/07/25/editor_and_ide.html</id><summary type="html">&lt;p&gt;虽然eclim很强悍，但由于它并没有集成任何的java debug功能，因此用vim+eclim的组合开发java仍然显得力不从心。&lt;/p&gt;
 &lt;p&gt;我最终决定回到eclipse的怀抱中。同时，出于对逐渐丧失vim武功的担忧，我决定使用eclipse+viplugin的组合：编辑代码使用vim的指法，其它事情全部交给eclipse。&lt;/p&gt;
 &lt;p&gt;这样用了一段时间，节奏还不错，而且eclipse一些强大的功能让我刮目相看，并让我开始反思之前对待编辑器与IDE的态度。&lt;/p&gt;
 &lt;p&gt;IDE里面确实蕴含了比普通文本编辑器高级很多的技术。IDE会对程序文本进行真正的解析，之后才开始分析里面的结构。它们的“跳转到定义”一般都是很精确的跳转，而不是像文本编辑器那样瞎猜。&lt;/p&gt;
@@ -764,7 +764,7 @@
 &lt;p&gt;但是最近开发java的经历让我逐渐冷静了下来，开始仔细地反思这件事情。就像没有万能的编程语言一样，也没有万能的编辑器。vim很强悍，emacs也很厉害，但是它俩在面对java这样的语言时，确实无法跟eclipse相提并论。&lt;/p&gt;
 &lt;p&gt;eclipse能让java程序员的头脑从琐碎的细节里面解脱出来，所以我们能够更加专注于程序本身的语义和算法，这样我们能写出更加优美和可靠的程序。这就是我用eclipse写java程序的时候相对于vim的感觉。我感觉到自己能够看见程序背后所表现的模型，而不只是看到程序的文本和细节。&lt;/p&gt;
 &lt;p&gt;最后我想说的是，eclipse这件事情对我触动很大。我开始渐渐认可这样的观点：程序员对诸如编程语言、编辑器这类事物产生宗教般的信仰或偏见确实是没有必要的。我们应该更加多元化地发展，学会尊重别的技术和别的事物，学会去发现、认可每件技术的优势与劣势。&lt;/p&gt;
-&lt;p&gt;天下武功，确实没有高低之分；只有习武之人，才有强弱之别。&lt;/p&gt;</summary><category term="编辑器"></category><category term="eclipse"></category><category term="vim"></category></entry><entry><title>滑雪</title><link href="http://www.lizherui.com/pages/2013/Jul/21/hua-xue.html" rel="alternate"></link><updated>2013-07-21T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-21:pages/2013/Jul/21/hua-xue.html</id><summary type="html">&lt;p&gt;没想到才来公司两周，就赶上了大型Outing。&lt;/p&gt;
+&lt;p&gt;天下武功，确实没有高低之分；只有习武之人，才有强弱之别。&lt;/p&gt;</summary><category term="编辑器"></category><category term="eclipse"></category><category term="vim"></category></entry><entry><title>滑雪</title><link href="http://www.lizherui.com/pages/2013/07/21/hua-xue.html" rel="alternate"></link><updated>2013-07-21T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-21:pages/2013/07/21/hua-xue.html</id><summary type="html">&lt;p&gt;没想到才来公司两周，就赶上了大型Outing。&lt;/p&gt;
 &lt;p&gt;第一次滑雪还是在大二的冬天，跟着班上几个要好的同学去的北京郊区一个雪场。从那时起就对滑雪很有好感，很刺激。&lt;/p&gt;
 &lt;p&gt;这次是跟着公司的人去滑雪。一路上让我愈发感到淘宝的人实在是太开放了，不停地开玩笑互黑。&lt;/p&gt;
 &lt;p&gt;到雪场后，我直接选择了中级滑道。果然，几年没滑，非常生疏，连摔两次，屁股很痛。&lt;/p&gt;
@@ -778,7 +778,7 @@
 &lt;p&gt;说一下这个室友吧。人非常漂亮，从小到大都是班花。做事情也很不错，上得厅堂下得厨房，很讨人喜欢。作为一名新人hr，工作非常辛苦，每天回来也挺晚，总是黑眼圈，非常不容易。&lt;/p&gt;
 &lt;p&gt;能找到这样的合租妹子，真是缘分。&lt;/p&gt;
 &lt;p&gt;有的时候我强烈感觉，很多事情，仿佛就是事先设计好了一样。&lt;/p&gt;
-&lt;p&gt;没错，这就是命。&lt;/p&gt;</summary><category term="淘宝"></category><category term="滑雪"></category></entry><entry><title>淘宝这个公司</title><link href="http://www.lizherui.com/pages/2013/Jul/13/taobao_vs_baidu.html" rel="alternate"></link><updated>2013-07-13T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-13:pages/2013/Jul/13/taobao_vs_baidu.html</id><summary type="html">&lt;p&gt;我来淘宝一周了。&lt;/p&gt;
+&lt;p&gt;没错，这就是命。&lt;/p&gt;</summary><category term="淘宝"></category><category term="滑雪"></category></entry><entry><title>淘宝这个公司</title><link href="http://www.lizherui.com/pages/2013/07/13/taobao_vs_baidu.html" rel="alternate"></link><updated>2013-07-13T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-13:pages/2013/07/13/taobao_vs_baidu.html</id><summary type="html">&lt;p&gt;我来淘宝一周了。&lt;/p&gt;
 &lt;p&gt;这一周在淘宝的所见所闻总是让我不自觉地联想起在百度工作的日子。&lt;/p&gt;
 &lt;p&gt;我觉得是时候总结一下了。&lt;/p&gt;
 &lt;h3&gt;团队氛围&lt;/h3&gt;
@@ -808,7 +808,7 @@
 &lt;p&gt;这个话题我不想再对比了，百度被甩得很远。&lt;/p&gt;
 &lt;h3&gt;总结&lt;/h3&gt;
 &lt;p&gt;如果你是“书呆子”，建议选择百度。&lt;/p&gt;
-&lt;p&gt;如果你是“嬉皮士”，建议选择淘宝。&lt;/p&gt;</summary><category term="淘宝"></category><category term="百度"></category><category term="公司"></category></entry><entry><title>初到杭州</title><link href="http://www.lizherui.com/pages/2013/Jul/06/arrive_at_hangzhou.html" rel="alternate"></link><updated>2013-07-06T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-06:pages/2013/Jul/06/arrive_at_hangzhou.html</id><summary type="html">&lt;p&gt;在入职淘宝的前一周，我来到杭州。&lt;/p&gt;
+&lt;p&gt;如果你是“嬉皮士”，建议选择淘宝。&lt;/p&gt;</summary><category term="淘宝"></category><category term="百度"></category><category term="公司"></category></entry><entry><title>初到杭州</title><link href="http://www.lizherui.com/pages/2013/07/06/arrive_at_hangzhou.html" rel="alternate"></link><updated>2013-07-06T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-06:pages/2013/07/06/arrive_at_hangzhou.html</id><summary type="html">&lt;p&gt;在入职淘宝的前一周，我来到杭州。&lt;/p&gt;
 &lt;p&gt;我拖着行李刚走出火车，就被黑车党团团围住。好不容易挣脱了黑车党，打的士又陷入困境。一个人来到完全陌生的城市打拼，真的是很不容易。&lt;/p&gt;
 &lt;p&gt;幸运的是，很快就在豆瓣找到了合租的人，并找到了一个不错的房子，虽然地段稍微有点远。不过以后可以考虑骑公共自行车上班，顺便锻炼身体。&lt;/p&gt;
 &lt;p&gt;技术方面的话，自从5月底离开百度后就没怎么练了。再不练，武功就废了。坚持看完了SICP第二章，感到越来越吃力(实在太抽象了)，于是决定暂缓第三章的学习计划。考虑到淘宝大量使用JAVA,于是开始学习《JAVA编程思想》，想尽快入门JAVA。&lt;/p&gt;
