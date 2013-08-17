@@ -9,14 +9,14 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-    <script src="../theme/html5.js"></script>
+    <script src="./theme/html5.js"></script>
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="../theme/bootstrap.min.css" rel="stylesheet">
-    <link href="../theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="../theme/local.css" rel="stylesheet">
-    <link href="../theme/pygments.css" rel="stylesheet">
+    <link href="./theme/bootstrap.min.css" rel="stylesheet">
+    <link href="./theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="./theme/local.css" rel="stylesheet">
+    <link href="./theme/pygments.css" rel="stylesheet">
 
 </head>
 
@@ -32,12 +32,12 @@
              <span class="icon-bar"></span>
          </button>
 
-        <a class="brand" href="..">lizherui的程序世界</a>
+        <a class="brand" href=".">lizherui的程序世界</a>
 
         <div class="nav-collapse collapse">
         <ul class="nav">
                     
-                            <li><a href="../pages/about.html">About</a></li>
+                            <li><a href="./pages/about.html">About</a></li>
                         </ul>
         <form class="navbar-search pull-right" action="/search.html">
     <input type="text" class="search-query" placeholder="Search" name="q" id="s">
@@ -53,23 +53,17 @@
     <div class="row">
 
         <div class="span9">
-                
-
-        
-
-
-    <div class='article'>
+            <div class='article'>
         <div class="content-title">
-            <a href="../design_patterns_in_lisp.html"><h1>Java设计模式在Common Lisp中的体现</h1></a>
+            <h1>Java设计模式在Common Lisp中的体现</h1>
             2013-08-04
 
-by <a class="url fn" href="../author/lizherui.html">lizherui</a>
+by <a class="url fn" href="./author/lizherui.html">lizherui</a>
  
 
 
- 
         </div>
-        
+	
         <div><p>最近在进一步学习Java的过程中，我愈发感到Java把面向对象的编程思想玩到了登峰造极的地步。而Java中最能表现面向对象编程思想的，就是大名鼎鼎的设计模式了。</p>
 <p>这是Wikipedia中对设计模式的定义：设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。面向对象设计模式通常以类型或对象来描述其中的关系和相互作用，但不涉及用来完成应用程序的特定类型或对象。设计模式能使不稳定依赖于相对稳定、具体依赖于相对抽象，避免会引起麻烦的紧耦合，以增强软件设计面对并适应变化的能力。</p>
 <p>在学习了一些设计模式后，我们会发现这23种设计模式都围绕着以下三大基本原则：</p>
@@ -378,21 +372,23 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <p>虽然这只是10个字左右的问题，我不会假装自己记住了Lisp之父约翰麦卡锡说的每一个字。他在问Python程序能
 不能像处理数据一样，优雅地处理Python代码。</p>
 <p>“不行。John, Python做不到。” Peter就回答了这一句，然后静静地等待，准备接受教授的质疑，但老人没有再说什么了。此时，无语已胜千言。</p></div>
-        <hr />
+	
+        <hr>
+    	   
+        <h2>Comments</h2>
+		<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'lizheruisworld'; 
+    var disqus_title = 'Java设计模式在Common Lisp中的体现';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-		
-            <div class="pagination">
-<ul>
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
-
-    <li class="active"><a href="../tag/she-ji-mo-shi.html">1</a></li>
-
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
-
-</ul>
-</div>    
- 
-  
         </div>
         
         <div class="span3">
@@ -403,8 +399,8 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
                 Site
                 </li>
             
-                <li><a href="../archives.html">Archives</a>
-                <li><a href="../tags.html">Tags</a>
+                <li><a href="./archives.html">Archives</a>
+                <li><a href="./tags.html">Tags</a>
                                 <li><a href="http://www.lizherui.com/feeds/all.rss.xml" rel="alternate">RSS</a></li>
                             </ul>
             </div>
@@ -416,9 +412,9 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
                 Categories
                 </li>
                 
-                                <li><a href="../category/life.html">Life</a></li>
-                                <li><a href="../category/tech.html">Tech</a></li>
-                                <li><a href="../category/work.html">Work</a></li>
+                                <li><a href="./category/life.html">Life</a></li>
+                                <li><a href="./category/tech.html">Tech</a></li>
+                                <li><a href="./category/work.html">Work</a></li>
                                    
             </ul>
             </div>
@@ -459,7 +455,7 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
     </div>     </div> 
 <footer>
 <br />
-<p><a href="..">lizherui的程序世界</a> &copy; lizherui 2013</p>
+<p><a href=".">lizherui的程序世界</a> &copy; lizherui 2013</p>
 </footer>
 
 </div> <!-- /container -->

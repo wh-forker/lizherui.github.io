@@ -6,9 +6,6 @@ AUTHOR = u'lizherui'
 SITENAME = u"lizherui的程序世界"
 SITEURL = 'http://www.lizherui.com'
 GITHUB_URL = 'https://github.com/lizherui'
-
-ARTICLE_URL = 'pages/{slug}'
-ARTICLE_SAVE_AS = 'pages/{slug}.html'
 ARCHIVES_URL = 'archives.html'
 
 RELATIVE_URLS = True
