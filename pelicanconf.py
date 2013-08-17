@@ -7,17 +7,9 @@ SITENAME = u"lizherui的程序世界"
 SITEURL = 'http://www.lizherui.com'
 GITHUB_URL = 'https://github.com/lizherui'
 
-ARTICLE_URL = 'posts/{slug}'
-ARTICLE_SAVE_AS = 'posts/{slug}.html'
 ARTICLE_URL = 'pages/{slug}'
 ARTICLE_SAVE_AS = 'pages/{slug}.html'
-AUTHOR_URL = 'author/{slug}.html'
-AUTHOR_SAVE_AS = 'author/{slug}.html'
-CATEGORY_URL = 'category/{slug}.html'
-CATEGORY_SAVE_AS = 'category/{slug}.html'
-TAG_URL = 'tag/{slug}.html'
-TAG_SAVE_AS = 'tag/{slug}.html'
-ARCHIVES_URL = 'archives/archives.html'
+ARCHIVES_URL = 'archives.html'
 
 RELATIVE_URLS = True
 DEFAULT_PAGINATION = 5
