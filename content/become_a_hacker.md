@@ -2,7 +2,7 @@ Date: 2013-08-06
 Title: 如何成为一名黑客(转)
 Category: Tech
 Tags: 黑客, 编程
-Slug: become_hack
+Slug: become_a_hack
 
 这是一份大名鼎鼎的黑客手册，来自Eric S. Raymond，我忍不住转存下来。
 
