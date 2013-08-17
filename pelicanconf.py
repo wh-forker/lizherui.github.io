@@ -20,7 +20,7 @@ THEME = 'tuxlite_tbs'
 
 DEFAULT_LANG = u'zh'
 
-#DEFAULT_DATE_FORMAT = '%Y-%m-%d'
+DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
 GOOGLE_ANALYTICS = 'UA-42648273-1'
 
