@@ -7,8 +7,8 @@ SITENAME = u"lizherui的程序世界"
 SITEURL = 'http://www.lizherui.com'
 GITHUB_URL = 'https://github.com/lizherui'
 ARCHIVES_URL = 'archives.html'
-ARTICLE_URL = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/'
-ARTICLE_SAVE_AS = 'posts/{date:%Y}/{date:%b}/{date:%d}/{slug}/index.html'
+ARTICLE_URL = 'posts/{slug}'
+ARTICLE_SAVE_AS = 'posts/{slug}/index.html'
 
 RELATIVE_URLS = True
 DEFAULT_PAGINATION = 5
