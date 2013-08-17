@@ -5,10 +5,9 @@ from __future__ import unicode_literals
 AUTHOR = u'lizherui'
 SITENAME = u"lizherui的程序世界"
 SITEURL = 'http://www.lizherui.com'
+
 GITHUB_URL = 'https://github.com/lizherui'
 ARCHIVES_URL = 'archives.html'
-
-
 ARTICLE_URL = 'pages/{slug}.html'
 ARTICLE_SAVE_AS = 'pages/{slug}.html'
 
