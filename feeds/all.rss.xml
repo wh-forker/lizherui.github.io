@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lizherui的程序世界</title><link>http://www.lizherui.com/</link><description></description><atom:link href="http://www.lizherui.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 17 Aug 2013 00:00:00 +0800</lastBuildDate><item><title>一步一步打造Geek风格的技术博客</title><link>http://www.lizherui.com/pages/2013/08/17/build_blog.html</link><description>&lt;h2&gt;如梦初醒&lt;/h2&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lizherui的程序世界</title><link>http://www.lizherui.com/</link><description></description><atom:link href="http://www.lizherui.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 18 Aug 2013 00:00:00 +0800</lastBuildDate><item><title>对待技术的态度</title><link>http://www.lizherui.com/pages/2013/08/18/dui-dai-ji-zhu-de-tai-du.html</link><description>&lt;p&gt;最近北邮人论坛上对IT行业技术人员的声讨愈演愈烈，如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://bbs.byr.cn/#!article/Job/1397821"&gt;搞lT的要有自知之明!!!!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bbs.byr.cn/#!article/Job/1398322"&gt;搞IT的要有自知之明！！！！（之二）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bbs.byr.cn/#!article/Job/1398654"&gt;搞IT就是一个大坑&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;回应如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://bbs.byr.cn/#!article/Job/1398835"&gt;跳进IT这个大坑，一直没有自知之明（痛心疾首篇）&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bbs.byr.cn/#!article/Job/1398880"&gt;IT行业不是一个坑~&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;争论非常激烈，各路大牛都积极地发表自己的看法。&lt;/p&gt;
+&lt;p&gt;我认认真真看了每一条回复，仔仔细细想了很久。&lt;/p&gt;
+&lt;p&gt;我感觉很多人并不能很准确地理解IT行业技术人员对待技术的态度。&lt;/p&gt;
+&lt;p&gt;我个人觉得，该不该搞技术，尤其是该不该花大量的业余时间去钻研技术，真的不需要这么多乱七八糟的争论。&lt;/p&gt;
+&lt;p&gt;至少对于我来说，在技术上花费如此多的时间和精力，最直接的原因就是：&lt;/p&gt;
+&lt;p&gt;Just for fun.&lt;/p&gt;
+&lt;p&gt;这与为什么很多人喜欢熬夜打游戏、喜欢一整天逛街的原因是一样的。&lt;/p&gt;
+&lt;p&gt;Have fun, and enjoy it.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sun, 18 Aug 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-08-18:pages/2013/08/18/dui-dai-ji-zhu-de-tai-du.html</guid><category>技术</category></item><item><title>一步一步打造Geek风格的技术博客</title><link>http://www.lizherui.com/pages/2013/08/17/build_blog.html</link><description>&lt;h2&gt;如梦初醒&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;h3&gt;Geek是什么&lt;/h3&gt;
 &lt;p&gt;Geek更多的是一种精神，一种态度，一种对技术的理解与信念。他们无法忍受丑陋的代码，拙劣的技术。他们思路开阔，技术娴熟，他们不甘平庸，追求完美。他们不会囿于常识，他们敢于突破。在常人眼中，他们不走寻常路，享受各种非主流的技术。但在他们自己眼中，这些又是那么得自然与优美。他们用自己的行为诠释着自己对于技术的理解，用那份固执传达着自己的信念。&lt;/p&gt;
