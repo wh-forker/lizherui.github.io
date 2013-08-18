@@ -2,6 +2,7 @@ Date: 2013-08-18
 Title: 对待技术的态度
 Category: Tech
 Tags: 技术
+Slug: attitude_to_tech
 
 最近北邮人论坛上对IT行业技术人员的声讨愈演愈烈，如下：
 
