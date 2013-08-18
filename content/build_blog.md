@@ -26,6 +26,7 @@ Jekyll非常棒，可惜它基于Ruby。对于Python爱好者而言，基于Pyth
 
 搭建过程中会涉及到的技术名词如下：
 
+* Mac OS X
 * Python
 * Pip
 * Pelican

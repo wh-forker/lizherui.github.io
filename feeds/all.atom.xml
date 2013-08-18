@@ -14,6 +14,7 @@
 &lt;p&gt;搭建环境为Mac OS X/Linux，Windows下可能会麻烦一些。&lt;/p&gt;
 &lt;p&gt;搭建过程中会涉及到的技术名词如下：&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;Mac OS X&lt;/li&gt;
 &lt;li&gt;Python&lt;/li&gt;
 &lt;li&gt;Pip&lt;/li&gt;
 &lt;li&gt;Pelican&lt;/li&gt;
