@@ -27,6 +27,6 @@ Slug: attitude_to_tech
 
 Just for fun.
 
-这与为什么很多人喜欢熬夜打游戏、喜欢一整天逛街的原因是一样的。
+在某种程度上，这与很多人喜欢通宵打游戏、喜欢整天逛街是一回事。
 
 Have fun, and enjoy it.
