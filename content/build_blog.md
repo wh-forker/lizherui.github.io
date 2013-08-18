@@ -1,7 +1,7 @@
 Date: 2013-08-17
 Title: 一步一步打造Geek风格的技术博客
 Category: Tech
-Tags: pelican, blog, pytho
+Tags: pelican, blog, python
 Slug: build_blog
 
 ##如梦初醒
