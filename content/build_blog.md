@@ -147,6 +147,14 @@ Google Analytics极其强悍，截图说明一切：
 
 ![3](https://lh6.googleusercontent.com/-a4ZAnTD7F0I/Ug5wTX0w9nI/AAAAAAAAALI/x9J0atK3lpU/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-17+%25E4%25B8%258A%25E5%258D%25882.31.54.png)
 
+###使用Google Webmasters
+在<http://www.google.com/webmasters>注册即可。
+
+这个就是Google站长工具，使用它的目的是为了让博客被Google更好的收录，完爆百度站长工具。
+
+截图如下：
+![3](https://lh3.googleusercontent.com/-tYrEbXyx_5o/UhGS1C_lcYI/AAAAAAAAALk/H7X7MBjNkVY/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-19+%25E4%25B8%258A%25E5%258D%258811.36.32.png)
+
 ###添加插件
     git clone git://github.com/getpelican/pelican-plugins.git
 比如我要使用sitemap，在pelicanconf.py里配置如下
