@@ -107,7 +107,7 @@ Github为每一个用户分配了一个二级域名username.github.io，用户�
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
     
     github: publish
-	git add . ; cd OUTPUTDIR ; git commit -am 'your comments' ; git push
+	cd OUTPUTDIR ; git add . ;  git commit -am 'your comments' ; git push
 
 以后写完文章执行make github就可以一键部署了。
 
