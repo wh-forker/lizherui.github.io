@@ -55,7 +55,7 @@
 &lt;li&gt;Dnspod&lt;/li&gt;
 &lt;li&gt;A记录&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;若对任何一个技术名词有疑问，请翻墙Google it. (&lt;a href="https://www.google.com/ncr"&gt;https://www.google.com/ncr&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;若对任何一个技术名词有疑问，请翻墙&lt;a href="https://www.google.com/ncr"&gt;Google&lt;/a&gt; it.&lt;/p&gt;
 &lt;h2&gt;初见端倪&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;开始动手。&lt;/p&gt;
@@ -125,7 +125,7 @@
 &lt;hr /&gt;
 &lt;p&gt;我们已经能成功地用markdown写出博文并部署到github了，但这远远不够。&lt;/p&gt;
 &lt;h3&gt;管理图片&lt;/h3&gt;
-&lt;p&gt;我觉得使用云相册比本地图片要方便的多，我使用picasa(&lt;a href="https://picasaweb.google.com"&gt;https://picasaweb.google.com&lt;/a&gt;)来维护blog的所有图片。&lt;/p&gt;
+&lt;p&gt;我觉得使用云相册比本地图片要方便的多，我使用&lt;a href="https://picasaweb.google.com?noredirect=1"&gt;Picasa&lt;/a&gt;来维护blog的所有图片。&lt;/p&gt;
 &lt;h3&gt;挑选主题&lt;/h3&gt;
 &lt;p&gt;安装主题，比如bootstrap2：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/getpelican/pelican-themes.git&lt;/span&gt;
@@ -140,14 +140,14 @@
 
 
 &lt;h3&gt;安装第三方评论系统&lt;/h3&gt;
-&lt;p&gt;在Disqus(&lt;a href="https://disqus.com/admin/signup"&gt;https://disqus.com/admin/signup&lt;/a&gt;)上申请一个站点，记牢Shortname。
+&lt;p&gt;在&lt;a href="https://disqus.com/admin/signup"&gt;Disqus&lt;/a&gt;上申请一个站点，记牢Shortname。
 在pelicanconf.py添加&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;DISQUS_SITENAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Shortname&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;添加Google Analytics&lt;/h3&gt;
-&lt;p&gt;去Google Analytics(&lt;a href="http://www.google.com/analytics"&gt;http://www.google.com/analytics&lt;/a&gt;)申请账号，记下跟踪ID。
+&lt;p&gt;去&lt;a href="http://www.google.com/analytics"&gt;Google Analytics&lt;/a&gt;申请账号，记下跟踪ID。
 在pelicanconf.py添加&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;GOOGLE_ANALYTICS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;跟踪&lt;/span&gt;&lt;span class="n"&gt;ID&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -157,7 +157,7 @@
 &lt;img alt="2" src="https://lh6.googleusercontent.com/-9vXmIT6vXDo/Ug5wTSu4wMI/AAAAAAAAALM/5-VSrnXNGUU/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-17+%25E4%25B8%258A%25E5%258D%25882.31.26.png" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="3" src="https://lh6.googleusercontent.com/-a4ZAnTD7F0I/Ug5wTX0w9nI/AAAAAAAAALI/x9J0atK3lpU/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-17+%25E4%25B8%258A%25E5%258D%25882.31.54.png" /&gt;&lt;/p&gt;
 &lt;h3&gt;使用Google Webmasters&lt;/h3&gt;
-&lt;p&gt;在&lt;a href="http://www.google.com/webmasters"&gt;http://www.google.com/webmasters&lt;/a&gt;注册即可。&lt;/p&gt;
+&lt;p&gt;在&lt;a href="http://www.google.com/webmasters"&gt;Google Webmasters&lt;/a&gt;上注册即可。&lt;/p&gt;
 &lt;p&gt;这个就是Google站长工具，使用它的目的是为了让博客被Google更好的收录，比如手动让Googlebot抓取、提交Robots、更新Sitemap等等，各方面完爆百度站长工具。&lt;/p&gt;
 &lt;p&gt;截图如下：
 &lt;img alt="3" src="https://lh3.googleusercontent.com/-tYrEbXyx_5o/UhGS1C_lcYI/AAAAAAAAALk/H7X7MBjNkVY/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-19+%25E4%25B8%258A%25E5%258D%258811.36.32.png" /&gt;&lt;/p&gt;
@@ -189,8 +189,8 @@
 &lt;p&gt;请参考&lt;a href="http://www.codenut.net/post/2013-06-30-cse"&gt;http://www.codenut.net/post/2013-06-30-cse&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;申请独立域名&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;在&lt;a href="https://www.godaddy.com"&gt;https://www.godaddy.com&lt;/a&gt;上用支付宝花购买为期一年的顶级域名，并去修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。&lt;/li&gt;
-&lt;li&gt;在&lt;a href="https://www.dnspod.cn"&gt;https://www.dnspod.cn&lt;/a&gt;上添加新域名，并申请一条A记录指向Github Pages的ip:207.97.227.245；&lt;/li&gt;
+&lt;li&gt;在&lt;a href="https://www.godaddy.com"&gt;Godaddy&lt;/a&gt;上用支付宝花购买为期一年的顶级域名，并去修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。&lt;/li&gt;
+&lt;li&gt;在&lt;a href="https://www.dnspod.cn"&gt;Dnspod&lt;/a&gt;上添加新域名，并申请一条A记录指向Github Pages的ip:207.97.227.245；&lt;/li&gt;
 &lt;li&gt;在Pelican主目录新建CNAME文件，添上刚刚申请的域名，如我的www.lizherui.com&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;登峰造极&lt;/h2&gt;

@@ -47,7 +47,7 @@ Jekyll非常棒，可惜它基于Ruby。对于Python爱好者而言，基于Pyth
 * Dnspod
 * A记录
 
-若对任何一个技术名词有疑问，请翻墙Google it. (<https://www.google.com/ncr>)
+若对任何一个技术名词有疑问，请翻墙[Google](https://www.google.com/ncr) it.
 
 ##初见端倪
 * * *
@@ -117,7 +117,7 @@ Github为每一个用户分配了一个二级域名username.github.io，用户�
 我们已经能成功地用markdown写出博文并部署到github了，但这远远不够。
 
 ###管理图片
-我觉得使用云相册比本地图片要方便的多，我使用picasa(<https://picasaweb.google.com>)来维护blog的所有图片。
+我觉得使用云相册比本地图片要方便的多，我使用[Picasa](https://picasaweb.google.com?noredirect=1)来维护blog的所有图片。
 
 ###挑选主题
 安装主题，比如bootstrap2：
@@ -131,14 +131,14 @@ Github为每一个用户分配了一个二级域名username.github.io，用户�
     THEME = 'bootstrap2'
 
 ###安装第三方评论系统
-在Disqus(<https://disqus.com/admin/signup>)上申请一个站点，记牢Shortname。
+在[Disqus](https://disqus.com/admin/signup)上申请一个站点，记牢Shortname。
 在pelicanconf.py添加
     
     DISQUS_SITENAME = Shortname
 
  
 ###添加Google Analytics
-去Google Analytics(<http://www.google.com/analytics>)申请账号，记下跟踪ID。
+去[Google Analytics](http://www.google.com/analytics)申请账号，记下跟踪ID。
 在pelicanconf.py添加
     
     GOOGLE_ANALYTICS = 跟踪ID
@@ -149,7 +149,7 @@ Google Analytics极其强悍，截图说明一切：
 ![3](https://lh6.googleusercontent.com/-a4ZAnTD7F0I/Ug5wTX0w9nI/AAAAAAAAALI/x9J0atK3lpU/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-17+%25E4%25B8%258A%25E5%258D%25882.31.54.png)
 
 ###使用Google Webmasters
-在<http://www.google.com/webmasters>注册即可。
+在[Google Webmasters](http://www.google.com/webmasters)上注册即可。
 
 这个就是Google站长工具，使用它的目的是为了让博客被Google更好的收录，比如手动让Googlebot抓取、提交Robots、更新Sitemap等等，各方面完爆百度站长工具。
 
@@ -180,8 +180,8 @@ Google Analytics极其强悍，截图说明一切：
 请参考<http://www.codenut.net/post/2013-06-30-cse>
 
 ###申请独立域名
-* 在<https://www.godaddy.com>上用支付宝花购买为期一年的顶级域名，并去修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。
-* 在<https://www.dnspod.cn>上添加新域名，并申请一条A记录指向Github Pages的ip:207.97.227.245；
+* 在[Godaddy](https://www.godaddy.com)上用支付宝花购买为期一年的顶级域名，并去修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。
+* 在[Dnspod](https://www.dnspod.cn)上添加新域名，并申请一条A记录指向Github Pages的ip:207.97.227.245；
 * 在Pelican主目录新建CNAME文件，添上刚刚申请的域名，如我的www.lizherui.com
 
 ##登峰造极
