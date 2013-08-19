@@ -1,6 +1,6 @@
 Date: 2013-08-18
 Title: 对待技术的态度
-Category: Tech
+Category: Life
 Tags: 技术
 Slug: attitude_to_tech
 
