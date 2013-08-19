@@ -38,6 +38,7 @@ Jekyll非常棒，可惜它基于Ruby。对于Python爱好者而言，基于Pyth
 * Mou
 * Google_Analytics
 * Google_Custom_Search
+* Google Webmasters
 * Picasa
 * Disqus
 * Rss
@@ -150,7 +151,7 @@ Google Analytics极其强悍，截图说明一切：
 ###使用Google Webmasters
 在<http://www.google.com/webmasters>注册即可。
 
-这个就是Google站长工具，使用它的目的是为了让博客被Google更好的收录，比如手动让Google Spider抓取、提交Robots、更新Sitemap等等，功能上完爆百度站长工具。
+这个就是Google站长工具，使用它的目的是为了让博客被Google更好的收录，比如手动让Googlebot抓取、提交Robots、更新Sitemap等等，功能上完爆百度站长工具。
 
 截图如下：
 ![3](https://lh3.googleusercontent.com/-tYrEbXyx_5o/UhGS1C_lcYI/AAAAAAAAALk/H7X7MBjNkVY/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-19+%25E4%25B8%258A%25E5%258D%258811.36.32.png)
