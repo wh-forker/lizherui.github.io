@@ -22,13 +22,13 @@ Slug: ten_thousand_hours
 
 "I believes in hard work."
 
-...
+... …
 
 "People think I can't do xxx even I keep training."
 
 "Our hard work is going to prove them wrong."
 
-…
+… ...
 
 "One day, it all pay off."
 
