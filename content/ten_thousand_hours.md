@@ -14,8 +14,18 @@ Slug: ten_thousand_hours
 
 这个视频系列一共有三部。这是第一部，主题是厚积薄发中的“厚积”。
 
-后面两部的字幕版还没出来。不过我浏览了下无字幕版的第二部，主题是厚积薄发中的“薄发”，更加令人深有同感、催人泪下。
+后面两部的字幕版还没出来。第二部和第三部出了字幕版后，我会第一时间更新的。
 
-第二部和第三部出了字幕版后，我会第一时间更新的。
+我稍微浏览了下无字幕版的第二部，主题是厚积薄发中的“薄发”，更加令人深有同感、催人泪下，应该是整个系列中的高潮部分：
+
+"People always ask me : why do you train? "
+
+"I believes in hard work."
+
+...
+
+"People think I can't do xxx even I keep training, but our hard work is going to prove them wrong."
+
+"One day, it all pay off."
 
 <iframe height=498 width=510 src="http://player.youku.com/embed/XNTk4MjM1MDUy" frameborder=0 allowfullscreen></iframe>
