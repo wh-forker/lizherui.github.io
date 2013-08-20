@@ -30,6 +30,7 @@ Slug: ten_thousand_hours
 "Our hard work is going to prove them wrong."
 
 * * *
+"Hard work don't wait on nobody."
 
 "One day, it all pay off."
 
