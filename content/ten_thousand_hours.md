@@ -36,4 +36,10 @@ Slug: ten_thousand_hours
 
 * * *
 
+第一部：
+
 <iframe height=498 width=510 src="http://player.youku.com/embed/XNTk4MjM1MDUy" frameborder=0 allowfullscreen></iframe>
+
+第二部：
+
+<iframe height=498 width=510 src="http://player.youku.com/embed/XNTk5NTU5NzIw" frameborder=0 allowfullscreen></iframe>
