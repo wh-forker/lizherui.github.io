@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lizherui的程序世界</title><link>http://www.lizherui.com/</link><description></description><atom:link href="http://www.lizherui.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 25 Aug 2013 00:00:00 +0800</lastBuildDate><item><title>筛选简历</title><link>http://www.lizherui.com/pages/2013/08/25/filter_resume.html</link><description>&lt;p&gt;上周在BYR论坛发了一个阿里内推的帖子，没想到短时间内就收到了成百上千封简历。&lt;/p&gt;
-&lt;p&gt;我仔仔细细地看了每一封简历，最终留下了30%，而且这30%中只有10%的本科生。&lt;/p&gt;
+&lt;p&gt;我仔仔细细地看了每一封简历，附带有Github地址的我也点进去仔细看了代码。&lt;/p&gt;
+&lt;p&gt;最终我留下了30%的简历，而且这30%中只有10%的本科生。&lt;/p&gt;
 &lt;h2&gt;筛选标准&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;满足以下条件中的任何一个，直接通过筛选：&lt;/p&gt;
@@ -17,13 +18,15 @@
 &lt;li&gt;新浪、网易、搜狐、360、人人、小米、优酷等同级别公司的实习经历&lt;/li&gt;
 &lt;li&gt;保送硕士&lt;/li&gt;
 &lt;li&gt;丰富的国家级重点实验室项目经历&lt;/li&gt;
-&lt;li&gt;使用MarkDown/Latex生成的漂亮的PDF简历&lt;/li&gt;
+&lt;li&gt;发表过高水平的学术论文&lt;/li&gt;
+&lt;li&gt;Markdown/Latex生成的PDF简历&lt;/li&gt;
 &lt;li&gt;高质量的技术博客&lt;/li&gt;
 &lt;li&gt;技能栏中写着熟练使用Vim/Emacs，以Mac OS X/Linux为日常操作系统&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;满足以下条件中的任何一个，直接淘汰：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;空空的邮件正文&lt;/li&gt;
+&lt;li&gt;求职产品职位却在简历中充斥着大量技术经历&lt;/li&gt;
 &lt;li&gt;China Great Wall, 360安全卫士等类似的项目经历&lt;/li&gt;
 &lt;li&gt;丑陋、混乱的简历排版&lt;/li&gt;
 &lt;li&gt;过于空洞或过于啰嗦的项目描述&lt;/li&gt;
@@ -42,13 +45,20 @@
 &lt;p&gt;没错，但是请注意，硕士中也有强悍的，而且数量不少，光这帮强悍的硕士就能抢光所有的好Offer。&lt;/p&gt;
 &lt;p&gt;因此，本科生，除非你有ACM级别的奖牌或者BAT级别的靠谱实习经历并且已经做好了和茫茫多大硕血拼到底的准备，否则请乖乖去读研。&lt;/p&gt;
 &lt;p&gt;你们TMD还能不能打，本科生？&lt;/p&gt;
-&lt;h3&gt;内推的真谛&lt;/h3&gt;
+&lt;h3&gt;内推的实质&lt;/h3&gt;
 &lt;p&gt;公司推出内推策略，是为了提前把人才抢到手，而不是给非人才一次额外的尝试机会。&lt;/p&gt;
+&lt;p&gt;请不要再问我内推失败会不会对正式校招造成影响。&lt;/p&gt;
+&lt;h3&gt;态度与能力&lt;/h3&gt;
+&lt;p&gt;一些小伙伴虽然实力不够，但附上了长长的求职信，而且写得像情书一样，感人肺腑，把自己对公司的向往之情表达得淋漓尽致。&lt;/p&gt;
+&lt;p&gt;抱歉，上百行催人泪下的表达不如几行高质量的代码更有力量。&lt;/p&gt;
+&lt;p&gt;这是竞争。&lt;/p&gt;
+&lt;p&gt;态度不能替代能力。&lt;/p&gt;
 &lt;h3&gt;Offer收割机&lt;/h3&gt;
-&lt;p&gt;我坚信这样的事实：Offer收割机不是在校招开始后出现的，而是在校招开始之前。&lt;/p&gt;
-&lt;p&gt;一些大牛的简历，处处透露着凶狠的杀气，让人感到一阵凉意。&lt;/p&gt;
+&lt;p&gt;Offer收割机不是在校招开始后出现的，而是在校招开始之前。&lt;/p&gt;
+&lt;p&gt;读着一些大牛的简历，能明显感觉到处处透露着的凶狠杀气。&lt;/p&gt;
 &lt;p&gt;这些人其实已经是Offer收割机了，他们蓄势待发，静静地等待着校招的来临，以检验他们长期苦练的效果。&lt;/p&gt;
-&lt;p&gt;校招来临后，他们爆发的时候就到了。&lt;/p&gt;
+&lt;p&gt;校招来临，他们爆发的时候到了。&lt;/p&gt;
+&lt;p&gt;看到他们的苦练得到回报，是一件很带劲的事情。&lt;/p&gt;
 &lt;h3&gt;残酷的竞争&lt;/h3&gt;
 &lt;p&gt;我印象最深的是去年10月百度校招的场景，在百度食堂齐刷刷地坐满了上千号人。&lt;/p&gt;
 &lt;p&gt;这种规模的面试场面，我是第一次见，也是唯一的一次。&lt;/p&gt;
@@ -62,6 +72,7 @@
 &lt;p&gt;感谢对爬取校招信息代码做出贡献的小伙伴们。&lt;/p&gt;
 &lt;p&gt;祝福大家都能抢到心仪的Offer。&lt;/p&gt;
 &lt;p&gt;还未投简历的同学，请投递给&lt;a href="&amp;#109;&amp;#97;&amp;#105;&amp;#108;&amp;#116;&amp;#111;&amp;#58;&amp;#108;&amp;#122;&amp;#114;&amp;#97;&amp;#107;&amp;#52;&amp;#55;&amp;#109;&amp;#52;&amp;#97;&amp;#49;&amp;#64;&amp;#49;&amp;#54;&amp;#51;&amp;#46;&amp;#99;&amp;#111;&amp;#109;"&gt;&amp;#108;&amp;#122;&amp;#114;&amp;#97;&amp;#107;&amp;#52;&amp;#55;&amp;#109;&amp;#52;&amp;#97;&amp;#49;&amp;#64;&amp;#49;&amp;#54;&amp;#51;&amp;#46;&amp;#99;&amp;#111;&amp;#109;&lt;/a&gt;，截止时间为9月12日。&lt;/p&gt;
+&lt;p&gt;前端工程师和UED无需内推，请参加线上统一笔试：http://ued.campus.alibaba.com&lt;/p&gt;
 &lt;p&gt;PS: 请各位投简历的大硕不要再喊我师兄了，我只是你们的小师弟，去年找工作时BYR论坛让我受益匪浅，如今只是想回馈论坛，做一点力所能及的事情罢了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sun, 25 Aug 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-08-25:pages/2013/08/25/filter_resume.html</guid><category>内推</category><category>简历</category></item><item><title>一万小时定律</title><link>http://www.lizherui.com/pages/2013/08/20/ten_thousand_hours.html</link><description>&lt;p&gt;“一万小时定律”，来自葛拉威尔的《异数》：“人们眼中的天才之所以卓越非凡，并非天资超人一等，而是付出了持续不断的努力。只要经过1万小时的锤炼，任何人都能从平凡变成超凡。”&lt;/p&gt;
 &lt;p&gt;今天我看到了一个关于它的非常棒的篮球视频，结尾的那几句话直接看哭了。&lt;/p&gt;
 &lt;p&gt;“为了你的追求，你愿意放弃多少无关的事物？你愿意牺牲多少时间花在你的追求上？你把一件事情做得越好，你会发现越多的Hates。别为他们烦心，专心在你想做的事情上吧。”&lt;/p&gt;
