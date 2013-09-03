@@ -62,5 +62,6 @@ SOCIAL = (('Github', 'https://github.com/lizherui'),
           ('Linkedin', 'http://www.linkedin.com/profile/view?id=232391796'),
           ('Weibo', 'http://weibo.com/lzrm4a1'),
           ('Zhihu', 'http://www.zhihu.com/people/li-zhe-rui'),
+          ('Douban', 'http://book.douban.com/people/lizherui'),
          )
 
