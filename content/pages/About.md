@@ -16,6 +16,6 @@ Title: About
 
 我的个人简历维护在[Gist](https://gist.github.com/lizherui/6184006)上，目前还是毕业前的资料。不过到了必要的时候，我会彻底更新它。
 
-我阅读的技术书籍维护在[豆瓣读书](http://book.douban.com/people/lizherui)上，欢迎关注。
+我阅读的书籍维护在[豆瓣读书](http://book.douban.com/people/lizherui)上，欢迎关注。
 
 我收藏的技术书籍和资料维护在[Dropbox](https://www.dropbox.com/sh/4wweu1f2wd60epg/Sv-EQzFhfw)上，随时随地都可以下载。
