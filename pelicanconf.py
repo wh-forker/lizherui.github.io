@@ -60,8 +60,8 @@ SOCIAL = (('Github', 'https://github.com/lizherui'),
           ('Twitter', 'https://twitter.com/lzrak47'),
           ('Facebook', 'https://www.facebook.com/profile.php?id=100004875786021'),
           ('Linkedin', 'http://www.linkedin.com/profile/view?id=232391796'),
-          ('Weibo', 'http://weibo.com/lzrm4a1'),
-          ('Zhihu', 'http://www.zhihu.com/people/li-zhe-rui'),
-          ('Douban', 'http://book.douban.com/people/lizherui'),
+          (u'微博', 'http://weibo.com/lzrm4a1'),
+          (u'知乎', 'http://www.zhihu.com/people/li-zhe-rui'),
+          (u'豆瓣读书', 'http://book.douban.com/people/lizherui'),
          )
 
