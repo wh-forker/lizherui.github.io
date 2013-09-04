@@ -6,7 +6,7 @@ Title: About
 
 我曾在百度实习过大半年，但实在是不太喜欢百度这个公司，于是在毕业前离开了那里。
 
-我最终在毕业的时候选择了阿里，花名"骨玉"。
+我最终在毕业的时候选择了阿里。
 
 我热爱编程，开发环境嗜好Mac OS X + Oh-my-zsh + Vim + Git的组合，惯用clang + gdb进行编译、调试。键盘流，快捷键党，尤其反感编程的时候用鼠标的编程习惯。编程语言方面熟悉c/c++/java/python/php/scheme，有代码洁癖，平时没事喜欢看点源码，常年混迹github，google group，stackoverflow等技术社区。
 
