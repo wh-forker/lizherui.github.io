@@ -50,3 +50,7 @@ Slug: ten_thousand_hours
 第三部：
 
 <iframe height=498 width=510 src="http://player.youku.com/embed/XNjA0MjMwMDYw" frameborder=0 allowfullscreen></iframe>
+
+附加篇：
+
+<iframe height=498 width=510 src="http://player.youku.com/embed/XNjA2NDc4OTgw" frameborder=0 allowfullscreen></iframe>
