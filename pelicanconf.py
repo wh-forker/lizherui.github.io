@@ -63,6 +63,6 @@ SOCIAL = (('Github', 'https://github.com/lizherui'),
           ('Linkedin', 'http://www.linkedin.com/profile/view?id=232391796'),
           (u'微博', 'http://weibo.com/lzrm4a1'),
           (u'知乎', 'http://www.zhihu.com/people/li-zhe-rui'),
-          (u'豆瓣读书', 'http://book.douban.com/people/lizherui'),
+          (u'豆瓣', 'http://www.douban.com/people/lizherui'),
          )
 
