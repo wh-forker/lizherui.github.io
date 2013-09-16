@@ -14,7 +14,7 @@ Slug: taobao_city
 
 因为公司给予员工越多，员工回报公司就越多。
 
-我感觉越来越温暖，我喜欢这里。
+越来越感觉温暖，越来越喜欢这里。
 
 ![1](https://lh3.googleusercontent.com/-nDB-cpletDg/UjcqOauueeI/AAAAAAAAANw/P5478BFtUlU/s640/IMG_0187.JPG)
 
