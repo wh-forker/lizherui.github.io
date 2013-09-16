@@ -4,7 +4,7 @@ Category: Work
 Tags: 淘宝城
 Slug: taobao_city
 
-淘宝城，霸气。
+淘宝城，震撼。
 
 从整体到局部，处处高端大气上档次，很有硅谷范儿。
 
