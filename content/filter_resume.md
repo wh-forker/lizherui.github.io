@@ -1,5 +1,5 @@
 Date: 2013-08-25
-Title: 筛选简历
+Title: 阿里校招内推简历筛选
 Category: Work
 Tags: 内推, 简历
 Slug: filter_resume
