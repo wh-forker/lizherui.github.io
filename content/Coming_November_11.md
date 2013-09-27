@@ -14,4 +14,4 @@ Slug: coming_November_11
 
 我们就是那更勤奋的人。
 
-<iframe height=360 width=640 src="http://cloud.video.taobao.com/play/u/1067522205/e/1/t/1/p/1/10653872.swf" frameborder=0 allowfullscreen></iframe>
+<iframe height=360 width=640 src="http://cloud.video.taobao.com/play/u/1067522205/e/1/t/1/p/1/10653872.swf" frameborder=0 quality="best" allowfullscreen></iframe>
