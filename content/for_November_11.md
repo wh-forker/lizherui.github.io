@@ -10,4 +10,4 @@ Slug: for_november_11
 
 We work hard for it, everyday.
 
-http://cloud.video.taobao.com/play/u/1067522205/e/1/t/1/p/1/10653872.swf
+<iframe height=498 width=510 src="http://cloud.video.taobao.com/play/u/1067522205/e/1/t/1/p/1/10653872.swf" frameborder=0 allowfullscreen></iframe>
