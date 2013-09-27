@@ -1,13 +1,17 @@
 Date: 2013-09-27
-Title: 企盼双十一
+Title: 临近的双十一
 Category: Work
 Tags: 天猫, 双11
-Slug: for_november_11
+Slug: coming_November_11
 
-双十一要来了。
+双十一就要来了。
 
-我们小组的leader是双十一负责人，所以我很幸运地参与了双十一相关的项目。
+由于我们小组leader是双十一总负责人，所以我很幸运地参与到双十一相关的项目中。
 
-We work hard for it, everyday.
+作为一个新人，虽然只能做一点儿双十一相关的小需求，但依然很激动。
+
+常听说总有人比你们更勤奋，但这句话就不用对我们说了。
+
+我们就是那更勤奋的人。
 
 <iframe height=360 width=640 src="http://cloud.video.taobao.com/play/u/1067522205/e/1/t/1/p/1/10653872.swf" frameborder=0 allowfullscreen></iframe>
