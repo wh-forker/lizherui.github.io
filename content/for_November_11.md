@@ -1,7 +1,7 @@
 Date: 2013-09-27
 Title: 临近的双十一
 Category: Work
-Tags: 天猫, 双11
+Tags: 天猫, 双十一
 Slug: coming_November_11
 
 双十一就要来了。
