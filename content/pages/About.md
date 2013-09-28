@@ -18,6 +18,6 @@ Title: About
 
 我使用[Dropbox](https://www.dropbox.com/sh/4wweu1f2wd60epg/Sv-EQzFhfw)来维护收藏的技术书籍和资料，随时随地都可以下载。
 
-我是苦练的虔诚者，并极其热爱竞争。
+我是苦练的虔诚者，也是竞争的狂热者。
 
 <embed src="http://player.youku.com/player.php/sid/XMzkyNzAxMjg0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" flashvars="isAutoPlay=true&showAd=0" type="application/x-shockwave-flash"></embed>
