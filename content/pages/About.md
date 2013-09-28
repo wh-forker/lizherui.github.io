@@ -12,10 +12,12 @@ Title: About
 
 我崇尚黑客文化与Geek精神，喜欢小众的东西，热爱一切简洁、快速且强壮的事物。
 
-我是苦练的虔诚者，并极其热爱竞争。
-
 我使用[Gist](https://gist.github.com/lizherui/6184006)来维护个人简历，目前还是毕业前的资料。不过到了必要的时候，我会彻底更新它。
 
 我使用[豆瓣读书](http://book.douban.com/people/lizherui)来维护书单，这同时也是我的读书动态。
 
 我使用[Dropbox](https://www.dropbox.com/sh/4wweu1f2wd60epg/Sv-EQzFhfw)来维护收藏的技术书籍和资料，随时随地都可以下载。
+
+我是苦练的虔诚者，并极其热爱竞争。
+
+<embed src="http://player.youku.com/player.php/sid/XMzkyNzAxMjg0&showAd=0&isAutoPlay=true/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
