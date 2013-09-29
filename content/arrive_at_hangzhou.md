@@ -17,3 +17,5 @@ Slug: arrive_at_hangzhou
 下周一就要入职了，感觉压力很大。
 
 上路了，毕业生。
+
+<iframe height=498 width=510 src="http://player.youku.com/embed/XMzcwMzExNg==" frameborder=0 allowfullscreen></iframe>
