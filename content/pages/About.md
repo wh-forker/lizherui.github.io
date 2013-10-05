@@ -16,7 +16,7 @@ Title: About
 
 我使用[豆瓣读书](http://book.douban.com/people/lizherui)来维护书单，这同时也是我的读书动态。
 
-我使用[Dropbox](https://www.dropbox.com/sh/4wweu1f2wd60epg/Sv-EQzFhfw/tech)来维护收藏的技术书籍和资料，随时随地都可以下载。
+我使用[Dropbox](https://www.dropbox.com/sh/4wweu1f2wd60epg/GivqMPcZRi/tech)来维护收藏的技术书籍和资料，随时随地都可以下载。
 
 我是苦练的虔诚者，也是竞争的狂热者。
 
