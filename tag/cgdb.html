@@ -9,14 +9,14 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-    <script src="./theme/html5.js"></script>
+    <script src="../theme/html5.js"></script>
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="./theme/bootstrap.min.css" rel="stylesheet">
-    <link href="./theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="./theme/local.css" rel="stylesheet">
-    <link href="./theme/pygments.css" rel="stylesheet">
+    <link href="../theme/bootstrap.min.css" rel="stylesheet">
+    <link href="../theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="../theme/local.css" rel="stylesheet">
+    <link href="../theme/pygments.css" rel="stylesheet">
 
 </head>
 
@@ -31,12 +31,12 @@
             <span class="icon-bar"></span>
           </button>
 
-        <a class="brand" href=".">lizherui的程序世界</a>
+        <a class="brand" href="..">lizherui的程序世界</a>
 
         <div class="nav-collapse collapse">
         <ul class="nav">
                     
-                            <li><a href="./pages/about.html">About</a></li>
+                            <li><a href="../pages/about.html">About</a></li>
                                 </ul>
         <form class="navbar-search pull-right" action="/search.html">
     <input type="text" class="search-query" placeholder="Search" name="q" id="s">
@@ -52,44 +52,56 @@
     <div class="row">
 
         <div class="span9">
-        <ul>
-    <li><a href="./tag/pelican.html">pelican</a></li>
-    <li><a href="./tag/jian-li.html">简历</a></li>
-    <li><a href="./tag/du-shu-bi-ji.html">读书笔记</a></li>
-    <li><a href="./tag/cgdb.html">cgdb</a></li>
-    <li><a href="./tag/vim.html">vim</a></li>
-    <li><a href="./tag/tian-mao.html">天猫</a></li>
-    <li><a href="./tag/hei-ke.html">黑客</a></li>
-    <li><a href="./tag/tao-bao.html">淘宝</a></li>
-    <li><a href="./tag/she-ji-mo-shi.html">设计模式</a></li>
-    <li><a href="./tag/hang-zhou.html">杭州</a></li>
-    <li><a href="./tag/java.html">java</a></li>
-    <li><a href="./tag/shuang-shi.html">双十一</a></li>
-    <li><a href="./tag/ji-zhu.html">技术</a></li>
-    <li><a href="./tag/macintoch.html">macintoch</a></li>
-    <li><a href="./tag/blog.html">blog</a></li>
-    <li><a href="./tag/tao-bao-cheng.html">淘宝城</a></li>
-    <li><a href="./tag/a-li.html">阿里</a></li>
-    <li><a href="./tag/nba.html">NBA</a></li>
-    <li><a href="./tag/gong-si.html">公司</a></li>
-    <li><a href="./tag/ke-du-xing.html">可读性</a></li>
-    <li><a href="./tag/bai-a.html">百阿</a></li>
-    <li><a href="./tag/python.html">python</a></li>
-    <li><a href="./tag/bian-cheng.html">编程</a></li>
-    <li><a href="./tag/bian-ji-qi.html">编辑器</a></li>
-    <li><a href="./tag/godaddy.html">godaddy</a></li>
-    <li><a href="./tag/hua-xue.html">滑雪</a></li>
-    <li><a href="./tag/bai-du.html">百度</a></li>
-    <li><a href="./tag/nei-tui.html">内推</a></li>
-    <li><a href="./tag/luo-si.html">罗斯</a></li>
-    <li><a href="./tag/mac-os-x.html">mac os x</a></li>
-    <li><a href="./tag/lian-xi.html">练习</a></li>
-    <li><a href="./tag/eclipse.html">eclipse</a></li>
-    <li><a href="./tag/yu-ming.html">域名</a></li>
-    <li><a href="./tag/lisp.html">lisp</a></li>
-    <li><a href="./tag/pa-chong.html">爬虫</a></li>
-    <li><a href="./tag/mo-xiao-shi.html">一万小时</a></li>
+                
+
+        
+
+
+    <div class='article'>
+        <div class="content-title">
+            <a href="../pages/2013/10/07/io_in_cgdb.html"><h1>在cgdb中进行I/O交互</h1></a>
+            2013-10-07
+
+by <a class="url fn" href="../author/lizherui.html">lizherui</a>
+ 
+
+
+ 
+        </div>
+        
+        <div><p>cgdb，gdb -tui的加强版，非常优秀，中文教程在此：<a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md">https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md</a>，不再赘述。</p>
+<p>cgdb有一个问题困扰了我很久：如何方便地进行I/O交互。</p>
+<p>虽然cgdb自带了TTY模式，但不太靠谱，调试到某些Unix I/O接口时会卡死，如read函数。</p>
+<p>今天我又反复看了下教程，发现了这样一句以前没注意的忠告：</p>
+<blockquote>
+<p>如果被调试的程序需要读取终端用户输入，我们推荐用户在终端中启动被调试程序，然后在另一个终端使用CGDB去attach被调试程序，这是与被调试程序进行I/O交互最简单的方法。</p>
+</blockquote>
+<p>但是教程没有说具体该怎么操作，摸索了下，终于完美解决，以调试redis-cli为例。</p>
+<ol>
+<li>命令行先后启动redis-server和redis-cli；</li>
+<li>ps查到redis-cli进程号后直接cgdb -p [pid]；
+<img alt="" src="https://lh6.googleusercontent.com/-O6GfuAvzPl8/UlGcap9xdYI/AAAAAAAAARI/DlRRE_RpPuE/w821-h139-no/Screen+Shot+2013-10-07+at+1.21.39+AM.png" /></li>
+<li>进入cgdb后不要慌，用bt看下阻塞I/O在哪里；
+<img alt="" src="https://lh4.googleusercontent.com/-g3Mq_Eg2aGI/UlGf0iupLjI/AAAAAAAAASY/rApjcwZpibw/w958-h112-no/Screen+Shot+2013-10-07+at+1.36.55+AM.png" /></li>
+<li>然后在阻塞I/O处设置断点，可以看到这里在linenoise.c的312行调用了read()，直接加断点b linenoise.c:312；</li>
+<li>cgdb中输入continue，然后再去redis-cli那里输入想调试的命令，比如info，回到cgdb，发现源码已经刷出来了，大功告成。
+<img alt="" src="https://lh4.googleusercontent.com/-2k_4-6EXv1I/UlGhLX__87I/AAAAAAAAATA/2PIFr0YZv8c/w958-h599-no/Screen+Shot+2013-10-07+at+1.42.54+AM.png" /></li>
+</ol></div>
+        <hr />
+    </div>
+		
+            <div class="pagination">
+<ul>
+    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+
+    <li class="active"><a href="../tag/cgdb.html">1</a></li>
+
+    <li class="next disabled"><a href="#">&rarr; Next</a></li>
+
 </ul>
+</div>    
+ 
+  
         </div>
         
         <div class="span3">
@@ -100,8 +112,8 @@
                 Site
                 </li>
             
-                <li><a href="./archives.html">Archives</a>
-                <li><a href="./tags.html">Tags</a>
+                <li><a href="../archives.html">Archives</a>
+                <li><a href="../tags.html">Tags</a>
                                 <li><a href="http://www.lizherui.com/feeds/all.rss.xml" rel="alternate">RSS</a></li>
                             </ul>
             </div>
@@ -113,9 +125,9 @@
                 Categories
                 </li>
                 
-                                <li><a href="./category/life.html">Life</a></li>
-                                <li><a href="./category/tech.html">Tech</a></li>
-                                <li><a href="./category/work.html">Work</a></li>
+                                <li><a href="../category/life.html">Life</a></li>
+                                <li><a href="../category/tech.html">Tech</a></li>
+                                <li><a href="../category/work.html">Work</a></li>
                                    
             </ul>
             </div>
@@ -158,7 +170,7 @@
     </div>     </div> 
 <footer>
 <br />
-<p><a href=".">lizherui的程序世界</a> &copy; lizherui 2013</p>
+<p><a href="..">lizherui的程序世界</a> &copy; lizherui 2013</p>
 </footer>
 
 </div> <!-- /container -->

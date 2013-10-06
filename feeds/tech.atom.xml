@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>lizherui的程序世界</title><link href="http://www.lizherui.com/" rel="alternate"></link><link href="http://www.lizherui.com/feeds/tech.atom.xml" rel="self"></link><id>http://www.lizherui.com/</id><updated>2013-08-17T00:00:00+08:00</updated><entry><title>一步一步打造Geek风格的技术博客</title><link href="http://www.lizherui.com/pages/2013/08/17/build_blog.html" rel="alternate"></link><updated>2013-08-17T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-17:pages/2013/08/17/build_blog.html</id><summary type="html">&lt;h2&gt;如梦初醒&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>lizherui的程序世界</title><link href="http://www.lizherui.com/" rel="alternate"></link><link href="http://www.lizherui.com/feeds/tech.atom.xml" rel="self"></link><id>http://www.lizherui.com/</id><updated>2013-10-07T00:00:00+08:00</updated><entry><title>在cgdb中进行I/O交互</title><link href="http://www.lizherui.com/pages/2013/10/07/io_in_cgdb.html" rel="alternate"></link><updated>2013-10-07T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-10-07:pages/2013/10/07/io_in_cgdb.html</id><summary type="html">&lt;p&gt;cgdb，gdb -tui的加强版，非常优秀，中文教程在此：&lt;a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md"&gt;https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md&lt;/a&gt;，不再赘述。&lt;/p&gt;
+&lt;p&gt;cgdb有一个问题困扰了我很久：如何方便地进行I/O交互。&lt;/p&gt;
+&lt;p&gt;虽然cgdb自带了TTY模式，但不太靠谱，调试到某些Unix I/O接口时会卡死，如read函数。&lt;/p&gt;
+&lt;p&gt;今天我又反复看了下教程，发现了这样一句以前没注意的忠告：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果被调试的程序需要读取终端用户输入，我们推荐用户在终端中启动被调试程序，然后在另一个终端使用CGDB去attach被调试程序，这是与被调试程序进行I/O交互最简单的方法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;但是教程没有说具体该怎么操作，摸索了下，终于完美解决，以调试redis-cli为例。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;命令行先后启动redis-server和redis-cli；&lt;/li&gt;
+&lt;li&gt;ps查到redis-cli进程号后直接cgdb -p [pid]；
+&lt;img alt="" src="https://lh6.googleusercontent.com/-O6GfuAvzPl8/UlGcap9xdYI/AAAAAAAAARI/DlRRE_RpPuE/w821-h139-no/Screen+Shot+2013-10-07+at+1.21.39+AM.png" /&gt;&lt;/li&gt;
+&lt;li&gt;进入cgdb后不要慌，用bt看下阻塞I/O在哪里；
+&lt;img alt="" src="https://lh4.googleusercontent.com/-g3Mq_Eg2aGI/UlGf0iupLjI/AAAAAAAAASY/rApjcwZpibw/w958-h112-no/Screen+Shot+2013-10-07+at+1.36.55+AM.png" /&gt;&lt;/li&gt;
+&lt;li&gt;然后在阻塞I/O处设置断点，可以看到这里在linenoise.c的312行调用了read()，直接加断点b linenoise.c:312；&lt;/li&gt;
+&lt;li&gt;cgdb中输入continue，然后再去redis-cli那里输入想调试的命令，比如info，回到cgdb，发现源码已经刷出来了，大功告成。
+&lt;img alt="" src="https://lh4.googleusercontent.com/-2k_4-6EXv1I/UlGhLX__87I/AAAAAAAAATA/2PIFr0YZv8c/w958-h599-no/Screen+Shot+2013-10-07+at+1.42.54+AM.png" /&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="cgdb"></category></entry><entry><title>一步一步打造Geek风格的技术博客</title><link href="http://www.lizherui.com/pages/2013/08/17/build_blog.html" rel="alternate"></link><updated>2013-08-17T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-17:pages/2013/08/17/build_blog.html</id><summary type="html">&lt;h2&gt;如梦初醒&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;h3&gt;Geek是什么&lt;/h3&gt;
 &lt;p&gt;Geek更多的是一种精神，一种态度，一种对技术的理解与信念。他们无法忍受丑陋的代码，拙劣的技术。他们思路开阔，技术娴熟，他们不甘平庸，追求完美。他们不会囿于常识，他们敢于突破。在常人眼中，他们不走寻常路，享受各种非主流的技术。但在他们自己眼中，这些又是那么得自然与优美。他们用自己的行为诠释着自己对于技术的理解，用那份固执传达着自己的信念。&lt;/p&gt;
