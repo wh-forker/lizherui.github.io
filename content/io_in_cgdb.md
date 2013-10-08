@@ -17,7 +17,7 @@ cgdb有一个问题困扰了我很久：如何方便地进行I/O交互。
 
 1. 命令行先后启动redis-server和redis-cli；
 2. ps查到redis-cli进程号后直接cgdb -p [pid]；
-![](https://lh6.googleusercontent.com/-O6GfuAvzPl8/UlGcap9xdYI/AAAAAAAAARI/DlRRE_RpPuE/w821-h139-no/Screen+Shot+2013-10-07+at+1.21.39+AM.png)
+![](https://lh6.googleusercontent.com/-5Eq0HZugi_0/UlGfDvp545I/AAAAAAAAASE/EUUwYqy23aY/w788-h124-no/Screen+Shot+2013-10-07+at+1.33.30+AM.png)
 3. 进入cgdb后不要慌，用bt看下阻塞I/O在哪里；
 ![](https://lh4.googleusercontent.com/-g3Mq_Eg2aGI/UlGf0iupLjI/AAAAAAAAASY/rApjcwZpibw/w958-h112-no/Screen+Shot+2013-10-07+at+1.36.55+AM.png)
 4. 然后在阻塞I/O处设置断点，可以看到这里在linenoise.c的312行调用了read()，直接加断点b linenoise.c:312；
