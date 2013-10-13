@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>lizherui的程序世界</title><link href="http://www.lizherui.com/" rel="alternate"></link><link href="http://www.lizherui.com/feeds/all-zh.atom.xml" rel="self"></link><id>http://www.lizherui.com/</id><updated>2013-10-07T00:00:00+08:00</updated><entry><title>在cgdb中进行I/O交互</title><link href="http://www.lizherui.com/pages/2013/10/07/io_in_cgdb.html" rel="alternate"></link><updated>2013-10-07T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-10-07:pages/2013/10/07/io_in_cgdb.html</id><summary type="html">&lt;p&gt;cgdb，gdb -tui的加强版，非常优秀，中文教程在此：&lt;a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md"&gt;https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md&lt;/a&gt;，不再赘述。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>lizherui的程序世界</title><link href="http://www.lizherui.com/" rel="alternate"></link><link href="http://www.lizherui.com/feeds/all-zh.atom.xml" rel="self"></link><id>http://www.lizherui.com/</id><updated>2013-10-13T00:00:00+08:00</updated><entry><title>晨跑计划</title><link href="http://www.lizherui.com/pages/2013/10/13/morning_jogging.html" rel="alternate"></link><updated>2013-10-13T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-10-13:pages/2013/10/13/morning_jogging.html</id><summary type="html">&lt;p&gt;明天正式启动晨跑计划。&lt;/p&gt;
+&lt;p&gt;在淘宝工作的这3个多月里，我几乎天天都熬到凌晨2点以后才睡觉，周末更甚，每次都熬到凌晨4点左右。&lt;/p&gt;
+&lt;p&gt;这样的生活作息产生了各种不良影响，而且表现得越来越明显：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;熬夜看书的效率越来越低，思维很慢，且越来越容易产生不耐烦的情绪。&lt;/li&gt;
+&lt;li&gt;身体开始吃不消，白天常常感到困倦。&lt;/li&gt;
+&lt;li&gt;运动的时间极少，这可不是个好兆头。&lt;/li&gt;
+&lt;li&gt;累，很累。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这件事情我反思了很久很久，恰巧最近又读了村上春树的&lt;a href="http://book.douban.com/subject/3369600/"&gt;《当我谈跑步时，我谈些什么》&lt;/a&gt;，我决定开始改变。&lt;/p&gt;
+&lt;p&gt;众所周知，晨跑最难的地方在于坚持不懈，而这也是我选择晨跑的原因之一。&lt;/p&gt;
+&lt;p&gt;因为工作后，我越来越觉得，对一个人来讲，能把一件小事长年累月坚持下来的这种品质，是多么得关键与稀有。&lt;/p&gt;
+&lt;p&gt;我意识到了这一点，同时发现我身上还有所欠缺，于是我想变得更好。&lt;/p&gt;
+&lt;p&gt;遥记大一开学第一天，我和宿舍的同学决定晨跑，最终只坚持了两天。&lt;/p&gt;
+&lt;p&gt;但是这次，我是认真的。&lt;/p&gt;
+&lt;p&gt;结束浑浑噩噩的状态吧，别忘记自己当初的梦想。&lt;/p&gt;
+&lt;p&gt;但我不能说太多这样的话，必须等到最终坚持下来的时候，我才有资格说更多。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you really want to do something, you won't talk about it, you just do it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;希望晨跑这种极富挑战性的事情，能让我重新认识下自己的能力。&lt;/p&gt;</summary><category term="跑步"></category><category term="早起"></category></entry><entry><title>在cgdb中进行I/O交互</title><link href="http://www.lizherui.com/pages/2013/10/07/io_in_cgdb.html" rel="alternate"></link><updated>2013-10-07T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-10-07:pages/2013/10/07/io_in_cgdb.html</id><summary type="html">&lt;p&gt;cgdb，gdb -tui的加强版，非常优秀，中文教程在此：&lt;a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md"&gt;https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md&lt;/a&gt;，不再赘述。&lt;/p&gt;
 &lt;p&gt;cgdb有一个问题困扰了我很久：如何方便地进行I/O交互。&lt;/p&gt;
 &lt;p&gt;虽然cgdb自带了TTY模式，但不太靠谱，调试到某些Unix I/O接口时会卡死，如read函数。&lt;/p&gt;
 &lt;p&gt;今天我又反复看了下教程，发现了这样一句以前没注意的忠告：&lt;/p&gt;
