@@ -29,7 +29,7 @@ Slug: morning_jogging
 
 结束浑浑噩噩的状态吧，别忘记自己当初的梦想。
 
-但我现在不能说太多这样的话，必须等到最终真正坚持了下来，我才有资格说更多。
+但我现在还不能说太多这样的话，必须等到最终真正坚持下来的时候，我才有资格说更多。
 
 > If you really want to do something, you won't talk about it, you just do it.
 
