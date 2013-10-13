@@ -15,11 +15,11 @@
 &lt;p&gt;遥记大一开学第一天，我和宿舍的同学决定晨跑，最终却只坚持了两天。&lt;/p&gt;
 &lt;p&gt;但是这次，我是认真的。&lt;/p&gt;
 &lt;p&gt;结束浑浑噩噩的状态吧，别忘记自己当初的梦想。&lt;/p&gt;
-&lt;p&gt;但我不能说太多这样的话，必须等到最终坚持下来的时候，我才有资格说更多。&lt;/p&gt;
+&lt;p&gt;但我现在不能说太多这样的话，必须等到最终真正坚持了下来，我才有资格说更多。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;If you really want to do something, you won't talk about it, you just do it.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;希望晨跑这样极富挑战性的事情，能让我重新认识到自己的能力。&lt;/p&gt;</summary><category term="跑步"></category><category term="早起"></category></entry><entry><title>在cgdb中进行I/O交互</title><link href="http://www.lizherui.com/pages/2013/10/07/io_in_cgdb.html" rel="alternate"></link><updated>2013-10-07T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-10-07:pages/2013/10/07/io_in_cgdb.html</id><summary type="html">&lt;p&gt;cgdb，gdb -tui的加强版，非常优秀，中文教程在此：&lt;a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md"&gt;https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md&lt;/a&gt;，不再赘述。&lt;/p&gt;
+&lt;p&gt;最后，希望晨跑这样极富挑战性的事情，能让我重新认识到自己的能力。&lt;/p&gt;</summary><category term="跑步"></category><category term="早起"></category></entry><entry><title>在cgdb中进行I/O交互</title><link href="http://www.lizherui.com/pages/2013/10/07/io_in_cgdb.html" rel="alternate"></link><updated>2013-10-07T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-10-07:pages/2013/10/07/io_in_cgdb.html</id><summary type="html">&lt;p&gt;cgdb，gdb -tui的加强版，非常优秀，中文教程在此：&lt;a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md"&gt;https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md&lt;/a&gt;，不再赘述。&lt;/p&gt;
 &lt;p&gt;cgdb有一个问题困扰了我很久：如何方便地进行I/O交互。&lt;/p&gt;
 &lt;p&gt;虽然cgdb自带了TTY模式，但不太靠谱，调试到某些Unix I/O接口时会卡死，如read函数。&lt;/p&gt;
 &lt;p&gt;今天我又反复看了下教程，发现了这样一句以前没注意的忠告：&lt;/p&gt;
