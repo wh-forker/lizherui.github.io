@@ -59,8 +59,8 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="./pages/2013/10/13/morning_jogging.html"><h1>晨跑计划</h1></a>
-            2013-10-13
+            <a href="./pages/2013/10/07/io_in_cgdb.html"><h1>在cgdb中进行I/O交互</h1></a>
+            2013-10-07
 
 by <a class="url fn" href="./author/lizherui.html">lizherui</a>
  
@@ -69,46 +69,7 @@ by <a class="url fn" href="./author/lizherui.html">lizherui</a>
  
         </div>
         
-        <div><p>明天正式启动晨跑计划。</p>
-<p>在淘宝工作的这3个多月里，我几乎天天都熬到凌晨2点后才睡觉，周末更甚，每次都熬到凌晨4点左右。</p>
-<p>这样的生活作息产生了各种不良影响，而且表现得越来越明显：</p>
-<ol>
-<li>熬夜看书的效率越来越低，思维很慢，且越来越容易产生不耐烦的情绪。</li>
-<li>身体开始吃不消，白天常常感到困倦。</li>
-<li>运动的时间极少，这可不是个好兆头。</li>
-<li>累，很累。</li>
-</ol>
-<p>这件事情我反思了很久很久，恰巧最近又读了村上春树的<a href="http://book.douban.com/subject/3369600/">《当我谈跑步时，我谈些什么》</a>，我决定开始改变。</p>
-<p>众所周知，晨跑最难的地方在于坚持不懈，而这也是我选择晨跑的原因之一。</p>
-<p>因为工作后，我越来越觉得，对一个人来讲，能把一件小事长年累月坚持下来的这种能力，是多么得关键与稀有。</p>
-<p>我意识到了这一点，同时发现我身上还有所欠缺，于是我想变得更好。</p>
-<p>遥记大一开学第一天，我和宿舍的同学决定晨跑，最终却只坚持了两天。</p>
-<p>但是这次，我是认真的。</p>
-<p>结束浑浑噩噩的状态吧，别忘记自己当初的梦想。</p>
-<p>但我现在还不能说太多这样的话，必须等到最终真正坚持下来的时候，我才有资格说更多。</p>
-<blockquote>
-<p>If you really want to do something, you won't talk about it, you just do it.</p>
-</blockquote>
-<p>最后，希望晨跑这样极富挑战性的事情，能让我重新认识到自己的能力。</p></div>
-        <hr />
-    </div>
-		
-    
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="./pages/2013/10/07/io_in_cgdb.html"><h2>在cgdb中进行I/O交互</h2></a>
-        <div class= "well small"> 2013-10-07
-
-by <a class="url fn" href="./author/lizherui.html">lizherui</a>
- 
-
-
- </div>
-        <div class="summary"><p>cgdb，gdb -tui的加强版，非常优秀，中文教程在此：<a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md">https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md</a>，不再赘述。</p>
+        <div><p>cgdb，gdb -tui的加强版，非常优秀，中文教程在此：<a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md">https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md</a>，不再赘述。</p>
 <p>cgdb有一个问题困扰了我很久：如何方便地进行I/O交互。</p>
 <p>虽然cgdb自带了TTY模式，但不太靠谱，调试到某些Unix I/O接口时会卡死，如read函数。</p>
 <p>今天我又反复看了下教程，发现了这样一句以前没注意的忠告：</p>
@@ -122,9 +83,13 @@ by <a class="url fn" href="./author/lizherui.html">lizherui</a>
 <img alt="" src="https://lh6.googleusercontent.com/-5Eq0HZugi_0/UlGfDvp545I/AAAAAAAAASE/EUUwYqy23aY/w788-h124-no/Screen+Shot+2013-10-07+at+1.33.30+AM.png" /></li>
 <li>进入cgdb后不要慌，用bt看下阻塞I/O在哪里；
 <img alt="" src="https://lh4.googleusercontent.com/-g3Mq_Eg2aGI/UlGf0iupLjI/AAAAAAAAASY/rApjcwZpibw/w958-h112-no/Screen+Shot+2013-10-07+at+1.36.55+AM.png" /></li>
-<li>然后在阻塞I/O处设置断点，可以看到这里在linenoise.c的312行调用了read()，直接加断点b linenoise.c:312 ...</li></ol> <a class="btn btn-info xsmall" href="./pages/2013/10/07/io_in_cgdb.html">read more</a></div>
-    </div>	
-				
+<li>然后在阻塞I/O处设置断点，可以看到这里在linenoise.c的312行调用了read()，直接加断点b linenoise.c:312；</li>
+<li>cgdb中输入continue，然后再去redis-cli那里输入想调试的命令，比如info，回到cgdb，发现源码已经刷出来了，大功告成。
+<img alt="" src="https://lh4.googleusercontent.com/-2k_4-6EXv1I/UlGhLX__87I/AAAAAAAAATA/2PIFr0YZv8c/w958-h599-no/Screen+Shot+2013-10-07+at+1.42.54+AM.png" /></li>
+</ol></div>
+        <hr />
+    </div>
+		
     
  
         
@@ -208,6 +173,46 @@ by <a class="url fn" href="./author/lizherui.html">lizherui</a>
 <p><img alt="" src="https://lh4.googleusercontent.com/-viYkjgbW6aQ/UjfCMTSGj5I/AAAAAAAAAQk/ZvWeD2ikIo0/w792-h594-no/20130809132058540.JPG" /></p> <a class="btn btn-info xsmall" href="./pages/2013/09/16/taobao_city.html">read more</a></div>
     </div>	
 				
+    
+ 
+        
+
+ 
+
+    <div class='article'>
+        <a href="./pages/2013/09/05/bai_nian_ali.html"><h2>百阿感言</h2></a>
+        <div class= "well small"> 2013-09-05
+
+by <a class="url fn" href="./author/lizherui.html">lizherui</a>
+ 
+
+
+ </div>
+        <div class="summary"><h2>背景</h2>
+<hr />
+<p>来阿里之前，阿里“很黄很暴力”的开放风骚型文化就已经在江湖上声名远扬了。</p>
+<p>记得参加13届校招那会儿，阿里的面试风格就让人印象深刻。与其它互联网公司面试官一脸严肃的风格不同，阿里的面试官不仅极其健谈，而且不停地和候选人互开玩笑，让我惊讶了很久很久。</p>
+<p>这样的氛围对于我们应届生来说无疑产生了极强的震撼力与极大的吸引力。</p>
+<h2>临行前</h2>
+<hr />
+<p>平时和师兄师姐吃饭的时候，他们聊到百阿总是故作神秘，欲言又止，吊足了我的胃口。</p>
+<p>晚上在内网上搜了搜百阿相关的帖子，预览了下诸如“破冰”这样神秘而刺激的传说级活动。</p>
+<p>明天就要亲身经历了，既期待又紧张。</p>
+<h2>第一天</h2>
+<hr />
+<h3>新人破冰</h3>
+<p>刚进教室我就惊呆了，没想到是一组人围坐一张圆桌的形式，好像回到了小时候上幼儿园的日子。</p>
+<p>迟到的那几个倒霉家伙自然成为了破冰活动的主角，气氛一下子活跃了起来。</p>
+<p>不过我感觉这次破冰倒是没有传说中那么得无底限。或许是因为mm来自海峡两岸中的宝岛台湾，或许是因为大家互相之间还不太熟，没有完全放开。</p>
+<p>破冰的尺度恰到火候，既没有传说中的那样夸张，又彻底开启了欢乐的百阿之门。</p>
+<h3>侠骨柔情</h3>
+<p>每个人都要写一个愿望，我想了很久很久都没有头绪。最后快没时间了，只好写了一个极难实现的愿望。</p>
+<p>幸运的是，我抽到了一个很简单的愿望，心里的石头总算落了地。</p>
+<p>这个小活动第一天给人的感觉就是很简单，乐呵乐呵随便玩玩。</p>
+<p>但是最后一天每个人愿望揭晓的时候，震撼的一面才彻底显现了出来。</p>
+<p>大家发现有些同学的愿望是那么得难实现 ...</p> <a class="btn btn-info xsmall" href="./pages/2013/09/05/bai_nian_ali.html">read more</a></div>
+    </div>	
+				
             <div class="pagination">
 <ul>
     <li class="prev disabled"><a href="#">&larr; Previous</a></li>
@@ -216,7 +221,6 @@ by <a class="url fn" href="./author/lizherui.html">lizherui</a>
     <li class=""><a href="./index2.html">2</a></li>
     <li class=""><a href="./index3.html">3</a></li>
     <li class=""><a href="./index4.html">4</a></li>
-    <li class=""><a href="./index5.html">5</a></li>
 
     <li class="next"><a href="./index2.html">Next &rarr;</a></li>
 
