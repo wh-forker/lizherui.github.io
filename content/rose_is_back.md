@@ -13,5 +13,3 @@ Slug: Rose_is_back
 罗斯快攻时的态度一直激励着我：甭管前面站着多高多壮的球员，统统硬上。
 
 Too Big, Too Strong, Too Fast, Too Good.
-
-<iframe frameborder=0 src="http://v.qq.com/iframe/player.html?vid=i0408ki87vh&tiny=0" allowfullscreen></iframe>
