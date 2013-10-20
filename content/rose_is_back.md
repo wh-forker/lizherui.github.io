@@ -14,4 +14,4 @@ Slug: Rose_is_back
 
 Too Big, Too Strong, Too Fast, Too Good.
 
-<iframe width="480" height="405" src="http://www.56.com/iframe/OTgxNTU1MDI" frameborder="0" allowfullscreen=""></iframe>
+<iframe frameborder=0 src="http://v.qq.com/iframe/player.html?vid=i0408ki87vh&tiny=0" allowfullscreen></iframe>
