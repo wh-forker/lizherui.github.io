@@ -1,7 +1,7 @@
 Date: 2013-11-14
 Title: 战友离，情谊在
 Category: Work
-Tags: 天猫, 双十一
+Tags: 离别
 Slug: goodbye
 
 双十一刚刚结束，团队里两名骨干就要被调到别的部门去了。
