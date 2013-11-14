@@ -16,4 +16,4 @@ Slug: goodbye
 
 A good guy will transfer, what a sad story.
 
-<iframe height=360 width=640 src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XMzk1NDAzMDQ=&embedid=-&showAd=0&isAutoPlay=true" frameborder=0 quality="best" allowfullscreen></iframe>
+<iframe height=498 width=510 src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XMzg3Njk2ODYw=&embedid=-&showAd=0&isAutoPlay=true" frameborder=0 quality="best" allowfullscreen></iframe>
