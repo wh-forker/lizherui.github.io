@@ -10,12 +10,12 @@
 &lt;ol&gt;
 &lt;li&gt;命令行先后启动redis-server和redis-cli；&lt;/li&gt;
 &lt;li&gt;ps查到redis-cli进程号后直接cgdb -p [pid]；
-&lt;img alt="" src="https://lh6.googleusercontent.com/-5Eq0HZugi_0/UlGfDvp545I/AAAAAAAAASE/EUUwYqy23aY/w788-h124-no/Screen+Shot+2013-10-07+at+1.33.30+AM.png" /&gt;&lt;/li&gt;
+&lt;img alt="1" src="https://lh6.googleusercontent.com/-5Eq0HZugi_0/UlGfDvp545I/AAAAAAAAASE/EUUwYqy23aY/w788-h124-no/Screen+Shot+2013-10-07+at+1.33.30+AM.png" /&gt;&lt;/li&gt;
 &lt;li&gt;进入cgdb后不要慌，用bt看下阻塞I/O在哪里；
-&lt;img alt="" src="https://lh4.googleusercontent.com/-g3Mq_Eg2aGI/UlGf0iupLjI/AAAAAAAAASY/rApjcwZpibw/w958-h112-no/Screen+Shot+2013-10-07+at+1.36.55+AM.png" /&gt;&lt;/li&gt;
+&lt;img alt="2" src="https://lh4.googleusercontent.com/-g3Mq_Eg2aGI/UlGf0iupLjI/AAAAAAAAASY/rApjcwZpibw/w958-h112-no/Screen+Shot+2013-10-07+at+1.36.55+AM.png" /&gt;&lt;/li&gt;
 &lt;li&gt;然后在阻塞I/O处设置断点，可以看到这里在linenoise.c的312行调用了read()，直接加断点b linenoise.c:312；&lt;/li&gt;
 &lt;li&gt;cgdb中输入continue，然后再去redis-cli那里输入想调试的命令，比如info，回到cgdb，发现源码已经刷出来了，大功告成。
-&lt;img alt="" src="https://lh4.googleusercontent.com/-2k_4-6EXv1I/UlGhLX__87I/AAAAAAAAATA/2PIFr0YZv8c/w958-h599-no/Screen+Shot+2013-10-07+at+1.42.54+AM.png" /&gt;&lt;/li&gt;
+&lt;img alt="3" src="https://lh4.googleusercontent.com/-2k_4-6EXv1I/UlGhLX__87I/AAAAAAAAATA/2PIFr0YZv8c/w958-h599-no/Screen+Shot+2013-10-07+at+1.42.54+AM.png" /&gt;&lt;/li&gt;
 &lt;/ol&gt;</summary><category term="cgdb"></category></entry><entry><title>一步一步打造Geek风格的技术博客</title><link href="http://www.lizherui.com/pages/2013/08/17/build_blog.html" rel="alternate"></link><updated>2013-08-17T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-17:pages/2013/08/17/build_blog.html</id><summary type="html">&lt;h2&gt;如梦初醒&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;h3&gt;Geek是什么&lt;/h3&gt;

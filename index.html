@@ -130,9 +130,9 @@ by <a class="url fn" href="./author/lizherui.html">lizherui</a>
 <ol>
 <li>命令行先后启动redis-server和redis-cli；</li>
 <li>ps查到redis-cli进程号后直接cgdb -p [pid]；
-<img alt="" src="https://lh6.googleusercontent.com/-5Eq0HZugi_0/UlGfDvp545I/AAAAAAAAASE/EUUwYqy23aY/w788-h124-no/Screen+Shot+2013-10-07+at+1.33.30+AM.png" /></li>
+<img alt="1" src="https://lh6.googleusercontent.com/-5Eq0HZugi_0/UlGfDvp545I/AAAAAAAAASE/EUUwYqy23aY/w788-h124-no/Screen+Shot+2013-10-07+at+1.33.30+AM.png" /></li>
 <li>进入cgdb后不要慌，用bt看下阻塞I/O在哪里；
-<img alt="" src="https://lh4.googleusercontent.com/-g3Mq_Eg2aGI/UlGf0iupLjI/AAAAAAAAASY/rApjcwZpibw/w958-h112-no/Screen+Shot+2013-10-07+at+1.36.55+AM.png" /></li>
+<img alt="2" src="https://lh4.googleusercontent.com/-g3Mq_Eg2aGI/UlGf0iupLjI/AAAAAAAAASY/rApjcwZpibw/w958-h112-no/Screen+Shot+2013-10-07+at+1.36.55+AM.png" /></li>
 <li>然后在阻塞I/O处设置断点，可以看到这里在linenoise.c的312行调用了read()，直接加断点b linenoise.c:312 ...</li></ol> <a class="btn btn-info xsmall" href="./pages/2013/10/07/io_in_cgdb.html">read more</a></div>
     </div>	
 				
