@@ -9,7 +9,7 @@ SITEURL = 'http://www.lizherui.com'
 GITHUB_URL = 'https://github.com/lizherui'
 ARCHIVES_URL = 'archives.html'
 ARTICLE_URL = 'pages/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
-ARTICLE_SAVE_AS = 'pages/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
+ARTICLE_SAVE_AS = 'output/{date:%Y}/{date:%m}/{date:%d}/{slug}.html'
 
 RELATIVE_URLS = True
 DEFAULT_PAGINATION = 5
