@@ -31,8 +31,8 @@ DISQUS_SITENAME = 'lizheruisworld'
 FEED_RSS = 'feeds/all.rss.xml'
 CATEGORY_FEED_RSS = 'feeds/%s.rss.xml'
 
-PLUGIN_PATH = u"pelican-plugins"
-#PLUGINS = ["sitemap"]
+PLUGIN_PATH = u"/usr/local/lib/python2.7/site-packages/pelican/pelican-plugins"
+PLUGINS = ["sitemap"]
 
 ## 配置sitemap 插件
 SITEMAP = {
