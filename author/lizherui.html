@@ -35,10 +35,10 @@
 
         <div class="nav-collapse collapse">
         <ul class="nav">
-                    
-                            <li><a href="../pages/about.html">About</a></li>
-                                </ul>
-        <form class="navbar-search pull-right" action="/search.html">
+            
+            <li><a href="../pages/about.html">About</a></li>
+        </ul>
+<form class="navbar-search pull-right" action="/search.html">
     <input type="text" class="search-query" placeholder="Search" name="q" id="s">
 </form> 
         </div>
@@ -52,15 +52,15 @@
     <div class="row">
 
         <div class="span9">
-                
+        
 
         
 
 
     <div class='article'>
         <div class="content-title">
-            <a href="../pages/2013/11/11/1111.html"><h1>双十一</h1></a>
-            2013-11-11
+            <a href="../pages/2013/11/14/goodbye.html"><h1>战友离，情谊在</h1></a>
+2013-11-14
 
 by <a class="url fn" href="../author/lizherui.html">lizherui</a>
  
@@ -69,18 +69,74 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
  
         </div>
         
-        <div><p>双十一来了。</p>
+        <div><p>双十一刚刚结束，团队里两名骨干就要被调到别的部门去了。</p>
+<p>我来阿里4个多月了，第一次遇到这样的事情。</p>
+<p>大家心里都感到很难受。</p>
+<p>双十一并肩作战的战友阿，熬夜发布、通宵压测的情景还历历在目。</p>
+<p>都是非常非常好的人，祝福他们在新部门依然开心。</p>
+<p>A good guy will transfer, what a sad story.</p>
+<iframe height=498 width=510 src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XMzk1NDAzMDQ=&embedid=-&showAd=0&isAutoPlay=true" frameborder=0 quality="best" allowfullscreen></iframe></div>
+        <hr />
+    </div>
+		
+
+ 
+        
+
+ 
+
+    <div class='article'>
+        <a href="../pages/2013/11/11/1111.html"><h2>双十一</h2></a>
+        <div class= "well small"> 2013-11-11
+
+by <a class="url fn" href="../author/lizherui.html">lizherui</a>
+ 
+
+
+ </div>
+        <div class="summary"><p>双十一来了。</p>
 <p>刻骨铭心的一天。</p>
 <p>在这个叫做“光明顶”的双十一核心作战室，见证了各种世界纪录的诞生，见到了马云、李连杰、李冰冰、王小丫等各路名人。</p>
 <p>总体来讲，双十一流量压力远不如全链路压测，除了刚开始的半个小时内支付宝不太稳定外，其它都表现良好。</p>
 <p>果然是：“如果想拿60分，就必须把目标设为80分”。</p>
 <p>最后我想说什么来着？</p>
 <p>努力然后进步，付出然后收获。</p>
-<iframe height=360 width=640 src="http://vodcdn.video.taobao.com/player/ugc/tb_ugc_bytes_core_player_loader.swf?version=1.0.20131031&vid=10794012&uid=1067522205&p=1&t=1&rid=&random=6666&autoplay=false" frameborder=0 quality="best" allowfullscreen></iframe></div>
-        <hr />
-    </div>
-		
-    
+<iframe height=360 width=640 src="http://vodcdn.video.taobao.com/player/ugc/tb_ugc_bytes_core_player_loader.swf?version=1.0.20131031&vid=10794012&uid=1067522205&p=1&t=1&rid=&random=6666&autoplay=false" frameborder=0 quality="best" allowfullscreen></iframe> <a class="btn btn-info xsmall" href="../pages/2013/11/11/1111.html">read more</a></div>
+    </div>	
+				
+
+ 
+        
+
+ 
+
+    <div class='article'>
+        <a href="../pages/2013/10/07/io_in_cgdb.html"><h2>在cgdb中进行I/O交互</h2></a>
+        <div class= "well small"> 2013-10-07
+
+by <a class="url fn" href="../author/lizherui.html">lizherui</a>
+ 
+
+
+ </div>
+        <div class="summary"><p>cgdb，gdb -tui的加强版，非常优秀，中文教程在此：<a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md">https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md</a>，不再赘述。</p>
+<p>cgdb有一个问题困扰了我很久：如何方便地进行I/O交互。</p>
+<p>虽然cgdb自带了TTY模式，但不太靠谱，调试到某些Unix I/O接口时会卡死，如read函数。</p>
+<p>今天我又反复看了下教程，发现了这样一句以前没注意的忠告：</p>
+<blockquote>
+<p>如果被调试的程序需要读取终端用户输入，我们推荐用户在终端中启动被调试程序，然后在另一个终端使用CGDB去attach被调试程序，这是与被调试程序进行I/O交互最简单的方法。</p>
+</blockquote>
+<p>但是教程没有说具体该怎么操作，摸索了下，终于完美解决，以调试redis-cli为例。</p>
+<ol>
+<li>命令行先后启动redis-server和redis-cli；</li>
+<li>ps查到redis-cli进程号后直接cgdb -p [pid]；
+<img alt="" src="https://lh6.googleusercontent.com/-5Eq0HZugi_0/UlGfDvp545I/AAAAAAAAASE/EUUwYqy23aY/w788-h124-no/Screen+Shot+2013-10-07+at+1.33.30+AM.png" /></li>
+<li>进入cgdb后不要慌，用bt看下阻塞I/O在哪里；
+<img alt="" src="https://lh4.googleusercontent.com/-g3Mq_Eg2aGI/UlGf0iupLjI/AAAAAAAAASY/rApjcwZpibw/w958-h112-no/Screen+Shot+2013-10-07+at+1.36.55+AM.png" /></li>
+<li>然后在阻塞I/O处设置断点，可以看到这里在linenoise.c的312行调用了read()，直接加断点b linenoise.c:312 ...</li></ol> <a class="btn btn-info xsmall" href="../pages/2013/10/07/io_in_cgdb.html">read more</a></div>
+    </div>	
+				
+
  
         
 
@@ -102,110 +158,31 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <p>Too Big, Too Strong, Too Fast, Too Good.</p> <a class="btn btn-info xsmall" href="../pages/2013/10/06/Rose_is_back.html">read more</a></div>
     </div>	
 				
-    
+
  
         
 
  
 
     <div class='article'>
-        <a href="../pages/2013/07/06/arrive_at_hangzhou.html"><h2>初到杭州</h2></a>
-        <div class= "well small"> 2013-07-06
+        <a href="../pages/2013/09/27/coming_November_11.html"><h2>临近的双十一</h2></a>
+        <div class= "well small"> 2013-09-27
 
 by <a class="url fn" href="../author/lizherui.html">lizherui</a>
  
 
 
  </div>
-        <div class="summary"><p>在入职淘宝的前一周，我来到杭州。</p>
-<p>我拖着行李刚走出火车，就被黑车党团团围住。好不容易挣脱了黑车党，打的士又陷入困境。一个人来到完全陌生的城市打拼，真的是很不容易。</p>
-<p>幸运的是，很快就在豆瓣找到了合租的人，并找到了一个不错的房子，虽然地段稍微有点远。不过以后可以考虑骑公共自行车上班，顺便锻炼身体。</p>
-<p>技术方面的话，自从5月底离开百度后就没怎么练了。再不练，武功就废了。坚持看完了SICP第二章，感到越来越吃力(实在太抽象了)，于是决定暂缓第三章的学习计划。考虑到淘宝大量使用JAVA,于是开始学习《JAVA编程思想》，想尽快入门JAVA。</p>
-<p>周末和向楠、倪灿在西湖旁边吃了个饭，聊了聊很多往事，感慨万千。</p>
-<p>下周一就要入职了，感觉压力很大。</p>
-<p>上路了，毕业生。</p>
-<iframe height=498 width=510 src="http://player.youku.com/embed/XMzcwMzExNg==" frameborder=0 allowfullscreen></iframe> <a class="btn btn-info xsmall" href="../pages/2013/07/06/arrive_at_hangzhou.html">read more</a></div>
+        <div class="summary"><p>双十一就要来了。</p>
+<p>由于我们小组leader是双十一总负责人，所以我很幸运地参与到双十一相关的项目中。</p>
+<p>作为一个新人，虽然只能做一点儿双十一相关的小需求，但依然很激动。</p>
+<p>生活中常常听到这样的说法：“总有人比你们更勤奋”。</p>
+<p>但这句话就不用对我们说了。</p>
+<p>我们就是那更勤奋的人。</p>
+<iframe height=360 width=640 src="http://vodcdn.video.taobao.com/player/ugc/tb_ugc_pieces_core_player_loader.swf?version=1.0.20130926&vid=10653872&uid=1067522205&p=1&t=1&rid=&random=6666&autoplay=false" frameborder=0 quality="best" allowfullscreen></iframe> <a class="btn btn-info xsmall" href="../pages/2013/09/27/coming_November_11.html">read more</a></div>
     </div>	
 				
-    
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="../pages/2013/08/18/attitude_to_tech.html"><h2>对待技术的态度</h2></a>
-        <div class= "well small"> 2013-08-18
-
-by <a class="url fn" href="../author/lizherui.html">lizherui</a>
- 
-
-
- </div>
-        <div class="summary"><p>最近北邮人论坛上对IT行业技术人员的声讨愈演愈烈，如下：</p>
-<ul>
-<li><a href="http://bbs.byr.cn/#!article/Job/1397821">搞lT的要有自知之明!!!!</a></li>
-<li><a href="http://bbs.byr.cn/#!article/Job/1398322">搞IT的要有自知之明！！！！（之二）</a></li>
-<li><a href="http://bbs.byr.cn/#!article/Job/1398654">搞IT就是一个大坑</a></li>
-</ul>
-<p>回应如下：</p>
-<ul>
-<li><a href="http://bbs.byr.cn/#!article/Job/1398835">跳进IT这个大坑，一直没有自知之明（痛心疾首篇）</a></li>
-<li><a href="http://bbs.byr.cn/#!article/Job/1398880">IT行业不是一个坑~</a></li>
-</ul>
-<p>争论非常激烈，各路大牛都在积极发表自己的看法。</p>
-<p>我认认真真看了每一条回复，仔仔细细思考了很久很久。</p>
-<p>我感觉很多人并不能很准确地理解IT行业技术人员对待技术的态度。</p>
-<p>该不该搞技术，尤其是该不该花大量的业余时间去钻研技术，真的不需要这么多乱七八糟的争论。</p>
-<p>至少对于我来说，在技术上花费如此多的时间和精力，最直接的原因就是：</p>
-<p>Just for fun.</p>
-<p>根本懒得去纠结思考学习某样技术到底有没有用、时间应该花在哪些更值得的事情上。</p>
-<p>就是为了乐趣而已。</p>
-<p>在某种程度上，这与很多人喜欢通宵打游戏、喜欢整天逛街是一回事。</p>
-<p>Have fun, and enjoy it.</p> <a class="btn btn-info xsmall" href="../pages/2013/08/18/attitude_to_tech.html">read more</a></div>
-    </div>	
-				
-    
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="../pages/2013/09/05/bai_nian_ali.html"><h2>百阿感言</h2></a>
-        <div class= "well small"> 2013-09-05
-
-by <a class="url fn" href="../author/lizherui.html">lizherui</a>
- 
-
-
- </div>
-        <div class="summary"><h2>背景</h2>
-<hr />
-<p>来阿里之前，阿里“很黄很暴力”的开放风骚型文化就已经在江湖上声名远扬了。</p>
-<p>记得参加13届校招那会儿，阿里的面试风格就让人印象深刻。与其它互联网公司面试官一脸严肃的风格不同，阿里的面试官不仅极其健谈，而且不停地和候选人互开玩笑，让我惊讶了很久很久。</p>
-<p>这样的氛围对于我们应届生来说无疑产生了极强的震撼力与极大的吸引力。</p>
-<h2>临行前</h2>
-<hr />
-<p>平时和师兄师姐吃饭的时候，他们聊到百阿总是故作神秘，欲言又止，吊足了我的胃口。</p>
-<p>晚上在内网上搜了搜百阿相关的帖子，预览了下诸如“破冰”这样神秘而刺激的传说级活动。</p>
-<p>明天就要亲身经历了，既期待又紧张。</p>
-<h2>第一天</h2>
-<hr />
-<h3>新人破冰</h3>
-<p>刚进教室我就惊呆了，没想到是一组人围坐一张圆桌的形式，好像回到了小时候上幼儿园的日子。</p>
-<p>迟到的那几个倒霉家伙自然成为了破冰活动的主角，气氛一下子活跃了起来。</p>
-<p>不过我感觉这次破冰倒是没有传说中那么得无底限。或许是因为mm来自海峡两岸中的宝岛台湾，或许是因为大家互相之间还不太熟，没有完全放开。</p>
-<p>破冰的尺度恰到火候，既没有传说中的那样夸张，又彻底开启了欢乐的百阿之门。</p>
-<h3>侠骨柔情</h3>
-<p>每个人都要写一个愿望，我想了很久很久都没有头绪。最后快没时间了，只好写了一个极难实现的愿望。</p>
-<p>幸运的是，我抽到了一个很简单的愿望，心里的石头总算落了地。</p>
-<p>这个小活动第一天给人的感觉就是很简单，乐呵乐呵随便玩玩。</p>
-<p>但是最后一天每个人愿望揭晓的时候，震撼的一面才彻底显现了出来。</p>
-<p>大家发现有些同学的愿望是那么得难实现 ...</p> <a class="btn btn-info xsmall" href="../pages/2013/09/05/bai_nian_ali.html">read more</a></div>
-    </div>	
-				
-            <div class="pagination">
+<div class="pagination">
 <ul>
     <li class="prev disabled"><a href="#">&larr; Previous</a></li>
 
@@ -218,7 +195,7 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
     <li class="next"><a href="../author/lizherui2.html">Next &rarr;</a></li>
 
 </ul>
-</div>    
+</div>
  
   
         </div>
@@ -233,57 +210,57 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
             
                 <li><a href="../archives.html">Archives</a>
                 <li><a href="../tags.html">Tags</a>
-                                <li><a href="http://www.lizherui.com/feeds/all.rss.xml" rel="alternate">RSS</a></li>
-                            </ul>
+                <li><a href="http://www.lizherui.com/feeds/all.rss.xml" rel="alternate">RSS</a></li>
+            </ul>
             </div>
 
 
-                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
                 <li class="nav-header"> 
                 Categories
                 </li>
                 
-                                <li><a href="../category/life.html">Life</a></li>
-                                <li><a href="../category/tech.html">Tech</a></li>
-                                <li><a href="../category/work.html">Work</a></li>
-                                   
+                <li><a href="../category/life.html">Life</a></li>
+                <li><a href="../category/tech.html">Tech</a></li>
+                <li><a href="../category/work.html">Work</a></li>
+                   
             </ul>
             </div>
-            
 
-                        <div class="social">
+
+            <div class="social">
             <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
                 <li class="nav-header"> 
                 Social
                 </li>
            
-                                <li><a href="https://github.com/lizherui">Github</a></li>
-                                <li><a href="http://www.quora.com/Zherui-Li">Quora</a></li>
-                                <li><a href="https://twitter.com/lzrak47">Twitter</a></li>
-                                <li><a href="https://www.facebook.com/profile.php?id=100004875786021">Facebook</a></li>
-                                <li><a href="http://www.linkedin.com/profile/view?id=232391796">Linkedin</a></li>
-                                <li><a href="http://weibo.com/lzrm4a1">微博</a></li>
-                                <li><a href="http://www.zhihu.com/people/li-zhe-rui">知乎</a></li>
-                                <li><a href="http://www.douban.com/people/lizherui">豆瓣</a></li>
-                            </ul>
+                <li><a href="https://github.com/lizherui">Github</a></li>
+                <li><a href="http://www.quora.com/Zherui-Li">Quora</a></li>
+                <li><a href="https://twitter.com/lzrak47">Twitter</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100004875786021">Facebook</a></li>
+                <li><a href="http://www.linkedin.com/profile/view?id=232391796">Linkedin</a></li>
+                <li><a href="http://weibo.com/lzrm4a1">微博</a></li>
+                <li><a href="http://www.zhihu.com/people/li-zhe-rui">知乎</a></li>
+                <li><a href="http://www.douban.com/people/lizherui">豆瓣</a></li>
+            </ul>
             </div>
             </div>
-            
 
-                        <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
             <ul class="nav nav-list">
                 <li class="nav-header"> 
                 Links
                 </li>
             
-                            <li><a href="https://www.google.com/ncr">Google</a></li>
-                            <li><a href="http://python.org/">Python</a></li>
-                            <li><a href="http://docs.getpelican.com/">Pelican</a></li>
-                        </ul>
+                <li><a href="https://www.google.com/ncr">Google</a></li>
+                <li><a href="http://python.org/">Python</a></li>
+                <li><a href="http://docs.getpelican.com/">Pelican</a></li>
+            </ul>
             </div>
-            
+
 
         </div>  
     </div>     </div> 
