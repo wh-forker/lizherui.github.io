@@ -5,7 +5,7 @@
 &lt;p&gt;于是每次上线新版本的时候，我们都需要清除全部缓存才能使新版本立即生效。&lt;/p&gt;
 &lt;p&gt;在平时，这样没有任何问题。&lt;/p&gt;
 &lt;p&gt;但是在一些特殊的场景下，比如天猫双十一的当天，面对那种规模的流量，没有任何人敢清除全部的缓存。而这个时候突然来了一个非常紧急且需要立即生效的上线需求，我们该怎么办？&lt;/p&gt;
-&lt;p&gt;再比如页面中有一些定时变动的部分，比如活动相关的页面片段。总不能每次到了新活动的时间都需要我们手动清除线上缓存吧？&lt;/p&gt;
+&lt;p&gt;此外页面中会有一些定时变动的部分，比如活动相关的页面片段，总不能每次到了新活动的时间都需要我们手动清除线上缓存吧？&lt;/p&gt;
 &lt;p&gt;所以，将整体缓存切割成局部缓存势在必行，这意味着低风险和自动化。&lt;/p&gt;
 &lt;p&gt;最近我参与了这个缓存局部化的项目，感觉挺有意思，也有所收获。&lt;/p&gt;
 &lt;h2&gt;技术&lt;/h2&gt;
@@ -72,7 +72,7 @@
 &lt;li&gt;PE清除线上assetsVersion对应的esi局部缓存&lt;/li&gt;
 &lt;li&gt;失效后swift回源到malldetail，走assets的esi流程 &lt;/li&gt;
 &lt;li&gt;assets的esi走流程到模板渲染时，取本地的esi版本号完成渲染并返回&lt;/li&gt;
-&lt;li&gt;swift拿到新版本assets的渲染结果拼接页面并返回，同时缓存新版本assets。&lt;/li&gt;
+&lt;li&gt;swift拿到新版本assets的渲染结果拼接页面并返回，同时缓存新版本assets&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;如此以来，修改模板并上线后，只需要清除esi局部缓存，就能生效。&lt;/p&gt;
 &lt;p&gt;不过这样存在一个问题，若修改java文件进行全量发布时，会发生下图的异常情况：&lt;/p&gt;
@@ -85,8 +85,7 @@
 
 &lt;p&gt;assets的esi流程走到模板渲染时，判断esi参数中的vmVersion版本号和本地vmVersion是否一致。如果一致，则返回本地assets版本号的渲染结果；否则返回esi中assets版本号的渲染结果, 如下图：&lt;/p&gt;
 &lt;p&gt;&lt;img alt="3" src="https://lh6.googleusercontent.com/-9hAfPlw4jFc/Uo3Hfw3x6eI/AAAAAAAAAVA/ZMjwK49BHMM/s767/Screen%2520Shot%25202013-11-21%2520at%252016.41.37.png" /&gt;&lt;/p&gt;
-&lt;p&gt;反之亦然。&lt;/p&gt;
-&lt;p&gt;问题解决。&lt;/p&gt;
+&lt;p&gt;反之亦然，问题解决。&lt;/p&gt;
 &lt;h3&gt;把定时变动的部分ESI化&lt;/h3&gt;
 &lt;p&gt;现在页面中有一个片段负责展现活动页面，这个活动页面有一批定时活动，比如8点-9点展现活动1，9点30分-10点展现活动2，11点-12点展现活动3。&lt;/p&gt;
 &lt;p&gt;ESI有一个功能是可以为某个局部缓存单独设置失效的时间，将它从整体缓存中剥离了出来。&lt;/p&gt;
@@ -107,7 +106,7 @@
 &lt;h2&gt;总结&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;局部缓存技术的应用场景目前还不是很多，往往都是在一些苛刻的情况下才需要它。&lt;/p&gt;
-&lt;p&gt;不过这并不重要，重要的是我们需要对低风险和自动化始终保持极限的追求。&lt;/p&gt;</summary><category term="esi"></category><category term="缓存"></category></entry><entry><title>在cgdb中进行I/O交互</title><link href="http://www.lizherui.com/pages/2013/10/07/io_in_cgdb.html" rel="alternate"></link><updated>2013-10-07T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-10-07:pages/2013/10/07/io_in_cgdb.html</id><summary type="html">&lt;p&gt;cgdb，gdb -tui的加强版，非常优秀，中文教程在此：&lt;a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md"&gt;https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md&lt;/a&gt;，不再赘述。&lt;/p&gt;
+&lt;p&gt;不过这并不重要，重要的是我们对低风险和自动化的极限追求。&lt;/p&gt;</summary><category term="esi"></category><category term="缓存"></category></entry><entry><title>在cgdb中进行I/O交互</title><link href="http://www.lizherui.com/pages/2013/10/07/io_in_cgdb.html" rel="alternate"></link><updated>2013-10-07T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-10-07:pages/2013/10/07/io_in_cgdb.html</id><summary type="html">&lt;p&gt;cgdb，gdb -tui的加强版，非常优秀，中文教程在此：&lt;a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md"&gt;https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md&lt;/a&gt;，不再赘述。&lt;/p&gt;
 &lt;p&gt;cgdb有一个问题困扰了我很久：如何方便地进行I/O交互。&lt;/p&gt;
 &lt;p&gt;虽然cgdb自带了TTY模式，但不太靠谱，调试到某些Unix I/O接口时会卡死，如read函数。&lt;/p&gt;
 &lt;p&gt;今天我又反复看了下教程，发现了这样一句以前没注意的忠告：&lt;/p&gt;
