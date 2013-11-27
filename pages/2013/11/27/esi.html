@@ -93,17 +93,9 @@ by <a class="url fn" href="../../../../author/lizherui.html">lizherui</a>
 <li>在Malldetail首次被访问到的时候，在页面上生成带ESI标签的页面。</li>
 </ul>
 <blockquote>
-<ul>
-<li>
 <p>ESI标签在Malldetail返回给Swift服务器的页面中，但是不被包含在最终页面中。    </p>
-</li>
-<li>
 <p>ESI请求和当前的Malldetail页面的请求是两个请求，不能共用上下文。</p>
-</li>
-<li>
 <p>ESI请求是一个单独的http请求，其中用到的参数和上下文信息需要在Malldetail页面渲染的时候加到ESI请求的URL中。</p>
-</li>
-</ul>
 </blockquote>
 <ul>
 <li>
@@ -114,17 +106,9 @@ by <a class="url fn" href="../../../../author/lizherui.html">lizherui</a>
 </li>
 </ul>
 <blockquote>
-<ul>
-<li>
 <p>根据参数处理业务逻辑。</p>
-</li>
-<li>
 <p>设置此ESI模块的失效时间。</p>
-</li>
-<li>
 <p>ESI请求对response header的处理不会发送到客户端浏览器。</p>
-</li>
-</ul>
 </blockquote>
 <ul>
 <li>Swift缓存ESI结果，在失效时间到之前命中缓存。</li>
