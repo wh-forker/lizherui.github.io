@@ -95,9 +95,9 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <p>一个ESI的模块处理过程如下图：</p>
 <p><img alt="1" src="https://lh3.googleusercontent.com/-dquEAiu6EhU/UpMGaPl3_WI/AAAAAAAAAVU/WFTeL1Y0U4Q/s336/esi.png" /></p>
 <p>完整步骤如下：</p>
-<ol>
+<ul>
 <li>在Malldetail首次被访问到的时候，在页面上生成带ESI标签的页面。</li>
-</ol>
+</ul>
 <blockquote>
 <ul>
 <li>
@@ -111,14 +111,14 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 </li>
 </ul>
 </blockquote>
-<ol>
+<ul>
 <li>
 <p>Swift服务器拿到页面后会进行ESI标签的解析，解析完成后向Malldetail服务器发送单独的ESI请求，并且将响应结果放在页面上。</p>
 </li>
 <li>
 <p>Malldetail处理ESI请求：</p>
 </li>
-</ol>
+</ul>
 <blockquote>
 <ul>
 <li>
@@ -132,9 +132,9 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 </li>
 </ul>
 </blockquote>
-<ol>
+<ul>
 <li>Swift缓存ESI结果，在失效时间到之前命中缓存。</li>
-</ol>
+</ul>
 <h2>应用</h2>
 <hr />
 <h3>把模板中对风险敏感的变量ESI化</h3>

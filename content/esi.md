@@ -38,9 +38,9 @@ ESI标签由Swift负责解析回源，并且Swift会对ESI请求做缓存，并�
 
 完整步骤如下：
 
-1. 在Malldetail首次被访问到的时候，在页面上生成带ESI标签的页面。       >* ESI标签在Malldetail返回给Swift服务器的页面中，但是不被包含在最终页面中。    
+* 在Malldetail首次被访问到的时候，在页面上生成带ESI标签的页面。       >* ESI标签在Malldetail返回给Swift服务器的页面中，但是不被包含在最终页面中。    
 
-   >* ESI请求和当前的Malldetail页面的请求是两个请求，不能共用上下文。   >* ESI请求是一个单独的http请求，其中用到的参数和上下文信息需要在Malldetail页面渲染的时候加到ESI请求的URL中。2. Swift服务器拿到页面后会进行ESI标签的解析，解析完成后向Malldetail服务器发送单独的ESI请求，并且将响应结果放在页面上。3. Malldetail处理ESI请求：   >* 根据参数处理业务逻辑。   >* 设置此ESI模块的失效时间。   >* ESI请求对response header的处理不会发送到客户端浏览器。4. Swift缓存ESI结果，在失效时间到之前命中缓存。
+   >* ESI请求和当前的Malldetail页面的请求是两个请求，不能共用上下文。   >* ESI请求是一个单独的http请求，其中用到的参数和上下文信息需要在Malldetail页面渲染的时候加到ESI请求的URL中。* Swift服务器拿到页面后会进行ESI标签的解析，解析完成后向Malldetail服务器发送单独的ESI请求，并且将响应结果放在页面上。* Malldetail处理ESI请求：   >* 根据参数处理业务逻辑。   >* 设置此ESI模块的失效时间。   >* ESI请求对response header的处理不会发送到客户端浏览器。* Swift缓存ESI结果，在失效时间到之前命中缓存。
 
 ##应用
 * * *
