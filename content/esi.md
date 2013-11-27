@@ -35,7 +35,7 @@ ESI标签由Swift负责解析回源，并且Swift会对ESI请求做缓存，并�
 
 一个ESI的模块处理过程如下图：
 
-![](https://lh3.googleusercontent.com/-dquEAiu6EhU/UpMGaPl3_WI/AAAAAAAAAVU/WFTeL1Y0U4Q/s336/esi.png)
+![1](https://lh3.googleusercontent.com/-dquEAiu6EhU/UpMGaPl3_WI/AAAAAAAAAVU/WFTeL1Y0U4Q/s336/esi.png)
 
 完整步骤如下：
 
@@ -71,7 +71,7 @@ ESI标签由Swift负责解析回源，并且Swift会对ESI请求做缓存，并�
 
 不过这样存在一个问题，若修改java文件进行全量发布时，会发生下图的异常情况：
 
-![](https://lh6.googleusercontent.com/-eiLJKhwtBo0/Uo3FbLIYWXI/AAAAAAAAAUc/om8szAMzow8/s757/Screen%2520Shot%25202013-11-21%2520at%252016.32.59.png)
+![2](https://lh6.googleusercontent.com/-eiLJKhwtBo0/Uo3FbLIYWXI/AAAAAAAAAUc/om8szAMzow8/s757/Screen%2520Shot%25202013-11-21%2520at%252016.32.59.png)
 
 如果老版本的malldetail和新的assets版本号不相互兼容，就会在全量发布的时候出问题。
 
@@ -81,7 +81,7 @@ ESI标签由Swift负责解析回源，并且Swift会对ESI请求做缓存，并�
 
 assets的esi流程走到模板渲染时，判断esi参数中的vmVersion版本号和本地vmVersion是否一致。如果一致，则返回本地assets版本号的渲染结果；否则返回esi中assets版本号的渲染结果, 如下图：
 
-![](https://lh6.googleusercontent.com/-9hAfPlw4jFc/Uo3Hfw3x6eI/AAAAAAAAAVA/ZMjwK49BHMM/s767/Screen%2520Shot%25202013-11-21%2520at%252016.41.37.png)
+![3](https://lh6.googleusercontent.com/-9hAfPlw4jFc/Uo3Hfw3x6eI/AAAAAAAAAVA/ZMjwK49BHMM/s767/Screen%2520Shot%25202013-11-21%2520at%252016.41.37.png)
 
 反之亦然。
 
