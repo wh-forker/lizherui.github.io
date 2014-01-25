@@ -20,4 +20,4 @@ Title: About
 
 我是苦练的虔诚者，也是竞争的狂热者。
 
-<embed src="http://player.youku.com/player.php/sid/XMzkyNzAxMjg0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" flashvars="isAutoPlay=true&showAd=0" type="application/x-shockwave-flash"></embed>
+<embed src="http://player.youku.com/player.php/sid/XMzAzODk5MDI0/v.swf" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" flashvars="isAutoPlay=true&showAd=0" type="application/x-shockwave-flash"></embed>
