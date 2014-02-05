@@ -1,14 +1,14 @@
 Date: 2014-02-05
-Title: 10000 hours from Youtube
+Title: 10000 Hours from Youtube
 Category: Life
 Tags: 练习, 一万小时
 Slug: youtube_10000_hours
 
 《10000 hours》已经出到第五部了，始发于Youtube。
 
-优酷上有翻译过的前3部，不过由于优酷视频广告太恶心，且画面质量、翻译质量和效率都不尽人意，实在让人反感。故从Youtube上把英文原版转载过来。
+优酷上有翻译过的前3部，不过由于优酷广告太恶心，且画面质量、翻译质量和翻译效率都不尽人意，实在让人反感，故从Youtube上把英文原版转载过来。
 
-Enjoy them.
+Break the wall and enjoy them.
 
 10000 Hours Episode 1:
 
