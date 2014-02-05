@@ -59,6 +59,38 @@
  
 
     <div class='article'>
+        <a href="./pages/2013/10/07/io_in_cgdb.html"><h2>在cgdb中进行I/O交互</h2></a>
+        <div class= "well small"> 2013-10-07
+
+by <a class="url fn" href="./author/lizherui.html">lizherui</a>
+ 
+
+
+ </div>
+        <div class="summary"><p>cgdb，gdb -tui的加强版，非常优秀，中文教程在此：<a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md">https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md</a>，不再赘述。</p>
+<p>cgdb有一个问题困扰了我很久：如何方便地进行I/O交互。</p>
+<p>虽然cgdb自带了TTY模式，但不太靠谱，调试到某些Unix I/O接口时会卡死，如read函数。</p>
+<p>今天我又反复看了下教程，发现了这样一句以前没注意的忠告：</p>
+<blockquote>
+<p>如果被调试的程序需要读取终端用户输入，我们推荐用户在终端中启动被调试程序，然后在另一个终端使用CGDB去attach被调试程序，这是与被调试程序进行I/O交互最简单的方法。</p>
+</blockquote>
+<p>但是教程没有说具体该怎么操作，摸索了下，终于完美解决，以调试redis-cli为例。</p>
+<ol>
+<li>命令行先后启动redis-server和redis-cli；</li>
+<li>ps查到redis-cli进程号后直接cgdb -p [pid]；
+<img alt="1" src="https://lh6.googleusercontent.com/-5Eq0HZugi_0/UlGfDvp545I/AAAAAAAAASE/EUUwYqy23aY/w788-h124-no/Screen+Shot+2013-10-07+at+1.33.30+AM.png" /></li>
+<li>进入cgdb后不要慌，用bt看下阻塞I/O在哪里；
+<img alt="2" src="https://lh4.googleusercontent.com/-g3Mq_Eg2aGI/UlGf0iupLjI/AAAAAAAAASY/rApjcwZpibw/w958-h112-no/Screen+Shot+2013-10-07+at+1.36.55+AM.png" /></li>
+<li>然后在阻塞I/O处设置断点，可以看到这里在linenoise.c的312行调用了read()，直接加断点b linenoise.c:312 ...</li></ol> <a class="btn btn-info xsmall" href="./pages/2013/10/07/io_in_cgdb.html">read more</a></div>
+    </div>	
+				
+
+ 
+        
+
+ 
+
+    <div class='article'>
         <a href="./pages/2013/10/06/Rose_is_back.html"><h2>罗斯归来</h2></a>
         <div class= "well small"> 2013-10-06
 
@@ -172,45 +204,6 @@ by <a class="url fn" href="./author/lizherui.html">lizherui</a>
 <p>这个小活动第一天给人的感觉就是很简单，乐呵乐呵随便玩玩。</p>
 <p>但是最后一天每个人愿望揭晓的时候，震撼的一面才彻底显现了出来。</p>
 <p>大家发现有些同学的愿望是那么得难实现 ...</p> <a class="btn btn-info xsmall" href="./pages/2013/09/05/bai_nian_ali.html">read more</a></div>
-    </div>	
-				
-
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="./pages/2013/08/25/filter_resume.html"><h2>阿里校招内推简历筛选</h2></a>
-        <div class= "well small"> 2013-08-25
-
-by <a class="url fn" href="./author/lizherui.html">lizherui</a>
- 
-
-
- </div>
-        <div class="summary"><p>上周在BYR论坛发了一个阿里内推的帖子，没想到短时间内就收到了成百上千封简历。</p>
-<p>我仔仔细细地看了每一封简历，附带有Github地址的我也点进去仔细看了代码。</p>
-<p>最终我留下了30%的简历，而且这30%中只有10%的本科生。</p>
-<h2>筛选标准</h2>
-<hr />
-<p>满足以下条件中的任何一个，直接通过筛选：</p>
-<ul>
-<li>ACM, Topcoder, Google Code Jam、Yahoo! Hack Day等重量级竞赛的获奖经历</li>
-<li>Google, Microsoft, Yahoo!, Amazon, IBM，Baidu, Tencent等顶级公司的靠谱实习经历</li>
-<li>Github, StackOverflow、Archlinux等高水平技术社区的活跃人士，贡献过高质量的开源代码</li>
-<li>Common Lisp, Scheme, Haskell, Scala等函数式语言的钻研经历</li>
-<li>黑客行为</li>
-</ul>
-<p>满足以下条件中的任何一个，增大通过筛选的可能性：</p>
-<ul>
-<li>保送硕士</li>
-<li>Top级别的专业成绩</li>
-<li>丰富的国家级重点实验室项目经历</li>
-<li>发表过高水平的学术论文</li>
-<li>Markdown/Latex生成的PDF简历</li>
-<li>高质量的技术博客</li>
-<li>技能栏中写着熟练使用Vim/Emacs，以Mac OS ...</li></ul> <a class="btn btn-info xsmall" href="./pages/2013/08/25/filter_resume.html">read more</a></div>
     </div>	
 				
 <div class="pagination">
