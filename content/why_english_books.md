@@ -44,7 +44,5 @@ Slug: why_English_books
 ##总结
 总有朋友问，英文不好怎么办，专业词太多怎么办，效率太低怎么办。
 
-Easy.
-
-Observe more, ask why, and think about it.
+Observe more, ask why, think about it, take a try, observe more......
 
