@@ -1,4 +1,4 @@
-Date: 2014-02-05
+Date: 2014-03-07
 Title: 10000 Hours from Youtube
 Category: Life
 Tags: 练习, 一万小时
@@ -28,7 +28,12 @@ Break the wall and enjoy them.
 
 <iframe width="640" height="360" src="//www.youtube.com/embed/U-C6KELmp8U?rel=0" frameborder="0" allowfullscreen></iframe>
 
-10000 Hours Episode 5 - Knight And Day:
+10000 Hours Episode 5 - Knight And Day(PART 1):
 
 <iframe width="640" height="360" src="//www.youtube.com/embed/Svd-0F-uIOM?rel=0" frameborder="0" allowfullscreen></iframe>
+
+
+10000 Hours Episode 5 - Knight And Day(PART 2):
+<iframe width="640" height="360" src="//www.youtube.com/embed/jS0lqyXjSOc?rel=0" frameborder="0" allowfullscreen></iframe>
+
 
