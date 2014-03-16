@@ -20,5 +20,5 @@ Title: About
 
 我是苦练的虔诚者，也是竞争的狂热者。
 
-<embed src="http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XMzAzODk5MDI0&winType=adshow&isAutoPlay=true" quality="high" width="480" height="400" align="middle" allowScriptAccess="never"  allowNetworking="internal" type="application/x-shockwave-flash"></embed>
+<embed src="http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XMzIyNTM3MzQ0&winType=adshow&isAutoPlay=true" quality="high" width="480" height="400" align="middle" allowScriptAccess="never"  allowNetworking="internal" type="application/x-shockwave-flash"></embed>
 
