@@ -4,7 +4,7 @@ Category: Life
 Tags: English book
 Slug: beginning_of_reading_English_books
 
-2月下旬年假结束回杭，开始执行“英文原版阅读计划”，到今天差不多一个月了。所有的英文原版全部使用[Dropbox](https://www.dropbox.com/sh/4wweu1f2wd60epg/fGHU0zlC3K/en)分享。
+2月下旬年假结束回杭，开始执行“英文原版阅读计划”，到今天差不多一个月了。我使用[Dropbox](https://www.dropbox.com/sh/4wweu1f2wd60epg/fGHU0zlC3K/en)分享所有的英文书籍。
 
 这一个月的战况依次是：
 
