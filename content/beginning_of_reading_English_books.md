@@ -236,7 +236,7 @@ It's a great job if you can hack it.
 ```
 作者的形象、文章的风格和总体意义，是不是完全不一样了？
 
-The most important thing is, It make us deep think while reading.
+The most important thing is that it makes us **deep think** while reading.
 
 Think about it.
 
