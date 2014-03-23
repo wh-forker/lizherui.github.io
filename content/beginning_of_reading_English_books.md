@@ -20,7 +20,7 @@ Slug: beginning_of_reading_English_books.md
 
 * [《MapReduce-Simplied Data Processing On Large Clusters》](https://www.dropbox.com/sh/4wweu1f2wd60epg/nOsrlDgAne/en/tech/MapReduce-Simplied%20Data%20Processing%20on%20Large%20Clusters.pdf)
  
-在这之前，只阅读中文技术资料的习惯使我总会不由自主地排斥英文资料，一碰到英文的技术资料，脑子里的第一反应就是：擦，英文的！赶紧去搜一下有木有翻译版。此外，浏览[Quora](http://www.quora.com/)、[StackOverflow](stackoverflow.com)这样的英文网站时，阅读任何英文问答都很没有耐心。
+在这之前，只阅读中文技术资料的习惯使我总会不由自主地排斥英文资料，一碰到英文的技术资料，脑子里的第一反应就是：擦，英文的！赶紧去搜一下有木有翻译版。此外，浏览[Quora](http://www.quora.com/)、[StackOverflow](http://stackoverflow.com)这样的英文网站时，阅读任何英文问答都很没有耐心。
 
 我相信很多人都是这样的。
 
