@@ -26,9 +26,9 @@ Slug: beginning_of_reading_English_books
 
 就像上一篇博文所说的，我还想再重复一次：这种状态让我意识到了一个非常严重的问题，排斥英文资料相当于给自己**设限**，会让自己错过更优秀的知识和资料(众所周知，最好的技术资料往往都是英文的)。这会阻碍我们的成长，所以这个问题必须得到解决。
 
-这一个月下来，从半技术的英文书籍入手，过渡到谈论架构的英文论文，我现在感觉非常非常好下一步准备开始阅读以技术细节为主的英文书籍，如[《Inside The Java 2 Virtual Machine》](https://www.dropbox.com/sh/4wweu1f2wd60epg/NsLqI1HHns/en/tech/Inside%20The%20Java%202%20Virtual%20Machine.pdf)。
+这一个月下来，从半技术的英文书籍入手，过渡到谈论架构的英文论文，目前我感觉非常非常好，下一步准备阅读以技术细节为主的英文书籍，如[《Inside The Java 2 Virtual Machine》](https://www.dropbox.com/sh/4wweu1f2wd60epg/NsLqI1HHns/en/tech/Inside%20The%20Java%202%20Virtual%20Machine.pdf)。
 
-在实践中，我发现了一个现象，让我感到尤为惊讶：有很多细节，是**“不可翻译的”**。一个段落或一篇文章中**“不可翻译”**的部分越多，翻译版与英文原版的差别就会越大。这一点在阅读Google的那3篇著名论文中表现得尤为明显，我曾尝试过阅读翻译版好几次，但每次读到一半就会产生不知所云的感觉，最终半途而废。没想到这次试着读了下英文原版，居然一次成功了，完完整整地读了下来，并且基本弄明白了意思。
+在实践中，我发现了一个现象，让我感到尤为惊讶：有很多细节，是**“不可翻译的”**。一个段落或一篇文章中**“不可翻译”**的部分越多，翻译版与英文原版的差别就会越大。这一点在阅读Google的那3篇著名论文中表现得尤为明显，我曾尝试过阅读翻译版好几次，但每次读到一半就会产生不知所云的感觉，最终半途而废。没想到这次试着读了下英文原版，居然一次成功，完完整整地读了下来，并且基本弄明白了意思。
 
 Why?
 
@@ -236,7 +236,7 @@ It's a great job if you can hack it.
 ```
 作者的形象、文章的风格和总体意义，是不是完全不一样了？
 
-The most important thing is that it makes us **deep think** while reading.
+The most important thing is that it makes us **deep thinking** while reading.
 
 Think about it.
 

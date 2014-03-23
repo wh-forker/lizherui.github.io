@@ -24,8 +24,8 @@
 &lt;p&gt;在这之前，只阅读中文技术资料的习惯使我总会不由自主地排斥英文资料，一碰到英文的技术资料，脑子里的第一反应就是：擦，英文的！赶紧去搜一下有木有翻译版。此外，浏览&lt;a href="http://www.quora.com/"&gt;Quora&lt;/a&gt;、&lt;a href="http://stackoverflow.com"&gt;StackOverflow&lt;/a&gt;这样的英文网站时，阅读任何英文问答都很没有耐心。&lt;/p&gt;
 &lt;p&gt;我相信很多人都是这样的。&lt;/p&gt;
 &lt;p&gt;就像上一篇博文所说的，我还想再重复一次：这种状态让我意识到了一个非常严重的问题，排斥英文资料相当于给自己&lt;strong&gt;设限&lt;/strong&gt;，会让自己错过更优秀的知识和资料(众所周知，最好的技术资料往往都是英文的)。这会阻碍我们的成长，所以这个问题必须得到解决。&lt;/p&gt;
-&lt;p&gt;这一个月下来，从半技术的英文书籍入手，过渡到谈论架构的英文论文，我现在感觉非常非常好下一步准备开始阅读以技术细节为主的英文书籍，如&lt;a href="https://www.dropbox.com/sh/4wweu1f2wd60epg/NsLqI1HHns/en/tech/Inside%20The%20Java%202%20Virtual%20Machine.pdf"&gt;《Inside The Java 2 Virtual Machine》&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;在实践中，我发现了一个现象，让我感到尤为惊讶：有很多细节，是&lt;strong&gt;“不可翻译的”&lt;/strong&gt;。一个段落或一篇文章中&lt;strong&gt;“不可翻译”&lt;/strong&gt;的部分越多，翻译版与英文原版的差别就会越大。这一点在阅读Google的那3篇著名论文中表现得尤为明显，我曾尝试过阅读翻译版好几次，但每次读到一半就会产生不知所云的感觉，最终半途而废。没想到这次试着读了下英文原版，居然一次成功了，完完整整地读了下来，并且基本弄明白了意思。&lt;/p&gt;
+&lt;p&gt;这一个月下来，从半技术的英文书籍入手，过渡到谈论架构的英文论文，目前我感觉非常非常好，下一步准备阅读以技术细节为主的英文书籍，如&lt;a href="https://www.dropbox.com/sh/4wweu1f2wd60epg/NsLqI1HHns/en/tech/Inside%20The%20Java%202%20Virtual%20Machine.pdf"&gt;《Inside The Java 2 Virtual Machine》&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;在实践中，我发现了一个现象，让我感到尤为惊讶：有很多细节，是&lt;strong&gt;“不可翻译的”&lt;/strong&gt;。一个段落或一篇文章中&lt;strong&gt;“不可翻译”&lt;/strong&gt;的部分越多，翻译版与英文原版的差别就会越大。这一点在阅读Google的那3篇著名论文中表现得尤为明显，我曾尝试过阅读翻译版好几次，但每次读到一半就会产生不知所云的感觉，最终半途而废。没想到这次试着读了下英文原版，居然一次成功，完完整整地读了下来，并且基本弄明白了意思。&lt;/p&gt;
 &lt;p&gt;Why?&lt;/p&gt;
 &lt;p&gt;Google这三篇论文太长，我举一个短点儿的例子。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.dropbox.com/sh/4wweu1f2wd60epg/d5zXz_PItA/en/tech/The%20Philosophy%20of%20Open%20Source.pdf"&gt;《The Philosophy of Open Source》&lt;/a&gt;这本书，以著名的“Linux kernel management style by Linus Torvalds”结尾，这一段由啄木鸟社区(啄木鸟社区的水平还是相当高的)翻译如下：&lt;/p&gt;
@@ -228,7 +228,7 @@
 
 
 &lt;p&gt;作者的形象、文章的风格和总体意义，是不是完全不一样了？&lt;/p&gt;
-&lt;p&gt;The most important thing is that it makes us &lt;strong&gt;deep think&lt;/strong&gt; while reading.&lt;/p&gt;
+&lt;p&gt;The most important thing is that it makes us &lt;strong&gt;deep thinking&lt;/strong&gt; while reading.&lt;/p&gt;
 &lt;p&gt;Think about it.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sun, 23 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2014-03-23:pages/2014/03/23/beginning_of_reading_English_books.html</guid><category>English book</category></item><item><title>10000 Hours from Youtube</title><link>http://www.lizherui.com/pages/2014/03/07/youtube_10000_hours.html</link><description>&lt;p&gt;《10000 Hours》已经出到第五部了，始发于Youtube。&lt;/p&gt;
 &lt;p&gt;优酷上有翻译过的前3部，不过优酷的视频实在让人反感：广告太恶心，画面质量、翻译质量和翻译效率都不尽人意。&lt;/p&gt;
 &lt;p&gt;故从Youtube上把英文原版转载过来。&lt;/p&gt;
