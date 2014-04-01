@@ -8,17 +8,15 @@ Title: About
 
 我最终在毕业的时候选择了阿里。
 
-我热爱编程，开发环境嗜好Mac OS X + Oh-my-zsh + Vim + Git + Clang + Gdb的组合，键盘流，快捷键党，熟悉C/C++/Java/Python/Php/Scheme等编程语言，常年混迹Github、Quora、Stackoverflow等技术社区。
+我崇尚Hacker文化与Geek精神，喜欢阅读和编写简洁、优美的代码，喜欢Mac OS X、Oh-My-Zsh、Vim、Git、Clang、Gdb，喜欢触摸板、快捷键，喜欢C/C++/Java/Python/Php/Scheme，喜欢Github、Quora、Stackoverflow，喜欢一切简洁、快速、强壮且优美的事物。
 
-我崇尚黑客文化与Geek精神，喜欢小众的东西，热爱一切简洁、快速且强壮的事物。
+我使用[Gist](https://gist.github.com/lizherui/6184006)维护个人简历，目前还是毕业前的资料。不过到了必要的时候，我会彻底更新它。
 
-我使用[Gist](https://gist.github.com/lizherui/6184006)来维护个人简历，目前还是毕业前的资料。不过到了必要的时候，我会彻底更新它。
+我使用[豆瓣读书](http://book.douban.com/people/lizherui)记录读书动态。
 
-我使用[豆瓣读书](http://book.douban.com/people/lizherui)来维护书单，这同时也是我的读书动态。
+我使用[Dropbox](https://www.dropbox.com/sh/4wweu1f2wd60epg/Sv-EQzFhfw)分享喜欢的书籍和资料。
 
-我使用[Dropbox](https://www.dropbox.com/sh/4wweu1f2wd60epg/Sv-EQzFhfw)来维护收藏的书籍和资料，随时随地都可以下载。
-
-我是苦练的虔诚者，也是竞争的狂热者。
+In a word, I'm only interested in **getting better**.
 
 <embed src="http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XMzExMzIxODA0&winType=adshow&isAutoPlay=true" quality="best" width="480" height="400" align="middle" allowScriptAccess="never"  allowNetworking="internal" type="application/x-shockwave-flash"></embed>
 
