@@ -8,7 +8,7 @@ Title: About
 
 我最终在毕业的时候选择了阿里。
 
-我崇尚Hacker文化与Geek精神，喜欢阅读和编写简洁、优美的代码，喜欢Mac OS X、Oh-My-Zsh、Vim、Git、Clang、Gdb，喜欢触摸板、快捷键，喜欢C/C++/Java/Python/Php/Scheme，喜欢Github、Quora、Stackoverflow，喜欢一切简洁、快速、强壮且优美的事物。
+我崇尚Hacker文化与Geek精神，喜欢简洁、优美的代码，喜欢Mac OS X、Oh-My-Zsh、Vim、Git、Clang、Gdb，喜欢触摸板、快捷键，喜欢C/C++/Java/Python/Php/Scheme，喜欢Github、Quora、Stackoverflow，喜欢一切简洁、快速、强壮且优美的事物。
 
 我使用[Gist](https://gist.github.com/lizherui/6184006)维护个人简历，目前还是毕业前的资料。不过到了必要的时候，我会彻底更新它。
 
