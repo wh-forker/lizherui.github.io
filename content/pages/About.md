@@ -14,7 +14,7 @@ Title: About
 
 我使用[豆瓣读书](http://book.douban.com/people/lizherui)记录读书动态。
 
-我使用[Dropbox](https://www.dropbox.com/sh/4wweu1f2wd60epg/Sv-EQzFhfw)分享喜欢的书籍和资料。
+我使用[Dropbox](https://www.dropbox.com/sh/hgihoqsrpnjnl2d/0EBmxC5_BL)分享喜欢的书籍和资料。
 
 In a word, I'm only interested in **getting better**.
 

@@ -4,21 +4,21 @@ Category: Life
 Tags: English book
 Slug: beginning_of_reading_English_books
 
-2月下旬年假结束回杭，开始执行“英文原版阅读计划”，到今天差不多一个月了。我使用[Dropbox](https://www.dropbox.com/sh/4wweu1f2wd60epg/fGHU0zlC3K/en)分享所有的英文书籍。
+2月下旬年假结束回杭，开始执行“英文原版阅读计划”，到今天差不多一个月了。我使用[Dropbox](https://www.dropbox.com/sh/hgihoqsrpnjnl2d/h4bEwUWgZl/en)分享所有的英文书籍。
 
 这一个月的战况依次是：
 
-* [《Hackers And Painters》](https://www.dropbox.com/sh/4wweu1f2wd60epg/8CPbJTSf2m/en/tech/Hackers%20And%20Painters.pdf)
+* [《Hackers And Painters》](https://www.dropbox.com/sh/hgihoqsrpnjnl2d/89Q--qQyUi/en/tech/Hackers%20And%20Painters.pdf)
 
-* [《The Google Resume》](https://www.dropbox.com/sh/4wweu1f2wd60epg/jYilOb104n/en/life/The%20Google%20Resume.pdf)
+* [《The Google Resume》](https://www.dropbox.com/sh/hgihoqsrpnjnl2d/4VBvBXi1bg/en/life/The%20Google%20Resume.pdf)
 
-* [《The Cathedral And The Bazaar》](https://www.dropbox.com/sh/4wweu1f2wd60epg/31I7zLfGah/en/tech/The%20Cathedral%20And%20The%20Bazaar.pdf)
+* [《The Cathedral And The Bazaar》](https://www.dropbox.com/sh/hgihoqsrpnjnl2d/W45SVrZhtx/en/tech/The%20Cathedral%20And%20The%20Bazaar.pdf)
 
-* [《The Google File System》](https://www.dropbox.com/sh/4wweu1f2wd60epg/X21LsmkCqv/en/tech/The%20Google%20File%20System.pdf)
+* [《The Google File System》](https://www.dropbox.com/sh/hgihoqsrpnjnl2d/f8u1epma2V/en/tech/The%20Google%20File%20System.pdf)
 
-* [《Bigtable-A Distributed Storage System for Structured Data》](https://www.dropbox.com/sh/4wweu1f2wd60epg/MWQHbyTbYQ/en/tech/Bigtable-A%20Distributed%20Storage%20System%20for%20Structured%20Data.pdf)
+* [《Bigtable-A Distributed Storage System for Structured Data》](https://www.dropbox.com/sh/hgihoqsrpnjnl2d/iFsPI7IqnL/en/tech/Bigtable-A%20Distributed%20Storage%20System%20for%20Structured%20Data.pdf)
 
-* [《MapReduce-Simplied Data Processing On Large Clusters》](https://www.dropbox.com/sh/4wweu1f2wd60epg/nOsrlDgAne/en/tech/MapReduce-Simplied%20Data%20Processing%20on%20Large%20Clusters.pdf)
+* [《MapReduce-Simplied Data Processing On Large Clusters》](https://www.dropbox.com/sh/hgihoqsrpnjnl2d/8eT0j1J63f/en/tech/MapReduce-Simplied%20Data%20Processing%20on%20Large%20Clusters.pdf)
  
 在这之前，只阅读中文技术资料的习惯使我总会不由自主地排斥英文资料，一碰到英文的技术资料，脑子里的第一反应就是：擦，英文的！赶紧去搜一下有木有翻译版。此外，浏览[Quora](http://www.quora.com/)、[StackOverflow](http://stackoverflow.com)这样的英文网站时，阅读任何英文问答都很没有耐心。
 
@@ -26,7 +26,7 @@ Slug: beginning_of_reading_English_books
 
 就像上一篇博文所说的，我还想再重复一次：这种状态让我意识到了一个非常严重的问题，排斥英文资料相当于给自己**设限**，会让自己错过更优秀的知识和资料(众所周知，最好的技术资料往往都是英文的)。这会阻碍我们的成长，所以这个问题必须得到解决。
 
-这一个月下来，从半技术的英文书籍入手，过渡到谈论架构的英文论文，目前我感觉非常非常好，下一步准备阅读以技术细节为主的英文书籍，如[《Inside The Java 2 Virtual Machine》](https://www.dropbox.com/sh/4wweu1f2wd60epg/NsLqI1HHns/en/tech/Inside%20The%20Java%202%20Virtual%20Machine.pdf)。
+这一个月下来，从半技术的英文书籍入手，过渡到谈论架构的英文论文，目前我感觉非常非常好，下一步准备阅读以技术细节为主的英文书籍，如[《Inside The Java 2 Virtual Machine》](https://www.dropbox.com/sh/hgihoqsrpnjnl2d/I0a4-AnN_N/en/tech/Inside%20The%20Java%202%20Virtual%20Machine.pdf)。
 
 在实践中，我发现了一个现象，让我感到尤为惊讶：有很多细节，是**“不可翻译的”**。一个段落或一篇文章中**“不可翻译”**的部分越多，翻译版与英文原版的差别就会越大。这一点在阅读Google的那3篇著名论文中表现得尤为明显，我曾尝试过阅读翻译版好几次，但每次读到一半就会产生不知所云的感觉，最终半途而废。没想到这次试着读了下英文原版，居然一次成功，完完整整地读了下来，并且基本弄明白了意思。
 
