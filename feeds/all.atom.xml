@@ -28,7 +28,7 @@
 &lt;p&gt;在实践中，我发现了一个现象，让我感到尤为惊讶：有很多细节，是&lt;strong&gt;“不可翻译的”&lt;/strong&gt;。一个段落或一篇文章中&lt;strong&gt;“不可翻译”&lt;/strong&gt;的部分越多，翻译版与英文原版的差别就会越大。这一点在阅读Google的那3篇著名论文中表现得尤为明显，我曾尝试过阅读翻译版好几次，但每次读到一半就会产生不知所云的感觉，最终半途而废。没想到这次试着读了下英文原版，居然一次成功，完完整整地读了下来，并且基本弄明白了意思。&lt;/p&gt;
 &lt;p&gt;Why?&lt;/p&gt;
 &lt;p&gt;Google这三篇论文太长，我举一个短点儿的例子。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.dropbox.com/sh/4wweu1f2wd60epg/d5zXz_PItA/en/tech/The%20Philosophy%20of%20Open%20Source.pdf"&gt;《The Philosophy of Open Source》&lt;/a&gt;这本书，以著名的“Linux kernel management style by Linus Torvalds”结尾，这一段由啄木鸟社区(啄木鸟社区的水平还是相当高的)翻译如下：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.dropbox.com/sh/hgihoqsrpnjnl2d/FNKQ4YUlbv/en/tech/The%20Philosophy%20of%20Open%20Source.pdf"&gt;《The Philosophy of Open Source》&lt;/a&gt;这本书，以著名的“Linux kernel management style by Linus Torvalds”结尾，这一段由啄木鸟社区(啄木鸟社区的水平还是相当高的)翻译如下：&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="mf"&gt;1.1&lt;/span&gt; &lt;span class="err"&gt;导言&lt;/span&gt;
 &lt;span class="n"&gt;Linus&lt;/span&gt; &lt;span class="n"&gt;Torvalds&lt;/span&gt; &lt;span class="err"&gt;在&lt;/span&gt;&lt;span class="mi"&gt;2004&lt;/span&gt;&lt;span class="err"&gt;年把一篇讲&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Linux内核的管理风格&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;的文章放在了内核源码文档里。这篇文章有意对应他以前写的关于编码&lt;/span&gt; &lt;span class="err"&gt;风格的文章（比如烧书仪式），也有技术人员熟悉的&lt;/span&gt;&lt;span class="n"&gt;Dilbert&lt;/span&gt;&lt;span class="err"&gt;卡通的影子。&lt;/span&gt; &lt;span class="n"&gt;Henrik&lt;/span&gt; &lt;span class="n"&gt;Ingo&lt;/span&gt; &lt;span class="err"&gt;写&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Open Life: The Philosophy of Open Source&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;一书的时候，拿这篇文章作了后记。&lt;/span&gt;
 

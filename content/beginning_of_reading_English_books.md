@@ -34,7 +34,7 @@ Why?
 
 Google这三篇论文太长，我举一个短点儿的例子。
 
-[《The Philosophy of Open Source》](https://www.dropbox.com/sh/4wweu1f2wd60epg/d5zXz_PItA/en/tech/The%20Philosophy%20of%20Open%20Source.pdf)这本书，以著名的“Linux kernel management style by Linus Torvalds”结尾，这一段由啄木鸟社区(啄木鸟社区的水平还是相当高的)翻译如下：
+[《The Philosophy of Open Source》](https://www.dropbox.com/sh/hgihoqsrpnjnl2d/FNKQ4YUlbv/en/tech/The%20Philosophy%20of%20Open%20Source.pdf)这本书，以著名的“Linux kernel management style by Linus Torvalds”结尾，这一段由啄木鸟社区(啄木鸟社区的水平还是相当高的)翻译如下：
 
 ```
 1.1 导言
