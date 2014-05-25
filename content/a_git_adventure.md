@@ -6,7 +6,7 @@ Slug: a_git_adventure
 
 Git, beautiful software.
 
-很多SVN使用者刚刚转到Git时，都会为Git独特的使用方式感到疑惑，尤其是git大名鼎鼎的分布式思想、随时随地的本机开发、独一无二的暂存区、难以置信的轻量级分支、无处不在的fork。
+很多SVN使用者刚刚转到Git时，都会为Git独特的使用方式感到疑惑，尤其是Git大名鼎鼎的分布式思想、随时随地的本机开发、独一无二的暂存区、难以置信的轻量级分支、无处不在的fork。
 
 这些都让Git显得如此与众不同，
 
@@ -303,9 +303,31 @@ Local means fast and stable.
 
 探寻像Git这样富有传奇性的软件内部无疑是一件趣味性极强的事情，甚至能感受到一种软件设计的哲学思想。
 
-这种哲学给人的感觉就是，git就像是在未来世界设计的软件，然后穿梭回来给人们使用。
+这种哲学给人的感觉就是，Git就像是在未来世界设计的软件，然后穿梭回来给世人使用。
 
-Too fast, too clean, too strong, and too good.  
+Too fast, too clean, too strong, and too good.
+
+Why?
+
+Linus Torvalds认为svn极度依赖中央仓库缺乏高可用性，于是设计了分布式工作流；觉得svn分支过于重量级显得很愚蠢，于是设计了完整快照+分支指针的模型；觉得svn大量操作依赖网络io显得很慢，于是设计了本地离线开发模式。
+
+这让我想起来一篇伟大的文章：[How to Get Startup Ideas](http://paulgraham.com/startupideas.html).
+
+生活中我们常常问“怎样才能**想出来**一个优美设计”的时候，究竟在问什么？
+
+优美的设计真的是**想出来**的吗？
+
+> Noticing , not coming up with.
+  
+> Live in the future, then build what's missing. 
+
+Git就是这样出现的，犹如后来的iphone。
+
+多么酷，多么美！
+
+
+
+
 
 
 

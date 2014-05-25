@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>lizherui的程序世界</title><link href="http://www.lizherui.com/" rel="alternate"></link><link href="http://www.lizherui.com/feeds/all.atom.xml" rel="self"></link><id>http://www.lizherui.com/</id><updated>2014-05-25T00:00:00+08:00</updated><entry><title>Git历险记</title><link href="http://www.lizherui.com/pages/2014/05/25/a_git_adventure.html" rel="alternate"></link><updated>2014-05-25T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2014-05-25:pages/2014/05/25/a_git_adventure.html</id><summary type="html">&lt;p&gt;Git, beautiful software.&lt;/p&gt;
-&lt;p&gt;很多SVN使用者刚刚转到Git时，都会为Git独特的使用方式感到疑惑，尤其是git大名鼎鼎的分布式思想、随时随地的本机开发、独一无二的暂存区、难以置信的轻量级分支、无处不在的fork。&lt;/p&gt;
+&lt;p&gt;很多SVN使用者刚刚转到Git时，都会为Git独特的使用方式感到疑惑，尤其是Git大名鼎鼎的分布式思想、随时随地的本机开发、独一无二的暂存区、难以置信的轻量级分支、无处不在的fork。&lt;/p&gt;
 &lt;p&gt;这些都让Git显得如此与众不同，&lt;/p&gt;
 &lt;p&gt;当很多人从一个软件迁移到另一个软件并不再回头的时候，就值得我们注意了。&lt;/p&gt;
 &lt;p&gt;这说明另一个软件&lt;strong&gt;更好用&lt;/strong&gt;。&lt;/p&gt;
@@ -276,8 +276,19 @@
 &lt;p&gt;此外，Git基于完整文件快照而非增量变更的设计，使分支成为了&lt;strong&gt;真正的&lt;/strong&gt;分支，简洁、快速而强大，一切分支操作都显得那么得自然、流畅。&lt;/p&gt;
 &lt;p&gt;当我们说一个软件很棒的时候，不仅仅是说它好用，更是在说它内部优美的设计。我们会不由自主地ask why，并在好奇心的驱使下进入内部一探究竟。&lt;/p&gt;
 &lt;p&gt;探寻像Git这样富有传奇性的软件内部无疑是一件趣味性极强的事情，甚至能感受到一种软件设计的哲学思想。&lt;/p&gt;
-&lt;p&gt;这种哲学给人的感觉就是，git就像是在未来世界设计的软件，然后穿梭回来给人们使用。&lt;/p&gt;
-&lt;p&gt;Too fast, too clean, too strong, and too good.  &lt;/p&gt;</summary><category term="git"></category></entry><entry><title>阅读英文原版的初步体验</title><link href="http://www.lizherui.com/pages/2014/03/23/beginning_of_reading_English_books.html" rel="alternate"></link><updated>2014-03-23T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2014-03-23:pages/2014/03/23/beginning_of_reading_English_books.html</id><summary type="html">&lt;p&gt;2月下旬年假结束回杭，开始执行“英文原版阅读计划”，到今天差不多一个月了。我使用&lt;a href="https://www.dropbox.com/sh/hgihoqsrpnjnl2d/h4bEwUWgZl/en"&gt;Dropbox&lt;/a&gt;分享所有的英文书籍。&lt;/p&gt;
+&lt;p&gt;这种哲学给人的感觉就是，Git就像是在未来世界设计的软件，然后穿梭回来给世人使用。&lt;/p&gt;
+&lt;p&gt;Too fast, too clean, too strong, and too good.&lt;/p&gt;
+&lt;p&gt;Why?&lt;/p&gt;
+&lt;p&gt;Linus Torvalds认为svn极度依赖中央仓库缺乏高可用性，于是设计了分布式工作流；觉得svn分支过于重量级显得很愚蠢，于是设计了完整快照+分支指针的模型；觉得svn大量操作依赖网络io显得很慢，于是设计了本地离线开发模式。&lt;/p&gt;
+&lt;p&gt;这让我想起来一篇伟大的文章：&lt;a href="http://paulgraham.com/startupideas.html"&gt;How to Get Startup Ideas&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;生活中我们常常问“怎样才能&lt;strong&gt;想出来&lt;/strong&gt;一个优美设计”的时候，究竟在问什么？&lt;/p&gt;
+&lt;p&gt;优美的设计真的是&lt;strong&gt;想出来&lt;/strong&gt;的吗？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Noticing , not coming up with.&lt;/p&gt;
+&lt;p&gt;Live in the future, then build what's missing. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Git就是这样出现的，犹如后来的iphone。&lt;/p&gt;
+&lt;p&gt;多么酷，多么美！&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>阅读英文原版的初步体验</title><link href="http://www.lizherui.com/pages/2014/03/23/beginning_of_reading_English_books.html" rel="alternate"></link><updated>2014-03-23T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2014-03-23:pages/2014/03/23/beginning_of_reading_English_books.html</id><summary type="html">&lt;p&gt;2月下旬年假结束回杭，开始执行“英文原版阅读计划”，到今天差不多一个月了。我使用&lt;a href="https://www.dropbox.com/sh/hgihoqsrpnjnl2d/h4bEwUWgZl/en"&gt;Dropbox&lt;/a&gt;分享所有的英文书籍。&lt;/p&gt;
 &lt;p&gt;这一个月的战况依次是：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
