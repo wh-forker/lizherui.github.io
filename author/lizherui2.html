@@ -59,6 +59,42 @@
  
 
     <div class='article'>
+        <a href="../pages/2013/11/27/esi.html"><h2>局部缓存的应用</h2></a>
+        <div class= "well small"> 2013-11-27
+
+by <a class="url fn" href="../author/lizherui.html">lizherui</a>
+ 
+
+
+ </div>
+        <div class="summary"><h2>源起</h2>
+<hr />
+<p>一般来讲，各个网站对页面做的缓存都是整体缓存，用户发请求的时候，缓存服务器会返回整个页面。</p>
+<p>于是每次上线新版本的时候，我们都需要清除全部缓存才能使新版本立即生效。</p>
+<p>在平时，这样没有任何问题。</p>
+<p>但是在一些特殊的场景下，比如天猫双十一的当天，面对那种规模的流量，没有任何人敢清除全部的缓存。而这个时候突然来了一个非常紧急且需要立即生效的上线需求，我们该怎么办？</p>
+<p>此外页面中会有一些定时变动的部分，比如活动相关的页面片段，总不能每次到了新活动的时间都需要我们手动清除线上缓存吧？</p>
+<p>所以，将整体缓存切割成局部缓存势在必行，这意味着低风险和自动化。</p>
+<p>最近我参与了这个缓存局部化的项目，感觉挺有意思，也有所收获。</p>
+<h2>技术</h2>
+<hr />
+<p>局部缓存主要用的是ESI技术，是一种标记语言。</p>
+<p>为了方便叙述，我们定义缓存服务器的名字叫Swift(类似开源界的Varnish，可处理ESI标签)，定义web应用叫malldetail。</p>
+<p>ESI，即Edge Side Includes，是一种数据缓冲/缓存服务器，它提供将Web网页的部分（这里指页面的片段）进行缓冲/缓存的技术及服务。
+详见<a href="http://en.wikipedia.org/wiki/Edge_Side_Includes">Wikipedia</a>。</p>
+<p>ESI标签由Swift负责解析回源，并且Swift会对ESI请求做缓存，并且提供如下特性：</p>
+<ul>
+<li>需要定时做全站变更的页面模块用ESI的include实现，时间判断放在应用服务器处理回源请求的时候。</li>
+<li>回源以后 ...</li></ul> <a class="btn btn-info xsmall" href="../pages/2013/11/27/esi.html">read more</a></div>
+    </div>	
+				
+
+ 
+        
+
+ 
+
+    <div class='article'>
         <a href="../pages/2013/11/14/goodbye.html"><h2>战友离，情谊在</h2></a>
         <div class= "well small"> 2013-11-14
 
@@ -153,30 +189,6 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <p>看罗斯打球有种独一无二的感觉，观赏性极强，速度与力量的完美结合。</p>
 <p>罗斯快攻时的态度一直激励着我：甭管前面站着多高多壮的球员，统统硬上。</p>
 <p>Too Big, Too Strong, Too Fast, Too Good.</p> <a class="btn btn-info xsmall" href="../pages/2013/10/06/Rose_is_back.html">read more</a></div>
-    </div>	
-				
-
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="../pages/2013/09/27/coming_November_11.html"><h2>临近的双十一</h2></a>
-        <div class= "well small"> 2013-09-27
-
-by <a class="url fn" href="../author/lizherui.html">lizherui</a>
- 
-
-
- </div>
-        <div class="summary"><p>双十一就要来了。</p>
-<p>由于我们小组leader是双十一总负责人，所以我很幸运地参与到双十一相关的项目中。</p>
-<p>作为一个新人，虽然只能做一点儿双十一相关的小需求，但依然很激动。</p>
-<p>生活中常常听到这样的说法：“总有人比你们更勤奋”。</p>
-<p>但这句话就不用对我们说了。</p>
-<p>我们就是那更勤奋的人。</p>
-<iframe height=360 width=640 src="http://vodcdn.video.taobao.com/player/ugc/tb_ugc_pieces_core_player_loader.swf?version=1.0.20130926&vid=10653872&uid=1067522205&p=1&t=1&rid=&random=6666&autoplay=false" frameborder=0 quality="best" allowfullscreen></iframe> <a class="btn btn-info xsmall" href="../pages/2013/09/27/coming_November_11.html">read more</a></div>
     </div>	
 				
 <div class="pagination">
