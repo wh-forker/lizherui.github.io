@@ -1,5 +1,5 @@
 Date: 2014-05-25
-Title: git历险记
+Title: Git历险记
 Category: Tech
 Tags: git
 Slug: a_git_adventure
