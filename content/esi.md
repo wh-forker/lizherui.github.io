@@ -24,7 +24,7 @@ Slug: esi
 * * *
 局部缓存主要用的是ESI技术，是一种标记语言。
 
-为了方便叙述，我们定义缓存服务器的名字叫Swift(类似开源界的Varnish，可处理ESI标签)，定义web应用叫malldetail。
+为了方便叙述，我们定义缓存服务器的名字叫Swift(类似开源界的Varnish，可处理ESI标签)。
 
 ESI，即Edge Side Includes，是一种数据缓冲/缓存服务器，它提供将Web网页的部分（这里指页面的片段）进行缓冲/缓存的技术及服务。
 详见[Wikipedia](http://en.wikipedia.org/wiki/Edge_Side_Includes)。
@@ -38,10 +38,10 @@ ESI标签由Swift负责解析回源，并且Swift会对ESI请求做缓存，并�
 
 完整步骤如下：
 
-* 在Malldetail首次被访问到的时候，在页面上生成带ESI标签的页面。       > ESI标签在Malldetail返回给Swift服务器的页面中，但是不被包含在最终页面中。    
+* 在web应用首次被访问到的时候，在页面上生成带ESI标签的页面。       > ESI标签在web应用返回给Swift服务器的页面中，但是不被包含在最终页面中。    
    
-   > ESI请求和当前的Malldetail页面的请求是两个请求，不能共用上下文。
-      > ESI请求是一个单独的http请求，其中用到的参数和上下文信息需要在Malldetail页面渲染的时候加到ESI请求的URL中。* Swift服务器拿到页面后会进行ESI标签的解析，解析完成后向Malldetail服务器发送单独的ESI请求，并且将响应结果放在页面上。* Malldetail处理ESI请求：   > 根据参数处理业务逻辑。   > 设置此ESI模块的失效时间。   > ESI请求对response header的处理不会发送到客户端浏览器。* Swift缓存ESI结果，在失效时间到之前命中缓存。
+   > ESI请求和当前的web应用页面的请求是两个请求，不能共用上下文。
+      > ESI请求是一个单独的http请求，其中用到的参数和上下文信息需要在web应用页面渲染的时候加到ESI请求的URL中。* Swift服务器拿到页面后会进行ESI标签的解析，解析完成后向web应用服务器发送单独的ESI请求，并且将响应结果放在页面上。* web应用处理ESI请求：   > 根据参数处理业务逻辑。   > 设置此ESI模块的失效时间。   > ESI请求对response header的处理不会发送到客户端浏览器。* Swift缓存ESI结果，在失效时间到之前命中缓存。
 
 ##应用
 * * *
@@ -63,7 +63,7 @@ ESI标签由Swift负责解析回源，并且Swift会对ESI请求做缓存，并�
 
 1. 开发/前端升级版本号assetsVersion并模板发布
 2. PE清除线上assetsVersion对应的esi局部缓存
-3. 失效后swift回源到malldetail，走assets的esi流程 
+3. 失效后swift回源到web应用，走assets的esi流程 
 4. assets的esi走流程到模板渲染时，取本地的esi版本号完成渲染并返回
 5. swift拿到新版本assets的渲染结果拼接页面并返回，同时缓存新版本assets
 
@@ -73,7 +73,7 @@ ESI标签由Swift负责解析回源，并且Swift会对ESI请求做缓存，并�
 
 ![2](https://lh6.googleusercontent.com/-eiLJKhwtBo0/Uo3FbLIYWXI/AAAAAAAAAUc/om8szAMzow8/s757/Screen%2520Shot%25202013-11-21%2520at%252016.32.59.png)
 
-如果老版本的malldetail和新的assets版本号不相互兼容，就会在全量发布的时候出问题。
+如果老版本的web应用和新的assets版本号不相互兼容，就会在全量发布的时候出问题。
 
 为了解决这个问题，我们可以添加一个用来校正的vmVesion版本号，并添加进assets esi的uri参数中，比如
     

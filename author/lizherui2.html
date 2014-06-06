@@ -79,13 +79,13 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <h2>技术</h2>
 <hr />
 <p>局部缓存主要用的是ESI技术，是一种标记语言。</p>
-<p>为了方便叙述，我们定义缓存服务器的名字叫Swift(类似开源界的Varnish，可处理ESI标签)，定义web应用叫malldetail。</p>
+<p>为了方便叙述，我们定义缓存服务器的名字叫Swift(类似开源界的Varnish，可处理ESI标签)。</p>
 <p>ESI，即Edge Side Includes，是一种数据缓冲/缓存服务器，它提供将Web网页的部分（这里指页面的片段）进行缓冲/缓存的技术及服务。
 详见<a href="http://en.wikipedia.org/wiki/Edge_Side_Includes">Wikipedia</a>。</p>
 <p>ESI标签由Swift负责解析回源，并且Swift会对ESI请求做缓存，并且提供如下特性：</p>
 <ul>
 <li>需要定时做全站变更的页面模块用ESI的include实现，时间判断放在应用服务器处理回源请求的时候。</li>
-<li>回源以后 ...</li></ul> <a class="btn btn-info xsmall" href="../pages/2013/11/27/esi.html">read more</a></div>
+<li>回源以后，应用服务器可设置缓存失效的时间 ...</li></ul> <a class="btn btn-info xsmall" href="../pages/2013/11/27/esi.html">read more</a></div>
     </div>	
 				
 
