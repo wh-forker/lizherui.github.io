@@ -1,5 +1,5 @@
 Date: 2014-06-16
-Title: 用Python重新Git 
+Title: 用Python重写Git 
 Category: Work
 Tags: Git, Python
 Slug: rewrite_git_in_python
