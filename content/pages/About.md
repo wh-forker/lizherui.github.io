@@ -16,7 +16,7 @@ Title: About
 
 我使用[Dropbox](https://www.dropbox.com/sh/hgihoqsrpnjnl2d/0EBmxC5_BL)分享喜欢的书籍和资料。
 
-In a word, I'm only interested in **getting better**.
+In a word, I'm only interested in **getting things better**.
 
 <embed src="http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XMzExMzIxODA0&winType=adshow&isAutoPlay=true" quality="best" width="480" height="400" align="middle" allowScriptAccess="never"  allowNetworking="internal" type="application/x-shockwave-flash"></embed>
 
