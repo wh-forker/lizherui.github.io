@@ -18,9 +18,11 @@ Slug: why_bmw
 
 我觉得bmw和apple真的很像，不仅是卖产品，更是卖理念。因此全世界的人们都为它们痴迷，不仅是买它们的产品，更是买它们独特的理念、背后的故事和生活的乐趣。
 
-最爱bmw的宣传理念——Sheer Driving Pleasure，正如互联网行业很多开发人员的理念——Sheer Coding Pleasure.
+最爱bmw的宣传理念——**Sheer Driving Pleasure**，正如互联网行业很多开发人员的理念——**Sheer Coding Pleasure**.
 
-There are millions of BMW stories. What`s yours?
+There are millions of bmw stories.
+
+What's yours?
 
 <embed src="http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XNzMzNTkyMjcy&winType=adshow&isAutoPlay=true" quality="best" width="480" height="400" align="middle" allowScriptAccess="never"  allowNetworking="internal" type="application/x-shockwave-flash"></embed>
 
