@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lizherui的程序世界</title><link>http://www.lizherui.com/</link><description></description><atom:link href="http://www.lizherui.com/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 26 Jul 2014 00:00:00 +0800</lastBuildDate><item><title>为什么选择bmw</title><link>http://www.lizherui.com/pages/2014/07/26/why_bmw.html</link><description>&lt;p&gt;距离bmw 320i时尚的提车时间已经不远了。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>lizherui的程序世界</title><link href="http://www.lizherui.com/" rel="alternate"></link><link href="http://www.lizherui.com/feeds/lizherui.atom.xml" rel="self"></link><id>http://www.lizherui.com/</id><updated>2014-07-26T00:00:00+08:00</updated><entry><title>为什么选择bmw</title><link href="http://www.lizherui.com/pages/2014/07/26/why_bmw.html" rel="alternate"></link><updated>2014-07-26T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2014-07-26:pages/2014/07/26/why_bmw.html</id><summary type="html">&lt;p&gt;距离bmw 320i时尚的提车时间已经不远了。&lt;/p&gt;
 &lt;p&gt;越来越期待，越来越激动。&lt;/p&gt;
 &lt;p&gt;半年前就开始混汽车之家，在benz、bmw、audi之间纠结了很久，最终选了bmw。&lt;/p&gt;
 &lt;p&gt;有人说，benz像是一个精英教育制度下的三好学生，相貌堂堂、举止优雅、知识渊博，是教科书版完美的男人。&lt;/p&gt;
@@ -8,7 +8,7 @@
 &lt;p&gt;我觉得bmw和apple真的很像，不仅是卖产品，更是卖理念。因此全世界的人们都为它们痴迷，不仅是买它们的产品，更是买它们独特的理念、背后的故事和生活的乐趣。&lt;/p&gt;
 &lt;p&gt;最爱bmw的宣传理念——Sheer Driving Pleasure，正如互联网行业很多开发人员的理念——Sheer Coding Pleasure.&lt;/p&gt;
 &lt;p&gt;There are millions of BMW stories. What`s yours?&lt;/p&gt;
-&lt;p&gt;&lt;embed src="http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XNzMzNTkyMjcy&amp;winType=adshow&amp;isAutoPlay=true" quality="best" width="480" height="400" align="middle" allowScriptAccess="never"  allowNetworking="internal" type="application/x-shockwave-flash"&gt;&lt;/embed&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sat, 26 Jul 2014 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2014-07-26:pages/2014/07/26/why_bmw.html</guid><category>bmw</category></item><item><title>用Python重写Git</title><link>http://www.lizherui.com/pages/2014/06/16/rewrite_git_in_python.html</link><description>&lt;p&gt;废话不多说：&lt;a href="https://github.com/lizherui/git-in-python"&gt;https://github.com/lizherui/git-in-python&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Mon, 16 Jun 2014 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2014-06-16:pages/2014/06/16/rewrite_git_in_python.html</guid><category>Git</category><category>Python</category></item><item><title>Git历险记</title><link>http://www.lizherui.com/pages/2014/05/25/a_git_adventure.html</link><description>&lt;p&gt;Git, beautiful software.&lt;/p&gt;
+&lt;p&gt;&lt;embed src="http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XNzMzNTkyMjcy&amp;winType=adshow&amp;isAutoPlay=true" quality="best" width="480" height="400" align="middle" allowScriptAccess="never"  allowNetworking="internal" type="application/x-shockwave-flash"&gt;&lt;/embed&gt;&lt;/p&gt;</summary><category term="bmw"></category></entry><entry><title>用Python重写Git</title><link href="http://www.lizherui.com/pages/2014/06/16/rewrite_git_in_python.html" rel="alternate"></link><updated>2014-06-16T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2014-06-16:pages/2014/06/16/rewrite_git_in_python.html</id><summary type="html">&lt;p&gt;废话不多说：&lt;a href="https://github.com/lizherui/git-in-python"&gt;https://github.com/lizherui/git-in-python&lt;/a&gt;&lt;/p&gt;</summary><category term="Git"></category><category term="Python"></category></entry><entry><title>Git历险记</title><link href="http://www.lizherui.com/pages/2014/05/25/a_git_adventure.html" rel="alternate"></link><updated>2014-05-25T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2014-05-25:pages/2014/05/25/a_git_adventure.html</id><summary type="html">&lt;p&gt;Git, beautiful software.&lt;/p&gt;
 &lt;p&gt;很多SVN使用者刚刚转到Git时，都会为Git独特的使用方式感到疑惑，尤其是Git大名鼎鼎的分布式思想、随时随地的本机开发、独一无二的暂存区、难以置信的轻量级分支、无处不在的fork。&lt;/p&gt;
 &lt;p&gt;这些都让Git显得如此与众不同，&lt;/p&gt;
 &lt;p&gt;当很多人从一个软件迁移到另一个软件并不再回头的时候，就值得我们注意了。&lt;/p&gt;
@@ -300,7 +300,7 @@
 &lt;p&gt;多么酷，多么美，多么令人着迷。&lt;/p&gt;
 &lt;p&gt;所以问题的关键来了，怎样才能具备&lt;strong&gt;观察&lt;/strong&gt;缺失的能力，首先我们需要成为擅长观察缺失的人，这意味着批判式思维，各个软件的设计不再让我们感到理所当然，就像2005年人们都觉得svn已经够好了，Linus Torvalds却仍然觉得很不爽。&lt;/p&gt;
 &lt;p&gt;开始观察软件/生活中让我们感到不爽的地方并思考怎样去改进是一件很累的事情，但这种累并不意味着我们自身出了问题。&lt;/p&gt;
-&lt;p&gt;也许，只是我们跑得太快了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sun, 25 May 2014 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2014-05-25:pages/2014/05/25/a_git_adventure.html</guid><category>git</category></item><item><title>阅读英文原版的初步体验</title><link>http://www.lizherui.com/pages/2014/03/23/beginning_of_reading_English_books.html</link><description>&lt;p&gt;2月下旬年假结束回杭，开始执行“英文原版阅读计划”，到今天差不多一个月了。我使用&lt;a href="https://www.dropbox.com/sh/hgihoqsrpnjnl2d/h4bEwUWgZl/en"&gt;Dropbox&lt;/a&gt;分享所有的英文书籍。&lt;/p&gt;
+&lt;p&gt;也许，只是我们跑得太快了。&lt;/p&gt;</summary><category term="git"></category></entry><entry><title>阅读英文原版的初步体验</title><link href="http://www.lizherui.com/pages/2014/03/23/beginning_of_reading_English_books.html" rel="alternate"></link><updated>2014-03-23T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2014-03-23:pages/2014/03/23/beginning_of_reading_English_books.html</id><summary type="html">&lt;p&gt;2月下旬年假结束回杭，开始执行“英文原版阅读计划”，到今天差不多一个月了。我使用&lt;a href="https://www.dropbox.com/sh/hgihoqsrpnjnl2d/h4bEwUWgZl/en"&gt;Dropbox&lt;/a&gt;分享所有的英文书籍。&lt;/p&gt;
 &lt;p&gt;这一个月的战况依次是：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -530,7 +530,7 @@
 
 &lt;p&gt;作者的形象、文章的风格和总体意义，是不是完全不一样了？&lt;/p&gt;
 &lt;p&gt;The most important thing is that it makes us &lt;strong&gt;deep thinking&lt;/strong&gt; while reading.&lt;/p&gt;
-&lt;p&gt;Think about it.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sun, 23 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2014-03-23:pages/2014/03/23/beginning_of_reading_English_books.html</guid><category>English book</category></item><item><title>10000 Hours from Youtube</title><link>http://www.lizherui.com/pages/2014/03/07/youtube_10000_hours.html</link><description>&lt;p&gt;《10000 Hours》已经出到第五部了，始发于Youtube。&lt;/p&gt;
+&lt;p&gt;Think about it.&lt;/p&gt;</summary><category term="English book"></category></entry><entry><title>10000 Hours from Youtube</title><link href="http://www.lizherui.com/pages/2014/03/07/youtube_10000_hours.html" rel="alternate"></link><updated>2014-03-07T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2014-03-07:pages/2014/03/07/youtube_10000_hours.html</id><summary type="html">&lt;p&gt;《10000 Hours》已经出到第五部了，始发于Youtube。&lt;/p&gt;
 &lt;p&gt;优酷上有翻译过的前3部，不过优酷的视频实在让人反感：广告太恶心，画面质量、翻译质量和翻译效率都不尽人意。&lt;/p&gt;
 &lt;p&gt;故从Youtube上把英文原版转载过来。&lt;/p&gt;
 &lt;p&gt;Break the wall and enjoy them.&lt;/p&gt;
@@ -550,7 +550,7 @@
 &lt;iframe width="640" height="360" src="//www.youtube.com/embed/Svd-0F-uIOM?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 
 &lt;p&gt;10000 Hours Episode 5 - Knight And Day(PART 2):
-&lt;iframe width="640" height="360" src="//www.youtube.com/embed/jS0lqyXjSOc?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Fri, 07 Mar 2014 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2014-03-07:pages/2014/03/07/youtube_10000_hours.html</guid><category>练习</category><category>一万小时</category></item><item><title>为什么要阅读英文原版</title><link>http://www.lizherui.com/pages/2014/02/25/why_English_books.html</link><description>&lt;h2&gt;背景&lt;/h2&gt;
+&lt;iframe width="640" height="360" src="//www.youtube.com/embed/jS0lqyXjSOc?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</summary><category term="练习"></category><category term="一万小时"></category></entry><entry><title>为什么要阅读英文原版</title><link href="http://www.lizherui.com/pages/2014/02/25/why_English_books.html" rel="alternate"></link><updated>2014-02-25T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2014-02-25:pages/2014/02/25/why_English_books.html</id><summary type="html">&lt;h2&gt;背景&lt;/h2&gt;
 &lt;p&gt;早在去年冬季，我就有这样的想法了，准备认真读读一些经典书籍的英文原版。&lt;/p&gt;
 &lt;p&gt;遗憾的是，那个时候双11刚刚结束，我一下子有了大解放的感觉，于是不由自主地开始熬夜放纵，把大量的时间花在了玩游戏上。&lt;/p&gt;
 &lt;p&gt;寒假终于警觉起来，执意不带鼠标回家，算是遏制住了一点。&lt;/p&gt;
@@ -572,7 +572,7 @@
 &lt;p&gt;而且，读英文书籍由于经常碰到生词，所以不得不强迫自己更加认真，不像翻译版那样一目十行。&lt;/p&gt;
 &lt;h2&gt;总结&lt;/h2&gt;
 &lt;p&gt;总有朋友问，英文不好怎么办，专业词太多怎么办，效率太低怎么办。&lt;/p&gt;
-&lt;p&gt;Observe more, ask why, think about it, take a try, observe more......&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Tue, 25 Feb 2014 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2014-02-25:pages/2014/02/25/why_English_books.html</guid><category>英文</category><category>书籍</category></item><item><title>2013总结</title><link>http://www.lizherui.com/pages/2013/12/31/2013_summary.html</link><description>&lt;p&gt;今天是2013年的最后一天，我在公司写下这篇总结。&lt;/p&gt;
+&lt;p&gt;Observe more, ask why, think about it, take a try, observe more......&lt;/p&gt;</summary><category term="英文"></category><category term="书籍"></category></entry><entry><title>2013总结</title><link href="http://www.lizherui.com/pages/2013/12/31/2013_summary.html" rel="alternate"></link><updated>2013-12-31T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-12-31:pages/2013/12/31/2013_summary.html</id><summary type="html">&lt;p&gt;今天是2013年的最后一天，我在公司写下这篇总结。&lt;/p&gt;
 &lt;p&gt;去年的这个时候，我还在百度实习，每天为各个项目忙得焦头烂额，而且老大突然安排了个巨蛋疼的项目，一怒之下借口期末考试请假回学校了。&lt;/p&gt;
 &lt;p&gt;想着去年这个时候的情景，再看看身旁已经从天蓝色变成橘黄色的Logo，我记得上学的那会儿，与很多学生一样，天真地以为去哪个互联网公司工作都差不多。但是现在，让我们重新考虑一下这个问题，仔细地想一想，真是天壤之别。&lt;/p&gt;
 &lt;p&gt;2013年大四寒假前夕，找工作历时半年，除了百度给了一个仍然悬而未定的实习转正offer，我没有任何靠谱的offer了。晚上熄灯后去刷牙的路上，我们几个菜比经常在走廊里讨论找工作阶段性成果，最后总是开玩笑地说：小声点，那边寝室坐着一个15K的，别吵到人家了。&lt;/p&gt;
@@ -602,7 +602,7 @@
 &lt;li&gt;做之前无限降低对方的期望，做出来就能远超对方的期望。&lt;/li&gt;
 &lt;li&gt;把意外当作对个人尊严侮辱的人永远不会再遭遇意外。 &lt;/li&gt;
 &lt;li&gt;谈判的时候，不要让别人知道你的想法。&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Tue, 31 Dec 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-12-31:pages/2013/12/31/2013_summary.html</guid><category>2013</category></item><item><title>局部缓存的应用</title><link>http://www.lizherui.com/pages/2013/11/27/esi.html</link><description>&lt;h2&gt;源起&lt;/h2&gt;
+&lt;/ul&gt;</summary><category term="2013"></category></entry><entry><title>局部缓存的应用</title><link href="http://www.lizherui.com/pages/2013/11/27/esi.html" rel="alternate"></link><updated>2013-11-27T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-11-27:pages/2013/11/27/esi.html</id><summary type="html">&lt;h2&gt;源起&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;一般来讲，各个网站对页面做的缓存都是整体缓存，用户发请求的时候，缓存服务器会返回整个页面。&lt;/p&gt;
 &lt;p&gt;于是每次上线新版本的时候，我们都需要清除全部缓存才能使新版本立即生效。&lt;/p&gt;
@@ -709,20 +709,20 @@
 &lt;h2&gt;总结&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;局部缓存技术的应用场景目前还不是很多，往往都是在一些苛刻的情况下才需要它。&lt;/p&gt;
-&lt;p&gt;不过这并不重要，重要的是我们对低风险和自动化的极限追求。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Wed, 27 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-11-27:pages/2013/11/27/esi.html</guid><category>esi</category><category>缓存</category></item><item><title>战友离，情谊在</title><link>http://www.lizherui.com/pages/2013/11/14/goodbye.html</link><description>&lt;p&gt;双十一刚刚结束，团队里两名骨干就要被调到别的部门去了。&lt;/p&gt;
+&lt;p&gt;不过这并不重要，重要的是我们对低风险和自动化的极限追求。&lt;/p&gt;</summary><category term="esi"></category><category term="缓存"></category></entry><entry><title>战友离，情谊在</title><link href="http://www.lizherui.com/pages/2013/11/14/goodbye.html" rel="alternate"></link><updated>2013-11-14T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-11-14:pages/2013/11/14/goodbye.html</id><summary type="html">&lt;p&gt;双十一刚刚结束，团队里两名骨干就要被调到别的部门去了。&lt;/p&gt;
 &lt;p&gt;我来阿里4个多月了，第一次遇到这样的事情。&lt;/p&gt;
 &lt;p&gt;大家心里都感到很难受。&lt;/p&gt;
 &lt;p&gt;双十一并肩作战的战友阿，熬夜发布、通宵压测的情景还历历在目。&lt;/p&gt;
 &lt;p&gt;都是非常非常好的人，祝福他们在新部门依然开心。&lt;/p&gt;
 &lt;p&gt;A good guy will transfer, what a sad story.&lt;/p&gt;
-&lt;iframe height=498 width=510 src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XMzk1NDAzMDQ=&amp;embedid=-&amp;showAd=0&amp;isAutoPlay=false" frameborder=0 quality="best" allowfullscreen&gt;&lt;/iframe&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Thu, 14 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-11-14:pages/2013/11/14/goodbye.html</guid><category>离别</category></item><item><title>双十一</title><link>http://www.lizherui.com/pages/2013/11/11/1111.html</link><description>&lt;p&gt;双十一来了。&lt;/p&gt;
+&lt;iframe height=498 width=510 src="http://static.youku.com/v/swf/qplayer.swf?VideoIDS=XMzk1NDAzMDQ=&amp;embedid=-&amp;showAd=0&amp;isAutoPlay=false" frameborder=0 quality="best" allowfullscreen&gt;&lt;/iframe&gt;</summary><category term="离别"></category></entry><entry><title>双十一</title><link href="http://www.lizherui.com/pages/2013/11/11/1111.html" rel="alternate"></link><updated>2013-11-11T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-11-11:pages/2013/11/11/1111.html</id><summary type="html">&lt;p&gt;双十一来了。&lt;/p&gt;
 &lt;p&gt;刻骨铭心的一天。&lt;/p&gt;
 &lt;p&gt;在这个叫做“光明顶”的双十一核心作战室，见证了各种世界纪录的诞生，见到了马云、李连杰、李冰冰、王小丫等各路名人。&lt;/p&gt;
 &lt;p&gt;总体来讲，双十一流量压力远不如全链路压测，除了刚开始的半个小时内支付宝不太稳定外，其它都表现良好。&lt;/p&gt;
 &lt;p&gt;果然是：“如果想拿60分，就必须把目标设为80分”。&lt;/p&gt;
 &lt;p&gt;最后我想说什么来着？&lt;/p&gt;
 &lt;p&gt;努力然后进步，付出然后收获。&lt;/p&gt;
-&lt;iframe height=360 width=640 src="http://vodcdn.video.taobao.com/player/ugc/tb_ugc_bytes_core_player_loader.swf?version=1.0.20131031&amp;vid=10794012&amp;uid=1067522205&amp;p=1&amp;t=1&amp;rid=&amp;random=6666&amp;autoplay=false" frameborder=0 quality="best" allowfullscreen&gt;&lt;/iframe&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Mon, 11 Nov 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-11-11:pages/2013/11/11/1111.html</guid><category>双十一</category></item><item><title>在cgdb中进行I/O交互</title><link>http://www.lizherui.com/pages/2013/10/07/io_in_cgdb.html</link><description>&lt;p&gt;cgdb，gdb -tui的加强版，非常优秀，中文教程在此：&lt;a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md"&gt;https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md&lt;/a&gt;，不再赘述。&lt;/p&gt;
+&lt;iframe height=360 width=640 src="http://vodcdn.video.taobao.com/player/ugc/tb_ugc_bytes_core_player_loader.swf?version=1.0.20131031&amp;vid=10794012&amp;uid=1067522205&amp;p=1&amp;t=1&amp;rid=&amp;random=6666&amp;autoplay=false" frameborder=0 quality="best" allowfullscreen&gt;&lt;/iframe&gt;</summary><category term="双十一"></category></entry><entry><title>在cgdb中进行I/O交互</title><link href="http://www.lizherui.com/pages/2013/10/07/io_in_cgdb.html" rel="alternate"></link><updated>2013-10-07T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-10-07:pages/2013/10/07/io_in_cgdb.html</id><summary type="html">&lt;p&gt;cgdb，gdb -tui的加强版，非常优秀，中文教程在此：&lt;a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md"&gt;https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md&lt;/a&gt;，不再赘述。&lt;/p&gt;
 &lt;p&gt;cgdb有一个问题困扰了我很久：如何方便地进行I/O交互。&lt;/p&gt;
 &lt;p&gt;虽然cgdb自带了TTY模式，但不太靠谱，调试到某些Unix I/O接口时会卡死，如read函数。&lt;/p&gt;
 &lt;p&gt;今天我又反复看了下教程，发现了这样一句以前没注意的忠告：&lt;/p&gt;
@@ -739,17 +739,17 @@
 &lt;li&gt;然后在阻塞I/O处设置断点，可以看到这里在linenoise.c的312行调用了read()，直接加断点b linenoise.c:312；&lt;/li&gt;
 &lt;li&gt;cgdb中输入continue，然后再去redis-cli那里输入想调试的命令，比如info，回到cgdb，发现源码已经刷出来了，大功告成。
 &lt;img alt="3" src="https://lh4.googleusercontent.com/-2k_4-6EXv1I/UlGhLX__87I/AAAAAAAAATA/2PIFr0YZv8c/w958-h599-no/Screen+Shot+2013-10-07+at+1.42.54+AM.png" /&gt;&lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Mon, 07 Oct 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-10-07:pages/2013/10/07/io_in_cgdb.html</guid><category>cgdb</category></item><item><title>罗斯归来</title><link>http://www.lizherui.com/pages/2013/10/06/Rose_is_back.html</link><description>&lt;p&gt;罗斯是我最喜欢的NBA球员，快速且强壮，球风硬朗，极富侵略性。&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="cgdb"></category></entry><entry><title>罗斯归来</title><link href="http://www.lizherui.com/pages/2013/10/06/Rose_is_back.html" rel="alternate"></link><updated>2013-10-06T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-10-06:pages/2013/10/06/Rose_is_back.html</id><summary type="html">&lt;p&gt;罗斯是我最喜欢的NBA球员，快速且强壮，球风硬朗，极富侵略性。&lt;/p&gt;
 &lt;p&gt;罗斯因伤休战了整整523天，终于在今天复出了。&lt;/p&gt;
 &lt;p&gt;看罗斯打球有种独一无二的感觉，观赏性极强，速度与力量的完美结合。&lt;/p&gt;
 &lt;p&gt;罗斯快攻时的态度一直激励着我：甭管前面站着多高多壮的球员，统统硬上。&lt;/p&gt;
-&lt;p&gt;Too Big, Too Strong, Too Fast, Too Good.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sun, 06 Oct 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-10-06:pages/2013/10/06/Rose_is_back.html</guid><category>罗斯</category><category>NBA</category></item><item><title>临近的双十一</title><link>http://www.lizherui.com/pages/2013/09/27/coming_November_11.html</link><description>&lt;p&gt;双十一就要来了。&lt;/p&gt;
+&lt;p&gt;Too Big, Too Strong, Too Fast, Too Good.&lt;/p&gt;</summary><category term="罗斯"></category><category term="NBA"></category></entry><entry><title>临近的双十一</title><link href="http://www.lizherui.com/pages/2013/09/27/coming_November_11.html" rel="alternate"></link><updated>2013-09-27T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-09-27:pages/2013/09/27/coming_November_11.html</id><summary type="html">&lt;p&gt;双十一就要来了。&lt;/p&gt;
 &lt;p&gt;由于我们小组leader是双十一总负责人，所以我很幸运地参与到双十一相关的项目中。&lt;/p&gt;
 &lt;p&gt;作为一个新人，虽然只能做一点儿双十一相关的小需求，但依然很激动。&lt;/p&gt;
 &lt;p&gt;生活中常常听到这样的说法：“总有人比你们更勤奋”。&lt;/p&gt;
 &lt;p&gt;但这句话就不用对我们说了。&lt;/p&gt;
 &lt;p&gt;我们就是那更勤奋的人。&lt;/p&gt;
-&lt;iframe height=360 width=640 src="http://vodcdn.video.taobao.com/player/ugc/tb_ugc_pieces_core_player_loader.swf?version=1.0.20130926&amp;vid=10653872&amp;uid=1067522205&amp;p=1&amp;t=1&amp;rid=&amp;random=6666&amp;autoplay=false" frameborder=0 quality="best" allowfullscreen&gt;&lt;/iframe&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Fri, 27 Sep 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-09-27:pages/2013/09/27/coming_November_11.html</guid><category>天猫</category><category>双十一</category></item><item><title>淘宝城的第一天</title><link>http://www.lizherui.com/pages/2013/09/16/taobao_city.html</link><description>&lt;p&gt;淘宝城，震撼。&lt;/p&gt;
+&lt;iframe height=360 width=640 src="http://vodcdn.video.taobao.com/player/ugc/tb_ugc_pieces_core_player_loader.swf?version=1.0.20130926&amp;vid=10653872&amp;uid=1067522205&amp;p=1&amp;t=1&amp;rid=&amp;random=6666&amp;autoplay=false" frameborder=0 quality="best" allowfullscreen&gt;&lt;/iframe&gt;</summary><category term="天猫"></category><category term="双十一"></category></entry><entry><title>淘宝城的第一天</title><link href="http://www.lizherui.com/pages/2013/09/16/taobao_city.html" rel="alternate"></link><updated>2013-09-16T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-09-16:pages/2013/09/16/taobao_city.html</id><summary type="html">&lt;p&gt;淘宝城，震撼。&lt;/p&gt;
 &lt;p&gt;从整体到局部，处处高端大气上档次，很有硅谷范儿。&lt;/p&gt;
 &lt;p&gt;我说淘宝城绝对是中国IT届的旗帜，应该没人会反对。&lt;/p&gt;
 &lt;p&gt;在这种环境里工作的感受，很难描述。&lt;/p&gt;
@@ -767,7 +767,7 @@
 &lt;p&gt;&lt;img alt="9" src="https://lh4.googleusercontent.com/-9t3GDAPdWGc/UjctHufr7XI/AAAAAAAAAOw/KcONF5Z8Idw/w568-h612-no/nEO_IMG_%25E6%25B0%25B4%25E5%25A1%2598.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="10" src="https://lh6.googleusercontent.com/HMT4bu0qsmamFevY_Uia8mIMke201AbsLpZueNL0k-U=w600-h338-no" /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="11" src="https://lh5.googleusercontent.com/GEbGoguUI1z2u_A4rP_wrH3IRxZswxt5ZfhmJzHMBDU=w600-h338-no" /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="12" src="https://lh4.googleusercontent.com/-viYkjgbW6aQ/UjfCMTSGj5I/AAAAAAAAAQk/ZvWeD2ikIo0/w792-h594-no/20130809132058540.JPG" /&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Mon, 16 Sep 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-09-16:pages/2013/09/16/taobao_city.html</guid><category>淘宝城</category></item><item><title>百阿感言</title><link>http://www.lizherui.com/pages/2013/09/05/bai_nian_ali.html</link><description>&lt;h2&gt;背景&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="12" src="https://lh4.googleusercontent.com/-viYkjgbW6aQ/UjfCMTSGj5I/AAAAAAAAAQk/ZvWeD2ikIo0/w792-h594-no/20130809132058540.JPG" /&gt;&lt;/p&gt;</summary><category term="淘宝城"></category></entry><entry><title>百阿感言</title><link href="http://www.lizherui.com/pages/2013/09/05/bai_nian_ali.html" rel="alternate"></link><updated>2013-09-05T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-09-05:pages/2013/09/05/bai_nian_ali.html</id><summary type="html">&lt;h2&gt;背景&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;来阿里之前，阿里“很黄很暴力”的开放风骚型文化就已经在江湖上声名远扬了。&lt;/p&gt;
 &lt;p&gt;记得参加13届校招那会儿，阿里的面试风格就让人印象深刻。与其它互联网公司面试官一脸严肃的风格不同，阿里的面试官不仅极其健谈，而且不停地和候选人互开玩笑，让我惊讶了很久很久。&lt;/p&gt;
@@ -834,7 +834,7 @@
 &lt;p&gt;百阿结束了，它既是一次阿里文化学习之旅，也是一次鸡血的励志之旅。&lt;/p&gt;
 &lt;p&gt;百阿让我对阿里的文化有了更进一步的理解，产生了气味相投的感觉。&lt;/p&gt;
 &lt;p&gt;但是这远远不够，仍然需要在今后的工作中不断地去训练、强化与总结。&lt;/p&gt;
-&lt;p&gt;感谢百阿，阿里之旅才刚刚开始。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Thu, 05 Sep 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-09-05:pages/2013/09/05/bai_nian_ali.html</guid><category>百阿</category><category>阿里</category></item><item><title>阿里校招内推简历筛选</title><link>http://www.lizherui.com/pages/2013/08/25/filter_resume.html</link><description>&lt;p&gt;上周在BYR论坛发了一个阿里内推的帖子，没想到短时间内就收到了成百上千封简历。&lt;/p&gt;
+&lt;p&gt;感谢百阿，阿里之旅才刚刚开始。&lt;/p&gt;</summary><category term="百阿"></category><category term="阿里"></category></entry><entry><title>阿里校招内推简历筛选</title><link href="http://www.lizherui.com/pages/2013/08/25/filter_resume.html" rel="alternate"></link><updated>2013-08-25T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-25:pages/2013/08/25/filter_resume.html</id><summary type="html">&lt;p&gt;上周在BYR论坛发了一个阿里内推的帖子，没想到短时间内就收到了成百上千封简历。&lt;/p&gt;
 &lt;p&gt;我仔仔细细地看了每一封简历，附带有Github地址的我也点进去仔细看了代码。&lt;/p&gt;
 &lt;p&gt;最终我留下了30%的简历，而且这30%中只有10%的本科生。&lt;/p&gt;
 &lt;h2&gt;筛选标准&lt;/h2&gt;
@@ -913,7 +913,7 @@
 &lt;hr /&gt;
 &lt;p&gt;感谢投简历的小伙伴们对阿里的支持与肯定。&lt;/p&gt;
 &lt;p&gt;感谢对爬取校招信息代码做出贡献的小伙伴们。&lt;/p&gt;
-&lt;p&gt;祝福大家都能抢到心仪的Offer。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sun, 25 Aug 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-08-25:pages/2013/08/25/filter_resume.html</guid><category>内推</category><category>简历</category></item><item><title>对待技术的态度</title><link>http://www.lizherui.com/pages/2013/08/18/attitude_to_tech.html</link><description>&lt;p&gt;最近北邮人论坛上对IT行业技术人员的声讨愈演愈烈，如下：&lt;/p&gt;
+&lt;p&gt;祝福大家都能抢到心仪的Offer。&lt;/p&gt;</summary><category term="内推"></category><category term="简历"></category></entry><entry><title>对待技术的态度</title><link href="http://www.lizherui.com/pages/2013/08/18/attitude_to_tech.html" rel="alternate"></link><updated>2013-08-18T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-18:pages/2013/08/18/attitude_to_tech.html</id><summary type="html">&lt;p&gt;最近北邮人论坛上对IT行业技术人员的声讨愈演愈烈，如下：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://bbs.byr.cn/#!article/Job/1397821"&gt;搞lT的要有自知之明!!!!&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://bbs.byr.cn/#!article/Job/1398322"&gt;搞IT的要有自知之明！！！！（之二）&lt;/a&gt;&lt;/li&gt;
@@ -933,7 +933,7 @@
 &lt;p&gt;根本懒得去纠结思考学习某样技术到底有没有用、时间应该花在哪些更值得的事情上。&lt;/p&gt;
 &lt;p&gt;就是为了乐趣而已。&lt;/p&gt;
 &lt;p&gt;在某种程度上，这与很多人喜欢通宵打游戏、喜欢整天逛街是一回事。&lt;/p&gt;
-&lt;p&gt;Have fun, and enjoy it.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sun, 18 Aug 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-08-18:pages/2013/08/18/attitude_to_tech.html</guid><category>技术</category></item><item><title>一步一步打造Geek风格的技术博客</title><link>http://www.lizherui.com/pages/2013/08/17/build_blog.html</link><description>&lt;h2&gt;如梦初醒&lt;/h2&gt;
+&lt;p&gt;Have fun, and enjoy it.&lt;/p&gt;</summary><category term="技术"></category></entry><entry><title>一步一步打造Geek风格的技术博客</title><link href="http://www.lizherui.com/pages/2013/08/17/build_blog.html" rel="alternate"></link><updated>2013-08-17T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-17:pages/2013/08/17/build_blog.html</id><summary type="html">&lt;h2&gt;如梦初醒&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;h3&gt;Geek是什么&lt;/h3&gt;
 &lt;p&gt;Geek更多的是一种精神，一种态度，一种对技术的理解与信念。他们无法忍受丑陋的代码，拙劣的技术。他们思路开阔，技术娴熟，他们不甘平庸，追求完美。他们不会囿于常识，他们敢于突破。在常人眼中，他们不走寻常路，享受各种非主流的技术。但在他们自己眼中，这些又是那么得自然与优美。他们用自己的行为诠释着自己对于技术的理解，用那份固执传达着自己的信念。&lt;/p&gt;
@@ -1112,7 +1112,7 @@
 &lt;p&gt;最后，如果感觉还不够味儿，可以参考Pelican官方文档和这个博客的完整源码。&lt;/p&gt;
 &lt;p&gt;Pelican : &lt;a href="http://docs.getpelican.com/en/3.2"&gt;http://docs.getpelican.com/en/3.2&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Source Code : &lt;a href="https://github.com/lizherui/lizherui.github.io"&gt;https://github.com/lizherui/lizherui.github.io&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;Have fun!&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sat, 17 Aug 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-08-17:pages/2013/08/17/build_blog.html</guid><category>pelican</category><category>blog</category><category>python</category></item><item><title>为什么我一直强烈推荐程序员使用Mac OS X</title><link>http://www.lizherui.com/pages/2013/08/11/use_mac_os_x.html</link><description>&lt;p&gt;像绝大多数国内程序员一样，我在相当长的时间里对Mac OS X一无所知，最开始使用Windows进行开发，然后转到Linux。&lt;/p&gt;
+&lt;p&gt;Have fun!&lt;/p&gt;</summary><category term="pelican"></category><category term="blog"></category><category term="python"></category></entry><entry><title>为什么我一直强烈推荐程序员使用Mac OS X</title><link href="http://www.lizherui.com/pages/2013/08/11/use_mac_os_x.html" rel="alternate"></link><updated>2013-08-11T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-11:pages/2013/08/11/use_mac_os_x.html</id><summary type="html">&lt;p&gt;像绝大多数国内程序员一样，我在相当长的时间里对Mac OS X一无所知，最开始使用Windows进行开发，然后转到Linux。&lt;/p&gt;
 &lt;p&gt;去年11月我终于攒够钱了，决定试着从Linux转到Mac OS X，于是入手Macbook Pro，从此踏上了Mac OS X的道路，没想到一去不复返。&lt;/p&gt;
 &lt;p&gt;这一年来使用Mac OS X的经历，不仅极大地开拓了我的视野，而且在很大程度上改变了我对待软件开发的态度。当然了，最重要的是，它使我的开发效率有了质的提升。&lt;/p&gt;
 &lt;h2&gt;Macintosh在国内的现状&lt;/h2&gt;
@@ -1158,7 +1158,7 @@
 &lt;h3&gt;强悍易用的软件包管理器&lt;/h3&gt;
 &lt;p&gt;Homebrew，Mac OS X上强悍的软件包管理器，使用Ruby开发，托管在github上：&lt;a href="https://github.com/mxcl/homebrew"&gt;https://github.com/mxcl/homebrew&lt;/a&gt;。我用过Ubuntu上的apt，也用过Fedora上的yum，但它俩实在无法跟Homebrew相提并论。&lt;/p&gt;
 &lt;h2&gt;结束语&lt;/h2&gt;
-&lt;p&gt;无它，唯Mac OS X。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sun, 11 Aug 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-08-11:pages/2013/08/11/use_mac_os_x.html</guid><category>mac os x</category><category>macintoch</category></item><item><title>编写可读代码的艺术</title><link>http://www.lizherui.com/pages/2013/08/08/clean_code.html</link><description>&lt;p&gt;我最早开始重视代码的可读性还是大三在搜狐做Python研发实习生的时候。那会儿我特别嫩，写代码还是学校大作业风格，天天被leader各种批评。现在回忆起来，虽然在搜狐呆的时间特别短，但那段经历能引起我对代码可读性的重视，也算是重量级的收获了。&lt;/p&gt;
+&lt;p&gt;无它，唯Mac OS X。&lt;/p&gt;</summary><category term="mac os x"></category><category term="macintoch"></category></entry><entry><title>编写可读代码的艺术</title><link href="http://www.lizherui.com/pages/2013/08/08/clean_code.html" rel="alternate"></link><updated>2013-08-08T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-08:pages/2013/08/08/clean_code.html</id><summary type="html">&lt;p&gt;我最早开始重视代码的可读性还是大三在搜狐做Python研发实习生的时候。那会儿我特别嫩，写代码还是学校大作业风格，天天被leader各种批评。现在回忆起来，虽然在搜狐呆的时间特别短，但那段经历能引起我对代码可读性的重视，也算是重量级的收获了。&lt;/p&gt;
 &lt;p&gt;今天一口气读完了《编写可读性代码的艺术》，感觉非常爽。我一直认为代码的可读性绝对是第一重要的，正如《黑客与画家》所言："代码写出来是给人看的，附带着能在机器上运行"。&lt;/p&gt;
 &lt;p&gt;顺手记录了几个重要的原则：&lt;/p&gt;
 &lt;ol&gt;
@@ -1219,7 +1219,7 @@
 &lt;li&gt;
 &lt;p&gt;最好读的代码就是没有代码。&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Thu, 08 Aug 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-08-08:pages/2013/08/08/clean_code.html</guid><category>可读性</category><category>读书笔记</category></item><item><title>如何成为一名黑客(转)</title><link>http://www.lizherui.com/pages/2013/08/06/become_a_hack.html</link><description>&lt;p&gt;这是一份大名鼎鼎的黑客手册，来自Eric S. Raymond，我忍不住转存下来。&lt;/p&gt;
+&lt;/ol&gt;</summary><category term="可读性"></category><category term="读书笔记"></category></entry><entry><title>如何成为一名黑客(转)</title><link href="http://www.lizherui.com/pages/2013/08/06/become_a_hack.html" rel="alternate"></link><updated>2013-08-06T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-06:pages/2013/08/06/become_a_hack.html</id><summary type="html">&lt;p&gt;这是一份大名鼎鼎的黑客手册，来自Eric S. Raymond，我忍不住转存下来。&lt;/p&gt;
 &lt;h2&gt;什么是黑客&lt;/h2&gt;
 &lt;p&gt;Jargon File 包含了一大堆关于“hacker”这个词的定义，大部分与技术高超和热衷解决问题 及超越极限有关。但如果你只想知道如何 成为 一名黑客， 那么只有两件事情确实相关。&lt;/p&gt;
 &lt;p&gt;这可以追溯到几十年前第一台分时小型电脑诞生, ARPAnet 实验也刚展开的 年代，那时有一个由程序设计专家和网络名人所组成的, 具有分享特点的文化社群。 这种文化的成员创造了 “hacker” 这个名词。黑客们建立了 Internet。 黑客们发明出了现在使用的 UNIX 操作系统。黑客们使 Usenet 运作起来， 黑客们让 WWW 运转起来。如果你是这个文化的一部分，如果你对这种文化有所贡献，而且 这个社群的其它成员也认识你并称你为 hacker, 那么你就是一位黑客。&lt;/p&gt;
@@ -1373,7 +1373,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;做以上的事情，只会招来嘲笑。黑客们个个记忆超群—— 你将需要数年的时间让他们忘记你犯下的错误。&lt;/p&gt;
-&lt;p&gt;网名的问题值得深思。将身份隐藏在虚假的名字后是骇客、解密者、d00dz 及其他低等生物幼稚愚蠢的行为特点。黑客不会做这些事； 他们对他们所作的感到骄傲，而且乐于人们将作品与他们的 真名相联系。 因此, 若你现在用假名，放弃它。在黑客文化里它会令你你失败的。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Tue, 06 Aug 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-08-06:pages/2013/08/06/become_a_hack.html</guid><category>黑客</category><category>编程</category></item><item><title>Java设计模式在Common Lisp中的体现</title><link>http://www.lizherui.com/pages/2013/08/04/lisp_design_patterns.html</link><description>&lt;p&gt;最近在进一步学习Java的过程中，我愈发感到Java把面向对象的编程思想玩到了登峰造极的地步。而Java中最能表现面向对象编程思想的，就是大名鼎鼎的设计模式了。&lt;/p&gt;
+&lt;p&gt;网名的问题值得深思。将身份隐藏在虚假的名字后是骇客、解密者、d00dz 及其他低等生物幼稚愚蠢的行为特点。黑客不会做这些事； 他们对他们所作的感到骄傲，而且乐于人们将作品与他们的 真名相联系。 因此, 若你现在用假名，放弃它。在黑客文化里它会令你你失败的。&lt;/p&gt;</summary><category term="黑客"></category><category term="编程"></category></entry><entry><title>Java设计模式在Common Lisp中的体现</title><link href="http://www.lizherui.com/pages/2013/08/04/lisp_design_patterns.html" rel="alternate"></link><updated>2013-08-04T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-04:pages/2013/08/04/lisp_design_patterns.html</id><summary type="html">&lt;p&gt;最近在进一步学习Java的过程中，我愈发感到Java把面向对象的编程思想玩到了登峰造极的地步。而Java中最能表现面向对象编程思想的，就是大名鼎鼎的设计模式了。&lt;/p&gt;
 &lt;p&gt;这是Wikipedia中对设计模式的定义：设计模式并不直接用来完成代码的编写，而是描述在各种不同情况下，要怎么解决问题的一种方案。面向对象设计模式通常以类型或对象来描述其中的关系和相互作用，但不涉及用来完成应用程序的特定类型或对象。设计模式能使不稳定依赖于相对稳定、具体依赖于相对抽象，避免会引起麻烦的紧耦合，以增强软件设计面对并适应变化的能力。&lt;/p&gt;
 &lt;p&gt;在学习了一些设计模式后，我们会发现这23种设计模式都围绕着以下三大基本原则：&lt;/p&gt;
 &lt;ol&gt;
@@ -1680,20 +1680,20 @@
 &lt;p&gt;“嗨，John，有什么问题？” Peter说。&lt;/p&gt;
 &lt;p&gt;虽然这只是10个字左右的问题，我不会假装自己记住了Lisp之父约翰麦卡锡说的每一个字。他在问Python程序能
 不能像处理数据一样，优雅地处理Python代码。&lt;/p&gt;
-&lt;p&gt;“不行。John, Python做不到。” Peter就回答了这一句，然后静静地等待，准备接受教授的质疑，但老人没有再说什么了。此时，无语已胜千言。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sun, 04 Aug 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-08-04:pages/2013/08/04/lisp_design_patterns.html</guid><category>java</category><category>lisp</category><category>设计模式</category></item><item><title>今天我终于有了自己的独立域名</title><link>http://www.lizherui.com/pages/2013/08/01/personal_domain.html</link><description>&lt;p&gt;今天折腾了半天，终于搞定了自己的独立域名：&lt;a href="http://www.lizherui.com"&gt;http://www.lizherui.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;“不行。John, Python做不到。” Peter就回答了这一句，然后静静地等待，准备接受教授的质疑，但老人没有再说什么了。此时，无语已胜千言。&lt;/p&gt;</summary><category term="java"></category><category term="lisp"></category><category term="设计模式"></category></entry><entry><title>今天我终于有了自己的独立域名</title><link href="http://www.lizherui.com/pages/2013/08/01/personal_domain.html" rel="alternate"></link><updated>2013-08-01T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-08-01:pages/2013/08/01/personal_domain.html</id><summary type="html">&lt;p&gt;今天折腾了半天，终于搞定了自己的独立域名：&lt;a href="http://www.lizherui.com"&gt;http://www.lizherui.com&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;整个过程颇为曲折：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;去&lt;a href="https://www.godaddy.com"&gt;https://www.godaddy.com&lt;/a&gt;上用支付宝花80多块钱购买为期一年的顶级域名，并去修改Nameservers为这两个地址：f1g1ns1.dnspod.net、f1g1ns2.dnspod.net。&lt;/li&gt;
 &lt;li&gt;去&lt;a href="https://www.dnspod.cn"&gt;https://www.dnspod.cn&lt;/a&gt;上添加新域名，并申请一条A记录指向Github Pages的ip:207.97.227.245；&lt;/li&gt;
 &lt;li&gt;在Pelican主目录新建CNAME文件，添上刚刚申请的域名：www.lizherui.com。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;有了独立域名后，感觉非常爽，更加坚定了好好打理个人博客的决心。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Thu, 01 Aug 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-08-01:pages/2013/08/01/personal_domain.html</guid><category>域名</category><category>godaddy</category></item><item><title>爬取校招信息</title><link>http://www.lizherui.com/pages/2013/07/31/spider.html</link><description>&lt;p&gt;抓取北邮人论坛和水木社区校招信息的爬虫程序, 直接运行main.py即可在本机(&lt;a href="http://127.0.0.1:8888"&gt;http://127.0.0.1:8888&lt;/a&gt;)访问，非常简洁，可以扩展。&lt;/p&gt;
+&lt;p&gt;有了独立域名后，感觉非常爽，更加坚定了好好打理个人博客的决心。&lt;/p&gt;</summary><category term="域名"></category><category term="godaddy"></category></entry><entry><title>爬取校招信息</title><link href="http://www.lizherui.com/pages/2013/07/31/spider.html" rel="alternate"></link><updated>2013-07-31T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-31:pages/2013/07/31/spider.html</id><summary type="html">&lt;p&gt;抓取北邮人论坛和水木社区校招信息的爬虫程序, 直接运行main.py即可在本机(&lt;a href="http://127.0.0.1:8888"&gt;http://127.0.0.1:8888&lt;/a&gt;)访问，非常简洁，可以扩展。&lt;/p&gt;
 &lt;p&gt;此外，已经增加手机短信通知功能，移动、联通、电信都可以用。&lt;/p&gt;
 &lt;p&gt;Talk is cheap, show you the code:&lt;a href="https://github.com/lizherui/spider_python"&gt;https://github.com/lizherui/spider_python&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Enjoy it.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Wed, 31 Jul 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-07-31:pages/2013/07/31/spider.html</guid><category>python</category><category>爬虫</category></item><item><title>温暖的杭州人</title><link>http://www.lizherui.com/pages/2013/07/27/hang_zhou_ren.html</link><description>&lt;p&gt;昨天傍晚我骑车去买水果，买完回去时忘记骑车了，没锁。快半夜才想起来这事，赶紧跑到已经关门的水果店门口，果然，车子没了。正当我郁闷地准备往回走时，没想到在水果店里看到了我的车子，一股暖意顿时涌上心头。&lt;/p&gt;
+&lt;p&gt;Enjoy it.&lt;/p&gt;</summary><category term="python"></category><category term="爬虫"></category></entry><entry><title>温暖的杭州人</title><link href="http://www.lizherui.com/pages/2013/07/27/hang_zhou_ren.html" rel="alternate"></link><updated>2013-07-27T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-27:pages/2013/07/27/hang_zhou_ren.html</id><summary type="html">&lt;p&gt;昨天傍晚我骑车去买水果，买完回去时忘记骑车了，没锁。快半夜才想起来这事，赶紧跑到已经关门的水果店门口，果然，车子没了。正当我郁闷地准备往回走时，没想到在水果店里看到了我的车子，一股暖意顿时涌上心头。&lt;/p&gt;
 &lt;p&gt;我每天早上上班的时候会去楼下那个早餐店买包子。有一次买了4块5的东西，但是我手里只有4块零钱和20块整钱。我正准备给他20块钱，没想到他说：给4块钱得了，下次来的时候再给剩下的5毛吧。&lt;/p&gt;
 &lt;p&gt;大家都知道江浙一代的人很会做生意，如今身临其境，确实开了眼界。这边做小本生意的人，不拘小节，也不看重短期的小利益，头脑、心态、眼光都很赞。&lt;/p&gt;
-&lt;p&gt;这方面我会多加留意，用心学习。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sat, 27 Jul 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-07-27:pages/2013/07/27/hang_zhou_ren.html</guid><category>杭州</category></item><item><title>编辑器与IDE</title><link>http://www.lizherui.com/pages/2013/07/25/editor_and_ide.html</link><description>&lt;p&gt;虽然eclim很强悍，但由于它并没有集成任何的java debug功能，因此用vim+eclim的组合开发java仍然显得力不从心。&lt;/p&gt;
+&lt;p&gt;这方面我会多加留意，用心学习。&lt;/p&gt;</summary><category term="杭州"></category></entry><entry><title>编辑器与IDE</title><link href="http://www.lizherui.com/pages/2013/07/25/editor_and_ide.html" rel="alternate"></link><updated>2013-07-25T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-25:pages/2013/07/25/editor_and_ide.html</id><summary type="html">&lt;p&gt;虽然eclim很强悍，但由于它并没有集成任何的java debug功能，因此用vim+eclim的组合开发java仍然显得力不从心。&lt;/p&gt;
 &lt;p&gt;我最终决定回到eclipse的怀抱中。同时，出于对逐渐丧失vim武功的担忧，我决定使用eclipse+viplugin的组合：编辑代码使用vim的指法，其它事情全部交给eclipse。&lt;/p&gt;
 &lt;p&gt;这样用了一段时间，节奏还不错，而且eclipse一些强大的功能让我刮目相看，并让我开始反思之前对待编辑器与IDE的态度。&lt;/p&gt;
 &lt;p&gt;IDE里面确实蕴含了比普通文本编辑器高级很多的技术。IDE会对程序文本进行真正的解析，之后才开始分析里面的结构。它们的“跳转到定义”一般都是很精确的跳转，而不是像文本编辑器那样瞎猜。&lt;/p&gt;
@@ -1705,7 +1705,7 @@
 &lt;p&gt;但是最近开发java的经历让我逐渐冷静了下来，开始仔细地反思这件事情。就像没有万能的编程语言一样，也没有万能的编辑器。vim很强悍，emacs也很厉害，但是它俩在面对java这样的语言时，确实无法跟eclipse相提并论。&lt;/p&gt;
 &lt;p&gt;eclipse能让java程序员的头脑从琐碎的细节里面解脱出来，所以我们能够更加专注于程序本身的语义和算法，这样我们能写出更加优美和可靠的程序。这就是我用eclipse写java程序的时候相对于vim的感觉。我感觉到自己能够看见程序背后所表现的模型，而不只是看到程序的文本和细节。&lt;/p&gt;
 &lt;p&gt;最后我想说的是，eclipse这件事情对我触动很大。我开始渐渐认可这样的观点：程序员对诸如编程语言、编辑器这类事物产生宗教般的信仰或偏见确实是没有必要的。我们应该更加多元化地发展，学会尊重别的技术和别的事物，学会去发现、认可每件技术的优势与劣势。&lt;/p&gt;
-&lt;p&gt;天下武功，确实没有高低之分；只有习武之人，才有强弱之别。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Thu, 25 Jul 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-07-25:pages/2013/07/25/editor_and_ide.html</guid><category>编辑器</category><category>eclipse</category><category>vim</category></item><item><title>滑雪</title><link>http://www.lizherui.com/pages/2013/07/21/hua_xue.html</link><description>&lt;p&gt;没想到才来公司两周，就赶上了大型Outing。&lt;/p&gt;
+&lt;p&gt;天下武功，确实没有高低之分；只有习武之人，才有强弱之别。&lt;/p&gt;</summary><category term="编辑器"></category><category term="eclipse"></category><category term="vim"></category></entry><entry><title>滑雪</title><link href="http://www.lizherui.com/pages/2013/07/21/hua_xue.html" rel="alternate"></link><updated>2013-07-21T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-21:pages/2013/07/21/hua_xue.html</id><summary type="html">&lt;p&gt;没想到才来公司两周，就赶上了大型Outing。&lt;/p&gt;
 &lt;p&gt;第一次滑雪还是在大二的冬天，跟着班上几个要好的同学去的北京郊区一个雪场。从那时起就对滑雪很有好感，很刺激。&lt;/p&gt;
 &lt;p&gt;这次是跟着公司的人去滑雪。一路上让我愈发感到淘宝的人实在是太开放了，不停地开玩笑互黑。&lt;/p&gt;
 &lt;p&gt;到雪场后，我直接选择了中级滑道。果然，几年没滑，非常生疏，连摔两次，屁股很痛。&lt;/p&gt;
@@ -1719,7 +1719,7 @@
 &lt;p&gt;说一下这个室友吧。人非常漂亮，从小到大都是班花。做事情也很不错，上得厅堂下得厨房，很讨人喜欢。作为一名新人hr，工作非常辛苦，每天回来也挺晚，总是黑眼圈，非常不容易。&lt;/p&gt;
 &lt;p&gt;能找到这样的合租妹子，真是缘分。&lt;/p&gt;
 &lt;p&gt;有的时候我强烈感觉，很多事情，仿佛就是事先设计好了一样。&lt;/p&gt;
-&lt;p&gt;没错，这就是命。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sun, 21 Jul 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-07-21:pages/2013/07/21/hua_xue.html</guid><category>淘宝</category><category>滑雪</category></item><item><title>淘宝这个公司</title><link>http://www.lizherui.com/pages/2013/07/13/taobao_vs_baidu.html</link><description>&lt;p&gt;我来淘宝一周了。&lt;/p&gt;
+&lt;p&gt;没错，这就是命。&lt;/p&gt;</summary><category term="淘宝"></category><category term="滑雪"></category></entry><entry><title>淘宝这个公司</title><link href="http://www.lizherui.com/pages/2013/07/13/taobao_vs_baidu.html" rel="alternate"></link><updated>2013-07-13T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-13:pages/2013/07/13/taobao_vs_baidu.html</id><summary type="html">&lt;p&gt;我来淘宝一周了。&lt;/p&gt;
 &lt;p&gt;这一周在淘宝的所见所闻总是让我不自觉地联想起在百度工作的日子。&lt;/p&gt;
 &lt;p&gt;我觉得是时候总结一下了。&lt;/p&gt;
 &lt;h3&gt;团队氛围&lt;/h3&gt;
@@ -1749,11 +1749,11 @@
 &lt;p&gt;这个话题我不想再对比了，百度被甩得很远。&lt;/p&gt;
 &lt;h3&gt;总结&lt;/h3&gt;
 &lt;p&gt;如果你是“书呆子”，建议选择百度。&lt;/p&gt;
-&lt;p&gt;如果你是“嬉皮士”，建议选择淘宝。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sat, 13 Jul 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-07-13:pages/2013/07/13/taobao_vs_baidu.html</guid><category>淘宝</category><category>百度</category><category>公司</category></item><item><title>初到杭州</title><link>http://www.lizherui.com/pages/2013/07/06/arrive_at_hangzhou.html</link><description>&lt;p&gt;在入职淘宝的前一周，我来到杭州。&lt;/p&gt;
+&lt;p&gt;如果你是“嬉皮士”，建议选择淘宝。&lt;/p&gt;</summary><category term="淘宝"></category><category term="百度"></category><category term="公司"></category></entry><entry><title>初到杭州</title><link href="http://www.lizherui.com/pages/2013/07/06/arrive_at_hangzhou.html" rel="alternate"></link><updated>2013-07-06T00:00:00+08:00</updated><author><name>lizherui</name></author><id>tag:www.lizherui.com,2013-07-06:pages/2013/07/06/arrive_at_hangzhou.html</id><summary type="html">&lt;p&gt;在入职淘宝的前一周，我来到杭州。&lt;/p&gt;
 &lt;p&gt;我拖着行李刚走出火车，就被黑车党团团围住。好不容易挣脱了黑车党，打的士又陷入困境。一个人来到完全陌生的城市打拼，真的是很不容易。&lt;/p&gt;
 &lt;p&gt;幸运的是，很快就在豆瓣找到了合租的人，并找到了一个不错的房子，虽然地段稍微有点远。不过以后可以考虑骑公共自行车上班，顺便锻炼身体。&lt;/p&gt;
 &lt;p&gt;技术方面的话，自从5月底离开百度后就没怎么练了。再不练，武功就废了。坚持看完了SICP第二章，感到越来越吃力(实在太抽象了)，于是决定暂缓第三章的学习计划。考虑到淘宝大量使用JAVA,于是开始学习《JAVA编程思想》，想尽快入门JAVA。&lt;/p&gt;
 &lt;p&gt;周末和向楠、倪灿在西湖旁边吃了个饭，聊了聊很多往事，感慨万千。&lt;/p&gt;
 &lt;p&gt;下周一就要入职了，感觉压力很大。&lt;/p&gt;
 &lt;p&gt;上路了，毕业生。&lt;/p&gt;
-&lt;iframe height=498 width=510 src="http://player.youku.com/embed/XMzcwMzExNg==" frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lizherui</dc:creator><pubDate>Sat, 06 Jul 2013 00:00:00 +0800</pubDate><guid>tag:www.lizherui.com,2013-07-06:pages/2013/07/06/arrive_at_hangzhou.html</guid><category>杭州</category><category>淘宝</category></item></channel></rss>
+&lt;iframe height=498 width=510 src="http://player.youku.com/embed/XMzcwMzExNg==" frameborder=0 allowfullscreen&gt;&lt;/iframe&gt;</summary><category term="杭州"></category><category term="淘宝"></category></entry></feed>

@@ -59,6 +59,35 @@
  
 
     <div class='article'>
+        <a href="./pages/2014/02/25/why_English_books.html"><h2>为什么要阅读英文原版</h2></a>
+        <div class= "well small"> 2014-02-25
+
+by <a class="url fn" href="./author/lizherui.html">lizherui</a>
+ 
+
+
+ </div>
+        <div class="summary"><h2>背景</h2>
+<p>早在去年冬季，我就有这样的想法了，准备认真读读一些经典书籍的英文原版。</p>
+<p>遗憾的是，那个时候双11刚刚结束，我一下子有了大解放的感觉，于是不由自主地开始熬夜放纵，把大量的时间花在了玩游戏上。</p>
+<p>寒假终于警觉起来，执意不带鼠标回家，算是遏制住了一点。</p>
+<p>年后上班，一位朋友突然告诉我，说我上进的形象一直激励着她，非常感谢我。</p>
+<p>这让我反思了整整一夜，因为双11后，我已经变得不怎么上进了。但是别人都这样说了，我真的是没有办法，只能把鼠标丢进垃圾桶，开始计划并执行“英文原版”计划。</p>
+<h2>为什么要阅读英文原版</h2>
+<p>闲暇的时候，我常常在想，怎样才能让自己的水平更加锋利？</p>
+<p>观察并效仿大牛们的共同点是一个很好的途径，就像我们为了提高打游戏的水平，常常会观看明星选手的视频，然后加以模仿。</p>
+<p>我很早就观察到，阅读英文原版，是大牛们的共同点。大牛们还有很多类似性质的共同点，比如使用Google而非百度。</p>
+<p>长期以来，作为一个习惯阅读中文翻译版的菜鸟，我一直想不明白为什么大牛们都会去阅读英文原版。同时也觉得，翻译版和英文原版不就是语言有差别嘛，内容都一样阿。</p>
+<p>但是我联想到了另一件事情，当初我从百度转到Google也是完全一样的处境：作为一个长期习惯百度的菜鸟，我一直想不明白为什么大牛们都用Google，同时也觉得，百度已经足够好用了阿 ...</p> <a class="btn btn-info xsmall" href="./pages/2014/02/25/why_English_books.html">read more</a></div>
+    </div>	
+				
+
+ 
+        
+
+ 
+
+    <div class='article'>
         <a href="./pages/2013/12/31/2013_summary.html"><h2>2013总结</h2></a>
         <div class= "well small"> 2013-12-31
 
@@ -160,38 +189,6 @@ by <a class="url fn" href="./author/lizherui.html">lizherui</a>
 <p>最后我想说什么来着？</p>
 <p>努力然后进步，付出然后收获。</p>
 <iframe height=360 width=640 src="http://vodcdn.video.taobao.com/player/ugc/tb_ugc_bytes_core_player_loader.swf?version=1.0.20131031&vid=10794012&uid=1067522205&p=1&t=1&rid=&random=6666&autoplay=false" frameborder=0 quality="best" allowfullscreen></iframe> <a class="btn btn-info xsmall" href="./pages/2013/11/11/1111.html">read more</a></div>
-    </div>	
-				
-
- 
-        
-
- 
-
-    <div class='article'>
-        <a href="./pages/2013/10/07/io_in_cgdb.html"><h2>在cgdb中进行I/O交互</h2></a>
-        <div class= "well small"> 2013-10-07
-
-by <a class="url fn" href="./author/lizherui.html">lizherui</a>
- 
-
-
- </div>
-        <div class="summary"><p>cgdb，gdb -tui的加强版，非常优秀，中文教程在此：<a href="https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md">https://github.com/leeyiw/cgdb-manual-in-chinese/blob/master/contents.md</a>，不再赘述。</p>
-<p>cgdb有一个问题困扰了我很久：如何方便地进行I/O交互。</p>
-<p>虽然cgdb自带了TTY模式，但不太靠谱，调试到某些Unix I/O接口时会卡死，如read函数。</p>
-<p>今天我又反复看了下教程，发现了这样一句以前没注意的忠告：</p>
-<blockquote>
-<p>如果被调试的程序需要读取终端用户输入，我们推荐用户在终端中启动被调试程序，然后在另一个终端使用CGDB去attach被调试程序，这是与被调试程序进行I/O交互最简单的方法。</p>
-</blockquote>
-<p>但是教程没有说具体该怎么操作，摸索了下，终于完美解决，以调试redis-cli为例。</p>
-<ol>
-<li>命令行先后启动redis-server和redis-cli；</li>
-<li>ps查到redis-cli进程号后直接cgdb -p [pid]；
-<img alt="1" src="https://lh6.googleusercontent.com/-5Eq0HZugi_0/UlGfDvp545I/AAAAAAAAASE/EUUwYqy23aY/w788-h124-no/Screen+Shot+2013-10-07+at+1.33.30+AM.png" /></li>
-<li>进入cgdb后不要慌，用bt看下阻塞I/O在哪里；
-<img alt="2" src="https://lh4.googleusercontent.com/-g3Mq_Eg2aGI/UlGf0iupLjI/AAAAAAAAASY/rApjcwZpibw/w958-h112-no/Screen+Shot+2013-10-07+at+1.36.55+AM.png" /></li>
-<li>然后在阻塞I/O处设置断点，可以看到这里在linenoise.c的312行调用了read()，直接加断点b linenoise.c:312 ...</li></ol> <a class="btn btn-info xsmall" href="./pages/2013/10/07/io_in_cgdb.html">read more</a></div>
     </div>	
 				
 <div class="pagination">
