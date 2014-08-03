@@ -20,9 +20,9 @@ Slug: why_bmw
 
 最爱bmw的宣传理念——**Sheer Driving Pleasure**，正如互联网行业很多开发人员的理念——**Sheer Coding Pleasure**.
 
-There are millions of bmw stories.
+Who needs to twitter or post on facebook when you are behind the wheel?
 
-What's yours?
+A BMW 3.
 
 <embed src="http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XNzUwMzk5NjU2&winType=adshow&isAutoPlay=true" quality="best" width="480" height="400" align="middle" allowScriptAccess="never"  allowNetworking="internal" type="application/x-shockwave-flash"></embed>
 
