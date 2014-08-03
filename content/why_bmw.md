@@ -24,5 +24,5 @@ There are millions of bmw stories.
 
 What's yours?
 
-<embed src="http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XNzMzNTkyMjcy&winType=adshow&isAutoPlay=false" quality="best" width="480" height="400" align="middle" allowScriptAccess="never"  allowNetworking="internal" type="application/x-shockwave-flash"></embed>
+<embed src="http://static.youku.com/v1.0.0149/v/swf/loader.swf?VideoIDS=XNzUwMzk5NjU2&winType=adshow&isAutoPlay=true" quality="best" width="480" height="400" align="middle" allowScriptAccess="never"  allowNetworking="internal" type="application/x-shockwave-flash"></embed>
 
