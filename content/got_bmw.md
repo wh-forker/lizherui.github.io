@@ -1,5 +1,5 @@
 Date: 2014-08-25
-Title: bmw提车小记
+Title: bmw提车记
 Category: Life
 Tags: bmw
 Slug: got_bmw
