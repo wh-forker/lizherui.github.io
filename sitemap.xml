@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://www.lizherui.com/index.html</loc>
-<lastmod>2014-09-07T01:01:36-00:00</lastmod>
+<lastmod>2014-09-07T01:05:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.lizherui.com/archives.html</loc>
-<lastmod>2014-09-07T01:01:36-00:00</lastmod>
+<lastmod>2014-09-07T01:05:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.lizherui.com/tags.html</loc>
-<lastmod>2014-09-07T01:01:36-00:00</lastmod>
+<lastmod>2014-09-07T01:05:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.lizherui.com/categories.html</loc>
-<lastmod>2014-09-07T01:01:36-00:00</lastmod>
+<lastmod>2014-09-07T01:05:28-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://www.lizherui.com/pages/about.html</loc>
-<lastmod>2014-09-07T01:01:36-00:00</lastmod>
+<lastmod>2014-09-07T01:05:28-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
