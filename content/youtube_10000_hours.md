@@ -36,4 +36,7 @@ Break the wall and enjoy them.
 10000 Hours Episode 5 - Knight And Day(PART 2):
 <iframe width="640" height="360" src="//www.youtube.com/embed/jS0lqyXjSOc?rel=0" frameborder="0" allowfullscreen></iframe>
 
+10000 HOURS EPISODE 6 - UNCOMFORTABLE PART 1
+<iframe width="640" height="360" src="//www.youtube.com/embed/5uWJHvHFkpY?rel=0" frameborder="0" allowfullscreen></iframe>
+
 
