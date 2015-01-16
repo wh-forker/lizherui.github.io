@@ -4,7 +4,7 @@ Category: Life
 Tags: 2014
 Slug: 2014_summary
 
-这是收获颇丰的一年。
+<center>这是收获颇丰的一年。</center>
 
 如果说去年的主要收获是一个大offer的话，那么今年的主要收获就是车子和妹子了。
 
