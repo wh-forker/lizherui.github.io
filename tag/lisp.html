@@ -85,31 +85,31 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <p>我们先来看看Singleton模式。</p>
 <p>Singleton模式有一个形象的比喻：Singleton就像追妹子一样，你不能大街上随便拉一个妹子就说是我对象，也不能自己做一个妹子出来说是自己对象。只能通过某种方法（追妹子），来产生一个对象。同时在调用这个方法的时候，会对你是否已经有对象进行检查。如果有，那么方法会直接返回，或者产生一个异常（抽你一巴掌，或者new Exception(”流氓!”)），从而保证你只有一个对象。</p>
 <p>这是一个线程安全的Java单例模式：</p>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Singleton</span>
-<span class="p">{</span>
-    <span class="n">private</span> <span class="k">static</span> <span class="n">Singleton</span> <span class="n">myInstance</span><span class="p">;</span>
-    <span class="n">public</span> <span class="k">static</span> <span class="n">Singleton</span> <span class="nf">getInstance</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">myInstance</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="n">synchronized</span><span class="p">(</span><span class="n">Singleton</span><span class="p">.</span><span class="n">class</span><span class="p">)</span>
-            <span class="p">{</span>
-                <span class="k">if</span> <span class="p">(</span><span class="n">myInstance</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span>
-                <span class="p">{</span>
-                    <span class="n">myInstance</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Singleton</span><span class="p">();</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
+<div class="highlight"><pre><span class="k">class</span> <span class="n">Singleton</span>
+{
+    <span class="n">private</span> <span class="n">static</span> <span class="n">Singleton</span> <span class="n">myInstance</span>;
+    <span class="n">public</span> <span class="n">static</span> <span class="n">Singleton</span> <span class="n">getInstance</span>()
+    {
+        <span class="k">if</span> (<span class="n">myInstance</span> == <span class="n">null</span>)
+        {
+            <span class="n">synchronized</span>(<span class="n">Singleton</span>.<span class="k">class</span>)
+            {
+                <span class="k">if</span> (<span class="n">myInstance</span> == <span class="n">null</span>)
+                {
+                    <span class="n">myInstance</span> = <span class="nb">new</span> <span class="n">Singleton</span>();
+                }
+            }
+        }
 
-        <span class="k">return</span> <span class="n">myInstance</span><span class="p">;</span>
-    <span class="p">}</span>
+        <span class="k">return</span> <span class="n">myInstance</span>;
+    }
 
-    <span class="n">private</span> <span class="nf">Singleton</span><span class="p">()</span>
-    <span class="p">{</span>
-        <span class="c1">// Constructor code goes here.</span>
-    <span class="p">}</span>
+    <span class="n">private</span> <span class="n">Singleton</span>()
+    {
+        // <span class="n">Constructor</span> <span class="n">code</span> <span class="n">goes</span> <span class="n">here</span>.
+    }
 
-<span class="p">}</span>
+}
 </pre></div>
 
 
@@ -118,64 +118,64 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <p>这是Wikipedia中对元编程的定义：元编程是指某类计算机程序的编写，这类计算机程序编写或者操纵其它程序（或者自身）作为它们的数据，或者在运行时完成部分本应在编译时完成的工作。多数情况下，与手工编写全部代码相比，程序员可以获得更高的工作效率, 或者给与程序更大的灵活度去处理新的情形而无需重新编译。</p>
 <p>我们需要用到元编程思想中的一个重要应用——元类，即类的模板，元类的实例也是类。</p>
 <p>我们先定义一个元类:</p>
-<div class="highlight"><pre><span class="p">(</span><span class="n">defclass</span> <span class="n">singleton</span><span class="o">-</span><span class="n">class</span> <span class="p">(</span><span class="n">standard</span><span class="o">-</span><span class="n">class</span><span class="p">)</span>
-    <span class="p">((</span><span class="n">instance</span> <span class="o">:</span><span class="n">initform</span> <span class="n">nil</span><span class="p">)))</span>
+<div class="highlight"><pre>(defclass singleton-class (standard-class)
+    ((instance :initform nil)))
 </pre></div>
 
 
 <p>这段代码阻止程序员直接实例化singleton-class，有点儿像Java的抽象类。</p>
 <p>然后为了严谨，我们对这个元类进行一些继承方面的限定。</p>
 <p>允许这个元类继承标准类：</p>
-<div class="highlight"><pre><span class="p">(</span><span class="n">defmethod</span> <span class="n">validate</span><span class="o">-</span><span class="n">superclass</span> <span class="p">((</span><span class="n">class</span> <span class="n">singleton</span><span class="o">-</span><span class="n">class</span><span class="p">)</span>                                                                 <span class="p">(</span><span class="n">superclass</span> <span class="n">standard</span><span class="o">-</span><span class="n">class</span><span class="p">))</span>    
-<span class="n">t</span><span class="p">)</span>
+<div class="highlight"><pre>(defmethod validate-superclass ((class singleton-class)                                                                 (superclass standard-class))    
+t)
 </pre></div>
 
 
 <p>允许其它元类继承这个元类：</p>
-<div class="highlight"><pre><span class="p">(</span><span class="n">defmethod</span> <span class="n">validate</span><span class="o">-</span><span class="n">superclass</span> <span class="p">((</span><span class="n">class</span> <span class="n">singleton</span><span class="o">-</span><span class="n">class</span><span class="p">)</span>                                                                 <span class="p">(</span><span class="n">superclass</span> <span class="n">singleton</span><span class="o">-</span><span class="n">class</span><span class="p">))</span>   
-<span class="n">t</span><span class="p">)</span>
+<div class="highlight"><pre>(defmethod validate-superclass ((class singleton-class)                                                                 (superclass singleton-class))   
+t)
 </pre></div>
 
 
 <p>不允许其它标准类继承这个元类：</p>
-<div class="highlight"><pre><span class="p">(</span><span class="n">defmethod</span> <span class="n">validate</span><span class="o">-</span><span class="n">superclass</span> <span class="p">((</span><span class="n">class</span> <span class="n">standard</span><span class="o">-</span><span class="n">class</span><span class="p">)</span>                                                                  <span class="p">(</span><span class="n">superclass</span> <span class="n">singleton</span><span class="o">-</span><span class="n">class</span><span class="p">))</span>
-<span class="n">nil</span><span class="p">)</span>
+<div class="highlight"><pre>(defmethod validate-superclass ((class standard-class)                                                                  (superclass singleton-class))
+nil)
 </pre></div>
 
 
 <p>然后定义初始化实例函数：</p>
-<div class="highlight"><pre><span class="p">(</span><span class="n">defvar</span> <span class="o">*</span><span class="n">singleton</span><span class="o">-</span><span class="n">classes</span><span class="o">*</span> <span class="err">&#39;</span><span class="p">())</span>
+<div class="highlight"><pre>(defvar *singleton-classes* &#39;())
 
-<span class="p">(</span><span class="n">defmethod</span> <span class="n">initialize</span><span class="o">-</span><span class="n">instance</span> <span class="o">:</span><span class="n">after</span> <span class="p">((</span><span class="n">c</span> <span class="n">singleton</span><span class="o">-</span><span class="n">class</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">key</span><span class="p">)</span>
-  <span class="p">(</span><span class="n">pushnew</span> <span class="n">c</span> <span class="o">*</span><span class="n">singleton</span><span class="o">-</span><span class="n">classes</span><span class="o">*</span><span class="p">))</span>
+(defmethod initialize-instance :after ((c singleton-class) &amp;key)
+  (pushnew c *singleton-classes*))
 </pre></div>
 
 
 <p>再定义真正的make-instance:</p>
-<div class="highlight"><pre><span class="p">(</span><span class="n">defmethod</span> <span class="n">make</span><span class="o">-</span><span class="n">instance</span> <span class="p">((</span><span class="n">class</span> <span class="n">singleton</span><span class="o">-</span><span class="n">class</span><span class="p">)</span>
-                      <span class="o">&amp;</span><span class="n">key</span><span class="p">)</span>
-  <span class="p">(</span><span class="n">with</span><span class="o">-</span><span class="n">slots</span> <span class="p">(</span><span class="n">instance</span><span class="p">)</span> <span class="n">class</span>
-    <span class="p">(</span><span class="n">or</span> <span class="n">instance</span>
-        <span class="p">(</span><span class="n">setf</span> <span class="n">instance</span> <span class="p">(</span><span class="n">call</span><span class="o">-</span><span class="n">next</span><span class="o">-</span><span class="n">method</span><span class="p">)))))</span>
+<div class="highlight"><pre>(defmethod make-instance ((class singleton-class)
+                      &amp;key)
+  (with-slots (instance) class
+    (or instance
+        (setf instance (call-next-method)))))
 </pre></div>
 
 
 <p>还可以定义一个reset-singleton-classes：</p>
-<div class="highlight"><pre><span class="p">(</span><span class="n">defun</span> <span class="n">reset</span><span class="o">-</span><span class="n">singleton</span><span class="o">-</span><span class="n">classes</span> <span class="p">()</span>
-  <span class="p">;;</span> <span class="n">This</span> <span class="n">means</span> <span class="n">you</span> <span class="n">will</span> <span class="n">get</span> <span class="n">new</span> <span class="n">singletons</span> <span class="n">from</span> <span class="n">now</span> <span class="n">on</span><span class="p">.</span>
-  <span class="p">(</span><span class="n">loop</span> <span class="k">for</span> <span class="n">c</span> <span class="n">in</span> <span class="o">*</span><span class="n">singleton</span><span class="o">-</span><span class="n">classes</span><span class="o">*</span>
-        <span class="k">do</span> <span class="p">(</span><span class="n">setf</span> <span class="p">(</span><span class="n">slot</span><span class="o">-</span><span class="n">value</span> <span class="n">c</span> <span class="err">&#39;</span><span class="n">instance</span><span class="p">)</span> <span class="n">nil</span><span class="p">)))</span>
+<div class="highlight"><pre>(defun reset-singleton-classes ()
+  ;; This means you will get new singletons from now on.
+  (loop for c in *singleton-classes*
+        do (setf (slot-value c &#39;instance) nil)))
 </pre></div>
 
 
 <p>元类完事了，我们定义两个标准类：</p>
-<div class="highlight"><pre><span class="p">(</span><span class="n">defclass</span> <span class="n">foo1</span><span class="p">()</span>
-  <span class="p">()</span>
-  <span class="p">(</span><span class="o">:</span><span class="n">metaclass</span> <span class="n">singleton</span><span class="o">-</span><span class="n">class</span><span class="p">))</span>
+<div class="highlight"><pre>(defclass foo1()
+  ()
+  (:metaclass singleton-class))
 
-<span class="p">(</span><span class="n">defclass</span> <span class="n">foo2</span> <span class="p">()</span>
-  <span class="p">()</span>
-  <span class="p">(</span><span class="o">:</span><span class="n">metaclass</span> <span class="n">singleton</span><span class="o">-</span><span class="n">class</span><span class="p">))</span>
+(defclass foo2 ()
+  ()
+  (:metaclass singleton-class))
 </pre></div>
 
 
@@ -190,58 +190,58 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <p>张教主有这样一句名言：元编程是一种黑魔法，正派人士都很畏惧。</p>
 <p>我们再来看看工厂模式。</p>
 <p>下面是一个典型的Java工厂模式：</p>
-<div class="highlight"><pre><span class="n">abstract</span> <span class="n">class</span> <span class="n">Pizza</span> <span class="p">{</span>
-    <span class="n">public</span> <span class="n">abstract</span> <span class="kt">int</span> <span class="n">getPrice</span><span class="p">();</span> <span class="c1">// count the cents</span>
-<span class="p">}</span>
+<div class="highlight"><pre>abstract class Pizza {
+    public abstract int getPrice(); // count the cents
+}
 
-<span class="n">class</span> <span class="n">HamAndMushroomPizza</span> <span class="n">extends</span> <span class="n">Pizza</span> <span class="p">{</span>
-    <span class="n">public</span> <span class="kt">int</span> <span class="n">getPrice</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="mi">850</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+class HamAndMushroomPizza extends Pizza {
+    public int getPrice() {
+        return 850;
+    }
+}
 
-<span class="n">class</span> <span class="n">DeluxePizza</span> <span class="n">extends</span> <span class="n">Pizza</span> <span class="p">{</span>
-    <span class="n">public</span> <span class="kt">int</span> <span class="n">getPrice</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="mi">1050</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+class DeluxePizza extends Pizza {
+    public int getPrice() {
+        return 1050;
+    }
+}
 
-<span class="n">class</span> <span class="n">HawaiianPizza</span> <span class="n">extends</span> <span class="n">Pizza</span> <span class="p">{</span>
-    <span class="n">public</span> <span class="kt">int</span> <span class="n">getPrice</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="mi">1150</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+class HawaiianPizza extends Pizza {
+    public int getPrice() {
+        return 1150;
+    }
+}
 
-<span class="n">class</span> <span class="n">PizzaFactory</span> <span class="p">{</span>
-    <span class="n">public</span> <span class="k">enum</span> <span class="n">PizzaType</span> <span class="p">{</span>
-        <span class="n">HamMushroom</span><span class="p">,</span>
-        <span class="n">Deluxe</span><span class="p">,</span>
-        <span class="n">Hawaiian</span>
-    <span class="p">}</span>
+class PizzaFactory {
+    public enum PizzaType {
+        HamMushroom,
+        Deluxe,
+        Hawaiian
+    }
 
-<span class="n">public</span> <span class="k">static</span> <span class="n">Pizza</span> <span class="n">createPizza</span><span class="p">(</span><span class="n">PizzaType</span> <span class="n">pizzaType</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">switch</span> <span class="p">(</span><span class="n">pizzaType</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">case</span> <span class="n">HamMushroom</span>:
-            <span class="k">return</span> <span class="n">new</span> <span class="n">HamAndMushroomPizza</span><span class="p">();</span>
-        <span class="k">case</span> <span class="n">Deluxe</span>:
-            <span class="k">return</span> <span class="n">new</span> <span class="n">DeluxePizza</span><span class="p">();</span>
-        <span class="k">case</span> <span class="n">Hawaiian</span>:
-            <span class="k">return</span> <span class="n">new</span> <span class="n">HawaiianPizza</span><span class="p">();</span>
-    <span class="p">}</span>
-    <span class="n">throw</span> <span class="n">new</span> <span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s">&quot;The pizza type &quot;</span> <span class="o">+</span> <span class="n">pizzaType</span> <span class="o">+</span> <span class="s">&quot; is not recognized.&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+public static Pizza createPizza(PizzaType pizzaType) {
+    switch (pizzaType) {
+        case HamMushroom:
+            return new HamAndMushroomPizza();
+        case Deluxe:
+            return new DeluxePizza();
+        case Hawaiian:
+            return new HawaiianPizza();
+    }
+    throw new IllegalArgumentException(&quot;The pizza type &quot; + pizzaType + &quot; is not recognized.&quot;);
+    }
+}
 
-<span class="n">class</span> <span class="n">PizzaLover</span> <span class="p">{</span>
-    <span class="cm">/*</span>
-<span class="cm">     * Create all available pizzas and print their prices</span>
-<span class="cm">     */</span>
-    <span class="n">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">main</span> <span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="p">[])</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">PizzaFactory</span><span class="p">.</span><span class="n">PizzaType</span> <span class="n">pizzaType</span> <span class="o">:</span> <span class="n">PizzaFactory</span><span class="p">.</span><span class="n">PizzaType</span><span class="p">.</span><span class="n">values</span><span class="p">())</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Price of &quot;</span> <span class="o">+</span> <span class="n">pizzaType</span> <span class="o">+</span> <span class="s">&quot; is &quot;</span> <span class="o">+</span> <span class="n">PizzaFactory</span><span class="p">.</span><span class="n">createPizza</span><span class="p">(</span><span class="n">pizzaType</span><span class="p">).</span><span class="n">getPrice</span><span class="p">());</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+class PizzaLover {
+    /*
+     * Create all available pizzas and print their prices
+     */
+    public static void main (String args[]) {
+        for (PizzaFactory.PizzaType pizzaType : PizzaFactory.PizzaType.values()) {
+            System.out.println(&quot;Price of &quot; + pizzaType + &quot; is &quot; + PizzaFactory.createPizza(pizzaType).getPrice());
+        }
+    }
+}
 </pre></div>
 
 
@@ -257,22 +257,22 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <li>可以在运行时被创造。</li>
 </ol>
 <p>因此，Common Lisp实现工厂模式就显得简单粗暴了，或者说，根本用不着工厂模式：</p>
-<div class="highlight"><pre><span class="p">(</span><span class="n">defclass</span> <span class="n">pizza</span> <span class="p">()</span>
-  <span class="p">((</span><span class="n">price</span> <span class="o">:</span><span class="n">accessor</span> <span class="n">price</span><span class="p">)))</span>
+<div class="highlight"><pre>(defclass pizza ()
+  ((price :accessor price)))
 
-<span class="p">(</span><span class="n">defclass</span> <span class="n">ham</span><span class="o">-</span><span class="n">and</span><span class="o">-</span><span class="n">mushroom</span><span class="o">-</span><span class="n">pizza</span> <span class="p">(</span><span class="n">pizza</span><span class="p">)</span>
-  <span class="p">((</span><span class="n">price</span> <span class="o">:</span><span class="n">initform</span> <span class="mi">850</span><span class="p">)))</span>
+(defclass ham-and-mushroom-pizza (pizza)
+  ((price :initform 850)))
 
-<span class="p">(</span><span class="n">defclass</span> <span class="n">deluxe</span><span class="o">-</span><span class="n">pizza</span> <span class="p">(</span><span class="n">pizza</span><span class="p">)</span>
-  <span class="p">((</span><span class="n">price</span> <span class="o">:</span><span class="n">initform</span> <span class="mi">1050</span><span class="p">)))</span>
+(defclass deluxe-pizza (pizza)
+  ((price :initform 1050)))
 
-<span class="p">(</span><span class="n">defclass</span> <span class="n">hawaiian</span><span class="o">-</span><span class="n">pizza</span> <span class="p">(</span><span class="n">pizza</span><span class="p">)</span>
-  <span class="p">((</span><span class="n">price</span> <span class="o">:</span><span class="n">initform</span> <span class="mi">1150</span><span class="p">)))</span>
+(defclass hawaiian-pizza (pizza)
+  ((price :initform 1150)))
 
-<span class="p">(</span><span class="n">defparameter</span> <span class="o">*</span><span class="n">pizza</span><span class="o">-</span><span class="n">types</span><span class="o">*</span>
-  <span class="p">(</span><span class="n">list</span> <span class="err">&#39;</span><span class="n">ham</span><span class="o">-</span><span class="n">and</span><span class="o">-</span><span class="n">mushroom</span><span class="o">-</span><span class="n">pizza</span>
-        <span class="err">&#39;</span><span class="n">deluxe</span><span class="o">-</span><span class="n">pizza</span>
-        <span class="err">&#39;</span><span class="n">hawaiian</span><span class="o">-</span><span class="n">pizza</span><span class="p">))</span>
+(defparameter *pizza-types*
+  (list &#39;ham-and-mushroom-pizza
+        &#39;deluxe-pizza
+        &#39;hawaiian-pizza))
 </pre></div>
 
 
@@ -280,62 +280,62 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <p><img alt="5" src="https://lh5.googleusercontent.com/-YNmX58cxcDo/Uf56OIKW--I/AAAAAAAAAHA/W-vT08Kmtwo/w324-h112-no/5.png" /></p>
 <p>小结：Common Lisp中由于函数是一等公民的缘故，相对于Java中工厂模式的实现要简单的多，不需要额外建一个工厂类，可以随心所欲地玩。函数式语言相当于OO语言来说，确实有一个优点——可以操纵的单元粒度更小更细，所以更加灵活，同时也更加容易失控。</p>
 <p>最后，让我们看看迭代器模式，首先是Java中的实现：</p>
-<div class="highlight"><pre><span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">ArrayList</span><span class="p">;</span>
-<span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">List</span><span class="p">;</span>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.List</span><span class="p">;</span>
 
 <span class="n">interface</span> <span class="n">Iterator</span> <span class="p">{</span>
-    <span class="n">public</span> <span class="n">Object</span> <span class="n">next</span><span class="p">();</span>
-    <span class="n">public</span> <span class="n">boolean</span> <span class="nf">hasNext</span><span class="p">();</span>
+    <span class="n">public</span> <span class="n">Object</span> <span class="nb">next</span><span class="p">();</span>
+    <span class="n">public</span> <span class="n">boolean</span> <span class="n">hasNext</span><span class="p">();</span>
 <span class="p">}</span>
-<span class="n">class</span> <span class="n">ConcreteIterator</span> <span class="n">implements</span> <span class="n">Iterator</span><span class="p">{</span>
-    <span class="n">private</span> <span class="n">List</span> <span class="n">list</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ArrayList</span><span class="p">();</span>
-    <span class="n">private</span> <span class="kt">int</span> <span class="n">cursor</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
-    <span class="n">public</span> <span class="nf">ConcreteIterator</span><span class="p">(</span><span class="n">List</span> <span class="n">list</span><span class="p">){</span>
-        <span class="n">this</span><span class="p">.</span><span class="n">list</span> <span class="o">=</span> <span class="n">list</span><span class="p">;</span>
+<span class="k">class</span> <span class="nc">ConcreteIterator</span> <span class="n">implements</span> <span class="n">Iterator</span><span class="p">{</span>
+    <span class="n">private</span> <span class="n">List</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ArrayList</span><span class="p">();</span>
+    <span class="n">private</span> <span class="nb">int</span> <span class="n">cursor</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="n">public</span> <span class="n">ConcreteIterator</span><span class="p">(</span><span class="n">List</span> <span class="nb">list</span><span class="p">){</span>
+        <span class="n">this</span><span class="o">.</span><span class="n">list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">boolean</span> <span class="nf">hasNext</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">cursor</span><span class="o">==</span><span class="n">list</span><span class="p">.</span><span class="n">size</span><span class="p">()){</span>
-            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="n">public</span> <span class="n">boolean</span> <span class="n">hasNext</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">cursor</span><span class="o">==</span><span class="nb">list</span><span class="o">.</span><span class="n">size</span><span class="p">()){</span>
+            <span class="k">return</span> <span class="n">false</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="k">return</span> <span class="nb">true</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">true</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="n">public</span> <span class="n">Object</span> <span class="nf">next</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">public</span> <span class="n">Object</span> <span class="nb">next</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">Object</span> <span class="n">obj</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
-        <span class="k">if</span><span class="p">(</span><span class="n">this</span><span class="p">.</span><span class="n">hasNext</span><span class="p">()){</span>
-            <span class="n">obj</span> <span class="o">=</span> <span class="n">this</span><span class="p">.</span><span class="n">list</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">cursor</span><span class="o">++</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">hasNext</span><span class="p">()){</span>
+            <span class="n">obj</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">list</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cursor</span><span class="o">++</span><span class="p">);</span>
         <span class="p">}</span>
         <span class="k">return</span> <span class="n">obj</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">interface</span> <span class="n">Aggregate</span> <span class="p">{</span>
-    <span class="n">public</span> <span class="kt">void</span> <span class="n">add</span><span class="p">(</span><span class="n">Object</span> <span class="n">obj</span><span class="p">);</span>
-    <span class="n">public</span> <span class="kt">void</span> <span class="nf">remove</span><span class="p">(</span><span class="n">Object</span> <span class="n">obj</span><span class="p">);</span>
-    <span class="n">public</span> <span class="n">Iterator</span> <span class="nf">iterator</span><span class="p">();</span>
+    <span class="n">public</span> <span class="n">void</span> <span class="n">add</span><span class="p">(</span><span class="n">Object</span> <span class="n">obj</span><span class="p">);</span>
+    <span class="n">public</span> <span class="n">void</span> <span class="n">remove</span><span class="p">(</span><span class="n">Object</span> <span class="n">obj</span><span class="p">);</span>
+    <span class="n">public</span> <span class="n">Iterator</span> <span class="n">iterator</span><span class="p">();</span>
 <span class="p">}</span>
-<span class="n">class</span> <span class="n">ConcreteAggregate</span> <span class="n">implements</span> <span class="n">Aggregate</span> <span class="p">{</span>
-    <span class="n">private</span> <span class="n">List</span> <span class="n">list</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ArrayList</span><span class="p">();</span>
-    <span class="n">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="n">Object</span> <span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">list</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span>
+<span class="k">class</span> <span class="nc">ConcreteAggregate</span> <span class="n">implements</span> <span class="n">Aggregate</span> <span class="p">{</span>
+    <span class="n">private</span> <span class="n">List</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ArrayList</span><span class="p">();</span>
+    <span class="n">public</span> <span class="n">void</span> <span class="n">add</span><span class="p">(</span><span class="n">Object</span> <span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">list</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="n">public</span> <span class="n">Iterator</span> <span class="nf">iterator</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">new</span> <span class="n">ConcreteIterator</span><span class="p">(</span><span class="n">list</span><span class="p">);</span>
+    <span class="n">public</span> <span class="n">Iterator</span> <span class="n">iterator</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">new</span> <span class="n">ConcreteIterator</span><span class="p">(</span><span class="nb">list</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="n">public</span> <span class="kt">void</span> <span class="nf">remove</span><span class="p">(</span><span class="n">Object</span> <span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">list</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span>
+    <span class="n">public</span> <span class="n">void</span> <span class="n">remove</span><span class="p">(</span><span class="n">Object</span> <span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nb">list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="n">public</span> <span class="n">class</span> <span class="n">Test</span> <span class="p">{</span>
-    <span class="n">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">){</span>
+<span class="n">public</span> <span class="k">class</span> <span class="nc">Test</span> <span class="p">{</span>
+    <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">){</span>
         <span class="n">Aggregate</span> <span class="n">ag</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ConcreteAggregate</span><span class="p">();</span>
-        <span class="n">ag</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;小明&quot;</span><span class="p">);</span>
-        <span class="n">ag</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;小红&quot;</span><span class="p">);</span>
-        <span class="n">ag</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;小刚&quot;</span><span class="p">);</span>
-        <span class="n">Iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">ag</span><span class="p">.</span><span class="n">iterator</span><span class="p">();</span>
-        <span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="n">hasNext</span><span class="p">()){</span>
-            <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="n">it</span><span class="p">.</span><span class="n">next</span><span class="p">();</span>
-            <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;小明&quot;</span><span class="p">);</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;小红&quot;</span><span class="p">);</span>
+        <span class="n">ag</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">&quot;小刚&quot;</span><span class="p">);</span>
+        <span class="n">Iterator</span> <span class="n">it</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="n">iterator</span><span class="p">();</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="o">.</span><span class="n">hasNext</span><span class="p">()){</span>
+            <span class="n">String</span> <span class="nb">str</span> <span class="o">=</span> <span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="n">it</span><span class="o">.</span><span class="n">next</span><span class="p">();</span>
+            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="nb">str</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>

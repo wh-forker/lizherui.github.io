@@ -113,34 +113,34 @@ by <a class="url fn" href="../../../../author/lizherui.html">lizherui</a>
 <li>耐心等待一段时间（不超过10分钟），登陆http://username.github.io，会发现自己的个人博客已经生成。</li>
 </ul>
 <h3>安装Pelican和Markdown</h3>
-<div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">pelican</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="n">markdown</span>
+<div class="highlight"><pre>pip install pelican
+pip install markdown
 </pre></div>
 
 
 <h3>搭建骨架</h3>
-<div class="highlight"><pre><span class="n">mkdir</span> <span class="n">blog</span>
-<span class="n">cd</span> <span class="n">blog</span>
-<span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span>
+<div class="highlight"><pre>mkdir blog
+cd blog
+pelican-quickstart
 </pre></div>
 
 
 <p>根据提示一步步输入相应的配置项，不知道如何设置的接受默认即可，后续可以通过编辑pelicanconf.py文件更改配置)</p>
 <p>以下是生成的目录结构：</p>
-<div class="highlight"><pre><span class="n">blog</span><span class="o">/</span>
-<span class="err">├──</span> <span class="n">content</span>              <span class="err">#</span> <span class="err">存放输入的源文件</span>
-<span class="err">│</span>   <span class="err">└──</span> <span class="p">(</span><span class="n">pages</span><span class="p">)</span>          <span class="err">#</span> <span class="err">存放手工创建的静态页面</span>
-<span class="err">├──</span> <span class="n">output</span>               <span class="err">#</span> <span class="err">生成的输出文件</span>
-<span class="err">├──</span> <span class="n">develop_server</span><span class="p">.</span><span class="n">sh</span>    <span class="err">#</span> <span class="err">方便开启测试服务器</span>
-<span class="err">├──</span> <span class="n">Makefile</span>             <span class="err">#</span> <span class="err">方便管理博客的</span><span class="n">Makefile</span>
-<span class="err">├──</span> <span class="n">pelicanconf</span><span class="p">.</span><span class="n">py</span>       <span class="err">#</span> <span class="err">主配置文件</span>
-<span class="err">└──</span> <span class="n">publishconf</span><span class="p">.</span><span class="n">py</span>       <span class="err">#</span> <span class="err">主发布文件，可删除</span>
+<div class="highlight"><pre>blog/
+├── content              # 存放输入的源文件
+│   └── (pages)          # 存放手工创建的静态页面
+├── output               # 生成的输出文件
+├── develop_server.sh    # 方便开启测试服务器
+├── Makefile             # 方便管理博客的Makefile
+├── pelicanconf.py       # 主配置文件
+└── publishconf.py       # 主发布文件，可删除
 </pre></div>
 
 
 <p>进入output把自己刚刚建好的username.github.io版本库clone下来：</p>
-<div class="highlight"><pre><span class="n">cd</span> <span class="n">output</span>
-<span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">:</span><span class="n">username</span><span class="o">/</span><span class="n">username</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span>
+<div class="highlight"><pre>cd output
+git clone git@github.com:username/username.github.io.git
 </pre></div>
 
 
@@ -150,17 +150,17 @@ by <a class="url fn" href="../../../../author/lizherui.html">lizherui</a>
 <img alt="1" src="https://lh5.googleusercontent.com/-edzDa6ch3Jk/Ug5oATNTjsI/AAAAAAAAAKs/WIqU7KziyOA/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-17+%25E4%25B8%258A%25E5%258D%25881.57.09.png" /></p>
 <p>左半边是正在用markdown写的博文，右边是即时预览效果。</p>
 <p>写完后，执行以下命令，即可在本机<a href="http://127.0.0.1:8000">http://127.0.0.1:8000</a>看到效果。</p>
-<div class="highlight"><pre><span class="n">make</span> <span class="n">publish</span>
-<span class="n">make</span> <span class="n">serve</span>
+<div class="highlight"><pre>make publish
+make serve
 </pre></div>
 
 
 <p>若要一键上传到Github，需要修改Makefile两处地方：</p>
-<div class="highlight"><pre><span class="nl">publish:</span>
-<span class="err">$</span><span class="p">(</span><span class="n">PELICAN</span><span class="p">)</span> <span class="err">$</span><span class="p">(</span><span class="n">INPUTDIR</span><span class="p">)</span> <span class="o">-</span><span class="n">o</span> <span class="err">$</span><span class="p">(</span><span class="n">OUTPUTDIR</span><span class="p">)</span> <span class="o">-</span><span class="n">s</span> <span class="err">$</span><span class="p">(</span><span class="n">CONFFILE</span><span class="p">)</span> <span class="err">$</span><span class="p">(</span><span class="n">PELICANOPTS</span><span class="p">)</span>
+<div class="highlight"><pre><span class="nf">publish</span><span class="o">:</span>
+<span class="k">$(</span><span class="nv">PELICAN</span><span class="k">)</span> <span class="k">$(</span><span class="nv">INPUTDIR</span><span class="k">)</span> <span class="err">-o</span> <span class="k">$(</span><span class="nv">OUTPUTDIR</span><span class="k">)</span> <span class="err">-s</span> <span class="k">$(</span><span class="nv">CONFFILE</span><span class="k">)</span> <span class="k">$(</span><span class="nv">PELICANOPTS</span><span class="k">)</span>
 
-<span class="nl">github:</span> <span class="n">publish</span>
-<span class="n">cd</span> <span class="n">OUTPUTDIR</span> <span class="p">;</span> <span class="n">git</span> <span class="n">add</span> <span class="p">.</span> <span class="p">;</span>  <span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="err">&#39;</span><span class="n">your</span> <span class="n">comments</span><span class="err">&#39;</span> <span class="p">;</span> <span class="n">git</span> <span class="n">push</span>
+<span class="nf">github</span><span class="o">:</span> <span class="n">publish</span>
+<span class="err">cd</span> <span class="err">OUTPUTDIR</span> <span class="err">;</span> <span class="err">git</span> <span class="err">add</span> <span class="err">.</span> <span class="err">;</span>  <span class="err">git</span> <span class="err">commit</span> <span class="err">-am</span> <span class="s1">&#39;your comments&#39;</span> <span class="err">;</span> <span class="err">git</span> <span class="err">push</span>
 </pre></div>
 
 
@@ -172,28 +172,28 @@ by <a class="url fn" href="../../../../author/lizherui.html">lizherui</a>
 <p>我觉得使用云相册比本地图片要方便的多，我使用<a href="https://picasaweb.google.com?noredirect=1">Picasa</a>来维护blog的所有图片。</p>
 <h3>挑选主题</h3>
 <p>安装主题，比如bootstrap2：</p>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/getpelican/pelican-themes.git</span>
-<span class="n">cd</span> <span class="n">pelican</span><span class="o">-</span><span class="n">themes</span>
-<span class="n">pelican</span><span class="o">-</span><span class="n">themes</span> <span class="o">-</span><span class="n">i</span> <span class="n">bootstrap2</span>
+<div class="highlight"><pre>git clone https://github.com/getpelican/pelican-themes.git
+cd pelican-themes
+pelican-themes -i bootstrap2
 </pre></div>
 
 
 <p>选择主题，在pelicanconf.py中添加</p>
-<div class="highlight"><pre><span class="n">THEME</span> <span class="o">=</span> <span class="err">&#39;</span><span class="n">bootstrap2</span><span class="err">&#39;</span>
+<div class="highlight"><pre>THEME = &#39;bootstrap2&#39;
 </pre></div>
 
 
 <h3>安装第三方评论系统</h3>
 <p>在<a href="https://disqus.com/admin/signup">Disqus</a>上申请一个站点，记牢Shortname。
 在pelicanconf.py添加</p>
-<div class="highlight"><pre><span class="n">DISQUS_SITENAME</span> <span class="o">=</span> <span class="n">Shortname</span>
+<div class="highlight"><pre>DISQUS_SITENAME = Shortname
 </pre></div>
 
 
 <h3>添加Google Analytics</h3>
 <p>去<a href="http://www.google.com/analytics">Google Analytics</a>申请账号，记下跟踪ID。
 在pelicanconf.py添加</p>
-<div class="highlight"><pre><span class="n">GOOGLE_ANALYTICS</span> <span class="o">=</span> <span class="err">跟踪</span><span class="n">ID</span>
+<div class="highlight"><pre>GOOGLE_ANALYTICS = 跟踪ID
 </pre></div>
 
 
@@ -206,26 +206,26 @@ by <a class="url fn" href="../../../../author/lizherui.html">lizherui</a>
 <p>截图如下：
 <img alt="3" src="https://lh3.googleusercontent.com/-tYrEbXyx_5o/UhGS1C_lcYI/AAAAAAAAALk/H7X7MBjNkVY/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-19+%25E4%25B8%258A%25E5%258D%258811.36.32.png" /></p>
 <h3>添加插件</h3>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">clone</span> <span class="n">git</span><span class="o">:</span><span class="c1">//github.com/getpelican/pelican-plugins.git</span>
+<div class="highlight"><pre>git clone git://github.com/getpelican/pelican-plugins.git
 </pre></div>
 
 
 <p>比如我要使用sitemap，在pelicanconf.py里配置如下</p>
-<div class="highlight"><pre><span class="n">PLUGIN_PATH</span> <span class="o">=</span> <span class="n">u</span><span class="s">&quot;pelican-plugins&quot;</span>
-<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;sitemap&quot;</span><span class="p">]</span>
-<span class="n">SITEMAP</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&quot;format&quot;</span><span class="o">:</span> <span class="s">&quot;xml&quot;</span><span class="p">,</span>
-    <span class="s">&quot;priorities&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s">&quot;articles&quot;</span><span class="o">:</span> <span class="mf">0.7</span><span class="p">,</span>
-        <span class="s">&quot;indexes&quot;</span><span class="o">:</span> <span class="mf">0.5</span><span class="p">,</span>
-        <span class="s">&quot;pages&quot;</span><span class="o">:</span> <span class="mf">0.3</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="s">&quot;changefreqs&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s">&quot;articles&quot;</span><span class="o">:</span> <span class="s">&quot;monthly&quot;</span><span class="p">,</span>
-        <span class="s">&quot;indexes&quot;</span><span class="o">:</span> <span class="s">&quot;daily&quot;</span><span class="p">,</span>
-        <span class="s">&quot;pages&quot;</span><span class="o">:</span> <span class="s">&quot;monthly&quot;</span><span class="p">,</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre>PLUGIN_PATH = u&quot;pelican-plugins&quot;
+PLUGINS = [&quot;sitemap&quot;]
+SITEMAP = {
+    &quot;format&quot;: &quot;xml&quot;,
+    &quot;priorities&quot;: {
+        &quot;articles&quot;: 0.7,
+        &quot;indexes&quot;: 0.5,
+        &quot;pages&quot;: 0.3,
+    },
+    &quot;changefreqs&quot;: {
+        &quot;articles&quot;: &quot;monthly&quot;,
+        &quot;indexes&quot;: &quot;daily&quot;,
+        &quot;pages&quot;: &quot;monthly&quot;,
+    }
+}
 </pre></div>
 
 

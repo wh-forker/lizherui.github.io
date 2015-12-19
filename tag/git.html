@@ -100,19 +100,21 @@ by <a class="url fn" href="../author/lizherui.html">lizherui</a>
 <p>每一位git使用者，都会不由自主地思考这样一件事情：git究竟是怎么存储每个文件和提交历史的？</p>
 <h3>Blob对象</h3>
 <p>我们在本地新建一个git仓库</p>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">init</span> <span class="n">learn</span><span class="o">-</span><span class="n">git</span>
+<div class="highlight"><pre>git init learn-git
 </pre></div>
 
 
 <p>会发生该目录下多了一个.git文件夹，进去后长这样：</p>
-<div class="highlight"><pre><span class="p">.</span><span class="n">git</span><span class="o">/</span>
-<span class="o">|--</span> <span class="n">HEAD</span>
-<span class="o">|--</span> <span class="n">config</span>
-<span class="o">|--</span> <span class="n">description</span>
-<span class="o">|--</span> <span class="n">hooks</span>
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">applypatch</span><span class="o">-</span><span class="n">msg</span><span class="p">.</span><span class="n">sample</span>
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">commit</span><span class="o">-</span><span class="n">msg</span><span class="p">.</span><span class="n">sample</span>
-<span class="o">|</span>   <span class="o">|--</span> <span class="n">post</span><span class="o">-</span><span class="n">commit</span><span class="p">.</span><span class="n">sample ...</span></pre></div> <a class="btn btn-info xsmall" href="../pages/2014/05/25/a_git_adventure.html">read more</a></div>
+<div class="highlight"><pre><span class="na">.git</span><span class="err">/</span>
+<span class="err">|--</span> <span class="nf">HEAD</span>
+<span class="err">|--</span> <span class="nf">config</span>
+<span class="err">|--</span> <span class="nf">description</span>
+<span class="err">|--</span> <span class="nf">hooks</span>
+<span class="err">|</span>   <span class="err">|--</span> <span class="nf">applypatch-msg.sample</span>
+<span class="err">|</span>   <span class="err">|--</span> <span class="nf">commit-msg.sample</span>
+<span class="err">|</span>   <span class="err">|--</span> <span class="nf">post-commit.sample</span>
+<span class="err">|</span>   <span class="err">|--</span> <span class="nf">post-receive.sample</span>
+<span class="err">|</span>   <span class="err">|--</span> <span class="nf">post-update.sample ...</span></pre></div> <a class="btn btn-info xsmall" href="../pages/2014/05/25/a_git_adventure.html">read more</a></div>
     </div>	
 				
 <div class="pagination">

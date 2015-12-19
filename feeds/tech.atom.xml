@@ -11,32 +11,32 @@
 &lt;p&gt;每一位git使用者，都会不由自主地思考这样一件事情：git究竟是怎么存储每个文件和提交历史的？&lt;/p&gt;
 &lt;h3&gt;Blob对象&lt;/h3&gt;
 &lt;p&gt;我们在本地新建一个git仓库&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt; &lt;span class="n"&gt;learn&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git init learn-git
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;会发生该目录下多了一个.git文件夹，进去后长这样：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
-&lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;HEAD&lt;/span&gt;
-&lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;config&lt;/span&gt;
-&lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;description&lt;/span&gt;
-&lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;hooks&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;applypatch&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;commit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;receive&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;post&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;pre&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;applypatch&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;pre&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;commit&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;pre&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;rebase&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;prepare&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;commit&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;update&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;
-&lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;info&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;exclude&lt;/span&gt;
-&lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;objects&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;info&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;pack&lt;/span&gt;
-&lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;refs&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="na"&gt;.git&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;
+&lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;HEAD&lt;/span&gt;
+&lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;config&lt;/span&gt;
+&lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;description&lt;/span&gt;
+&lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;hooks&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;applypatch-msg.sample&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;commit-msg.sample&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;post-commit.sample&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;post-receive.sample&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;post-update.sample&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;pre-applypatch.sample&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;pre-commit.sample&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;pre-rebase.sample&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;prepare-commit-msg.sample&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;update.sample&lt;/span&gt;
+&lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;info&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;exclude&lt;/span&gt;
+&lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;objects&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;info&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;pack&lt;/span&gt;
+&lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;refs&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -54,46 +54,46 @@
 &lt;li&gt;index 文件保存了暂存区域信息。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;接下来，我们新建一个文件1.txt，内容为1，并把它加入暂存区&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;➜ echo 1 &amp;gt; 1.txt
+➜ git add 1.txt
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;于是我们发现.git目录下多了2个文件，且内容都为字节码：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
-&lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;
-&lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;objects&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="n"&gt;d0&lt;/span&gt;
-&lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|&lt;/span&gt;   &lt;span class="o"&gt;|--&lt;/span&gt; &lt;span class="mf"&gt;0491f&lt;/span&gt;&lt;span class="n"&gt;d7e5bb6fa28c517a0bb32b8b506539d4d&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="na"&gt;.git&lt;/span&gt;&lt;span class="err"&gt;/&lt;/span&gt;
+&lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;index&lt;/span&gt;
+&lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;objects&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="nf"&gt;d0&lt;/span&gt;
+&lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|&lt;/span&gt;   &lt;span class="err"&gt;|--&lt;/span&gt; &lt;span class="err"&gt;0491&lt;/span&gt;&lt;span class="nf"&gt;fd7e5bb6fa28c517a0bb32b8b506539d4d&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;使用如下命令查看1.txt的hash值&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;hash&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;object&lt;/span&gt; &lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;span class="n"&gt;d00491fd7e5bb6fa28c517a0bb32b8b506539d4d&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;➜ git hash-object 1.txt
+d00491fd7e5bb6fa28c517a0bb32b8b506539d4d
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;我们发现结果的前2位是文件夹的名字，后38位是文件的名字。&lt;/p&gt;
 &lt;p&gt;其实0491fd7e5bb6fa28c517a0bb32b8b506539d4d这个文件是用zlib压缩的，我们用Python解压一下：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;zlib&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zlib&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;decompress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.git/objects/d0/0491fd7e5bb6fa28c517a0bb32b8b506539d4d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;blob&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;x001&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;zlib&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;zlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;decompress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.git/objects/d0/0491fd7e5bb6fa28c517a0bb32b8b506539d4d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;blob 2&lt;/span&gt;&lt;span class="se"&gt;\x00&lt;/span&gt;&lt;span class="s"&gt;1&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;反向验证一下：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;hashlib&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;hashlib&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sha1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;blob&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;x001&lt;/span&gt;&lt;span class="err"&gt;\&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;hexdigest&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;d00491fd7e5bb6fa28c517a0bb32b8b506539d4d&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;hashlib&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;hashlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sha1&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;blob 2&lt;/span&gt;&lt;span class="se"&gt;\x00&lt;/span&gt;&lt;span class="s"&gt;1&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hexdigest&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="s"&gt;&amp;#39;d00491fd7e5bb6fa28c517a0bb32b8b506539d4d&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;即git使用'blob ' + len(content) + '\0' + content作为文件内容，其sha1值的前2位作为文件夹名，后38位作为文件名。 &lt;/p&gt;
 &lt;p&gt;这就是git blob对象的奥秘。&lt;/p&gt;
 &lt;p&gt;下面瞅瞅index文件，查看index文件的内容可以用这个命令：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;ls&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;files&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;stage&lt;/span&gt;
-&lt;span class="mi"&gt;100644&lt;/span&gt; &lt;span class="n"&gt;d00491fd7e5bb6fa28c517a0bb32b8b506539d4d&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;➜ git ls-files --stage
+100644 d00491fd7e5bb6fa28c517a0bb32b8b506539d4d 0 1.txt
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -137,39 +137,39 @@
 
 &lt;h3&gt;Tree对象和Commit对象&lt;/h3&gt;
 &lt;p&gt;现在我们提交一次：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;ci&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git commit -m &amp;#39;first ci&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;objects目录下多了两个文件，查看一下内容：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="mf"&gt;38f&lt;/span&gt;&lt;span class="n"&gt;d29697b220f7e4ca15b044c3222eefe5afdc1&lt;/span&gt;
-&lt;span class="mi"&gt;100644&lt;/span&gt; &lt;span class="n"&gt;blob&lt;/span&gt; &lt;span class="n"&gt;d00491fd7e5bb6fa28c517a0bb32b8b506539d4d&lt;/span&gt; &lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="mi"&gt;844&lt;/span&gt;&lt;span class="n"&gt;d93360ba0083ae4a6e911887a569892cb5102&lt;/span&gt;
-&lt;span class="n"&gt;tree&lt;/span&gt; &lt;span class="mf"&gt;38f&lt;/span&gt;&lt;span class="n"&gt;d29697b220f7e4ca15b044c3222eefe5afdc1&lt;/span&gt;
-&lt;span class="n"&gt;author&lt;/span&gt; &lt;span class="n"&gt;lizherui&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;lzrak47m4a1&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1401017562&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;0800&lt;/span&gt;
-&lt;span class="n"&gt;committer&lt;/span&gt; &lt;span class="n"&gt;lizherui&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;lzrak47m4a1&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1401017562&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;0800&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;➜ git cat-file -p 38fd29697b220f7e4ca15b044c3222eefe5afdc1
+100644 blob d00491fd7e5bb6fa28c517a0bb32b8b506539d4d 1.txt
+➜ git cat-file -p 844d93360ba0083ae4a6e911887a569892cb5102
+tree 38fd29697b220f7e4ca15b044c3222eefe5afdc1
+author lizherui &amp;lt;lzrak47m4a1@gmail.com&amp;gt; 1401017562 +0800
+committer lizherui &amp;lt;lzrak47m4a1@gmail.com&amp;gt; 1401017562 +0800
 
-&lt;span class="n"&gt;first&lt;/span&gt; &lt;span class="n"&gt;ci&lt;/span&gt;
+first ci
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;即生成了一个tree对象和一个commit对象：commit对象指向这个tree对象，这个tree对象指向1.txt文件。&lt;/p&gt;
 &lt;p&gt;这个tree对象可以认为是.git文件夹所在的目录，即根目录，类似unix文件系统中的"/"。&lt;/p&gt;
 &lt;p&gt;我们新建一个文件dir，在里面建一个新文件2.txt，并提交：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;dir&lt;/span&gt;
-&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;dir&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;echo&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mf"&gt;2.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt;
-&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;am&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;second&lt;/span&gt; &lt;span class="n"&gt;ci&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mkdir dir
+cd dir &amp;amp;&amp;amp; echo 2 &amp;gt; 2.txt
+git commit -am &amp;#39;second ci&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;查看一下第二次提交：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="n"&gt;b2b2ec533fbfe31801fc5571e812ac6a3bd9e46d&lt;/span&gt;
-&lt;span class="n"&gt;tree&lt;/span&gt; &lt;span class="mi"&gt;80&lt;/span&gt;&lt;span class="n"&gt;ab0595bc80fab8778b3c5011c49bf7ea475241&lt;/span&gt;
-&lt;span class="n"&gt;parent&lt;/span&gt; &lt;span class="mi"&gt;844&lt;/span&gt;&lt;span class="n"&gt;d93360ba0083ae4a6e911887a569892cb5102&lt;/span&gt;
-&lt;span class="n"&gt;author&lt;/span&gt; &lt;span class="n"&gt;lizherui&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;lzrak47m4a1&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1401018309&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;0800&lt;/span&gt;
-&lt;span class="n"&gt;committer&lt;/span&gt; &lt;span class="n"&gt;lizherui&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;lzrak47m4a1&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;gmail&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1401018309&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;0800&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;➜ git cat-file -p b2b2ec533fbfe31801fc5571e812ac6a3bd9e46d
+tree 80ab0595bc80fab8778b3c5011c49bf7ea475241
+parent 844d93360ba0083ae4a6e911887a569892cb5102
+author lizherui &amp;lt;lzrak47m4a1@gmail.com&amp;gt; 1401018309 +0800
+committer lizherui &amp;lt;lzrak47m4a1@gmail.com&amp;gt; 1401018309 +0800
 
-&lt;span class="n"&gt;second&lt;/span&gt; &lt;span class="n"&gt;ci&lt;/span&gt;
+second ci
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -182,35 +182,35 @@
 &lt;hr /&gt;
 &lt;p&gt;我们新建一个100w行都为3的文件3.txt并提交，然后把第一行改成4再提交。&lt;/p&gt;
 &lt;p&gt;我们发现有2个12k的快照：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;du&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/*&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;grep&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt;
-&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;
-&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="n"&gt;K&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;ce&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;➜ du -sh ./* |grep 12K
+12K ./9b
+12K ./ce
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;磁盘上有了两个几乎完全相同的12K的对象。如果Git只完整保存其中一个，并保存另一个对象的差异内容，岂不更好？&lt;/p&gt;
 &lt;p&gt;事实上 Git 可以那样做。Git 往磁盘保存对象时默认使用的格式叫松散对象 (loose object) 格式。Git 时不时地将这些对象打包至一个叫 packfile 的二进制文件以节省空间并提高效率。当仓库中有太多的松散对象，或是手工调用 git gc 命令，或推送至远程服务器时，Git 都会这样做。手工调用 git gc 命令让 Git 将库中对象打包并看会发生些什么：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;gc&lt;/span&gt;
-&lt;span class="n"&gt;Counting&lt;/span&gt; &lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;done&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="n"&gt;Delta&lt;/span&gt; &lt;span class="n"&gt;compression&lt;/span&gt; &lt;span class="n"&gt;using&lt;/span&gt; &lt;span class="n"&gt;up&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="n"&gt;threads&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="n"&gt;Compressing&lt;/span&gt; &lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;done&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="n"&gt;Writing&lt;/span&gt; &lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;done&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-&lt;span class="n"&gt;Total&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;delta&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;reused&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;delta&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;➜ git gc
+Counting objects: 20, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (20/20), done.
+Total 20 (delta 6), reused 0 (delta 0)
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;查看一下object目录，原来的object都没了，在pack文件夹下生成了2新文件：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;find&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;packs&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ee129ceb0468a3cf3ba3aa6023a317df104c2f44&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;idx&lt;/span&gt;
-&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ee129ceb0468a3cf3ba3aa6023a317df104c2f44&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;➜ find .git/objects -type f
+.git/objects/info/packs
+.git/objects/pack/pack-ee129ceb0468a3cf3ba3aa6023a317df104c2f44.idx
+.git/objects/pack/pack-ee129ceb0468a3cf3ba3aa6023a317df104c2f44.pack
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;查看idx文件：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;verify&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;objects&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pack&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ee129ceb0468a3cf3ba3aa6023a317df104c2f44&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;idx&lt;/span&gt;
-&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="n"&gt;b84452867f54e90019ae876477060784a08ac50&lt;/span&gt; &lt;span class="n"&gt;blob&lt;/span&gt;   &lt;span class="mi"&gt;2000000&lt;/span&gt; &lt;span class="mi"&gt;1968&lt;/span&gt; &lt;span class="mi"&gt;1107&lt;/span&gt;
-&lt;span class="n"&gt;ce01eef250562995d118fdae4d5f9836d89fe483&lt;/span&gt; &lt;span class="n"&gt;blob&lt;/span&gt;   &lt;span class="mi"&gt;102&lt;/span&gt; &lt;span class="mi"&gt;87&lt;/span&gt; &lt;span class="mi"&gt;3231&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="n"&gt;b84452867f54e90019ae876477060784a08ac50&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;➜ git verify-pack -v .git/objects/pack/pack-ee129ceb0468a3cf3ba3aa6023a317df104c2f44.idx
+9b84452867f54e90019ae876477060784a08ac50 blob   2000000 1968 1107
+ce01eef250562995d118fdae4d5f9836d89fe483 blob   102 87 3231 1 9b84452867f54e90019ae876477060784a08ac50
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -223,33 +223,33 @@
 &lt;p&gt;Git的分支可谓是难以置信的轻量级，它的新建操作几乎可以在瞬间完成，并且在不同分支间切换起来也差不多一样快。和许多其他版本控制系统不同，Git鼓励在工作流程中频繁使用分支与合并，哪怕一天之内进行许多次都没有关系。理解分支的概念并熟练运用后，你才会意识到为什么Gi 是一个如此强大而独特的工具，并从此真正改变你的开发方式。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;我们创建一个分支test_branch，并切换过去:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;branch&lt;/span&gt; &lt;span class="n"&gt;test_branch&lt;/span&gt;
-&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;checkout&lt;/span&gt; &lt;span class="n"&gt;test_branch&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git branch test_branch
+git checkout test_branch
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;我们发现HEAD文件的内容指向了新文件refs/heads/test_branch&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;HEAD&lt;/span&gt;
-&lt;span class="nl"&gt;ref:&lt;/span&gt; &lt;span class="n"&gt;refs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;heads&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;test_branch&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;➜ cat .git/HEAD
+ref: refs/heads/test_branch
 
-&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;refs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;heads&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;test_branch&lt;/span&gt;
-&lt;span class="n"&gt;ab779b378043dbb4fa4436cab8263f4a5ba8d26a&lt;/span&gt;
+➜ cat .git/refs/heads/test_branch
+ab779b378043dbb4fa4436cab8263f4a5ba8d26a
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;修改一下1.txt并提交，test_branch指向了新的commit&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;refs&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;heads&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;test_branch&lt;/span&gt;
-&lt;span class="mi"&gt;7622&lt;/span&gt;&lt;span class="n"&gt;a8a51a02d7843026589c71e587b7ad123c1c&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;cat .git/refs/heads/test_branch
+7622a8a51a02d7843026589c71e587b7ad123c1c
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;切回master，一切未变，master仍然指向老的commit：ab779b3&lt;/p&gt;
 &lt;p&gt;这时候我们在master里把test_branch合进来：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="err"&gt;➜&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;merge&lt;/span&gt; &lt;span class="n"&gt;test_branch&lt;/span&gt;
-&lt;span class="n"&gt;Updating&lt;/span&gt; &lt;span class="n"&gt;ab779b3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="mf"&gt;.7622&lt;/span&gt;&lt;span class="n"&gt;a8a&lt;/span&gt;
-&lt;span class="n"&gt;Fast&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;forward&lt;/span&gt;
- &lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;+-&lt;/span&gt;
- &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;file&lt;/span&gt; &lt;span class="n"&gt;changed&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;insertion&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="n"&gt;deletion&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;➜ git merge test_branch
+Updating ab779b3..7622a8a
+Fast-forward
+ 1.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -358,34 +358,34 @@
 &lt;li&gt;耐心等待一段时间（不超过10分钟），登陆http://username.github.io，会发现自己的个人博客已经生成。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;安装Pelican和Markdown&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;
-&lt;span class="n"&gt;pip&lt;/span&gt; &lt;span class="n"&gt;install&lt;/span&gt; &lt;span class="n"&gt;markdown&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install pelican
+pip install markdown
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;搭建骨架&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;mkdir&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;
-&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;blog&lt;/span&gt;
-&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;quickstart&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mkdir blog
+cd blog
+pelican-quickstart
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;根据提示一步步输入相应的配置项，不知道如何设置的接受默认即可，后续可以通过编辑pelicanconf.py文件更改配置)&lt;/p&gt;
 &lt;p&gt;以下是生成的目录结构：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;blog&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
-&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;              &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;存放输入的源文件&lt;/span&gt;
-&lt;span class="err"&gt;│&lt;/span&gt;   &lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pages&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;          &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;存放手工创建的静态页面&lt;/span&gt;
-&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;               &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;生成的输出文件&lt;/span&gt;
-&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;develop_server&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sh&lt;/span&gt;    &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;方便开启测试服务器&lt;/span&gt;
-&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;Makefile&lt;/span&gt;             &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;方便管理博客的&lt;/span&gt;&lt;span class="n"&gt;Makefile&lt;/span&gt;
-&lt;span class="err"&gt;├──&lt;/span&gt; &lt;span class="n"&gt;pelicanconf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;       &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;主配置文件&lt;/span&gt;
-&lt;span class="err"&gt;└──&lt;/span&gt; &lt;span class="n"&gt;publishconf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;py&lt;/span&gt;       &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="err"&gt;主发布文件，可删除&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;blog/
+├── content              # 存放输入的源文件
+│   └── (pages)          # 存放手工创建的静态页面
+├── output               # 生成的输出文件
+├── develop_server.sh    # 方便开启测试服务器
+├── Makefile             # 方便管理博客的Makefile
+├── pelicanconf.py       # 主配置文件
+└── publishconf.py       # 主发布文件，可删除
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;进入output把自己刚刚建好的username.github.io版本库clone下来：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;output&lt;/span&gt;
-&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="err"&gt;@&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;com&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;github&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;git&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;cd output
+git clone git@github.com:username/username.github.io.git
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -395,17 +395,17 @@
 &lt;img alt="1" src="https://lh5.googleusercontent.com/-edzDa6ch3Jk/Ug5oATNTjsI/AAAAAAAAAKs/WIqU7KziyOA/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-17+%25E4%25B8%258A%25E5%258D%25881.57.09.png" /&gt;&lt;/p&gt;
 &lt;p&gt;左半边是正在用markdown写的博文，右边是即时预览效果。&lt;/p&gt;
 &lt;p&gt;写完后，执行以下命令，即可在本机&lt;a href="http://127.0.0.1:8000"&gt;http://127.0.0.1:8000&lt;/a&gt;看到效果。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;publish&lt;/span&gt;
-&lt;span class="n"&gt;make&lt;/span&gt; &lt;span class="n"&gt;serve&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;make publish
+make serve
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;若要一键上传到Github，需要修改Makefile两处地方：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nl"&gt;publish:&lt;/span&gt;
-&lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PELICAN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;INPUTDIR&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;OUTPUTDIR&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CONFFILE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="err"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PELICANOPTS&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nf"&gt;publish&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+&lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;PELICAN&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;INPUTDIR&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="err"&gt;-o&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;OUTPUTDIR&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="err"&gt;-s&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;CONFFILE&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;PELICANOPTS&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
 
-&lt;span class="nl"&gt;github:&lt;/span&gt; &lt;span class="n"&gt;publish&lt;/span&gt;
-&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;OUTPUTDIR&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt;  &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;commit&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;am&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt; &lt;span class="n"&gt;comments&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;push&lt;/span&gt;
+&lt;span class="nf"&gt;github&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;publish&lt;/span&gt;
+&lt;span class="err"&gt;cd&lt;/span&gt; &lt;span class="err"&gt;OUTPUTDIR&lt;/span&gt; &lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="err"&gt;git&lt;/span&gt; &lt;span class="err"&gt;add&lt;/span&gt; &lt;span class="err"&gt;.&lt;/span&gt; &lt;span class="err"&gt;;&lt;/span&gt;  &lt;span class="err"&gt;git&lt;/span&gt; &lt;span class="err"&gt;commit&lt;/span&gt; &lt;span class="err"&gt;-am&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;your comments&amp;#39;&lt;/span&gt; &lt;span class="err"&gt;;&lt;/span&gt; &lt;span class="err"&gt;git&lt;/span&gt; &lt;span class="err"&gt;push&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -417,28 +417,28 @@
 &lt;p&gt;我觉得使用云相册比本地图片要方便的多，我使用&lt;a href="https://picasaweb.google.com?noredirect=1"&gt;Picasa&lt;/a&gt;来维护blog的所有图片。&lt;/p&gt;
 &lt;h3&gt;挑选主题&lt;/h3&gt;
 &lt;p&gt;安装主题，比如bootstrap2：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/getpelican/pelican-themes.git&lt;/span&gt;
-&lt;span class="n"&gt;cd&lt;/span&gt; &lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;themes&lt;/span&gt;
-&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;themes&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;bootstrap2&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git clone https://github.com/getpelican/pelican-themes.git
+cd pelican-themes
+pelican-themes -i bootstrap2
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;选择主题，在pelicanconf.py中添加&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;bootstrap2&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;THEME = &amp;#39;bootstrap2&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;安装第三方评论系统&lt;/h3&gt;
 &lt;p&gt;在&lt;a href="https://disqus.com/admin/signup"&gt;Disqus&lt;/a&gt;上申请一个站点，记牢Shortname。
 在pelicanconf.py添加&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;DISQUS_SITENAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Shortname&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;DISQUS_SITENAME = Shortname
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;h3&gt;添加Google Analytics&lt;/h3&gt;
 &lt;p&gt;去&lt;a href="http://www.google.com/analytics"&gt;Google Analytics&lt;/a&gt;申请账号，记下跟踪ID。
 在pelicanconf.py添加&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;GOOGLE_ANALYTICS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;跟踪&lt;/span&gt;&lt;span class="n"&gt;ID&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;GOOGLE_ANALYTICS = 跟踪ID
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -451,26 +451,26 @@
 &lt;p&gt;截图如下：
 &lt;img alt="3" src="https://lh3.googleusercontent.com/-tYrEbXyx_5o/UhGS1C_lcYI/AAAAAAAAALk/H7X7MBjNkVY/w958-h599-no/%25E5%25B1%258F%25E5%25B9%2595%25E5%25BF%25AB%25E7%2585%25A7+2013-08-19+%25E4%25B8%258A%25E5%258D%258811.36.32.png" /&gt;&lt;/p&gt;
 &lt;h3&gt;添加插件&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;git&lt;/span&gt; &lt;span class="n"&gt;clone&lt;/span&gt; &lt;span class="n"&gt;git&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//github.com/getpelican/pelican-plugins.git&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;git clone git://github.com/getpelican/pelican-plugins.git
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;比如我要使用sitemap，在pelicanconf.py里配置如下&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;PLUGIN_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;pelican-plugins&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;PLUGINS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;sitemap&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;SITEMAP&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="s"&gt;&amp;quot;format&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;xml&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s"&gt;&amp;quot;priorities&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="s"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;0.7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="s"&gt;&amp;quot;indexes&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="s"&gt;&amp;quot;pages&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;0.3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="s"&gt;&amp;quot;changefreqs&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="s"&gt;&amp;quot;articles&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;monthly&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="s"&gt;&amp;quot;indexes&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;daily&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="s"&gt;&amp;quot;pages&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;monthly&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;PLUGIN_PATH = u&amp;quot;pelican-plugins&amp;quot;
+PLUGINS = [&amp;quot;sitemap&amp;quot;]
+SITEMAP = {
+    &amp;quot;format&amp;quot;: &amp;quot;xml&amp;quot;,
+    &amp;quot;priorities&amp;quot;: {
+        &amp;quot;articles&amp;quot;: 0.7,
+        &amp;quot;indexes&amp;quot;: 0.5,
+        &amp;quot;pages&amp;quot;: 0.3,
+    },
+    &amp;quot;changefreqs&amp;quot;: {
+        &amp;quot;articles&amp;quot;: &amp;quot;monthly&amp;quot;,
+        &amp;quot;indexes&amp;quot;: &amp;quot;daily&amp;quot;,
+        &amp;quot;pages&amp;quot;: &amp;quot;monthly&amp;quot;,
+    }
+}
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -607,17 +607,17 @@
 &lt;p&gt;但是如果你认为培养黑客态度只是一条在黑客文化圈中得到承认的路子， 那就大错特错了。成为具备这些特质的这种人对 你自己非常重要——有助于你学习，及给你提供源源不断的动力。 同所有创造性的艺术一样，成为大师
 的最有效方法就是模仿大师的精神—— 不仅从智力上，也要从感情上进行模仿。&lt;/p&gt;
 &lt;p&gt;或许, 下面这首现代的禅诗很好的阐述了这个意思：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;To&lt;/span&gt; &lt;span class="n"&gt;follow&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="err"&gt;（沿着这样一条道路：）&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;To follow the path:（沿着这样一条道路：）
 
-&lt;span class="n"&gt;look&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;（寻找大师，）&lt;/span&gt;
+look to the master,（寻找大师，）
 
-&lt;span class="n"&gt;follow&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;（跟随大师，）&lt;/span&gt;
+follow the master,（跟随大师，）
 
-&lt;span class="n"&gt;walk&lt;/span&gt; &lt;span class="n"&gt;with&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;（与大师通行，）&lt;/span&gt;
+walk with the master,（与大师通行，）
 
-&lt;span class="n"&gt;see&lt;/span&gt; &lt;span class="n"&gt;through&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="err"&gt;（洞察大师，）&lt;/span&gt;
+see through the master,（洞察大师，）
 
-&lt;span class="n"&gt;become&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;master&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="err"&gt;（成为大师。）&lt;/span&gt;
+become the master.（成为大师。）
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -764,31 +764,31 @@
 &lt;p&gt;我们先来看看Singleton模式。&lt;/p&gt;
 &lt;p&gt;Singleton模式有一个形象的比喻：Singleton就像追妹子一样，你不能大街上随便拉一个妹子就说是我对象，也不能自己做一个妹子出来说是自己对象。只能通过某种方法（追妹子），来产生一个对象。同时在调用这个方法的时候，会对你是否已经有对象进行检查。如果有，那么方法会直接返回，或者产生一个异常（抽你一巴掌，或者new Exception(”流氓!”)），从而保证你只有一个对象。&lt;/p&gt;
 &lt;p&gt;这是一个线程安全的Java单例模式：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt; &lt;span class="n"&gt;myInstance&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt; &lt;span class="nf"&gt;getInstance&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myInstance&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;synchronized&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Singleton&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="p"&gt;{&lt;/span&gt;
-                &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;myInstance&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-                &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="n"&gt;myInstance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-                &lt;span class="p"&gt;}&lt;/span&gt;
-            &lt;span class="p"&gt;}&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt;
+{
+    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt; &lt;span class="n"&gt;myInstance&lt;/span&gt;;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt; &lt;span class="n"&gt;getInstance&lt;/span&gt;()
+    {
+        &lt;span class="k"&gt;if&lt;/span&gt; (&lt;span class="n"&gt;myInstance&lt;/span&gt; == &lt;span class="n"&gt;null&lt;/span&gt;)
+        {
+            &lt;span class="n"&gt;synchronized&lt;/span&gt;(&lt;span class="n"&gt;Singleton&lt;/span&gt;.&lt;span class="k"&gt;class&lt;/span&gt;)
+            {
+                &lt;span class="k"&gt;if&lt;/span&gt; (&lt;span class="n"&gt;myInstance&lt;/span&gt; == &lt;span class="n"&gt;null&lt;/span&gt;)
+                {
+                    &lt;span class="n"&gt;myInstance&lt;/span&gt; = &lt;span class="nb"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt;();
+                }
+            }
+        }
 
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;myInstance&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;myInstance&lt;/span&gt;;
+    }
 
-    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="nf"&gt;Singleton&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="c1"&gt;// Constructor code goes here.&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;Singleton&lt;/span&gt;()
+    {
+        // &lt;span class="n"&gt;Constructor&lt;/span&gt; &lt;span class="n"&gt;code&lt;/span&gt; &lt;span class="n"&gt;goes&lt;/span&gt; &lt;span class="n"&gt;here&lt;/span&gt;.
+    }
 
-&lt;span class="p"&gt;}&lt;/span&gt;
+}
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -797,64 +797,64 @@
 &lt;p&gt;这是Wikipedia中对元编程的定义：元编程是指某类计算机程序的编写，这类计算机程序编写或者操纵其它程序（或者自身）作为它们的数据，或者在运行时完成部分本应在编译时完成的工作。多数情况下，与手工编写全部代码相比，程序员可以获得更高的工作效率, 或者给与程序更大的灵活度去处理新的情形而无需重新编译。&lt;/p&gt;
 &lt;p&gt;我们需要用到元编程思想中的一个重要应用——元类，即类的模板，元类的实例也是类。&lt;/p&gt;
 &lt;p&gt;我们先定义一个元类:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;standard&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;initform&lt;/span&gt; &lt;span class="n"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(defclass singleton-class (standard-class)
+    ((instance :initform nil)))
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;这段代码阻止程序员直接实例化singleton-class，有点儿像Java的抽象类。&lt;/p&gt;
 &lt;p&gt;然后为了严谨，我们对这个元类进行一些继承方面的限定。&lt;/p&gt;
 &lt;p&gt;允许这个元类继承标准类：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defmethod&lt;/span&gt; &lt;span class="n"&gt;validate&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;superclass&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;                                                                 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;superclass&lt;/span&gt; &lt;span class="n"&gt;standard&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;    
-&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(defmethod validate-superclass ((class singleton-class)                                                                 (superclass standard-class))    
+t)
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;允许其它元类继承这个元类：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defmethod&lt;/span&gt; &lt;span class="n"&gt;validate&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;superclass&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;                                                                 &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;superclass&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;   
-&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(defmethod validate-superclass ((class singleton-class)                                                                 (superclass singleton-class))   
+t)
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;不允许其它标准类继承这个元类：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defmethod&lt;/span&gt; &lt;span class="n"&gt;validate&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;superclass&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;standard&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;                                                                  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;superclass&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="n"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(defmethod validate-superclass ((class standard-class)                                                                  (superclass singleton-class))
+nil)
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;然后定义初始化实例函数：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defvar&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(defvar *singleton-classes* &amp;#39;())
 
-&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defmethod&lt;/span&gt; &lt;span class="n"&gt;initialize&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;after&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pushnew&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+(defmethod initialize-instance :after ((c singleton-class) &amp;amp;key)
+  (pushnew c *singleton-classes*))
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;再定义真正的make-instance:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defmethod&lt;/span&gt; &lt;span class="n"&gt;make&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-                      &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;with&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;slots&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt;
-    &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;instance&lt;/span&gt;
-        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;setf&lt;/span&gt; &lt;span class="n"&gt;instance&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;method&lt;/span&gt;&lt;span class="p"&gt;)))))&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(defmethod make-instance ((class singleton-class)
+                      &amp;amp;key)
+  (with-slots (instance) class
+    (or instance
+        (setf instance (call-next-method)))))
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;还可以定义一个reset-singleton-classes：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defun&lt;/span&gt; &lt;span class="n"&gt;reset&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
-  &lt;span class="p"&gt;;;&lt;/span&gt; &lt;span class="n"&gt;This&lt;/span&gt; &lt;span class="n"&gt;means&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;get&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;singletons&lt;/span&gt; &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;now&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
-  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;loop&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;classes&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
-        &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;setf&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;slot&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;instance&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;nil&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(defun reset-singleton-classes ()
+  ;; This means you will get new singletons from now on.
+  (loop for c in *singleton-classes*
+        do (setf (slot-value c &amp;#39;instance) nil)))
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;元类完事了，我们定义两个标准类：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;foo1&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-  &lt;span class="p"&gt;()&lt;/span&gt;
-  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;metaclass&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(defclass foo1()
+  ()
+  (:metaclass singleton-class))
 
-&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;foo2&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
-  &lt;span class="p"&gt;()&lt;/span&gt;
-  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;metaclass&lt;/span&gt; &lt;span class="n"&gt;singleton&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;class&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+(defclass foo2 ()
+  ()
+  (:metaclass singleton-class))
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -869,58 +869,58 @@
 &lt;p&gt;张教主有这样一句名言：元编程是一种黑魔法，正派人士都很畏惧。&lt;/p&gt;
 &lt;p&gt;我们再来看看工厂模式。&lt;/p&gt;
 &lt;p&gt;下面是一个典型的Java工厂模式：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;abstract&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Pizza&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;abstract&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;getPrice&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt; &lt;span class="c1"&gt;// count the cents&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;abstract class Pizza {
+    public abstract int getPrice(); // count the cents
+}
 
-&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;HamAndMushroomPizza&lt;/span&gt; &lt;span class="n"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Pizza&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;getPrice&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;850&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+class HamAndMushroomPizza extends Pizza {
+    public int getPrice() {
+        return 850;
+    }
+}
 
-&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;DeluxePizza&lt;/span&gt; &lt;span class="n"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Pizza&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;getPrice&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;1050&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+class DeluxePizza extends Pizza {
+    public int getPrice() {
+        return 1050;
+    }
+}
 
-&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;HawaiianPizza&lt;/span&gt; &lt;span class="n"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Pizza&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;getPrice&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;1150&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+class HawaiianPizza extends Pizza {
+    public int getPrice() {
+        return 1150;
+    }
+}
 
-&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;PizzaFactory&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;enum&lt;/span&gt; &lt;span class="n"&gt;PizzaType&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="n"&gt;HamMushroom&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="n"&gt;Deluxe&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="n"&gt;Hawaiian&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
+class PizzaFactory {
+    public enum PizzaType {
+        HamMushroom,
+        Deluxe,
+        Hawaiian
+    }
 
-&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Pizza&lt;/span&gt; &lt;span class="n"&gt;createPizza&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PizzaType&lt;/span&gt; &lt;span class="n"&gt;pizzaType&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="k"&gt;switch&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pizzaType&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;HamMushroom&lt;/span&gt;:
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;HamAndMushroomPizza&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Deluxe&lt;/span&gt;:
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;DeluxePizza&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-        &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;Hawaiian&lt;/span&gt;:
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;HawaiianPizza&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="n"&gt;throw&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;IllegalArgumentException&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;The pizza type &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;pizzaType&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot; is not recognized.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+public static Pizza createPizza(PizzaType pizzaType) {
+    switch (pizzaType) {
+        case HamMushroom:
+            return new HamAndMushroomPizza();
+        case Deluxe:
+            return new DeluxePizza();
+        case Hawaiian:
+            return new HawaiianPizza();
+    }
+    throw new IllegalArgumentException(&amp;quot;The pizza type &amp;quot; + pizzaType + &amp;quot; is not recognized.&amp;quot;);
+    }
+}
 
-&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;PizzaLover&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="cm"&gt;/*&lt;/span&gt;
-&lt;span class="cm"&gt;     * Create all available pizzas and print their prices&lt;/span&gt;
-&lt;span class="cm"&gt;     */&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;[])&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PizzaFactory&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PizzaType&lt;/span&gt; &lt;span class="n"&gt;pizzaType&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;PizzaFactory&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PizzaType&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Price of &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;pizzaType&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot; is &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;PizzaFactory&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;createPizza&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pizzaType&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;getPrice&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
+class PizzaLover {
+    /*
+     * Create all available pizzas and print their prices
+     */
+    public static void main (String args[]) {
+        for (PizzaFactory.PizzaType pizzaType : PizzaFactory.PizzaType.values()) {
+            System.out.println(&amp;quot;Price of &amp;quot; + pizzaType + &amp;quot; is &amp;quot; + PizzaFactory.createPizza(pizzaType).getPrice());
+        }
+    }
+}
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -936,22 +936,22 @@
 &lt;li&gt;可以在运行时被创造。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;因此，Common Lisp实现工厂模式就显得简单粗暴了，或者说，根本用不着工厂模式：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;pizza&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt;
-  &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;price&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;accessor&lt;/span&gt; &lt;span class="n"&gt;price&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;(defclass pizza ()
+  ((price :accessor price)))
 
-&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;ham&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mushroom&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;price&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;initform&lt;/span&gt; &lt;span class="mi"&gt;850&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+(defclass ham-and-mushroom-pizza (pizza)
+  ((price :initform 850)))
 
-&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;deluxe&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;price&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;initform&lt;/span&gt; &lt;span class="mi"&gt;1050&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+(defclass deluxe-pizza (pizza)
+  ((price :initform 1050)))
 
-&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defclass&lt;/span&gt; &lt;span class="n"&gt;hawaiian&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-  &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;price&lt;/span&gt; &lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="n"&gt;initform&lt;/span&gt; &lt;span class="mi"&gt;1150&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+(defclass hawaiian-pizza (pizza)
+  ((price :initform 1150)))
 
-&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;defparameter&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;types&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;
-  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ham&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;and&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;mushroom&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;
-        &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;deluxe&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;
-        &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hawaiian&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pizza&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+(defparameter *pizza-types*
+  (list &amp;#39;ham-and-mushroom-pizza
+        &amp;#39;deluxe-pizza
+        &amp;#39;hawaiian-pizza))
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -959,62 +959,62 @@
 &lt;p&gt;&lt;img alt="5" src="https://lh5.googleusercontent.com/-YNmX58cxcDo/Uf56OIKW--I/AAAAAAAAAHA/W-vT08Kmtwo/w324-h112-no/5.png" /&gt;&lt;/p&gt;
 &lt;p&gt;小结：Common Lisp中由于函数是一等公民的缘故，相对于Java中工厂模式的实现要简单的多，不需要额外建一个工厂类，可以随心所欲地玩。函数式语言相当于OO语言来说，确实有一个优点——可以操纵的单元粒度更小更细，所以更加灵活，同时也更加容易失控。&lt;/p&gt;
 &lt;p&gt;最后，让我们看看迭代器模式，首先是Java中的实现：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;util&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ArrayList&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;java&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;util&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.ArrayList&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;java.util.List&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 
 &lt;span class="n"&gt;interface&lt;/span&gt; &lt;span class="n"&gt;Iterator&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="nf"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="nb"&gt;next&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;ConcreteIterator&lt;/span&gt; &lt;span class="n"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Iterator&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ArrayList&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;cursor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;ConcreteIterator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-        &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ConcreteIterator&lt;/span&gt; &lt;span class="n"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Iterator&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ArrayList&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;cursor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;ConcreteIterator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;List&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+        &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="nf"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cursor&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="p"&gt;()){&lt;/span&gt;
-            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;boolean&lt;/span&gt; &lt;span class="n"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cursor&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="p"&gt;()){&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
         &lt;span class="p"&gt;}&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="nf"&gt;next&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="nb"&gt;next&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
         &lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;()){&lt;/span&gt;
-            &lt;span class="n"&gt;obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cursor&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;()){&lt;/span&gt;
+            &lt;span class="n"&gt;obj&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cursor&lt;/span&gt;&lt;span class="o"&gt;++&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
         &lt;span class="p"&gt;}&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="n"&gt;interface&lt;/span&gt; &lt;span class="n"&gt;Aggregate&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Iterator&lt;/span&gt; &lt;span class="nf"&gt;iterator&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Iterator&lt;/span&gt; &lt;span class="n"&gt;iterator&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;ConcreteAggregate&lt;/span&gt; &lt;span class="n"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Aggregate&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ArrayList&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ConcreteAggregate&lt;/span&gt; &lt;span class="n"&gt;implements&lt;/span&gt; &lt;span class="n"&gt;Aggregate&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;List&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ArrayList&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Iterator&lt;/span&gt; &lt;span class="nf"&gt;iterator&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ConcreteIterator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;Iterator&lt;/span&gt; &lt;span class="n"&gt;iterator&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ConcreteIterator&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Object&lt;/span&gt; &lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;obj&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Test&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;static&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;static&lt;/span&gt; &lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt; &lt;span class="n"&gt;args&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
         &lt;span class="n"&gt;Aggregate&lt;/span&gt; &lt;span class="n"&gt;ag&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ConcreteAggregate&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-        &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;小明&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;小红&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;小刚&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-        &lt;span class="n"&gt;Iterator&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iterator&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-        &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;()){&lt;/span&gt;
-            &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;str&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;str&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;小明&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;小红&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;小刚&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;Iterator&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ag&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iterator&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="k"&gt;while&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hasNext&lt;/span&gt;&lt;span class="p"&gt;()){&lt;/span&gt;
+            &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+            &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
         &lt;span class="p"&gt;}&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
